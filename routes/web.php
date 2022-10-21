@@ -1,6 +1,10 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Route;
+use Artisan;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',function(){
     return view('welcome');
+})->name('home');
+
+
+
+require __DIR__ . '/auth.php';
+
+Route::prefix('admin')->middleware(['auth:sanctum'])->group(function () {
+    require __DIR__ . '/admin.php';
+});
+
+Route::prefix('developer')->group(function () {
+    Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
+    Route::get('/artisan', function () {
+        Artisan::call("view:cache");
+        Artisan::call("view:clear");
+        Artisan::call("config:cache");
+        Artisan::call("config:clear");
+        Artisan::call("cache:clear");
+
+        dd('clear');
+    });
+});
+
+Route::prefix('pages')->group(function () {
+    Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
 });

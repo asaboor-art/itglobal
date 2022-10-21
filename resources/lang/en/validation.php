@@ -46,7 +46,7 @@ return [
     'email' => 'The :attribute must be a valid email address.',
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'enum' => 'The selected :attribute is invalid.',
-    'exists' => 'The selected :attribute is invalid.',
+    'exists' => 'Please select :attribute.',
     'file' => 'The :attribute must be a file.',
     'filled' => 'The :attribute field must have a value.',
     'gt' => [
@@ -107,9 +107,9 @@ return [
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
-    'required_array_keys' => 'The :attribute field must contain entries for: :values.',
-    'required_if' => 'The :attribute field is required when :other is :value.',
+    'required' => 'The :attribute is required.',
+    'required_array_keys' => 'The :attribute must contain entries for: :values.',
+    'required_if' => 'The :attribute is required',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
     'required_with_all' => 'The :attribute field is required when :values are present.',
@@ -142,9 +142,33 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'regex' => 'Invalid format, special characters and numbers are not allowed'
         ],
+        'zipcode' => [
+            'regex' => ':attribute contain only number',
+        ],
+        'username' => [
+            'regex' => 'Invalid format, special characters, space and upper case are not allowed'
+        ],
+        'role_id' => [
+            'exists_in' => 'Role you selected is not exist',
+        ],
+        'integer' => ':attribute must be a number',
+        'email_not_in' => 'Email should have a private domain',
+        'eighteen_plus' => 'Your age should be greater then 18',
+        'image' => [
+            'invalid_format' => 'Image has invalid format, supported formats are (:types)',
+            'dimensions' => 'Image has invalid dimensions, valid dimensions are :dimensions'
+        ],
+        'file' => [
+            'invalid_format' => 'File has invalid format, supported formats are (:types)',
+        ],
+
+        'errors' => [
+            'server-errors' => 'Internal server error, please contact your administator',
+        ]
+
     ],
 
     /*

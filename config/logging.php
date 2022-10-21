@@ -50,19 +50,19 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['error','debug'],
             'ignore_exceptions' => false,
         ],
-
-        'single' => [
+// For debug
+        'debug' => [
             'driver' => 'single',
-            'path' => storage_path('logs/laravel.log'),
+            'path' => storage_path('logs/queries/query-'.date('Y-m-d').'.log'),
             'level' => env('LOG_LEVEL', 'debug'),
         ],
 
         'daily' => [
             'driver' => 'daily',
-            'path' => storage_path('logs/laravel.log'),
+            'path' => storage_path('logs/log-'.date('Y-m-d').'.log'),
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => 14,
         ],
@@ -113,6 +113,13 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+// Custom log channel
+        'error' => [
+            'driver' => 'single',
+            'level'  => 'error',
+            'path'   => storage_path('logs/errors/error-'.date('Y-m-d').'.log'),
+            'bubble' => false
+        ]
     ],
 
 ];

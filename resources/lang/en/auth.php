@@ -14,7 +14,9 @@ return [
     */
 
     'failed' => 'These credentials do not match our records.',
+    'blocked' => 'Your profile has been blocked by admin.',
     'password' => 'The provided password is incorrect.',
+    'send_email' => 'Enable to send an email sorry for the inconviencce',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
