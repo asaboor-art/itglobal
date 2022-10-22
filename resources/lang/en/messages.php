@@ -5,4 +5,5 @@ return [
     'get-free-trail' => 'Get Free Trial',
     'edit' => 'Edit :attribute',
     'success_msg' => ':action Successfully',
+    'error_msg' => 'Error while :action',
 ];

@@ -92,6 +92,7 @@ return [
     'approved' => 'Approved',
     'rejected' => 'Rejected',
     'widthdraw-request' => 'Widthdraw Request',
+    'subscribing' => 'Subscribing',
 
 
 ];

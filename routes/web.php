@@ -21,7 +21,9 @@ Route::get('/',function(){
     return view('welcome');
 })->name('home');
 
-
+// NewsLetter
+Route::get('/newsletter',[BaseController::class,'newsletterSubscription'])->name('newsletter.subscribe');
+Route::get('/contact-us',[BaseController::class,'saveContactForm'])->name('newsletter.subscribe');
 
 require __DIR__ . '/auth.php';
 

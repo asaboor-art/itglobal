@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\Models\BaseModel;
-use App\Models\User;
-use App\Models\GeneralSetting;
+use App\Models\ContactForm;
+use App\Models\Newsletter;
 use App\Helpers\Helper;
 use App\Traits\Validation;
 use Pusher\Pusher;
@@ -17,7 +17,13 @@ use DB;
 class BaseController extends Controller
 {
     //
-    use Validation;
+    // use Validation;
+    private $baseModel,$contactForm,$newsletter;
+    public function __construct(BaseModel $baseModel,Newsletter $newsletter,ContactForm $contactForm){
+        $this->baseModel = $baseModel;
+        $this->contactForm = $contactForm;
+        $this->newsletter = $newsletter;
+    }
     public function setGeneralFilters(Request $request, BaseModel $model)
     {
         $model->setLength($request->has('length') ? $request->length : 10);
@@ -49,32 +55,32 @@ class BaseController extends Controller
 
         return response()->json($response, $code);
     }
-
-    public function changeProfileStatus(Request $request, User $user)
-    {
-        if (!$request->has('user_id') && $request->user_id <= 0) {
-            return $this->sendError('', []);
-        }
-
-        $response = $user->changeProfileStatus($request->user_id);
-        return $this->sendResponse($response);
-    }
-
-    public function getHonourCode(Request $request, GeneralSetting $generalSetting)
-    {
+// Subscribe for newsletter
+    public function newsletterSubscription(Request $request){
         $request->validate([
-            'role' => ['required', 'integer', 'exists:roles,id'],
+            'email' => 'required|email|unique:email'
         ]);
 
-        $data = $generalSetting->getGeneralSetting('honor_code', $request->role);
-        if (!isset($data)) {
-            if ($request->role == 2) {
-                $data['value'] = config('honor-code.innovator');
-            } else if ($request->role == 3) {
-                $data['value'] = config('honor-code.company');
-            }
+        $response =$this->newsLetter->store($request->except('_token'));
+        if($response){
+            return $this->sendResponse([],trans('messages.success_msg',['action' => trans('lang.subscribed')]));
         }
-        return $this->sendResponse($data);
+        return $this->sendError(trans('messages.error_msg',['action' => trans('lang.subscribing')]));
+    }
+// Contact us form
+    public function saveContactForm(Request $request){
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required'
+        ]);
+
+        $response =$this->contactForm->store($request->except('_token'));
+        if($response){
+            return $this->sendResponse([],trans('messages.success_msg',['action' => trans('lang.save')]));
+        }
+        return $this->sendError(trans('messages.error_msg',['action' => trans('lang.saving')]));
     }
 
     
