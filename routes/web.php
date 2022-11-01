@@ -17,9 +17,7 @@ use Artisan;
 |
 */
 
-Route::get('/',function(){
-    return view('welcome');
-})->name('home');
+Route::get('/',SitePageController::)->name('home');
 
 // NewsLetter
 Route::get('/newsletter',[BaseController::class,'newsletterSubscription'])->name('newsletter.subscribe');
@@ -44,6 +42,8 @@ Route::prefix('developer')->group(function () {
     });
 });
 
+
+// Static Pages
 Route::prefix('pages')->group(function () {
     Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
 });
