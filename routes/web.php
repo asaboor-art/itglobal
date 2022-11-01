@@ -17,11 +17,14 @@ use Artisan;
 |
 */
 
-Route::get('/',SitePageController::)->name('home');
+Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
+Route::get('/pages/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
+
+
 
 // NewsLetter
-Route::get('/newsletter',[BaseController::class,'newsletterSubscription'])->name('newsletter.subscribe');
-Route::get('/contact-us',[BaseController::class,'saveContactForm'])->name('newsletter.subscribe');
+Route::post('/newsletter',[BaseController::class,'newsletterSubscription'])->name('newsletter.subscribe');
+Route::post('/contact-us',[BaseController::class,'saveContactForm'])->name('newsletter.subscribe');
 
 require __DIR__ . '/auth.php';
 
