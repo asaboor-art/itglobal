@@ -25,27 +25,41 @@
               <form class="get-a-quote-form" enctype="multipart/form-data">
                 <div class="quote-success"></div>
                 <div class="quote-error"></div>
-                <div class="flex-fields">
-                  <input type="text" name="first_name" placeholder="First Name" class="form-control first_name">
+                <div class="row flex-fields">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <input type="text" name="first_name" placeholder="First Name" class="form-control first_name">
                   <div class="error-first_name errors"></div>
-                  <input type="text" name="last_name" placeholder="Last Name" class="form-control last_name">
+                  </div>
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <input type="text" name="last_name" placeholder="Last Name" class="form-control last_name">
                   <div class="error-last_name errors"></div>
+                  </div>
                 </div>
-                <div class="flex-fields">
-                  <input type="email" name="email" placeholder="Email" class="form-control email">
+                <div class="row flex-fields">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <input type="email" name="email" placeholder="Email" class="form-control email">
                   <div class="error-email errors"></div>
-                  <input type="number" name="phone_no" placeholder="Phone Number" class="form-control phone_no">
+                  </div>
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <input type="number" name="phone_no" placeholder="Phone Number" class="form-control phone_no">
                   <div class="error-phone_no errors"></div>
+                  </div>
                 </div>
-                <div class="flex-fields">
-                  <input type="text" name="state" placeholder="State" class="form-control state">
+                <div class="row flex-fields">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <input type="text" name="state" placeholder="State" class="form-control state">
                   <div class="error-state errors"></div>
-                  <input type="number" name="postalcode" placeholder="Postal Code" class="form-control postalcode">
+                  </div>
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <input type="number" name="postalcode" placeholder="Postal Code" class="form-control postalcode">
                   <div class="error-postalcode errors"></div>
+                  </div>
                 </div>
-                <div class="flex-fields">
-                  <textarea cols="1" rows="1" name="message" placeholder="Project Details/Message" class="form-control message"></textarea>
+                <div class="row flex-fields">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <textarea cols="1" rows="1" name="message" placeholder="Project Details/Message" class="form-control message"></textarea>
                   <div class="error-message errors"></div>
+                  </div>
                 </div>
                   <div class="panel">
                     <div class="button_outer">

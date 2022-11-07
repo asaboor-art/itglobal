@@ -104,24 +104,24 @@ function ajaxPost(url,data,succssContainer,errorContainer) {
         },
         complete:function(){
             setLoader(false);
-            setTimeout(() => {
-                $(succssContainer).text('');
-                $(errorContainer).text('');
+            // setTimeout(() => {
+            //     $(succssContainer).text('');
+            //     $(errorContainer).text('');
 
-                $(succssContainer).html('');
-                $(errorContainer).html('');
+            //     $(succssContainer).html('');
+            //     $(errorContainer).html('');
 
-                $(succssContainer).removeClass('alert alert-success');
-                $(errorContainer).removeClass('alert alert-danger');
-                if($('.errors')){
+            //     $(succssContainer).removeClass('alert alert-success');
+            //     $(errorContainer).removeClass('alert alert-danger');
+            //     if($('.errors')){
                     
-                    $('.errors').removeClass('text-danger');
-                    $('.errors').html('');
+            //         $('.errors').removeClass('text-danger');
+            //         $('.errors').html('');
 
-                }
+            //     }
                 
                 
-            },config.timeout)
+            // },config.timeout)
             
         }
     })
