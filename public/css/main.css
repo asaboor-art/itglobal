@@ -18,7 +18,6 @@ input {outline: none;font-weight: 400 !important;font-size: 14px !important;}
 select {outline: none;font-weight: 400;font-size: 15px;color: #000;}
 a {outline: none;text-decoration: none;font-size: 20px !important;font-weight: 400;color: #716C6C;transition: 0.8s all ease-in-out;}
 a:hover, a:focus{text-decoration: none;}
-
 /*HOME PAGE CSS BEGIN*/
 /*HEADER SECTION CSS BEGIN*/
 header {padding: 10px 120px;position: absolute;top: 0;left: 0;width: 100%;z-index: 1;}
@@ -136,7 +135,6 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 .copy-right-sec p {font-weight: 400;color: #231F20;opacity: 20%;}
 /*COPY RIGHT SECTION CSS END*/
 /*HOME PAGE CSS END*/
-
 /*ABOUT US PAGE CSS BEGIN*/
 .about-banner-sec {height: 80vh;padding: 0 0 0;background-image: url("../images/about-banner-design.png");background-repeat: no-repeat;background-size: cover;background-position: center;display: flex;align-items: center;justify-content: center;width: 100%;overflow: hidden;}
 .about-banner-content h2:before {content: "";background-image: url("../images/bg-design.png");background-repeat: no-repeat;position: absolute;top: 0;left: 36%;width: 100%;height: 100%;z-index: -1;}
@@ -161,7 +159,6 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 .rev-stars i {color: #FCB001;font-size: 20px;}
 .review-sec .row {display: flex;align-items: center;}
 /*ABOUT US PAGE CSS END*/
-
 /*OUR SERVICES PAGE CSS BEGIN*/
 .residential-interior-sec {padding: 60px 120px;}
 .residential-interior-content {text-align: center;margin-bottom: 110px;}
@@ -178,7 +175,6 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 .interior-exterior-cb p {font-weight: 400;color: #231F20;font-family: 'Poppins', sans-serif;width: 72%;padding: 25px 0 10px;}
 .ex-cb {margin: 50px 0 0;}
 /*OUR SERVICES PAGE CSS END*/
-
 /*CONTACT US PAGE CSS BEGIN*/
 .inquires-sec {padding: 70px 120px;}
 .inquires-sec .row {display: flex;align-items: center;}
@@ -204,7 +200,6 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 .btn-primary:focus {box-shadow: none;}
 .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {box-shadow:  none;}
 /*CONTACT US PAGE CSS END*/
-
 /*GET A QUOTE PAGE CSS BEGIN*/
 .quote-sec {padding: 70px 120px;}
 .quote-form h2 {color: #231F20;text-align: center;margin-bottom: 40px;}
@@ -233,8 +228,17 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 .up-txt h6 {font-size: 15px;color: #231F20;font-weight: 400;font-family: 'Poppins', sans-serif;margin-right: 30px;}
 .form-btn2 {margin: 0 0 0;}
 .ext-txt {text-align: left;color: #231F20;font-weight: 400;font-family: 'Poppins', sans-serif;font-size: 14px;}
+.error-last_name.errors {display: block;}
 /*GET A QUOTE PAGE CSS END*/
-
+/*ERROR PAGE CSS BEGIN*/
+.page_404  img{ width:100%;}
+.four_zero_four_bg{background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);height: 400px;background-position: center;}
+.page_404 h1{font-size: 160px;}
+.four_zero_four_bg h3{font-size:80px;}
+.link_404{color: #fff!important;padding: 10px 20px;background: #36B5CA;margin: 20px 0;display: inline-block;border-radius: 8px;}
+.contant_box_404{ margin-top:-50px;}
+.page_404 {display: flex;align-items: center;justify-content: center;padding: 340px 0 120px;}
+/*ERROR PAGE CSS END*/
 /*RESPONSIVE CSS BEGIN*/
 @media only screen and (min-width: 320px) and (max-width: 529px) {
 header {padding: 10px 15px;}
@@ -617,5 +621,3 @@ header .navbar-nav {margin-left: 90px;}
 .about-banner-content h2:before {left: 32%;}
 }
 /*RESPONSIVE CSS END*/
-
-.error-last_name.errors {display: block;}
