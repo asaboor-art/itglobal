@@ -17,8 +17,16 @@ use Artisan;
 |
 */
 
+<<<<<<< Updated upstream
 Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
 Route::get('/pages/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
+
+
+=======
+Route::get('/',function(){
+    return view('cbc_web.index');
+})->name('home');
+>>>>>>> Stashed changes
 
 
 
