@@ -137,3 +137,8 @@ function setLoader(state){
 
 }
 
+// Image not found issue
+$('img').on('error',function(e){
+    e.preventDefault();
+    $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
+})

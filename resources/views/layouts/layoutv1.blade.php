@@ -35,6 +35,11 @@
     <script src="{{ asset(config('site_config.assets.js_scripts').'jquery.fancybox.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'owl.carousel.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'wow.min.js') }}"></script>
+    <script>
+      const blade_config = {
+        baseUrl: "{{ env('APP_URL') }}"
+      }
+    </script>
     <script src="{{ asset(config('site_config.assets.js').'custom/common.js') }}"></script>
     <!-- <script src="js/main.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
