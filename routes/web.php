@@ -20,7 +20,9 @@ use Artisan;
 Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
 Route::get('/pages/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
 
-
+Route::get('/error', function(){
+    return view('errors.404');
+});
 
 
 
