@@ -8,6 +8,7 @@ use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Database;
 use PDF;
+use Mail;
 
 class Helper
 {
@@ -117,8 +118,8 @@ class Helper
         }
 
         $path = public_path('uploads/' . $directory);
-        $public_path = 'uploads/' . $directory . '/' . time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension();
-        $file->move($path, time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension());
+        $public_path = 'uploads/' . $directory . '/' . time() . '.' . $file->getClientOriginalExtension();
+        $file->move($path, time() . '.' . $file->getClientOriginalExtension());
 
         return $public_path;
     }
@@ -172,5 +173,20 @@ class Helper
         $pdf->save(public_path('uploads/statements/deal_' . $data['Deal']->id . '.pdf'));
         $path = 'statements/deal_' . $data['Deal']->id . '.pdf';
         return $path;
+    }
+
+    // Mail
+    public static function sendMail($to,$MailObject,$from="support.cpcweb@gmail.com")
+    {   
+        $message = "";
+
+        try{
+            Mail::to($to)->send($MailObject);
+        }catch(\Exception $e){
+            $response = trans('messages.mail_error');
+        }
+        
+        return $message;
+
     }
 }

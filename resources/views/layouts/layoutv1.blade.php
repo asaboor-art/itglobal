@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Calgary Painting Crew - Index Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{ asset(config('site_config.assets.css').'app.css') }}" rel="stylesheet">
@@ -18,6 +19,7 @@
     @include('headers.headerv1')
     <!-- Header Ends -->
     <!-- Content Starts -->
+    @include('components.loader')
     @yield('content')
     <!-- Content Ends  -->
     <!-- FOOTER SECTION BEGIN -->
@@ -25,20 +27,21 @@
     <!-- FOOTER SECTION END -->
     @include('footers.footerv1')
     <!-- Latest compiled JavaScript -->
-    <script src="{{ asset(config('site_config.assets.plugins').'jquery.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js').'app.js') }}"></script>
-    <script src="{{ asset(config('site_config.assets.js').'main.js') }}"></script>
-    <script src="{{ asset(config('site_config.assets.js').'slick.min.js') }}"></script>
-    <script src="{{ asset(config('site_config.assets.js').'jquery.fancybox.min.js') }}"></script>
-    <script src="{{ asset(config('site_config.assets.js').'owl.carousel.min.js') }}"></script>
-    <script src="{{ asset(config('site_config.assets.js').'wow.min.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.plugins').'jquery/jquery.min.js') }}"></script>
+    
+    <script src="{{ asset(config('site_config.assets.js_scripts').'main.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.js_scripts').'slick.min.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.js_scripts').'jquery.fancybox.min.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.js_scripts').'owl.carousel.min.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.js_scripts').'wow.min.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.js').'custom/common.js') }}"></script>
     <!-- <script src="js/main.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
      <script src="js/wow.min.js"></script> -->
-    <script>
-      new WOW().init();
-    </script>
+    
+    @yield('scripts')
   </body>
 </html>

@@ -31,9 +31,9 @@
         <div class="row cb-flex">
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="residential-img-co">
-              <img src="images/pw1.png" alt="image" class="img-fluid">
+              <img src="{{ asset(config('site_config.assets.images').'pw1.png') }}" alt="image" class="img-fluid">
               <div class="res-des">
-                <img src="images/pw-design.png" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'pw-design.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>
@@ -53,9 +53,9 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img">
-              <img src="images/ct1.png" alt="image" class="img-fluid">
+              <img src="{{ asset(config('site_config.assets.images').'ct1.png') }}" alt="image" class="img-fluid">
               <div class="inner-img">
-                <img src="images/ct2.png" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'ct2.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>
@@ -63,9 +63,9 @@
         <div class="row cb-flex2">
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img2">
-              <img src="images/ct3.png" alt="image" class="img-fluid second-img">
+              <img src="{{ asset(config('site_config.assets.images').'ct3.png') }}" alt="image" class="img-fluid second-img">
               <div class="inner-img2">
-                <img src="images/ct4.png" alt="image" class="img-fluid one-img">
+                <img src="{{ asset(config('site_config.assets.images').'ct4.png') }}" alt="image" class="img-fluid one-img">
               </div>
             </div>
           </div>
@@ -85,9 +85,9 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img">
-              <img src="images/ct5.png" alt="image" class="img-fluid">
+              <img src="{{ asset(config('site_config.assets.images').'ct5.png') }}" alt="image" class="img-fluid">
               <div class="inner-img">
-                <img src="images/ct6.png" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'ct6.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>
@@ -102,9 +102,9 @@
         <div class="row cb-flex">
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="residential-img-co">
-              <img src="images/ec1.png" alt="image" class="img-fluid">
+              <img src="{{ asset(config('site_config.assets.images').'ec1.png') }}" alt="image" class="img-fluid">
               <div class="res-des">
-                <img src="images/ec-design.png" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'ec-design.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>
@@ -124,9 +124,9 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img">
-              <img src="images/ec2.png" alt="image" class="img-fluid">
+              <img src="{{ asset(config('site_config.assets.images').'ec2.png') }}" alt="image" class="img-fluid">
               <div class="inner-img">
-                <img src="images/ec3.png" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'ec3.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>
@@ -134,9 +134,9 @@
         <div class="row cb-flex2">
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img2">
-              <img src="images/ec4.png" alt="image" class="img-fluid second-img">
+              <img src="ec4.png" alt="image" class="img-fluid second-img">
               <div class="inner-img2">
-                <img src="images/ec5.png" alt="image" class="img-fluid one-img">
+                <img src="{{ asset(config('site_config.assets.images').'ec5.png') }}" alt="image" class="img-fluid one-img">
               </div>
             </div>
           </div>
@@ -156,9 +156,9 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img">
-              <img src="images/ec6.png" alt="image" class="img-fluid">
+              <img src="{{ asset(config('site_config.assets.images').'ec6.png') }}" alt="image" class="img-fluid">
               <div class="inner-img">
-                <img src="images/ec7.png" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'ec7.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>

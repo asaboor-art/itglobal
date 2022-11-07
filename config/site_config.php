@@ -6,11 +6,13 @@ return [
         'images' => 'images/',
         'css' => 'css/',
         'js' => 'js/',
+        'js_scripts' => 'js/scripts/',
         'plugins' => 'plugins/',
         'fonts' => 'fonts/',
         'layouts' => 'layouts.',
         'home_pages' => 'homes.',
         'pages' => 'pages.',
+        'logo'=>'images/logo.png',
 
     ],
     'menus' => [

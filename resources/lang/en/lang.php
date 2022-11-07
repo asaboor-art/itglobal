@@ -5,4 +5,5 @@ return [
     'services' => 'Services',
     'contact' => 'Contact Us',
     'get_a_quote' => 'Get a Quote',
+    'save' => 'Save'
 ];

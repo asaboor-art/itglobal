@@ -52,7 +52,7 @@ header .navbar-nav {margin-left: 140px;}
 .experience-img-text {position: absolute;bottom: 44px;right: 214px;z-index: 2;}
 .experience-design3 {position: absolute;bottom: -120px;right: 0;z-index: 1;}
 .experience-img-text h6 {font-size: 15px;font-weight: 500;color: #fff;text-align: center;} 
-.experience-img-text span {font-size: 55px;color: #fff;display: block;}
+.experience-img-text span {font-size: 60px;color: #fff;display: block;}
 .experience-content h2 {color: #231F20;}
 .experience-content span {display: block;}
 .experience-content small {font-size: 50px;font-weight: 700;color: #36B5CA;}
@@ -91,7 +91,7 @@ header .navbar-nav {margin-left: 140px;}
 .second-img {position: absolute;top: -160px;left: 0;z-index: -1;}
 /*INTERIOR & EXTERIOR SECTION CSS END*/
 /*WORK WITH US SECTION CSS BEGIN*/
-.work-with-us-sec {padding: 100px 120px;background-image: url("../images/work-bg.png");background-repeat: no-repeat;background-size: cover;background-position: center;}
+.work-with-us-sec {padding: 100px 120px;background-image: url("../images/work-bg.png");background-repeat: no-repeat;background-size: cover;background-position: center;overflow: hidden;}
 .col-setting .col-lg-3 {max-width: 20%;}
 .work-with-content h2:before {content: "";background-image: url("../images/white-design.png");background-repeat: no-repeat;width: 100%;height: 100%;position: absolute;top: -8px;left: 29%;z-index: -1;}
 .work-with-content h2 {margin: 0 auto;position: relative;color: #006E95;text-align: center;padding: 30px 0 66px;z-index: 1;font-size: 60px;}
@@ -138,7 +138,7 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 /*HOME PAGE CSS END*/
 
 /*ABOUT US PAGE CSS BEGIN*/
-.about-banner-sec {height: 80vh;padding: 0 0 0;background-image: url("../images/about-banner-design.png");background-repeat: no-repeat;background-size: cover;background-position: center;display: flex;align-items: center;justify-content: center;width: 100%;}
+.about-banner-sec {height: 80vh;padding: 0 0 0;background-image: url("../images/about-banner-design.png");background-repeat: no-repeat;background-size: cover;background-position: center;display: flex;align-items: center;justify-content: center;width: 100%;overflow: hidden;}
 .about-banner-content h2:before {content: "";background-image: url("../images/bg-design.png");background-repeat: no-repeat;position: absolute;top: 0;left: 36%;width: 100%;height: 100%;z-index: -1;}
 .about-banner-content h2 {text-align: center;position: relative;font-size: 70px;color: #fff;padding: 51px 0;z-index: 1;}
 .paint-sec {padding: 40px 120px 0;}
@@ -234,3 +234,386 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 .form-btn2 {margin: 0 0 0;}
 .ext-txt {text-align: left;color: #231F20;font-weight: 400;font-family: 'Poppins', sans-serif;font-size: 14px;}
 /*GET A QUOTE PAGE CSS END*/
+
+/*RESPONSIVE CSS BEGIN*/
+@media only screen and (min-width: 320px) and (max-width: 529px) {
+header {padding: 10px 15px;}
+.banner-sec {padding: 270px 15px 200px;background-position: center;}
+.banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
+.banner-content h2 {z-index: 0;font-size: 70px;padding: 5px 0;line-height: 70px;}
+.banner-content span {font-size: 70px;}
+header .navbar-nav {margin-left: 0;}
+header .navbar {padding: 0 0;}
+header .navbar-collapse {background-color: #EA4638;padding: 40px 20px;}
+header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px 0px 0 0;}
+.quote-btn {margin-top: 15px;}
+.experience-sec {padding: 100px 15px 60px;}
+.experience-design3 {bottom: -90px;right: -25px;width: 180px;}
+.experience-design {left: -70px;width: 180px;}
+.experience-img-text {bottom: -43px;right: 28px;}
+.experience-content h2 {font-size: 35px;padding-top: 100px;}
+.experience-content small {font-size: 35px;}
+.banner-content h4 {padding: 9px 0 0px;font-size: 28px;}
+.experience-content p {width: 100%;padding: 25px 0 10px;}
+.buttons-sec {padding: 0px 15px 0px;}
+.email-btn .btn-primary {margin-bottom: 15px;}
+.newsletter-btn .btn-primary {margin-bottom: 15px;}
+.interior-exterior-sec {padding: 11px 15px 30px;}
+.interior-exterior-content p {padding: 7px 0;width: 100%;}
+.inner-img {position: initial;top: 0;margin-top: 25px;}
+.interior-exterior-img {margin-top: 30px;}
+.interior-exterior-sec .row {padding: 60px 0 0;}
+.second-img {position: initial;top: 0;}
+.one-img {margin: 25px 0 0 auto;}
+.interior-exterior-content2 {margin-left: 0;margin-top: 70px;}
+.interior-exterior-content2 p {padding: 17px 0;width: 100%;}
+.work-with-us-sec {padding: 70px 15px;}
+.work-with-content h2 {padding: 30px 0 66px;font-size: 40px;}
+.work-with-content h2:before {top: -8px;left: 0;}
+.col-setting .col-lg-3 {max-width: 100%;}
+.col-setting {margin: 0 0px;}
+.commercial-sec {padding: 70px 15px;}
+.commercial-content h2 {font-size: 40px;}
+.commercial-content p {padding: 17px 0;width: 100%;}
+.com-left {top: -1px;left: -40px;width: 180px;}
+.com-right {bottom: -70px;right: 0;width: 180px;}
+.instagram-feed-sec {padding: 60px 15px;}
+.instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
+.feed-imgs {margin-bottom: 25px;}
+footer {padding: 70px 15px 3px;}
+.footer-content p {width: 100%;}
+.footer-content li {display: block;padding: 17px 0 26px 0;}
+.address-box li {padding: 0 0 12px 0;display: block;}
+.copy-right-sec p {line-height: 27px;}
+.experience-img-text span {font-size: 28px;}
+.experience-img-text h6 {font-size: 12px;}
+.about-banner-content h2:before {left: 0%;}
+.about-banner-content h2 {z-index: 0;}
+.paint-sec {padding: 40px 15px 0;}
+.red-bg {bottom: 0;right: -20px;width: 180px;}
+.blue-bg {top: 0;left: -30px;width: 180px;}
+.paint-content h2 {font-size: 35px;}
+.paint-content small {font-size: 35px;}
+.paint-content p {width: 100%;padding: 17px 0;}
+.roller-text p {width: 100%;padding: 17px 0;}
+.review-sec {padding: 60px 15px;}
+.g-rev-img {margin-bottom: 50px;}
+.about-banner-content h2 {font-size: 45px;}
+.residential-interior-sec {padding: 60px 15px;}
+.residential-interior-content h2 {font-size: 35px;}
+.cabinet-heading h2 {font-size: 35px;}
+.cabinet-heading {margin-top: 40px;}
+.cabinet-heading p {width: 100%;padding: 15px 0 10px;}
+.cb-flex2 {padding: 40px 0 0px;}
+.interior-exterior-cb h2 {font-size: 35px;}
+.interior-exterior-cb p {width: 100%;padding: 25px 0 10px;}
+.cb-flex {margin-top: 85px;}
+.interior-exterior-cb {margin-top: 40px;}
+.inquires-sec {padding: 70px 15px;}
+.inquiry-content h2 {font-size: 35px;}
+.roller-man-sec {padding: 0px 15px 50px;}
+.roller-man-content h2 {font-size: 35px;}
+.quote-sec {padding: 70px 15px;}
+.quote-form h2 {font-size: 35px;}
+.flex-fields {display: block;}
+.upload-flex {display: block;}
+.up-txt h6 {margin-right: 0;margin-bottom: 25px;}
+.ext-txt {line-height: 22px;margin-top: 20px;}
+}
+@media only screen and (min-width: 530px) and (max-width: 767px) {
+header {padding: 10px 15px;}
+.banner-sec {padding: 270px 15px 200px;background-position: center;}
+.banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
+.banner-content h2 {z-index: 0;font-size: 70px;padding: 5px 0;line-height: 70px;}
+.banner-content span {font-size: 70px;}
+header .navbar-nav {margin-left: 0;}
+header .navbar {padding: 0 0;}
+header .navbar-collapse {background-color: #EA4638;padding: 40px 20px;}
+header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px 0px 0 0;}
+.quote-btn {margin-top: 35px;}
+.experience-sec {padding: 0px 15px 60px;}
+.experience-design3 {bottom: -90px;right: -25px;width: 180px;}
+.experience-design {left: -70px;width: 180px;}
+.experience-img-text {bottom: -43px;right: 28px;}
+.experience-content h2 {font-size: 35px;padding-top: 100px;}
+.experience-content small {font-size: 35px;}
+.banner-content h4 {padding: 9px 0 0px;font-size: 28px;}
+.experience-content p {width: 100%;padding: 25px 0 10px;}
+.buttons-sec {padding: 0px 15px 0px;}
+.email-btn .btn-primary {margin-bottom: 15px;}
+.newsletter-btn .btn-primary {margin-bottom: 15px;}
+.interior-exterior-sec {padding: 11px 15px 30px;}
+.interior-exterior-content p {padding: 7px 0;width: 100%;}
+.inner-img {position: initial;top: 0;margin-top: 25px;}
+.interior-exterior-img {margin-top: 30px;}
+.interior-exterior-sec .row {padding: 60px 0 0;}
+.second-img {position: initial;top: 0;}
+.one-img {margin: 25px 0 0 auto;}
+.interior-exterior-content2 {margin-left: 0;margin-top: 70px;}
+.interior-exterior-content2 p {padding: 17px 0;width: 100%;}
+.work-with-us-sec {padding: 70px 15px;overflow: hidden;}
+.work-with-content h2 {padding: 30px 0 66px;font-size: 40px;}
+.work-with-content h2:before {top: -18px;left: 70px;}
+.col-setting .col-lg-3 {max-width: 100%;}
+.col-setting {margin: 0 0px;}
+.commercial-sec {padding: 70px 15px;}
+.commercial-content h2 {font-size: 40px;}
+.commercial-content p {padding: 17px 0;width: 100%;}
+.com-left {top: -1px;left: -40px;width: 180px;}
+.com-right {bottom: -70px;right: 0;width: 180px;}
+.instagram-feed-sec {padding: 60px 15px;}
+.instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
+.feed-imgs {margin-bottom: 25px;}
+footer {padding: 70px 15px 3px;}
+.footer-content p {width: 70%;}
+.footer-content li {padding: 17px 30px 26px;}
+.address-box li {padding: 0 15px 25px;}
+.copy-right-sec p {line-height: 27px;}
+.quote-btn .btn-primary {display: inline;}
+.experience-img-text span {font-size: 28px;}
+.experience-img-text h6 {font-size: 12px;}
+.about-banner-content h2:before {left: 0%;}
+.about-banner-content h2 {z-index: 0;}
+.paint-sec {padding: 40px 15px 0;}
+.red-bg {bottom: 0;right: -20px;width: 180px;}
+.blue-bg {top: 0;left: -30px;width: 180px;}
+.paint-content h2 {font-size: 35px;}
+.paint-content small {font-size: 35px;}
+.paint-content p {width: 100%;padding: 17px 0;}
+.roller-text p {width: 100%;padding: 17px 0;}
+.review-sec {padding: 60px 15px;}
+.g-rev-img {margin-bottom: 50px;}
+.about-banner-content h2 {font-size: 45px;}
+.residential-interior-sec {padding: 60px 15px;}
+.residential-interior-content h2 {font-size: 35px;}
+.cabinet-heading h2 {font-size: 35px;}
+.cabinet-heading {margin-top: 40px;}
+.cabinet-heading p {width: 100%;padding: 15px 0 10px;}
+.cb-flex2 {padding: 40px 0 0px;}
+.interior-exterior-cb h2 {font-size: 35px;}
+.interior-exterior-cb p {width: 100%;padding: 25px 0 10px;}
+.cb-flex {margin-top: 85px;}
+.interior-exterior-cb {margin-top: 40px;}
+.inquires-sec {padding: 70px 15px;}
+.inquiry-content h2 {font-size: 35px;}
+.roller-man-sec {padding: 0px 15px 50px;}
+.roller-man-content h2 {font-size: 35px;}
+.quote-sec {padding: 70px 15px;}
+.quote-form h2 {font-size: 35px;}
+.flex-fields {display: block;}
+.upload-flex {display: block;}
+.up-txt h6 {margin-right: 0;margin-bottom: 25px;}
+.ext-txt {line-height: 22px;margin-top: 20px;}
+}
+@media only screen and (min-width:768px) and (max-width: 991px) {
+header {padding: 10px 15px;}
+.banner-sec {padding: 270px 15px 200px;background-position: center;}
+.banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
+.banner-content h2 {z-index: 0;font-size: 70px;padding: 5px 0;line-height: 70px;}
+.banner-content span {font-size: 70px;}
+header .navbar-nav {margin-left: 0;}
+header .navbar {padding: 0 0;}
+header .navbar-collapse {background-color: #EA4638;padding: 40px 20px;}
+header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px 0px 0 0;}
+.quote-btn {margin-top: 35px;}
+.experience-sec {padding: 0px 15px 60px;}
+.experience-design3 {bottom: -90px;right: -25px;width: 180px;}
+.experience-design {left: -70px;width: 180px;}
+.experience-img-text {bottom: -43px;right: 28px;}
+.experience-content h2 {font-size: 35px;padding-top: 100px;}
+.experience-content small {font-size: 35px;}
+.banner-content h4 {padding: 9px 0 0px;font-size: 28px;}
+.experience-content p {width: 100%;padding: 25px 0 10px;}
+.buttons-sec {padding: 0px 15px 0px;}
+.email-btn .btn-primary {margin-bottom: 15px;}
+.newsletter-btn .btn-primary {margin-bottom: 15px;}
+.interior-exterior-sec {padding: 11px 15px 30px;}
+.interior-exterior-content p {padding: 7px 0;width: 100%;}
+.inner-img {position: initial;top: 0;margin-top: 25px;}
+.interior-exterior-img {margin-top: 30px;}
+.interior-exterior-sec .row {padding: 60px 0 0;}
+.second-img {position: initial;top: 0;}
+.one-img {margin: 25px 0 0 auto;}
+.interior-exterior-content2 {margin-left: 0;margin-top: 70px;}
+.interior-exterior-content2 p {padding: 17px 0;width: 100%;}
+.work-with-us-sec {padding: 70px 15px;overflow: hidden;}
+.work-with-content h2 {padding: 30px 0 66px;font-size: 40px;}
+.work-with-content h2:before {top: -18px;left: 70px;}
+.col-setting .col-lg-3 {max-width: 100%;}
+.col-setting {margin: 0 0px;}
+.commercial-sec {padding: 70px 15px;}
+.commercial-content h2 {font-size: 40px;}
+.commercial-content p {padding: 17px 0;width: 100%;}
+.com-left {top: -1px;left: -40px;width: 180px;}
+.com-right {bottom: -70px;right: 0;width: 180px;}
+.instagram-feed-sec {padding: 60px 15px;}
+.instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
+.feed-imgs {margin-bottom: 25px;}
+footer {padding: 70px 15px 3px;}
+.footer-content p {width: 70%;}
+.footer-content li {padding: 17px 30px 26px;}
+.address-box li {padding: 0 15px 25px;}
+.copy-right-sec p {line-height: 27px;}
+.quote-btn .btn-primary {display: inline;}
+.experience-img-text span {font-size: 28px;}
+.experience-img-text h6 {font-size: 12px;}
+.about-banner-content h2:before {left: 10%;}
+.about-banner-content h2 {z-index: 0;}
+.paint-sec {padding: 40px 15px 0;}
+.red-bg {bottom: 0;right: -20px;width: 180px;}
+.blue-bg {top: 0;left: -30px;width: 180px;}
+.paint-content h2 {font-size: 35px;}
+.paint-content small {font-size: 35px;}
+.paint-content p {width: 100%;padding: 17px 0;}
+.roller-text p {width: 100%;padding: 17px 0;}
+.review-sec {padding: 60px 15px;}
+.g-rev-img {margin-bottom: 50px;}
+.about-banner-content h2 {font-size: 45px;}
+.about-banner-sec {height: 65vh;overflow: hidden;}
+.residential-interior-sec {padding: 60px 15px;}
+.residential-interior-content h2 {font-size: 35px;}
+.cabinet-heading h2 {font-size: 35px;}
+.cabinet-heading {margin-top: 40px;}
+.cabinet-heading p {width: 100%;padding: 15px 0 10px;}
+.cb-flex2 {padding: 40px 0 0px;}
+.interior-exterior-cb h2 {font-size: 35px;}
+.interior-exterior-cb p {width: 100%;padding: 25px 0 10px;}
+.cb-flex {margin-top: 85px;}
+.interior-exterior-cb {margin-top: 40px;}
+.inquires-sec {padding: 70px 15px;}
+.inquiry-content h2 {font-size: 35px;}
+.roller-man-sec {padding: 0px 15px 50px;}
+.roller-man-content h2 {font-size: 35px;}
+.quote-sec {padding: 70px 15px;}
+.quote-form h2 {font-size: 35px;}
+.flex-fields {display: block;}
+.upload-flex {display: block;}
+.up-txt h6 {margin-right: 0;margin-bottom: 25px;}
+.ext-txt {line-height: 22px;margin-top: 20px;}
+}
+@media only screen and (min-width:992px) and (max-width: 1199px) {
+header {padding: 10px 15px;}
+.banner-sec {padding: 270px 15px 200px;background-position: center;}
+.banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
+.banner-content h2 {z-index: 0;font-size: 70px;padding: 55px 0;line-height: 70px;}
+.banner-content span {font-size: 70px;}
+header .navbar-nav {margin-left: 78px;}
+header .navbar {padding: 0 0;}
+.experience-sec {padding: 60px 75px 140px;}
+.experience-design3 {bottom: -90px;right: -85px;width: 180px;}
+.experience-design {left: -70px;width: 180px;}
+.experience-img-text {bottom: -43px;right: -32px;}
+.experience-content h2 {font-size: 35px;padding-top: 100px;}
+.experience-content small {font-size: 35px;}
+.banner-content h4 {padding: 9px 0 0px;font-size: 28px;}
+.experience-content p {width: 100%;padding: 25px 0 10px;}
+.buttons-sec {padding: 0px 15px 0px;}
+.email-btn .btn-primary {margin-bottom: 15px;}
+.newsletter-btn .btn-primary {margin-bottom: 15px;}
+.interior-exterior-sec {padding: 11px 15px 30px;}
+.interior-exterior-content p {padding: 7px 0;width: 100%;}
+.inner-img {position: initial;top: 0;margin-top: 25px;}
+.interior-exterior-img {margin-top: 30px;}
+.interior-exterior-sec .row {padding: 60px 0 0;}
+.second-img {position: initial;top: 0;}
+.one-img {margin: 25px 0 0 auto;}
+.interior-exterior-content2 {margin-left: 0;margin-top: 70px;}
+.interior-exterior-content2 p {padding: 17px 0;width: 100%;}
+.work-with-us-sec {padding: 70px 15px;overflow: hidden;}
+.work-with-content h2 {padding: 30px 0 66px;font-size: 40px;}
+.work-with-content h2:before {top: -18px;left: 220px;}
+.col-setting .col-lg-3 {max-width: 100%;}
+.col-setting {margin: 0 0px;}
+.commercial-sec {padding: 70px 15px;}
+.commercial-content h2 {font-size: 40px;}
+.commercial-content p {padding: 17px 0;width: 100%;}
+.com-left {top: -1px;left: -40px;width: 180px;}
+.com-right {bottom: -70px;right: 0;width: 180px;}
+.instagram-feed-sec {padding: 60px 15px;}
+.instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
+.feed-imgs {margin-bottom: 25px;}
+footer {padding: 70px 15px 3px;}
+.footer-content p {width: 70%;}
+.footer-content li {padding: 17px 30px 26px;}
+.address-box li {padding: 0 15px 25px;}
+.copy-right-sec p {line-height: 27px;}
+.quote-btn .btn-primary {display: inline;}
+.experience-img-text span {font-size: 28px;}
+.experience-img-text h6 {font-size: 12px;}
+.about-banner-content h2:before {left: 21%;}
+.about-banner-content h2 {z-index: 0;}
+.paint-sec {padding: 40px 15px 0;}
+.red-bg {bottom: 0;right: -20px;width: 180px;}
+.blue-bg {top: 0;left: -30px;width: 180px;}
+.paint-content h2 {font-size: 35px;}
+.paint-content small {font-size: 35px;}
+.paint-content p {width: 100%;padding: 17px 0;}
+.roller-text p {width: 100%;padding: 17px 0;}
+.review-sec {padding: 60px 15px;}
+.g-rev-img {margin-bottom: 50px;}
+.about-banner-content h2 {font-size: 45px;}
+.about-banner-sec {height: 65vh;overflow: hidden;}
+.residential-interior-content h2 {font-size: 35px;}
+.cabinet-heading h2 {font-size: 35px;}
+.cabinet-heading {margin-top: 40px;}
+.cabinet-heading p {width: 100%;padding: 15px 0 10px;}
+.cb-flex2 {padding: 40px 0 0px;}
+.interior-exterior-cb h2 {font-size: 35px;}
+.interior-exterior-cb p {width: 100%;padding: 25px 0 10px;}
+.cb-flex {margin-top: 85px;}
+.interior-exterior-cb {margin-top: 40px;}
+.inquires-sec {padding: 70px 15px;}
+.inquiry-content h2 {font-size: 35px;}
+.roller-man-sec {padding: 0px 15px 50px;}
+.roller-man-content h2 {font-size: 35px;}
+.quote-sec {padding: 70px 15px;}
+.quote-form h2 {font-size: 35px;}
+.flex-fields {display: block;}
+.upload-flex {display: block;}
+.up-txt h6 {margin-right: 0;margin-bottom: 25px;}
+.ext-txt {line-height: 22px;margin-top: 20px;}
+}
+@media only screen and (min-width:1260px) and (max-width: 1365px) {
+header .navbar-nav {margin-left: 90px;}
+.banner-sec {background-position: bottom;}
+.experience-design3 {bottom: -120px;right: -120px;}
+.experience-img-text {right: 93px;}
+.inner-img {right: -100px;}
+.second-img {left: -100px;}
+.work-with-content h2:before {left: 15%;}
+.circle-text h5 {font-size: 20px;}
+.com-right {right: -50px;}
+.about-banner-content h2:before {left: 29%;}
+.paint-content p {width: 100%;}
+.roller-text p {width: 100%;}
+}
+@media only screen and (min-width:1366px) and (max-width: 1439px) {
+header .navbar-nav {margin-left: 90px;}
+.banner-sec {background-position: bottom;}
+.experience-design3 {bottom: -120px;right: -120px;}
+.experience-img-text {right: 93px;}
+.inner-img {right: -100px;}
+.second-img {left: -100px;}
+.work-with-content h2:before {left: 17%;}
+.circle-text h5 {font-size: 20px;}
+.com-right {right: -50px;}
+.about-banner-content h2:before {left: 31%;}
+.paint-content p {width: 100%;}
+.roller-text p {width: 100%;}
+}
+@media only screen and (min-width: 1440px) and (max-width: 1599px){
+.banner-sec {background-position: bottom;}
+.experience-design3 {bottom: -120px;right: -120px;}
+.experience-img-text {bottom: 44px;right: 88px;}
+.work-with-content h2:before {left: 20%;}
+.com-right {bottom: -110px;right: 40px;}
+.about-banner-content h2:before {left: 32%;}
+}
+@media only screen and (min-width: 1600px) and (max-width: 1850px) {
+.experience-design3 {bottom: -120px;right: -120px;}
+.experience-img-text {bottom: 44px;right: 88px;}
+.work-with-content h2:before {left: 23%;}
+.com-right {bottom: -110px;right: 40px;}
+.about-banner-content h2:before {left: 32%;}
+}
+/*RESPONSIVE CSS END*/
