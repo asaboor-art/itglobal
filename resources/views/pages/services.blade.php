@@ -134,7 +134,7 @@
         <div class="row cb-flex2">
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="interior-exterior-img2">
-              <img src="ec4.png" alt="image" class="img-fluid second-img">
+              <img src="{{ asset(config('site_config.assets.images').'ec4.png') }}" alt="image" class="img-fluid second-img">
               <div class="inner-img2">
                 <img src="{{ asset(config('site_config.assets.images').'ec5.png') }}" alt="image" class="img-fluid one-img">
               </div>
