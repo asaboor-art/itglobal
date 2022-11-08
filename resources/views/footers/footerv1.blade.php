@@ -6,10 +6,10 @@
               <a href="index.html"><img src="{{ asset(config('site_config.assets.logo')) }}" alt="image" class="img-fluid"></a>
               <p>Small and medium-sized assignments that other contractors aren't interested in are our area of expertise.</p>
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="our-services.html">Services</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="{{ route('home')}}">Home</a></li>
+                <li><a href="{{ route('site-pages','about-us') }}">About Us</a></li>
+                <li><a href="{{ route('site-pages','services') }}">Services</a></li>
+                <li><a href="{{ route('site-pages','contact-us') }}">Contact Us</a></li>
               </ul>
             </div>
             <div class="address-box">
