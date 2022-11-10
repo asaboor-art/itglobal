@@ -29,7 +29,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="{{ asset(config('site_config.assets.js').'app.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.plugins').'jquery/jquery.min.js') }}"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'main.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'slick.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'jquery.fancybox.min.js') }}"></script>

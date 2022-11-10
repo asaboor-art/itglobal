@@ -23,7 +23,7 @@
               <h2><span>Residential</span> Interior</h2>
               <p>We specialise in excellent wall preparation and exquisite colour selection while painting the interior of Calgary residences.</p>
               <div class="banner-btn">
-              <a href="javascriptvoid:(0)" class="btn btn-primary">Get A Free Quote</a>
+              <a href="{{ route('site-pages','get-a-quote')}}" class="btn btn-primary">Get A Free Quote</a>
               </div>
             </div>
           </div>

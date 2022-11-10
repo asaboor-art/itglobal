@@ -15,7 +15,7 @@
                 <img src="{{ asset(config('site_config.assets.images').'bl-bg.png') }}" alt="image" class="img-fluid">
               </div>
               <div class="red-bg">
-                <img src="{{ asset(config('site_config.assets.images').'com2.png') }}" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'c2.jpg') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>

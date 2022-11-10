@@ -16,8 +16,7 @@
 
 
 -- Dumping database structure for itcglobal
-DROP DATABASE IF EXISTS `itcglobal`;
-CREATE DATABASE IF NOT EXISTS `itcglobal` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
 USE `itcglobal`;
 
 -- Dumping structure for table itcglobal.contact_forms
