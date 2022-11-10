@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="about-banner-content">
-              <h2>Conatact Us</h2>
+              <h2>Contact Us</h2>
             </div>
           </div>
         </div>
