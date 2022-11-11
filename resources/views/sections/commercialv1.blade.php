@@ -11,10 +11,10 @@
             <div class="commercial-img wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.8s">
               <img src="{{ asset(config('site_config.assets.images').'com-img.png') }}" alt="image" class="img-fluid"> 
               <div class="com-left">
-                <img src="{{ asset(config('site_config.assets.images').'c1.jpg') }}" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'c1.png') }}" alt="image" class="img-fluid">
               </div>
               <div class="com-right">
-                <img src="{{ asset(config('site_config.assets.images').'c2.jpg') }}" alt="image" class="img-fluid">
+                <img src="{{ asset(config('site_config.assets.images').'c2.png') }}" alt="image" class="img-fluid">
               </div>
             </div>
           </div>
