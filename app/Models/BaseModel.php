@@ -133,7 +133,7 @@ class BaseModel extends Model
     public function store($data)
     {
         $data['created_at'] = Carbon::now();
-        return static::create($data)->id;
+        return static::create($data);
     }
 
     public function updateByColumn($data, $column = 'id', $value)

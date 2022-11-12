@@ -11,6 +11,7 @@ use App\Models\ContactForm;
 use App\Models\Newsletter;
 use App\Helpers\Helper;
 use App\Traits\Validation;
+use App\Mail\Contactus;
 use Pusher\Pusher;
 use DB;
 
@@ -73,12 +74,19 @@ class BaseController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email',
+            'subject' =>'required',
             'message' => 'required'
         ]);
 
-        $response =$this->contactForm->store($request->except('_token'));
+        $response = $this->contactForm->store($request->except('_token'));
         if($response){
-            return $this->sendResponse([],trans('messages.success_msg',['action' => trans('lang.save')]));
+            $message = Helper::sendMail(env('MAIL_FROM_ADDRESS'),new Contactus($response));
+            if($message ==""){
+                return $this->sendResponse([],'Your response has been '.trans('messages.success_msg',['action' => trans('lang.save')]));
+            }else{
+                return $this->sendResponse([],$message);
+            }
+            
         }
         return $this->sendError(trans('messages.error_msg',['action' => trans('lang.saving')]));
     }

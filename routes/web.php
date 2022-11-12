@@ -17,12 +17,21 @@ use Artisan;
 |
 */
 
-Route::get('/',SitePageController::)->name('home');
+Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
+Route::get('/pages/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
+
+Route::get('/error', function(){
+    return view('errors.404');
+});
+
+
 
 // NewsLetter
-Route::get('/newsletter',[BaseController::class,'newsletterSubscription'])->name('newsletter.subscribe');
-Route::get('/contact-us',[BaseController::class,'saveContactForm'])->name('newsletter.subscribe');
+Route::post('/newsletter',[BaseController::class,'newsletterSubscription'])->name('newsletter.subscribe');
+Route::post('/contact-us',[BaseController::class,'saveContactForm'])->name('contact-us');
+// Custom Form Posting
 
+Route::post('/custom-form/get-a-quote',[SitePageController::class,'storeCustomForm'])->name('custom-form-posting');
 require __DIR__ . '/auth.php';
 
 Route::prefix('admin')->middleware(['auth:sanctum'])->group(function () {
