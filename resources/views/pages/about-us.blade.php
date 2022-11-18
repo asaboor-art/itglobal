@@ -23,7 +23,7 @@
             <div class="paint-content">
               <h2><small>About</small> Calgary Painting <span>Crew</span></h2>
               <p>Small and medium-sized assignments that other contractors aren't interested in are our area of expertise. We are renowned for providing excellent work at a competitive price—Guaranteed. Every task we complete is supported by us.</p>
-              <p>Before being allowed to join Calgary Painting Crew, our craftsmen must successfully complete a thorough background investigation and skill evaluation. Our staff consists of career artisans with expertise in a variety of trades, including carpentry, remodelling, and plumbing, among others.</p>
+              <p>Before being allowed to join Calgary Painting Crew, our craftsmen must successfully complete a thorough background investigation and skill evaluation.</p>
             </div>
           </div>
         </div>

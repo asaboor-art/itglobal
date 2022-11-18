@@ -27,11 +27,11 @@
                 <div class="quote-error"></div>
                 <div class="row flex-fields">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <input type="text" name="first_name" placeholder="First Name" class="form-control first_name">
+                    <input type="text" name="first_name" placeholder="Name" class="form-control first_name">
                   <div class="error-first_name errors"></div>
                   </div>
                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <input type="text" name="last_name" placeholder="Last Name" class="form-control last_name">
+                    <input type="text" name="last_name" placeholder="Address" class="form-control last_name">
                   <div class="error-last_name errors"></div>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
                   <div class="error-phone_no errors"></div>
                   </div>
                 </div>
-                <div class="row flex-fields">
+                <!-- <div class="row flex-fields">
                   <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                     <input type="text" name="state" placeholder="State" class="form-control state">
                   <div class="error-state errors"></div>
@@ -54,7 +54,7 @@
                     <input type="number" name="postalcode" placeholder="Postal Code" class="form-control postalcode">
                   <div class="error-postalcode errors"></div>
                   </div>
-                </div>
+                </div> -->
                 <div class="row flex-fields">
                   <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <textarea cols="1" rows="1" name="message" placeholder="Project Details/Message" class="form-control message"></textarea>

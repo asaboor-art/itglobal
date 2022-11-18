@@ -31,7 +31,7 @@ header .navbar-nav {margin-left: 140px;}
 .quote-btn .btn-primary:not(:disabled):not(.disabled):active {color: #fff;background-color: #36B5CA;border-color: #36B5CA;box-shadow: none;}
 /*HEADER SECTION CSS END*/
 /*BANNER SECTION CSS BEGIN*/
-.banner-sec {position: relative;padding: 340px 120px 270px;background-image: url("../images/banner.png");background-repeat: no-repeat;background-size: cover;}
+.banner-sec {position: relative;padding: 320px 120px 183px;background-image: url("../images/cpc-banner.jpg");background-repeat: no-repeat;background-size: cover;}
 .banner-content h1 {color: #231F20;}
 .banner-content h2 {font-size: 100px;color: #231F20;position: relative;z-index: 6;padding: 25px 0;}
 .banner-content h2:before {content: "";background-image: url("../images/bg-design.png");background-repeat: no-repeat;position: absolute;top: 0;left: -50px;width: 100%;height: 100%;z-index: -1;}
@@ -621,3 +621,4 @@ header .navbar-nav {margin-left: 90px;}
 .about-banner-content h2:before {left: 32%;}
 }
 /*RESPONSIVE CSS END*/
+.banner-overlay {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #ffffff69;z-index: 0;}
