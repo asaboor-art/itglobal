@@ -36,7 +36,6 @@ class SitePageController extends BaseController
         
         $request->validate([
             'first_name' => 'required',
-            'last_name' =>'required',
             'email' =>'required|email',
             'phone_no' =>'required|integer',
             'state' =>'required',

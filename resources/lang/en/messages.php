@@ -7,4 +7,5 @@ return [
     
     'error_msg' => 'Error while :action',
     'mail_error' => 'Enable to send email, sorry for the inconvience',
+    'newsletter' => 'Sign Up To Our Newsletter'
 ];
