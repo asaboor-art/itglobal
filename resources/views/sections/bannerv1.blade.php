@@ -9,10 +9,10 @@
                 <img src="{{ asset(config('site_config.assets.images').'banner-logo.png') }}" alt="image" class="img-fluid">
               </h1>
               <!-- <h2 class="wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.8s"><span>Painting</span> Crew</h2> -->
-              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Interior & Exterior</h4>
-              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">Residential & Commercial</h4>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">{{ trans('lang.intererior-exterior') }}</h4>
+              <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">{{ trans('lang.residential-commericals') }}</h4>
               <div class="banner-btn wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="1.2s">
-                <a href="{{ route('site-pages','get-a-quote')}}" class="btn btn-primary">Get A Free Quote</a>
+                <a href="{{ route('site-pages','get-a-quote')}}" class="btn btn-primary">{{ trans('lang.get_a_free_quote') }}</a>
               </div>
             </div>
           </div>

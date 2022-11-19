@@ -21,17 +21,18 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="paint-content">
-              <h2><small>About</small> Calgary Painting <span>Crew</span></h2>
-              <p>Small and medium-sized assignments that other contractors aren't interested in are our area of expertise. We are renowned for providing excellent work at a competitive price—Guaranteed. Every task we complete is supported by us.</p>
-              <p>Before being allowed to join Calgary Painting Crew, our craftsmen must successfully complete a thorough background investigation and skill evaluation.</p>
+              <h2><small>{{ trans('lang.about') }}</small>{{ config('site_config.contacts.name') }} <span>{{ trans('lang.crew') }}</span></h2>
+              <p>{{ trans('content.about1')}}</p>
+              <p>{{ trans('content.about2')}}</p>
             </div>
           </div>
         </div>
         <div class="row roller-row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="roller-text">
-              <p>Simply put, our handymen are among the best in their industry. Our artisans' skill sets are as diverse as the work they do. When doing their duties, they are well-trained to offer excellent customer service and pay attention to the demands of the client.</p>
-              <p>We offer the best services available. You can trust in the calibre of Calgary Painting Crew's craftsmanship and customer service because we guarantee our work.</p>
+              <p>{{ trans('content.about3')}}</p>
+              <p>{{ trans('content.about4')}}</p>
+              
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-12">

@@ -11,7 +11,7 @@
 
     <!-- BUTTONS SECTION BEGIN -->
     @include('sections.newsletterv1')
-    <!-- BUTTONS SECTION END -->
+    <!-- BUTTONS SECTION END --> 
 
     <!-- INTERIOR & EXTERIOR SECTION BEGIN -->
     @include('sections.interior-ext')
