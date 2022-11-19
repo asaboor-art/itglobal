@@ -1,5 +1,5 @@
 <!-- BUTTONS SECTION BEGIN -->
-<section class="buttons-sec">
+<!-- <section class="buttons-sec">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-4 col-12">
@@ -19,5 +19,5 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- BUTTONS SECTION END -->
