@@ -11,13 +11,21 @@ return [
                 'submenu' => [],
             ],
             [
-                'name' => 'categories',
-                'route' => 'categories.index',
-                'icon' => 'nav-icon fas fa-clipboard',
+                'name' => 'pages',
+                'route' => 'pages.index',
+                'icon' => 'nav-icon fa fa-file',
                 'has_submenu' => false,
                 'submenu_icon' => '',
                 'submenu' => [],
             ],
+            // [
+            //     'name' => 'categories',
+            //     'route' => 'categories.index',
+            //     'icon' => 'nav-icon fas fa-clipboard',
+            //     'has_submenu' => false,
+            //     'submenu_icon' => '',
+            //     'submenu' => [],
+            // ],
            
             // [
             //     'name' => 'general-setting',

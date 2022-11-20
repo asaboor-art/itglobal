@@ -241,7 +241,7 @@ ul {
 .ck-file-dialog-button {
     display: none !important;
 }
-
+.form-check-input{margin-left: 0 !important;margin-right: 0 !important;}
 .ck-dropdown__button {
     display: none !important;
 }

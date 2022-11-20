@@ -15,6 +15,10 @@ return [
         'logo'=>'images/logo.png',
 
     ],
+    'constants' => [
+        'experience' => '10',
+        'warranty' => '2',
+    ],
     'menus' => [
         'pages' => [
             [
@@ -41,6 +45,18 @@ return [
         ],
 
     ],
+    'contacts' => [
+        'phone' => "(403)376-3322",
+        'email' => "info@gmail.com",
+        'copyright' => "© 2022 Calgary Painting Crew. All rights reserved.",
+        'name' => "Calgary Painting",
+        'address'   => "328 40 Ave NE Calgary,AB T2E 2M7",
+        'developer' => 'K13.ca',
+        'facebook' => 'javascript:void(0);',
+        'tiktok' => 'javascript:void(0);',
+        'instragram' => 'https://www.instagram.com/calgarypaintingcrew/?igshid=ZmVmZTY5ZGE%3D',
+
+    ]
 
 
 ];

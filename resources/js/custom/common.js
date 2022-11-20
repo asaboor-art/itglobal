@@ -23,6 +23,7 @@ function showPassword(event) {
 }
 
 $('.newsletter-form').on('submit', (e) => {
+    e.preventDefault();
     ajaxPost(
         '/newsletter',
         {
@@ -52,7 +53,7 @@ $('.get-a-quote-form').on('submit', (e) => {
     var form = new FormData();
     console.log(form)
     form.append('first_name', $('.first_name').val());
-    form.append('last_name', $('.last_name').val());
+    // form.append('last_name', $('.last_name').val());
     form.append('email', $('.email').val());
     form.append('phone_no', $('.phone_no').val());
     form.append('message', $('.message').val());
