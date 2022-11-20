@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Calgary Painting Crew - Index Page</title>
+    <title>{{ config('app.name')}} | {{ isset($title)?$title:'Page'}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{ asset(config('site_config.assets.css').'app.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'main.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset(config('site_config.assets.css').'jquery.fancybox.min.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'slick.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'slick-theme.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'animate.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'animate.css') }}"> -->
   </head>
   <body>
     <!-- Header Starts -->

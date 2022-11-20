@@ -4,8 +4,9 @@
         <div class="row">
             <div v-for="(field,index) in fields" :key="index" :class="field.grid+' mb-3'">
                 <div class="form-group" v-if="field.type == 'checkbox'">
+                    
                     <input :type="field.type" :class="field.class" :name="field.field" v-model="data[field.field]" :required="field.required">
-                    <label class="pl-2">{{ field.label }}</label>
+                    <label class="pl-3">{{ field.label }}</label>
                     <div v-if="errors[field.field]">
                       <ul>
                           <li class="text-danger" style="list-style:none;" v-for="(error,index) in errors[field.field]" :key="index">{{ error }}</li>
@@ -58,6 +59,7 @@
 <script>
 import {Language} from '../../helpers/lang/lang';
 import CKEditor from '@ckeditor/ckeditor5-vue';
+
 import useService  from '../../services/index';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export default {
@@ -69,7 +71,8 @@ export default {
         errors:Object,
     },
     components:{
-        ckeditor: CKEditor.component
+        ckeditor: CKEditor.component,
+       
     },
     data(){
         return {

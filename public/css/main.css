@@ -31,7 +31,7 @@ header .navbar-nav {margin-left: 140px;}
 .quote-btn .btn-primary:not(:disabled):not(.disabled):active {color: #fff;background-color: #36B5CA;border-color: #36B5CA;box-shadow: none;}
 /*HEADER SECTION CSS END*/
 /*BANNER SECTION CSS BEGIN*/
-.banner-sec {position: relative;padding: 340px 120px 270px;background-image: url("../images/banner.png");background-repeat: no-repeat;background-size: cover;}
+.banner-sec {position: relative;padding: 320px 120px 183px;background-image: url("../images/cpc-banner.jpg");background-repeat: no-repeat;background-size: cover;}
 .banner-content h1 {color: #231F20;}
 .banner-content h2 {font-size: 100px;color: #231F20;position: relative;z-index: 6;padding: 25px 0;}
 .banner-content h2:before {content: "";background-image: url("../images/bg-design.png");background-repeat: no-repeat;position: absolute;top: 0;left: -50px;width: 100%;height: 100%;z-index: -1;}
@@ -120,13 +120,13 @@ header .navbar-nav {margin-left: 140px;}
 .banner-btn.view-all-btn {text-align: center;margin: 80px 0 0;}
 /*INSTAGRAM FEED SECTION END*/
 /*FOOTER SECTION CSS BEGIN*/
-footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
-.footer-content p {font-weight: 400;color: #231F20;width: 44%;font-family: 'Poppins', sans-serif;margin: 27px auto 15px auto;line-height: 30px;}
+footer {padding: 70px 120px 11px;background-color: #F5F7F7;}
+.footer-content p {font-weight: 400;color: #231F20;width: 100%;font-family: 'Poppins', sans-serif;margin: 27px auto 15px auto;line-height: 30px;}
 .footer-content ul {margin-bottom: 5px;}
-.footer-content li {display: inline-block;padding: 17px 67px 26px 0;}
+.footer-content li {display: block;padding: 17px 0 0px 0;}
 .footer-content a {color: #231F20;}
 .footer-content a:hover {color: #36B5CA;}
-.address-box li {padding: 0 53px 0 0;display: inline-block;}
+.address-box li {padding: 0 0 10px 0;display: block;}
 .address-box a {color: #231F20;}
 .address-box strong {margin-left: 10px;}
 /*FOOTER SECTION CSS END*/
@@ -241,6 +241,15 @@ footer {padding: 70px 120px 41px;text-align: center;background-color: #F5F7F7;}
 /*ERROR PAGE CSS END*/
 /*RESPONSIVE CSS BEGIN*/
 @media only screen and (min-width: 320px) and (max-width: 529px) {
+.footer-content h5 {margin-bottom: 10px !important;margin-top: 30px;}
+.address-box h5 {margin-bottom: 24px !important;margin-top: 30px;}
+.address-box strong {margin-left: 0;}
+.address-box2 h5 {margin-bottom: 24px !important;margin-top: 28px;}
+.subscribe-form-sec {width: 100% !important;}
+.input-text-field {display: block !important;}
+.input-text-field .form-control {margin-bottom: 15px;}
+.copy-right-para {line-height: 29px;}
+.roller-man-content {margin-top: 30px;}
 header {padding: 10px 15px;}
 .banner-sec {padding: 270px 15px 200px;background-position: center;}
 .banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
@@ -284,9 +293,9 @@ header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px
 .instagram-feed-sec {padding: 60px 15px;}
 .instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
 .feed-imgs {margin-bottom: 25px;}
-footer {padding: 70px 15px 3px;}
+footer {padding: 70px 15px 13px;}
 .footer-content p {width: 100%;}
-.footer-content li {display: block;padding: 17px 0 26px 0;}
+.footer-content li {display: block;padding: 12px 0 0 0;}
 .address-box li {padding: 0 0 12px 0;display: block;}
 .copy-right-sec p {line-height: 27px;}
 .experience-img-text span {font-size: 28px;}
@@ -325,6 +334,13 @@ footer {padding: 70px 15px 3px;}
 .ext-txt {line-height: 22px;margin-top: 20px;}
 }
 @media only screen and (min-width: 530px) and (max-width: 767px) {
+.footer-content h5 {margin-bottom: 10px !important;margin-top: 30px;}
+.address-box h5 {margin-bottom: 24px !important;margin-top: 30px;}
+.address-box strong {margin-left: 0;}
+.address-box2 h5 {margin-bottom: 24px !important;margin-top: 28px;}
+.subscribe-form-sec {width: 100% !important;}
+.input-text-field {display: block !important;}
+.input-text-field .form-control {margin-bottom: 15px;}
 header {padding: 10px 15px;}
 .banner-sec {padding: 270px 15px 200px;background-position: center;}
 .banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
@@ -369,9 +385,9 @@ header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px
 .instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
 .feed-imgs {margin-bottom: 25px;}
 footer {padding: 70px 15px 3px;}
-.footer-content p {width: 70%;}
-.footer-content li {padding: 17px 30px 26px;}
-.address-box li {padding: 0 15px 25px;}
+.footer-content p {width: 100%;}
+.footer-content li {padding: 17px 0px 6px;}
+.address-box li {padding: 0 0px 17px;}
 .copy-right-sec p {line-height: 27px;}
 .quote-btn .btn-primary {display: inline;}
 .experience-img-text span {font-size: 28px;}
@@ -410,6 +426,13 @@ footer {padding: 70px 15px 3px;}
 .ext-txt {line-height: 22px;margin-top: 20px;}
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
+.footer-content h5 {margin-bottom: 10px !important;margin-top: 30px;}
+.address-box h5 {margin-bottom: 24px !important;margin-top: 30px;}
+.address-box strong {margin-left: 0;}
+.address-box2 h5 {margin-bottom: 24px !important;margin-top: 28px;}
+.subscribe-form-sec {width: 100% !important;}
+.input-text-field {display: block !important;}
+.input-text-field .form-control {margin-bottom: 15px;}
 header {padding: 10px 15px;}
 .banner-sec {padding: 270px 15px 200px;background-position: center;}
 .banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
@@ -454,9 +477,9 @@ header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px
 .instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
 .feed-imgs {margin-bottom: 25px;}
 footer {padding: 70px 15px 3px;}
-.footer-content p {width: 70%;}
-.footer-content li {padding: 17px 30px 26px;}
-.address-box li {padding: 0 15px 25px;}
+.footer-content p {width: 100%;}
+.footer-content li {padding: 17px 0px 0px;}
+.address-box li {padding: 0 0px 15px;}
 .copy-right-sec p {line-height: 27px;}
 .quote-btn .btn-primary {display: inline;}
 .experience-img-text span {font-size: 28px;}
@@ -496,6 +519,7 @@ footer {padding: 70px 15px 3px;}
 .ext-txt {line-height: 22px;margin-top: 20px;}
 }
 @media only screen and (min-width:992px) and (max-width: 1199px) {
+.address-box strong {margin-left: 0;}
 header {padding: 10px 15px;}
 .banner-sec {padding: 270px 15px 200px;background-position: center;}
 .banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
@@ -537,9 +561,9 @@ header .navbar {padding: 0 0;}
 .instagram-heading h2 {color: #36B5CA;font-size: 40px;margin-bottom: 60px;}
 .feed-imgs {margin-bottom: 25px;}
 footer {padding: 70px 15px 3px;}
-.footer-content p {width: 70%;}
-.footer-content li {padding: 17px 30px 26px;}
-.address-box li {padding: 0 15px 25px;}
+.footer-content p {width: 100%;}
+.footer-content li {padding: 17px 0px 0px;}
+.address-box li {padding: 0 0px 19px;}
 .copy-right-sec p {line-height: 27px;}
 .quote-btn .btn-primary {display: inline;}
 .experience-img-text span {font-size: 28px;}
@@ -590,8 +614,10 @@ header .navbar-nav {margin-left: 90px;}
 .about-banner-content h2:before {left: 29%;}
 .paint-content p {width: 100%;}
 .roller-text p {width: 100%;}
+.address-box strong {margin-left: 0;}
 }
 @media only screen and (min-width:1366px) and (max-width: 1439px) {
+.address-box strong {margin-left: 0;}
 header .navbar-nav {margin-left: 90px;}
 .banner-sec {background-position: bottom;}
 .experience-design3 {bottom: -120px;right: -120px;}
@@ -621,3 +647,20 @@ header .navbar-nav {margin-left: 90px;}
 .about-banner-content h2:before {left: 32%;}
 }
 /*RESPONSIVE CSS END*/
+.banner-overlay {position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #ffffff69;z-index: 0;}
+.address-box h5 {margin-bottom: 40px;}
+.footer-content h5 {margin-bottom: 20px;}
+.address-box2 h5 {margin-bottom: 40px;}
+.address-box2 li {display: inline-block;padding: 0 20px 0 0;}
+.address-box2 a {font-size: 22px !important;color: #231F20;}
+.copy-right-para {text-align: center;}
+.copy-right-para strong {vertical-align: top;padding: 0 4px;}
+.subscribe-form-sec {width: 50%;margin: 50px auto 30px auto;}
+.subscribe-form-sec h5 {margin-bottom: 25px;}
+.input-text-field {display: flex;align-items: center;}
+.input-text-field .form-control {height: auto;padding: 15px 15px;margin-right: 15px;outline: none;box-shadow: none;border: 1px solid #0000002e;font-size: 15px !important;font-weight: 400 !important;color: #231F20;font-family: 'Poppins', sans-serif;resize: none;}
+.input-text-field .btn-primary {font-weight: 700;color: #231F20;background-color: transparent;border: 1px solid #707070;border-radius: 8px;padding: 12px 46px;transition: 0.8s all ease-in-out;font-size: 20px;}
+.input-text-field .btn-primary:hover {border-color: #36B5CA;background-color: #36B5CA;color: #fff;}
+.copy-right-para a {color: #231F20;font-size: 16px;font-weight: 700;}
+
+

@@ -4,8 +4,8 @@ import {
 } from "vue-router";
 
 import Dashboard from '../components/admin/Dashboard.vue';
-import Categories from '../components/admin/categories/Categories.vue';
-import CreateCategories from '../components/admin/categories/CreateCategories.vue';
+import Pages from '../components/admin/pages/Pages.vue';
+import CreatePages from '../components/admin/pages/CreatePages.vue';
 import Login from '../components/auth/Login.vue';
 
 const routes = [
@@ -22,15 +22,15 @@ const routes = [
         props: true,
     },
     {
-        path: "/admin/categories",
-        name: "admin.categories",
-        component: Categories,
+        path: "/admin/pages",
+        name: "admin.pages",
+        component: Pages,
         props: true,
     },
     {
-        path: "/admin/categories/create",
-        name: "admin.categories/create",
-        component: CreateCategories,
+        path: "/admin/pages/create",
+        name: "admin.pages/create",
+        component: CreatePages,
         props: true,
     },
 
