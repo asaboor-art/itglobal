@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Calgary Painting Crew - Index Page</title>
+    <title>{{ config('app.name')}} | {{ isset($title)?$title:'Page'}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link href="{{ asset(config('site_config.assets.css').'app.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'main.css') }}" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link href="{{ asset(config('site_config.assets.css').'jquery.fancybox.min.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'slick.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'slick-theme.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'animate.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'animate.css') }}"> -->
   </head>
   <body>
     <!-- Header Starts -->

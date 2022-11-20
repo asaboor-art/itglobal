@@ -56,4 +56,13 @@ return [
     'designed_by' => 'Designed By',
     'follow_us' => 'Follow Us',
     'subscribe' => 'Subscribe',
+    'go_to_home' => 'Go To Home',
+    'dashboard'  => 'Dashboard',
+    'pages' => 'Pages',
+    'admin' => 'Admin',
+    'log-out'   => 'Log Out',
+    'active' => 'Active',
+    'inactive' => 'Inactive',
+    'create' => 'Create',
+    'saved' => 'Saved'
 ];

@@ -1,11 +1,8 @@
 export const Language = {
     dashboard: "Dashboard",
     admin: "Admin",
-    company: "Company",
-    companies: "Companies",
-    projects: "Projects",
-    innovators: "Innovators",
-    innovator: "Innovator",
+    pages:"Pages",
+    page:"Page",
     view: "View",
     no_record_found: "No record found",
     action: "Action",
@@ -163,4 +160,7 @@ export const Language = {
     location: "Location",
     title_image: "Title Image",
     testimonial_recommended_dimension: "Recommended dimension: 564 x 318",
+    display_on_menu: "Display On Menu",
+    layout:"Layout",
+    home_page:"Home Page",
 };

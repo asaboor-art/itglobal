@@ -7,6 +7,7 @@ use App\Http\Controllers\BaseController;
 use App\Helpers\Helper;
 use App\Models\CustomForm;
 use App\Mail\CustomForm as MailForm;
+use App\Models\Page;
 
 class SitePageController extends BaseController
 {
@@ -19,17 +20,30 @@ class SitePageController extends BaseController
 
     public function renderMainPage(Request $request){
        
-       
-        return view(config('site_config.assets.home_pages').'indexv1',[
-            'title' => trans('lang.home'),
+        $Page = Page::where('is_active',1)->where('is_home_page',1)->first();
+        return view(config('site_config.assets.home_pages').$Page->view,[
+            'title' => $Page->name,
         ]);
     }
 
     public function renderSitePages(Request $request,$page){
         
-        return view(config('site_config.assets.pages').$page,[
-            'title' =>'Page',
-        ]);
+        $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
+
+        if($Page->is_home_page){
+            return redirect()->route('home');
+        }
+        if($Page->has_custom_view){
+            return view(config('site_config.assets.pages').$Page->view,[
+                'title' => $Page->name,
+            ]);
+        }else{
+            return view(config('site_config.assets.pages').'page',[
+                'title' => $Page->name,
+            ]);
+        }
+
+        
     }
 
     public function storeCustomForm(Request $request){
