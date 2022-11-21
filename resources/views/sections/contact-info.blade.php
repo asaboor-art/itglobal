@@ -5,9 +5,15 @@
             <div class="inquiry-content">
               <h2><span class="email-gen">{{ trans('lang.general')}}</span> {{ trans('lang.inquires')}}</h2>
               <ul>
+<<<<<<< Updated upstream
                 <li><a href="mailto:info@calgarypaintingcrew.com">{{ trans('lang.email')}}: <span class="email-tag">{{ config('site_config.contacts.email')}}</span></a></li>
                 <li><a href="tel:{{ config('site_config.contacts.phone')}}">{{ trans('lang.phone')}}:<span class="email-tag">{{ config('site_config.contacts.phone')}}</span></a></li>
                 <li><a href="javascriptvoid:(0)">{{ trans('lang.address')}}:<span class="email-tag">{{ config('site_config.contacts.address')}}</span> <span class="email-tag">{{ trans('content.contact1') }}</span></a></li>
+=======
+                <li><a href="mailto:info@calgarypaintingcrew.com">Email: <span class="email-tag">info@calgarypaintingcrew.com</span></a></li>
+                <li><a href="tel:(403)376-3322">Phone:<span class="email-tag">(403)376-3322</span></a></li>
+                <li><a href="javascriptvoid:(0)">Location:<span class="email-tag">328 40 Ave NE Calgary,AB T2E 2M7</span> <span class="email-tag">(Servicing Calgary & Surrounding Areas)</span></a></li>
+>>>>>>> Stashed changes
               </ul>
             </div>
           </div>
