@@ -64,5 +64,6 @@ return [
     'active' => 'Active',
     'inactive' => 'Inactive',
     'create' => 'Create',
-    'saved' => 'Saved'
+    'saved' => 'Saved',
+    'updated' => 'Updated'
 ];

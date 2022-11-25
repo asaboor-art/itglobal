@@ -5,7 +5,7 @@
             <div v-for="(field,index) in fields" :key="index" :class="field.grid+' mb-3'">
                 <div class="form-group" v-if="field.type == 'checkbox'">
                     
-                    <input :type="field.type" :class="field.class" :name="field.field" v-model="data[field.field]" :required="field.required">
+                    <input :type="field.type" :class="field.class" :name="field.field" v-model="data[field.field]" :required="field.required" :checked="data[field.field]?true:false">
                     <label class="pl-3">{{ field.label }}</label>
                     <div v-if="errors[field.field]">
                       <ul>

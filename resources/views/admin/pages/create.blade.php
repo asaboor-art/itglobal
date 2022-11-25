@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>{{ trans('lang.pages') }}</h1>
+                    <h1>{{ trans('lang.create') }} {{ trans('lang.page') }}</h1>
                     </div>
 
                 </div>

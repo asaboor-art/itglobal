@@ -13,7 +13,7 @@ class Page extends BaseModel
     protected $fillable = ['name','slug','description','view','layout','has_custom_view','display_to_menu','is_active','is_delete','is_home_page'];
     protected $table = 'pages';
 
-    public $rules = [
+    private $rules = [
         'name' => 'required',
         'slug' => 'required',
         'view' =>  'required',
@@ -51,5 +51,9 @@ class Page extends BaseModel
         }
         $this->attributes['slug'] = $slug;
         return true;
+    }
+
+    public function getRule(){
+        return $this->rules;
     }
 }

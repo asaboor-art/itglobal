@@ -64,7 +64,6 @@ export default {
             pageNo:1,
             pageSize:10,
             loader:false,
-            store_modal_loader:false,
             order:'desc',
             orderBy:'created_at',
             pages:1,
@@ -72,54 +71,6 @@ export default {
                 search:'',
             },
             errors:[],
-            is_show_modal:false,
-            formTitle: "Add New Page",
-            form:{
-                name:'',
-                slug:'',
-                view:'',
-                layout:'',
-                description:'',
-                display_to_menu:0,
-            },
-            formFields:[
-                {
-                    name:"name",
-                    type:"text",
-                    label:Language.name,
-                    placeholder:Language.placeholder_msg.replace(':attribute',Language.name),
-                },
-                {
-                    name:"slug",
-                    type:"text",
-                    label:Language.slug,
-                    placeholder:Language.placeholder_msg.replace(':attribute',Language.slug),
-                },
-                {
-                    name:"display_to_menu",
-                    type:"checkbox",
-                    label:Language.display_to_menu,
-                    placeholder:Language.placeholder_msg.replace(':attribute',Language.display_to_menu),
-                },
-                {
-                    name:"view",
-                    type:"text",
-                    label:Language.view,
-                    placeholder:Language.placeholder_msg.replace(':attribute',Language.view),
-                },
-                {
-                    name:"layout",
-                    type:"text",
-                    label:Language.layout,
-                    placeholder:Language.placeholder_msg.replace(':attribute',Language.layout),
-                },
-                {
-                    name:"description",
-                    type:"textarea",
-                    label:Language.description,
-                    placeholder:Language.placeholder_msg.replace(':attribute',Language.description),
-                }
-            ],
             id:0,
         }
     },
@@ -131,7 +82,7 @@ export default {
         let ref = this;
         this.columns = [
             {
-                label:'S.no',
+                label:Language.s_no,
                 field:'sno',
                 orignal_name:'sno',
                 width:'4%',
@@ -139,7 +90,7 @@ export default {
                 has_html:false,
             },
             {
-                label:'Name',
+                label:Language.name,
                 field:'name',
                 orignal_name:'name',
                 width:'4%',
@@ -147,7 +98,7 @@ export default {
                 has_html:false,
             },
             {
-                label:'SLug',
+                label:Language.slug,
                 field:'slug',
                 orignal_name:'slug',
                 width:'4%',
@@ -155,7 +106,7 @@ export default {
                 has_html:false,
             },
             {
-                label:'Status',
+                label:Language.status,
                 field:'status',
                 orignal_name:'is_active',
                 width:'4%',
@@ -163,7 +114,7 @@ export default {
                 has_html:true,
             },
             {
-                label:'Display to Menu',
+                label:Language.display_on_menu,
                 field:'display_to_menu',
                 orignal_name:'display_to_menu',
                 width:'4%',
@@ -171,7 +122,7 @@ export default {
                 has_html:true,
             },
             {
-                label:'Created At',
+                label:Language.created_at,
                 field:'created_at',
                 orignal_name:'created_at',
                 width:'4%',
@@ -179,7 +130,7 @@ export default {
                 has_html:false,
             },
             {
-                label:'Action',
+                label:Language.action,
                 field:'action',
                 orignal_name:'action',
                 width:'4%',
@@ -188,28 +139,26 @@ export default {
                 dropdown:[
                     {
                         name:(row) => {
-                            if(row.is_active)
-
-                                return Language.inactive
-                            else
-                                return Language.active
-                        },
-                        icon:(row) => {
-                            return 'fa fa-list-alt mr-2'
-                        },
-                        action:(row) =>{
-                            ref.updateStatus(row.id)
-                        }
-                    },
-                    {
-                        name:(row) => {
                             return Language.edit
                         },
                         icon:(row) => {
                             return 'fa fa-edit mr-2'
                         },
                         action:(row) =>{
-                            ref.edit(row.id)
+                            
+                            window.location.href = '/admin/pages/edit/'+row.id
+                        }
+                    },
+                    {
+                        name:(row) => {
+                            return Language.delete
+                        },
+                        icon:(row) => {
+                            return 'fa fa-trash mr-2'
+                        },
+                        action:(row) =>{
+                            
+                            ref._delete(row.id);
                         }
                     }
 
@@ -253,7 +202,6 @@ export default {
 
             try{
                 await getPages(ref.pageNo,ref.pageSize,ref.orderBy,ref.order,ref.filter);
-
                 ref.data = pages
                 ref.loader = false;
             }catch(e){
@@ -261,68 +209,29 @@ export default {
             }
 
         },
-        async updateStatus(id){
-
-
-            const {confirmAlert} = useService();
+        // async updateStatus(id){
+        //     const {confirmAlert} = useService();
+        //     let ref = this
+        //         confirmAlert(async () => {
+        //             this.loader = true
+        //                 const { udpateStatus } = useCategories();
+        //                 await udpateStatus(id)
+        //                 ref.getPages(ref.pageNo,ref.pageSize,ref.filter);
+        //         })
+        // },
+        async _delete(id){
+            const {confirmAlert,successAlert} = useService();
             let ref = this
                 confirmAlert(async () => {
                     this.loader = true
-                        const { udpateStatus } = useCategories();
-                        await udpateStatus(id)
+                        const { _delete } = usePages();
+                        await _delete(id)
                         ref.getPages(ref.pageNo,ref.pageSize,ref.filter);
+                        successAlert(Language.success_msg.replace(':attribute',Language.page).replace(':action',Language.deleted))
+
                 })
         },
-
         
-        async formSubmit(){
-            if(this.id == 0){
-                await this.store();
-            }else{
-                await this.update();
-            }
-
-        },
-        async edit(id){
-            const {category,getCategory} = useCategories();
-            this.id = id;
-            await getCategory(id);
-            this.form.name = category.value.name;
-            this.form.slug = category.value.slug;
-            this.form.image = category.value.image;
-            this.form.logo = category.value.logo;
-            this.form.show_on_home = category.value.show_on_home === 1;
-            this.formTitle = "Edit Category";
-            this.is_show_modal = true;
-        },
-        async store(){
-            const {storeCategory,errors} = useCategories();
-            const {errorAlert,successAlert} = useService();
-
-            this.errors = [];
-            let ref = this;
-            if(!this.store_modal_loader){
-                this.store_modal_loader = true;
-                this.form.show_on_home = this.form.show_on_home ? 1 : 0;
-                await storeCategory(this.form).then((response) => {
-                    successAlert(Language.success_msg.replace(':attribute',Language.category).replace(':action',Language.saved));
-                    ref.store_modal_loader = false;
-                    ref.is_show_modal = false;
-                    ref.getPages();
-                }).catch((e) => {
-                    ref.store_modal_loader = false;
-                    if(e.response.status === 422){
-                        ref.errors = e.response.data.errors
-                    }else if(e.response.status == 500){
-                        errorAlert(e.message)
-                    }else{
-
-                        errorAlert(e.response.data.message)
-                    }
-                })
-            }
-
-        },
         async update(){
             const {update,errors} = useCategories();
             const {errorAlert,successAlert} = useService();

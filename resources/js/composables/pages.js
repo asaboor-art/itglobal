@@ -41,6 +41,10 @@ export default function usePages() {
             errorAlert(e.message);
         })
     }
+    
+    const _delete  =async(id) => {
+        await axiosWrapper.destroy(`/admin/pages/delete/${id}`);
+    }
     return {
         getPages,
         getPagesPublic,
@@ -50,6 +54,7 @@ export default function usePages() {
         getPage,
         page,
         update,
-        errors
+        errors,
+        _delete
     }
 }

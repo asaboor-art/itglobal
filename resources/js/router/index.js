@@ -6,6 +6,7 @@ import {
 import Dashboard from '../components/admin/Dashboard.vue';
 import Pages from '../components/admin/pages/Pages.vue';
 import CreatePages from '../components/admin/pages/CreatePages.vue';
+import EditPage from '../components/admin/pages/EditPage.vue';
 import Login from '../components/auth/Login.vue';
 
 const routes = [
@@ -31,6 +32,12 @@ const routes = [
         path: "/admin/pages/create",
         name: "admin.pages/create",
         component: CreatePages,
+        props: true,
+    },
+    {
+        path: "/admin/pages/edit/:id",
+        name: "admin.pages/edit",
+        component: EditPage,
         props: true,
     },
 

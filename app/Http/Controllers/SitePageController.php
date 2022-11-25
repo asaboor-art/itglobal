@@ -52,8 +52,7 @@ class SitePageController extends BaseController
             'first_name' => 'required',
             'email' =>'required|email',
             'phone_no' =>'required|integer',
-            'state' =>'required',
-            'postal_code' =>'required|integer',
+            'address' =>'required',
             'message' =>'required'
         ]);
         $path = "NULL";
