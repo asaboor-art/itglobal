@@ -136,7 +136,7 @@ class BaseModel extends Model
         return static::create($data)->id;
     }
 
-    public function updateByColumn($data, $column = 'id', $value)
+    public function updateByColumn($data,$value,$column = 'id')
     {
         $data['updated_at'] = Carbon::now();
         return static::where($column, $value)->update($data);
@@ -144,10 +144,14 @@ class BaseModel extends Model
 
     public function destroyByid($id)
     {
-
-        $data['updated_at'] = Carbon::now();
-        $data['is_delete'] = 1;
-        return $this->where('id', $id)->update($data);
+        if(config('app.APP_ENV') == 'production'){
+            $data['updated_at'] = Carbon::now();
+            $data['is_delete'] = 1;
+            return $this->where('id', $id)->update($data);
+        }else{
+            return $this->where('id', $id)->delete();
+        }
+        
     }
 
     public static function getAllRoles()

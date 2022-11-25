@@ -47,7 +47,7 @@ return [
     ],
     'contacts' => [
         'phone' => "(403)376-3322",
-        'email' => "info@gmail.com",
+        'email' => "info@calgarypaintingcrew.com",
         'copyright' => "© 2022 Calgary Painting Crew. All rights reserved.",
         'name' => "Calgary Painting",
         'address'   => "328 40 Ave NE Calgary,AB T2E 2M7",

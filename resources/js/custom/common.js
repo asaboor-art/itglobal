@@ -57,8 +57,8 @@ $('.get-a-quote-form').on('submit', (e) => {
     form.append('email', $('.email').val());
     form.append('phone_no', $('.phone_no').val());
     form.append('message', $('.message').val());
-    form.append('state', $('.state').val());
-    form.append('postal_code', $('.postalcode').val());
+    form.append('address', $('.address').val());
+    //form.append('postal_code', $('.postalcode').val());
     form.append('file', $('.file')[0].files[0]);
     // Posting a form;
     ajaxPost('/custom-form/get-a-quote',form,'.quote-success','.quote-error')

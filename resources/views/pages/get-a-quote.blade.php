@@ -31,8 +31,8 @@
                   <div class="error-first_name errors"></div>
                   </div>
                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                    <input type="text" name="last_name" placeholder="Address" class="form-control last_name">
-                  <div class="error-last_name errors"></div>
+                    <input type="text" name="address" placeholder="Address" class="form-control address">
+                  <div class="error-address errors"></div>
                   </div>
                 </div>
                 <div class="row flex-fields">

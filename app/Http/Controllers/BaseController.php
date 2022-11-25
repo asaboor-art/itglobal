@@ -11,7 +11,7 @@ use App\Models\ContactForm;
 use App\Models\Newsletter;
 use App\Helpers\Helper;
 use App\Traits\Validation;
-use App\Mail\Contactus;
+use App\Mail\ContactUss;
 use Pusher\Pusher;
 use DB;
 

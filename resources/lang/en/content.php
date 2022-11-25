@@ -11,6 +11,6 @@ return [
     "about4" => "We offer the best services available. You can trust in the calibre of Calgary Painting Crew's craftsmanship and customer service because we guarantee our work.",
     'get_a_quote1' => "Drop Photos here or click to upload",
     'get_a_quote2' => "Accepted file types: jpg, jpeg, gif, png, pdf, mp4, mov, wmv, flv, avi, doc, docx, bmp, Max. file size: 256 MB.",
-    'contact1' => "(office visits by appointment only)"
+    'contact1' => "(Servicing Calgary & Surrounding Areas)"
 
 ];

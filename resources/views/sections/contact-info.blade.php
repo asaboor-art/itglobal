@@ -43,7 +43,7 @@
                 <div class="form-btn">
                   <button type="submit" class="btn btn-primary">{{ strtoupper(trans('lang.send')) }}</button>
                 </div>
-                <p>Looking to do a project outside of Calgary? We are able to do projects <span class="any-text">anywhere in the USA or Canada. <a href="javascriptvoid:(0)">Contact us here for more information.</a></span></p>
+                <p>{{ trans('messages.looks_to_do_project')}}<span class="any-text">{{ trans('messages.anywhere_in_canada')}}<a href="{{ route('site-pages','contact-us') }}">{{ trans('messages.contactus_for_information')}}</a></span></p>
               </form>
             </div>
           </div>

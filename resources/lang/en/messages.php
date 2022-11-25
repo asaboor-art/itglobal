@@ -7,6 +7,9 @@ return [
     
     'error_msg' => 'Error while :action',
     'mail_error' => 'Enable to send email, sorry for the inconvience',
+    'looks_to_do_project' => 'Looking to do a project outside of Calgary? We are able to do projects',
+    'anywhere_in_canada' => 'anywhere in the USA or Canada. ',
+    'contactus_for_information' => 'Contact us here for more information.',
     'newsletter' => 'Sign Up To Our Newsletter',
     'errors' => [
         '500' => [

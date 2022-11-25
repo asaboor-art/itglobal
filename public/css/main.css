@@ -31,7 +31,7 @@ header .navbar-nav {margin-left: 140px;}
 .quote-btn .btn-primary:not(:disabled):not(.disabled):active {color: #fff;background-color: #36B5CA;border-color: #36B5CA;box-shadow: none;}
 /*HEADER SECTION CSS END*/
 /*BANNER SECTION CSS BEGIN*/
-.banner-sec {position: relative;padding: 320px 120px 183px;background-image: url("../images/cpc-banner.jpg");background-repeat: no-repeat;background-size: cover;}
+.banner-sec {position: relative;padding: 320px 120px 137px;background-image: url("../images/cpc-banner.jpg");background-repeat: no-repeat;background-size: cover;}
 .banner-content h1 {color: #231F20;}
 .banner-content h2 {font-size: 100px;color: #231F20;position: relative;z-index: 6;padding: 25px 0;}
 .banner-content h2:before {content: "";background-image: url("../images/bg-design.png");background-repeat: no-repeat;position: absolute;top: 0;left: -50px;width: 100%;height: 100%;z-index: -1;}
@@ -251,7 +251,7 @@ footer {padding: 70px 120px 11px;background-color: #F5F7F7;}
 .copy-right-para {line-height: 29px;}
 .roller-man-content {margin-top: 30px;}
 header {padding: 10px 15px;}
-.banner-sec {padding: 270px 15px 200px;background-position: center;}
+.banner-sec {padding: 270px 15px 60px;background-position: center;}
 .banner-content h1 {font-size: 70px;margin-bottom: 0;line-height: 70px;}
 .banner-content h2 {z-index: 0;font-size: 70px;padding: 5px 0;line-height: 70px;}
 .banner-content span {font-size: 70px;}
@@ -266,7 +266,7 @@ header .navbar-light .navbar-nav .nav-link {color: #fff !important;padding: 15px
 .experience-img-text {bottom: -43px;right: 28px;}
 .experience-content h2 {font-size: 35px;padding-top: 100px;}
 .experience-content small {font-size: 35px;}
-.banner-content h4 {padding: 9px 0 0px;font-size: 28px;}
+.banner-content h4 {padding: 9px 0 0px;font-size: 23px;}
 .experience-content p {width: 100%;padding: 25px 0 10px;}
 .buttons-sec {padding: 0px 15px 0px;}
 .email-btn .btn-primary {margin-bottom: 15px;}
@@ -662,5 +662,6 @@ header .navbar-nav {margin-left: 90px;}
 .input-text-field .btn-primary {font-weight: 700;color: #231F20;background-color: transparent;border: 1px solid #707070;border-radius: 8px;padding: 12px 46px;transition: 0.8s all ease-in-out;font-size: 20px;}
 .input-text-field .btn-primary:hover {border-color: #36B5CA;background-color: #36B5CA;color: #fff;}
 .copy-right-para a {color: #231F20;font-size: 16px;font-weight: 700;}
+.banner-content img {width: 230px;margin-bottom: 45px;}
 
 

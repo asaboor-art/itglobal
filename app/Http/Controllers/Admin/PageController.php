@@ -14,14 +14,12 @@ class PageController extends BaseController
     //
     private $page;
     public function __construct(Page $page) {
-       
         $this->page = $page;
-
     }
 
     public function index(Request $request){
        return view('admin.pages.index',[
-        'title' => trans('lang.pages'),
+            'title' => trans('lang.pages'),
        ]);
     }
 
@@ -29,15 +27,13 @@ class PageController extends BaseController
         $this->setGeneralFilters($request,$this->page);
 
         if($request->has('search') && $request->search !=''){
-            $this->page->setFilters(['name','like','%'.$request->search.'%']);
-            
+            $this->page->setFilters(['name','like','%'.$request->search.'%']);     
         }
 
         $condition = [];
-
         
         $result = $this->page->getAllDatatables([],
-        ['name','slug','view','is_active','display_to_menu','has_custom_view','created_at'],
+        ['id','name','slug','view','is_active','display_to_menu','has_custom_view','created_at'],
         [],'is_delete');
 
         
@@ -71,7 +67,7 @@ class PageController extends BaseController
 
     public function store(Request $request){
 
-        $request->validate($this->page->rules);
+        $request->validate($this->page->getRule());
 
         try {
             DB::beginTransaction();
@@ -79,28 +75,27 @@ class PageController extends BaseController
             //dd($data);
             $path = ""; //config('constant.default-images.general');
             $logo_path = ""; //config('constant.defau""; //lt-images.general');
-            $this->page->name = $data['name'];
-            $this->page->slug = $data['slug'];
-            $this->page->display_to_menu = (int)$request->display_to_menu;
-            $this->page->is_home_page = (int)$request->is_home_page;
-            $this->page->view = $data['view'];
-            $this->page->layout = $data['layout'];
-            $this->page->is_active = 1;
+            // $this->page->name = $data['name'];
+            // $this->page->slug = $data['slug'];
+            // $this->page->display_to_menu = (int)$request->display_to_menu;
+            // $this->page->is_home_page = (int)$request->is_home_page;
+            // $this->page->view = $data['view'];
+            // $this->page->layout = $data['layout'];
+            // $this->page->is_active = 1;
             if ($request->has('image')) {
 
                 if (!is_array($request->image)) {
-
                     $response = Helper::saveFiles($request->image, 'page');
-
                     if ($response) {
                         $path = $response;
                     }
                 }
-                $this->page->image = $path;
-                $this->page->image_url = $logo_path;
+                $data['image'] = $path;
+                // $this->page->image = $path;
+                // $this->page->image_url = $logo_path;
             }
             
-            $this->page->save();
+            $this->page->store($data);
             DB::commit();
             return $this->sendResponse([], trans('messages.success_msg', ['action' => trans('lang.saved')]));
         } catch (\Exception $e) {
@@ -110,9 +105,71 @@ class PageController extends BaseController
         }
     }
 
+    public function update(Request $request,$id){
+        
+        $request->validate($this->page->getRule());
+        try {
+            DB::beginTransaction();
+            $data = $request->except('_token');
+            //dd($data);
+            $path = ""; //config('constant.default-images.general');
+            $logo_path = ""; //config('constant.defau""; //lt-images.general');
+            // $this->page->name = $data['name'];
+            // $this->page->slug = $data['slug'];
+            // $this->page->display_to_menu = (int)$request->display_to_menu;
+            // $this->page->is_home_page = (int)$request->is_home_page;
+            // $this->page->view = $data['view'];
+            // $this->page->layout = $data['layout'];
+            // $this->page->is_active = 1;
+            if ($request->has('image')) {
+
+                if (!is_array($request->image)) {
+                    $response = Helper::saveFiles($request->image, 'page');
+                    if ($response) {
+                        $path = $response;
+                    }
+                }
+                $data['image'] = $path;
+                // $this->page->image = $path;
+                // $this->page->image_url = $logo_path;
+            }
+            
+            $this->page->updateByColumn($data,$id);
+            DB::commit();
+            return $this->sendResponse([], trans('messages.success_msg', ['action' => trans('lang.updated')]));
+        } catch (\Exception $e) {
+            DB::rollback();
+            Log::error($e);
+            return $this->sendError(trans('validation.custom.errors.server-errors'));
+        }
+    
+    }
+
+    public function edit(Request $request){
+        return view('admin.pages.edit',[
+            'title' => trans('lang.pages').' | '.trans('lang.edit'),
+        ]);
+    }
+
+    public function getPage(Request $request,$id){
+        $Page = $this->page->where('id',$id)->first();
+        return $this->sendResponse($Page);
+    }
     public function create(Request $request){
         return view('admin.pages.create',[
             'title' => trans('lang.pages').' | '.trans('lang.create'),
         ]);
+    }
+
+    public function destroy(Request $request,$id){
+        try{
+            DB::beginTransaction();
+            $this->page->destroyByid($id);
+            DB::commit();
+        }catch(Exception $e){
+            DB::rollback();
+            Log::error($e);
+            return $this->sendError(trans('validation.custom.errors.server-errors'));
+        }
     }
 }
