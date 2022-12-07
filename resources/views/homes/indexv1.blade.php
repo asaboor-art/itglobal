@@ -2,26 +2,24 @@
 
 @section('content')
     <!-- BANNER SECTION BEGIN -->
-    @include('sections.bannerv1')
+    @include('sections.banner-k13v1')
     <!-- BANNER SECTION END -->
     
-    <!-- EXPERIENCE SECTION BEGIN -->
-    @include('sections.experiencev1')
-    <!-- EXPERIENCE SECTION END -->
+    <!-- HOW WE HELP SECTION BEGIN -->
+    @include('sections.how-we-helpv1')
+    <!-- HOW WE HELP SECTION END -->
 
-   
+    <!-- LETS WORK TOGETHER SECTION BEGIN -->
+    @include('sections.lets-work-togetherv1')
+    <!-- LETS WORK TOGETHER SECTION END -->
 
-    <!-- INTERIOR & EXTERIOR SECTION BEGIN -->
-    @include('sections.interior-ext')
-    <!-- INTERIOR & EXTERIOR SECTION END -->
-    <!-- WORK WITH US SECTION BEGIN -->
-    @include('sections.work-with-us')
-    <!-- WORK WITH US SECTION END -->
-    <!-- COMMERCIAL SECTION BEGIN -->
-    @include('sections.commercialv1')
-    <!-- COMMERCIAL SECTION END -->
-    <!-- INSTAGRAM FEED SECTION BEGIN -->
-    @include('sections.socialv1')
-    <!-- INSTAGRAM FEED SECTION END -->
+    <!-- SEO SECTION BEGIN -->
+    @include('sections.seo')
+    <!-- SEO SECTION END -->
+
+    <!-- NEWSLETTER SECTION BEGIN -->
+    @include('sections.newsletterv2')
+    <!-- NEWSLETTER SECTION END -->
+
     
 @endsection

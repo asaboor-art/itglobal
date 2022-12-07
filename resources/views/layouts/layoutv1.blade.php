@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Header Starts -->
-    @include('headers.headerv1')
+    @include('headers.headerv2')
     <!-- Header Ends -->
     <!-- Content Starts -->
     @include('components.loader')
