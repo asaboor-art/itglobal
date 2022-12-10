@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 /*font-family: 'DM Sans', sans-serif;*/
 
-
 html {overflow-x: hidden;scroll-behavior: smooth;}
-body {font-family: 'DM Sans', sans-serif;}
+body {font-family: 'DM Sans', sans-serif !important;}
 h1{font-size: 60px;font-weight: 700;line-height: 60px;}
 h2 {font-size: 60px;font-weight: 700;line-height: 45px;} 
 h3 {font-size: 35px;font-weight: 700;}
@@ -16,7 +15,7 @@ li {font-size: 15px;font-weight: 400;color: #000;}
 label {font-size: 16px;font-weight: 500;color: #000;}
 input {outline: none;font-weight: 400;font-size: 15px;color: #000;}
 select {outline: none;font-weight: 400;font-size: 15px;color: #000;}
-a {font-family: 'Inter', sans-serif;outline: none;text-decoration: none;font-size: 14px;font-weight: 600;color: #1a1a1ab0;transition: 0.6s all ease-in-out;}
+a {outline: none;text-decoration: none;font-size: 14px;font-weight: 600;color: #1a1a1ab0;transition: 0.6s all ease-in-out;}
 a:hover, a:focus{text-decoration: none;}
 .btn-primary:hover, .btn-primary:focus {background-color: #EF5375;border-color: transparent;box-shadow: none;}
 .btn:not(:disabled):not(.disabled) {background-color: #EF5375;border-color: transparent;box-shadow: none;}
@@ -102,8 +101,120 @@ ul > li:first-of-type{display:none;}
 .seo-btn .btn-primary {background-color: transparent !important;}
 /*SEO SECTION CSS END*/
 /*NEWSLETTER SECTION CSS BEGIN*/
-
-
+.newsletter-sec {background-color: #327A56;margin: -60px 0 0;padding: 160px 302px 120px;}
+.newsletter-form h2 {font-size: 60px;font-weight: 700;color: #fff;font-family: 'DM Sans', sans-serif;}
+.newsletter-form p {color: #fff;font-family: 'DM Sans', sans-serif;}
+.newsletter-flex-div {display: flex;align-items: center;justify-content: space-between;}
+.newsletter-field {width: 30%;}
+.input-text-field {display: flex;align-items: center;}
+.newsletter-field .form-control {display: block;width: 100%;height: auto;padding: 10px 40px 3px 10px;font-size: 16px;font-weight: 400;line-height: 1.5;color: #fff;background-color: transparent;border-radius: 0;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;border-top: 0;border-left: 0;border-right: 0;border-bottom: 1px solid #fff;font-family: 'DM Sans', sans-serif;}
+.newsletter-field .form-control:focus {color: #fff !important;background-color: transparent !important;border-color: #fff !important;outline: 0;box-shadow: none !important;}
+.newsletter-field .form-control::placeholder {color: #fff !important}
+.newsletter-field .btn:not(:disabled):not(.disabled) {background-color: transparent;border-color: transparent;box-shadow: none;}
+.newsletter-field .error-email li {color: #fff !important;margin-top: 7px;}
+.newsletter-field .btn-primary:not(:disabled):not(.disabled):active {background-color: transparent;border-color: transparent;}
+.newsletter-field .btn-primary:not(:disabled):not(.disabled):active:focus {box-shadow: none;}
+.newsletter-field .btn-primary {margin-left: -40px;color: #64F4AB !important;}
 /*NEWSLETTER SECTION CSS END*/
-
+/*WEB DESIGN SECTION CSS BEGIN*/
+.webdesign-btn .btn-primary {background-color: #1F7A61 !important;color: #fff !important;}
+.webdesign-sec {padding: 80px 240px 230px;position: relative;}
+.webdesign-sec .row {display: flex;align-items: center;}
+.webdesign-content h2 {font-size: 50px;font-weight: 700;color: #070707;font-family: 'DM Sans', sans-serif;display: inline-block;position: relative;}
+.webdesign-content p {color: #808080;font-family: 'DM Sans', sans-serif;padding: 14px 0;width: 71%;}
+.webdesign-sec:after {content: "";position: absolute;top: 80px;right: -140px;width: 30%;height: 83%;background-image: url(../images/webpanda.png);background-repeat: no-repeat;}
+/*WEB DESIGN SECTION CSS END*/
+/*SOCIAL MEDIA SECTION BEGIN*/
+/*SOCIAL MEDIA SECTION END*/
+/*PAID ADVERTISEMENT SECTION CSS BEGIN*/
+.paid-advertisement-sec {padding: 80px 240px 150px;}
+/*PAID ADVERTISEMENT SECTION CSS END*/
+/*BUSINESS JOURNEY SECTION CSS BEGIN*/
+.jour-flex {background: #FAFAFA;box-shadow: 0 0 13px 1px #00000026;border-radius: 30px;padding: 60px 180px;text-align: left;position: relative;overflow: hidden;z-index: 1;display: flex;align-items: center;justify-content: space-between;}
+.jour-flex:before {position: absolute;top: 0px;left: -10px;width: 159px;height: 139px;content: "";background-image: url(../images/ds1.png);background-repeat: no-repeat;}
+.jour-flex:after {position: absolute;bottom: -2px;right: -22px;width: 139px;height: 110px;content: "";background-image: url(../images/ds2.png);background-repeat: no-repeat;}
+.business-journey-sec {padding: 40px 200px;}
+.work-inner-box1 h2 {font-size: 41px;font-weight: 700;color: #070707;font-family: 'DM Sans', sans-serif;}
+.work-inner-box1 span {display: block;}
+.work-inner-box1 p {color: #808080;font-family: 'DM Sans', sans-serif;width: 81%;padding: 14px 0 0;width: 79%;}
+.work-inner-box1 {width: 74%;}
+.jour-flex .work-btn .btn-primary {text-transform: uppercase;background-color: transparent;}
+/*BUSINESS JOURNEY SECTION CSS END*/
+/*LATEST BLOGS SECTION CSS BEGIN*/
+.latest-blog-sec {padding: 70px 120px;}
+.latest-blog-content h2 {font-size: 50px;font-weight: 700;color: #070707;text-align: center;}
+.latest-blog-content span {color: #1F7A61;}
+.blog-box-contents img {width: 100%;}
+.blog-box-contents h4 {font-size: 28px;font-weight: 500;color: #070707;width: 67%;padding: 30px 0 10px;}
+.blog-box-contents p {font-size: 15px;color: #808080;width: 78%;}
+.blog-box-contents a {font-size: 14px;font-weight: 500;color: #1F7A61;}
+.images-row {margin-top: 55px;}
+.blog-box-contents:hover {cursor: pointer;box-shadow: 0 0 18px 2px #00000042;transform: scale(1.1);padding: 30px 30px;border-radius: 14px;}
+.blog-box-contents:hover p {width: 80% !important;}
+.blog-box-contents {transition: 0.6s all ease-in-out;overflow: hidden;}
+.blog-view-all {text-align: center;margin-top: 84px;}
+.blog-view-all .btn-primary {font-size: 17px;font-weight: 700;color: #1F7A61 !important;font-family: 'DM Sans', sans-serif;background-color: #fff !important;padding: 15px 60px;border-radius: 25px;border-color: #1F7A61 !important;}
+/*LATEST BLOGS SECTION CSS END*/
+/*FOOTER SECTION CSS BEGIN*/
+footer {background-color: #F3F8F7;padding: 60px 120px 0px;}
+.footer-first-contemt p {color: #808080;font-family: 'DM Sans', sans-serif;padding: 34px 0 10px;width: 78%;font-size: 15px;}
+.footer-first-contemt .rd-mr {color: #808080;font-family: 'DM Sans', sans-serif;text-decoration: underline !important;font-size: 15px;}
+.footer-first-contemt li {display: inline-block;padding: 0 18px 0 0px;}
+.footer-first-contemt a {font-size: 20px;color: #1F7A61;}
+.qc-links h4 {font-size: 25px;font-weight: 700;color: #070707;}
+.qc-links li {padding: 0 0 7px;}
+.qc-links a {font-size: 16px;font-weight: 400;color: #808080;}
+.qc-links a:hover {color: #1F7A61;}
+.qc-links ul {margin-top: 42px;}
+.qc-links i {margin-right: 5px;color: #1F7A61;}
+.k13-link {border-top: 1px solid #80808059;margin-top: 32px;}
+.k13-link p {font-size: 15px;color: #808080;text-align: center;padding-top: 17px;}
+.k13-link a:hover {color: #1F7A61;}
+.k13-link a {color: #808080;}
+/*FOOTER SECTION CSS END*/
 /*HOME PAGE CSS END*/
+
+/*WEB DESIGN PAGE CSS BEGIN*/
+.web-design-banner-sec {position: relative;padding: 0 250px 0;background-image: url("../images/wb-des-banner.png");background-repeat: no-repeat;background-size: cover;background-position: center;height: 83vh;display: flex;align-items: center;}
+.web-design-banner-sec:before {content: "";position:absolute;top:0;left:0;width: -webkit-fill-available;height: -webkit-fill-available;background-image:url("../images/banner-design.png");background-repeat:no-repeat;z-index: 0;}
+.web-design-banner-sec .row {display: flex;align-items: center;}
+.web-design-ban h2 {font-size: 80px;font-weight: 700;color: #070707;}
+.web-col-cont {padding: 80px 120px;background-image: linear-gradient(to top, #ffffff, #fff, #1f7a610f, #1f7a610f, #1f7a610f);}
+.web-col-cont p {font-size: 15px;color: #808080;width: 59%;margin: 0 auto;text-align: center;}
+.web-des-pro-sec {padding: 30px 120px 130px;}
+.web-inner-cont-head h2 {font-size: 50px;font-weight: 700;color: #070707;text-transform: uppercase;text-align: center;}
+.web-inner-cont-head span {color: #1F7A61;}
+.lft-content h2 {font-size: 50px;font-weight: 700;color: #070707;text-transform: uppercase;margin-bottom: 30px;}
+.lft-content p {font-size: 15px;color: #808080;width: 74%;}
+.lft-content span {display: block;}
+.lft-one-row {align-items: center;padding: 80px 0 0;}
+.testing-sec {padding: 70px 120px 20px;}
+.testing-sec .row {align-items: center;}
+.launch-secc {padding: 0px 120px 40px;}
+.launch-secc .row {align-items: center;}
+.businessv2 {margin-bottom: 50px;}
+/*WEB DESIGN PAGE CSS END*/
+
+/*PPC PAGE CSS BEGIN*/
+.ppc-paid-sec {padding: 70px 120px;background-image: linear-gradient(to top, #ffffff, #fff, #1f7a610f, #1f7a610f, #1f7a610f);}
+.ppc-paid-sec .row {align-items: center;}
+.ppc-method-sec {padding: 20px 120px 140px;position: relative;}
+.ppc-method-sec:after {content: "";position:absolute;bottom: -30px;right: -50px;width: 20%;height: 76%;background-image:url("../images/small-kola.png");background-repeat:no-repeat;z-index: 0;}
+.ppc-method-sec .row {align-items: center;}
+.method-heading-cont h2 {font-size: 50px;font-weight: 700;color: #070707;text-transform: uppercase;text-align: center;margin-bottom: 65px;}
+.method-heading-cont span {color: #1F7A61;}
+.bn-new-img {position: relative;}
+.bn-inner-one {position: absolute;top: 0;left: 0;z-index: -1;}
+.bn-inner-two {position: absolute;bottom: 30px;right: 10px;z-index: -1;}
+.webdesign-content span {display: block;}
+.budget-v1 h2 {font-size: 38px;text-transform: uppercase;}
+.budget-v1 p {margin-bottom: 0;width: 63%;}
+.seo-content span {display: block;}
+.perform-paid-sec {background-image: url("../images/cx1.png");background-position: bottom;padding: 120px 120px 230px;}
+.perform-paid-sec .seo-content h2 {text-transform: uppercase;font-size: 42px;}
+.perform-paid-sec .seo-content p {width: 88%;}
+.newsletterv3-sec {margin: -71px 0 0;}
+.ppc-plan-sec {padding: 120px 120px;}
+.account-structure-sec {margin-top: 0;}
+.rate-ads-sec {padding: 100px 120px 100px;}
+/*PPC PAGE CSS END*/

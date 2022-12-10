@@ -9,7 +9,7 @@
     <link href="{{ asset(config('site_config.assets.css').'app.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'main.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link href="{{ asset(config('site_config.assets.css').'jquery.fancybox.min.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'slick.css') }}" rel="stylesheet">
     <link href="{{ asset(config('site_config.assets.css').'slick-theme.css') }}" rel="stylesheet">
@@ -25,9 +25,8 @@
     @yield('content')
     <!-- Content Ends  -->
     <!-- FOOTER SECTION BEGIN -->
-  
+   @include('footers.footerv2')
     <!-- FOOTER SECTION END -->
-    @include('footers.footerv1')
     <!-- Latest compiled JavaScript -->
     <script src="{{ asset(config('site_config.assets.js').'app.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

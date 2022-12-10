@@ -28,20 +28,23 @@ class SitePageController extends BaseController
 
     public function renderSitePages(Request $request,$page){
         
-        $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
+        return view(config('site_config.assets.pages').$page,[
+    'title' => "text-field",
+       ]);
+        // $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
 
-        if($Page->is_home_page){
-            return redirect()->route('home');
-        }
-        if($Page->has_custom_view){
-            return view(config('site_config.assets.pages').$Page->view,[
-                'title' => $Page->name,
-            ]);
-        }else{
-            return view(config('site_config.assets.pages').'page',[
-                'title' => $Page->name,
-            ]);
-        }
+        // if($Page->is_home_page){
+        //     return redirect()->route('home');
+        // }
+        // if($Page->has_custom_view){
+        //    return view(config('site_config.assets.pages').$Page->view,[
+        //         'title' => $Page->name,
+        //     ]); 
+        // }else{
+        //     return view(config('site_config.assets.pages').'page',[
+        //         'title' => $Page->name,
+        //     ]);
+        // }
 
         
     }

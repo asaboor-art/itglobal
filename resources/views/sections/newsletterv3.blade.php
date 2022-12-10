@@ -1,5 +1,5 @@
-<!-- NEWSLETTER SECTION BEGIN -->
-<section class="newsletter-sec">
+<!-- NEWSLETTER V3 SECTION BEGIN -->
+<section class="newsletter-sec newsletterv3-sec">
 	<div class="container-fluid">
 		<div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-12">
@@ -26,4 +26,4 @@
         </div>
 	</div>
 </section>
-<!-- NEWSLETTER SECTION END -->
+<!-- NEWSLETTER V3 SECTION END -->

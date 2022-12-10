@@ -21,5 +21,24 @@
     @include('sections.newsletterv2')
     <!-- NEWSLETTER SECTION END -->
 
+    <!-- WEB DESIGN SECTION BEGIN -->
+    @include('sections.webdesignv1')
+    <!-- WEB DESIGN SECTION END -->
+
+    <!-- SOCIAL MEDIA SECTION BEGIN -->
+    @include('sections.social-mediav1')
+    <!-- SOCIAL MEDIA SECTION END -->
+
+    <!-- PAID ADVERTISEMENT SECTION BEGIN -->
+    @include('sections.paid-advertisementv1')
+    <!-- PAID ADVERTISEMENT SECTION END -->
+
+     <!-- BUSINESS JOURNEY SECTION BEGIN -->
+    @include('sections.businessv1')
+    <!-- BUSINESS JOURNEY SECTION END -->
+
+    <!-- LATEST BLOGS SECTION BEGIN -->
+    @include('sections.latest-blogv1')
+    <!-- LATEST BLOGS SECTION END -->
     
 @endsection
