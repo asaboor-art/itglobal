@@ -10,14 +10,7 @@ return [
                 'submenu_icon' => '',
                 'submenu' => [],
             ],
-            [
-                'name' => 'pages',
-                'route' => 'pages.index',
-                'icon' => 'nav-icon fa fa-file',
-                'has_submenu' => false,
-                'submenu_icon' => '',
-                'submenu' => [],
-            ],
+           
             // [
             //     'name' => 'categories',
             //     'route' => 'categories.index',
@@ -27,25 +20,25 @@ return [
             //     'submenu' => [],
             // ],
            
-            // [
-            //     'name' => 'general-setting',
-            //     'route' => 'home',
-            //     'icon' => 'nav-icon fas fa-bars',
-            //     'has_submenu' => true,
-            //     'submenu_icon' => 'right fas fa-angle-left',
-            //     'submenu' => [
-            //         [
-            //             'name' => 'site-page',
-            //             'route' => 'general-setting.site-page.get',
-            //             'icon' => 'nav-icon fa fa-clipboard',
-            //             'has_submenu' => false,
-            //             'submenu_icon' => '',
-            //             'submenu' => [],
-            //         ],
+            [
+                'name' => 'site-setting',
+                'route' => 'dashboard',
+                'icon' => 'nav-icon fas fa-bars',
+                'has_submenu' => true,
+                'submenu_icon' => 'right fas fa-angle-left',
+                'submenu' => [
+                    [
+                        'name' => 'pages',
+                        'route' => 'pages.index',
+                        'icon' => 'nav-icon fa fa-file',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                    ],
                     
 
-            //     ],
-            // ]
+                ],
+            ]
         ]
     ],
     'guest' => [

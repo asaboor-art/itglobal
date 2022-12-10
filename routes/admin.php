@@ -19,6 +19,9 @@ Route::prefix('pages')->group(function () {
     Route::delete('/delete/{id}',[PageController::class, 'destroy'])->name('admin.pages.destroy');
 });
 
+Route::prefix('layouts')->group(function(){
+    Route::get('/select',[LayoutController::class, 'getLayoutPublic'])->name('admin.layouts.select');
+});
 
 // Inner dashboard
 // Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard.ajax');

@@ -37,6 +37,8 @@ import {Language} from '../../../helpers/lang/lang';
 import Form from '../../commons/Form.vue';
 import usePages from '../../../composables/pages';
 import useService  from '../../../services/index';
+import useGenerals from '../../../composables/general';
+
 export default {
     components:{
         Form,
@@ -46,65 +48,8 @@ export default {
             Lang:Language,
             loader:false,
             errors:{},
-            FormFields:[
-                {
-                    label:Language.name,
-                    field:"name",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    required:true,
-                },
-                {
-                    label:Language.slug,
-                    field:"slug",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    required:true,
-                },
-                {
-                    label:Language.description,
-                    field:"description",
-                    class:"form-control",
-                    type:"textarea",
-                    grid:"col-md-12 col-12",
-                    required:true,
-                },
-                {
-                    label:Language.view,
-                    field:"view",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    required:true,
-                },
-                {
-                    label:Language.home_page,
-                    field:"is_home_page",
-                    class:"form-check-input",
-                    grid:"col-md-12 col-12",
-                    type:"checkbox",
-                    required:false,
-                },
-                {
-                    label:Language.layout,
-                    field:"layout",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    required:true,
-                },
-                {
-                    label:Language.display_on_menu,
-                    field:"display_to_menu",
-                    class:"form-check-input",
-                    grid:"col-md-12 col-12",
-                    type:"checkbox",
-                    required:false,
-                },
-                
-            ],
+            FormFields:[],
+            options:[],
             FormData:{
                 name:'',
                 slug:'',
@@ -117,6 +62,100 @@ export default {
             name:"Create Page",
         }
     },
+    mounted(){ 
+        let ref = this;
+        ref.getData();
+        ref.FormFields = [
+                {
+                    label:Language.name,
+                    field:"name",
+                    class:"form-control",
+                    grid:"col-md-12 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.slug,
+                    field:"slug",
+                    class:"form-control",
+                    grid:"col-md-12 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.description,
+                    field:"description",
+                    class:"form-control",
+                    type:"textarea",
+                    grid:"col-md-12 col-12",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.view,
+                    field:"view",
+                    class:"form-control",
+                    grid:"col-md-12 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.home_page,
+                    field:"is_home_page",
+                    class:"form-check-input",
+                    grid:"col-md-12 col-12",
+                    type:"checkbox",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:false,
+                },
+                {
+                    label:Language.layout,
+                    field:"layout",
+                    class:"vue-select1",
+                    grid:"col-md-12 col-12",
+                    type:"select",
+                    isdynamic:true,
+                    searchable:true,
+                    options:function(){
+                            if(this.isdynamic){
+                                return ref.options;            
+                            }
+                            return [];
+                    },
+                    placeholder:function(){
+                        return "Select "+this.label
+                    },
+                    
+                    required:true,
+                },
+                {
+                    label:Language.display_on_menu,
+                    field:"display_to_menu",
+                    class:"form-check-input",
+                    grid:"col-md-12 col-12",
+                    type:"checkbox",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:false,
+                },
+                
+            ]
+    },
+
     methods:{
         async store(){
             const {storePage,errors} = usePages();
@@ -142,7 +181,15 @@ export default {
             this.errors = errors.value;
             
     
+        },
+        async getData(){
+            const {data,get} = useGenerals();
+            await get(`/admin/layouts/select`);
+            this.options = data.value;
+            
+            
         }
+
    }
 }
 </script>

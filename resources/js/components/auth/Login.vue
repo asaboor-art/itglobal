@@ -35,6 +35,9 @@ export default {
                     class:"form-control",
                     grid:"col-md-12 col-12",
                     type:"email",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
                     required:true,
                 },
                 {
@@ -43,6 +46,9 @@ export default {
                     class:"form-control",
                     grid:"col-md-12 col-12",
                     type:"password",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
                     required:true,
                 },
                 {

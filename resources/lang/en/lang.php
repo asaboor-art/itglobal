@@ -2,6 +2,7 @@
 return [
     'about_us' => 'About Us',
     'home' => 'Home',
+    'site-setting'  => 'Site Settings',
     'services' => 'Services',
     'contact' => 'Contact Us',
     'get_a_quote' => 'Get a Quote',
