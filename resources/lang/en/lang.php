@@ -4,7 +4,7 @@ return [
     'home' => 'Home',
     'services' => 'Services',
     'contact' => 'Contact Us',
-    'get_a_quote' => 'Get a Quote',
+    'get_a_quote' => 'GET A FREE CONSULTATION',
     'save' => 'Save',
     'intererior-exterior' => 'Interior & Exterior',
     'residential-commericals' => 'Residential & Commercial',
@@ -65,5 +65,11 @@ return [
     'inactive' => 'Inactive',
     'create' => 'Create',
     'saved' => 'Saved',
-    'updated' => 'Updated'
+    'updated' => 'Updated',
+    'seo' =>  'Seo',
+    'web_design' => 'Web Design',
+    'social_media' => 'Social Media',
+    'paid_advertisement' => 'Paid Advertisement',
+    'learn_more' => 'Learn More',
+    'schedule_a_meeting' => 'Schedule a Meeting'
 ];

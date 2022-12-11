@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- BANNER SECTION BEGIN -->
-    @include('sections.banner-k13v1')
+    @include('sections.bannerv3')
     <!-- BANNER SECTION END -->
     
     <!-- HOW WE HELP SECTION BEGIN -->

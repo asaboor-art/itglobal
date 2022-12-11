@@ -7,7 +7,7 @@
 					<h2>SOCIAL MEDIA</h2>
 					<p>You need a system that handles paid media, planning, long-term goals, and more if you want continuing social returns.</p>
 					<div class="work-btn seo-btn">
-					<a href="javascriptvoid:(0)" class="btn btn-primary">LEARN MORE</a>
+					<a href="{{ route('site-pages','social-media')}}" class="btn btn-primary">{{ strtoupper(trans('lang.learn_more')) }}</a>
 					</div>
 				</div>
 			</div>

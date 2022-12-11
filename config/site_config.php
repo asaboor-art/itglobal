@@ -27,13 +27,23 @@ return [
                 'is_main' => true,
             ],
             [
-                'name' => 'about_us',
-                'link' => 'about-us',
+                'name' => 'seo',
+                'link' => 'seo',
                 'is_main' => false,
             ],
             [
-                'name' => 'services',
-                'link' => 'services',
+                'name' => 'web_design',
+                'link' => 'web-design',
+                'is_main' => false,
+            ],
+            [
+                'name' => 'social_media',
+                'link' => 'social-media',
+                'is_main' => false,
+            ],
+            [
+                'name' => 'paid_advertisement',
+                'link' => 'paid-advertisement',
                 'is_main' => false,
             ],
             [
@@ -43,18 +53,60 @@ return [
             ],
             
         ],
+        'footer_menu1' => [
+            [
+                'name' => 'home',
+                'link' => 'home',
+                'is_main' => true,
+            ],
+            [
+                'name' => 'about_us',
+                'link' => 'about-us',
+                'is_main' => false,
+            ],
+            [
+                'name' => 'contact',
+                'link' => 'contact-us',
+                'is_main' => false,
+            ],
+        ],
+        'footer_menu2' => [
+            [
+                'name' => 'web_design',
+                'link' => 'web-design',
+                'is_main' => false,
+            ],
+            [
+                'name' => 'social_media',
+                'link' => 'social-media',
+                'is_main' => false,
+            ],
+            [
+                'name' => 'paid_advertisement',
+                'link' => 'paid-advertisement',
+                'is_main' => false,
+            ],
+            [
+                'name' => 'seo',
+                'link' => 'seo',
+                'is_main' => false,
+            ],
+
+        ],
 
     ],
+    
     'contacts' => [
         'phone' => "(403)376-3322",
-        'email' => "info@calgarypaintingcrew.com",
-        'copyright' => "© 2022 Calgary Painting Crew. All rights reserved.",
-        'name' => "Calgary Painting",
+        'email' => "info@K13.com",
+        'copyright' => "© 2022 K13. All rights reserved.",
+        'name' => "K13 Web",
         'address'   => "328 40 Ave NE Calgary,AB T2E 2M7",
         'developer' => 'K13.ca',
         'facebook' => 'javascript:void(0);',
         'tiktok' => 'javascript:void(0);',
         'instragram' => 'https://www.instagram.com/calgarypaintingcrew/?igshid=ZmVmZTY5ZGE%3D',
+        'website' => 'sagnter.com',
 
     ]
 

@@ -10,7 +10,7 @@
 					<h2>WEB DESIGN</h2>
 					<p>We create stunningly branded WordPress and Shopify websites that are optimised for more traffic and conversions.</p>
 					<div class="work-btn webdesign-btn">
-					<a href="javascriptvoid:(0)" class="btn btn-primary">LEARN MORE</a>
+					<a href="{{ route('site-pages','web-design')}}" class="btn btn-primary">{{ strtoupper(trans('lang.learn_more')) }}</a>
 					</div>
 				</div>
 			</div>
