@@ -96,7 +96,7 @@ ul > li:first-of-type{display:none;}
 .seo-sec:before {content: "";position: absolute;top: 130px;left: -170px;width: 30%;height: 83%;background-image: url("../images/seo-animal.png");background-repeat: no-repeat;}
 .seo-sec .row {align-items: center;}
 .seo-content {margin-left: 185px;}
-.seo-content h2 {font-size: 50px;font-weight: 700;color: #070707;font-family: 'DM Sans', sans-serif;display: inline-block;position: relative;}
+.seo-content h2 {font-size: 50px;font-weight: 700;color: #070707;font-family: 'DM Sans', sans-serif;display: inline-block;position: relative;text-transform: uppercase;}
 .seo-content p {color: #808080;font-family: 'DM Sans', sans-serif;width: 81%;padding: 14px 0;}
 .seo-btn .btn-primary {background-color: transparent !important;}
 /*SEO SECTION CSS END*/
@@ -287,7 +287,13 @@ footer {background-color: #F3F8F7;padding: 60px 120px 0px;}
 /*ABOUT US PAGE CSS END*/
 
 /*SEO PAGE CSS BEGIN*/
-
-
-
+.seo-man-banner-sec .social-media-banner-girl img {width: 58%;}
+.offsite-seo-sec {margin-top: -50px;margin-bottom: 70px;}
+.ranking-seo-sec {margin-top: -10px;}
+.keyword-seo-sec {padding-top: 80px;padding-bottom: 80px;}
+.links-seo-sec {margin-top: 20px;margin-bottom: 60px;}
+.seo-method-together-sec {position: relative;background-image: url("../images/seo-map.png");background-repeat: no-repeat;background-size: contain;background-position: center;padding: 0 120px 90px;margin-top: 120px;margin-bottom: 70px;}
+.methods-content h2 {font-size: 50px;font-weight: 700;color: #070707;text-transform: uppercase;text-align: center;margin-bottom: 65px;}
+.methods-content span {color: #1F7A61;}
+.method-imags img {width: 100%;margin: 80px 0 110px;}
 /*SEO PAGE CSS END*/
