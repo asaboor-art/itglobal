@@ -29,7 +29,7 @@ class SitePageController extends BaseController
     public function renderSitePages(Request $request,$page){
         
         return view(config('site_config.assets.pages').$page,[
-    'title' => "text-field",
+    'title' => "Test Page",
        ]);
         // $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
 

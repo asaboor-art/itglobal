@@ -42,13 +42,18 @@ return [
                 'is_main' => false,
             ],
             [
+                'name' => 'branding',
+                'link' => 'branding',
+                'is_main' => false,
+            ],
+            [
                 'name' => 'paid_advertisement',
                 'link' => 'paid-advertisement',
                 'is_main' => false,
             ],
             [
-                'name' => 'contact',
-                'link' => 'contact-us',
+                'name' => 'about_us',
+                'link' => 'about-us',
                 'is_main' => false,
             ],
             
@@ -65,8 +70,8 @@ return [
                 'is_main' => false,
             ],
             [
-                'name' => 'contact',
-                'link' => 'contact-us',
+                'name' => 'branding',
+                'link' => 'branding',
                 'is_main' => false,
             ],
         ],

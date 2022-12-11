@@ -71,5 +71,6 @@ return [
     'social_media' => 'Social Media',
     'paid_advertisement' => 'Paid Advertisement',
     'learn_more' => 'Learn More',
-    'schedule_a_meeting' => 'Schedule a Meeting'
+    'schedule_a_meeting' => 'Schedule a Meeting',
+    'branding' => 'Branding',
 ];
