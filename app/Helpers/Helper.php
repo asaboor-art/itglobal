@@ -9,6 +9,7 @@ use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Database;
 use PDF;
 use Mail;
+use App\Models\Media;
 
 class Helper
 {
@@ -108,20 +109,32 @@ class Helper
         }
     }
 
-    public static function moveNormalFile($file, $directory)
+    public static function saveMedia($file, $directory,$model,$id)
     {
-        if (file_exists(public_path('uploads/' . $directory . '/' . $directory . '_' . time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension()))) {
-            @unlink(public_path('uploads/' . $directory . '\\' . $directory . '_' . time() . '.' . $file->getClientOriginalExtension()));
+        $public_path = "";
+        try{
+            if (file_exists(public_path('uploads/' . $directory . '/' . $directory . '_' . time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension()))) {
+                @unlink(public_path('uploads/' . $directory . '\\' . $directory . '_' . time() . '.' . $file->getClientOriginalExtension()));
+            }
+            if (!file_exists(public_path('uploads/' . $directory)) && !is_dir(public_path('uploads/' . $directory))) {
+                mkdir(public_path('uploads/' . $directory), 0777);
+            }
+    
+            $path = public_path('uploads/' . $directory);
+            $public_path = 'uploads/' . $directory . '/' . time() . '.' . $file->getClientOriginalExtension();
+            $file->move($path, time() . '.' . $file->getClientOriginalExtension());  
+        }catch(\Exception $e){
+            $public_path = "images/image-not-found.png";
+            Log::error($e);
         }
-        if (!file_exists(public_path('uploads/' . $directory)) && !is_dir(public_path('uploads/' . $directory))) {
-            mkdir(public_path('uploads/' . $directory), 0777);
-        }
+        
 
-        $path = public_path('uploads/' . $directory);
-        $public_path = 'uploads/' . $directory . '/' . time() . '.' . $file->getClientOriginalExtension();
-        $file->move($path, time() . '.' . $file->getClientOriginalExtension());
-
-        return $public_path;
+        $media = Media::create([
+            'image_url' => $public_path,
+            'model' => $model,
+            'model_id' => $id,
+        ]);
+        return $media;
     }
 
     public static function base64ToImage($data)

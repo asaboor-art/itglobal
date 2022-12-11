@@ -185,9 +185,7 @@ export default {
         async getData(){
             const {data,get} = useGenerals();
             await get(`/admin/layouts/select`);
-            this.options = data.value;
-            
-            
+            this.options = data.value;   
         }
 
    }

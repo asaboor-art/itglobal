@@ -23,7 +23,8 @@
 
             </div>
         </div>
-        <div class="table-responsive">
+        <div class="table-responsive" v-if="rows">
+            
             <table class="table table-striped table-sm">
                 <thead>
                     <tr>
@@ -42,6 +43,7 @@
 
                     </tr>
                 </thead>
+                
                 <tbody v-if="rows.length > 0">
                     <tr v-for="(row,index) in rows" :key="index">
                         <td v-for="(column,key) in columns" :key="key">
@@ -74,17 +76,49 @@
             </table>
 
         </div>
-        <div class="row p-4" v-if="rows.length >0">
-            <div class="col-md-12 col-12 d-flex justify-content-center">
-            <v-pagination
-                v-model="pageNo"
-                :pages="pages"
-                :range-size="pageSize"
-                active-color="#DCEDFF"
-                @update:modelValue="updatePageNo"
-            />
+        <div v-else>
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th v-for="(item,index) in columns" :key="index" >
+                                <div>
+                                    <input type="checkbox" v-if="checkbox"/>
+                                    <label v-else style="cursor:pointer;">
+                                        <span class="mr-1">{{ item.label}}</span>
+                                        <span v-if="item.sorted" @click="setOrder(item.field)">
+                                            <i class="fa fa-sort-up" v-if="order =='desc'"></i>
+                                            <i class="fa fa-sort-down" v-else></i>
+                                         </span>
+                                    </label>
+                                </div>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td :colspan="columns.length">
+                            {{ Language.no_record_found}}
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div v-if="rows">
+            <div class="row p-4" v-if="rows.length >0">
+                <div class="col-md-12 col-12 d-flex justify-content-center">
+                <v-pagination
+                    v-model="pageNo"
+                    :pages="pages"
+                    :range-size="pageSize"
+                    active-color="#DCEDFF"
+                    @update:modelValue="updatePageNo"
+                />
+                </div>
             </div>
         </div>
+        
     </div>
 
 </template>

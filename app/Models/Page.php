@@ -40,17 +40,57 @@ class Page extends BaseModel
     {
 
         if(isset($this->id)){
-            $category = self::where('slug',$slug)->where('id','!=',$this->id)->first();
+            $page = self::where('slug',$slug)->where('id','!=',$this->id)->first();
             $this->attributes['slug'] = $slug.'-'.((int)$this->id);
             return true;
         }
-        $category = self::where('slug',$slug)->first();
-        if(isset($category)){
-            $this->attributes['slug'] = $slug.'-'.((int)$category->id+1);
+        $page = self::where('slug',$slug)->first();
+        if(isset($page)){
+            $this->attributes['slug'] = $slug.'-'.((int)$page->id+1);
             return true;
         }
         $this->attributes['slug'] = $slug;
         return true;
+    }
+
+    public function getRecordDataTable($request){
+        if($request->has('search') && $request->search !=''){
+            $this->setFilters(['name','like','%'.$request->search.'%']);     
+        }
+
+        $condition = [];
+        
+        $result = $this->getAllDatatables([],
+        ['id','name','slug','view','is_active','display_to_menu','has_custom_view','created_at'],
+        [],'is_delete');
+
+        
+            $count = 0;
+            $data = [];
+            $response = [];
+            foreach ($result['data'] as $key => $row) {
+                $count++;
+                $data['id'] = $row->id;
+                $data['is_active'] = $row->is_active;
+                $data['sno'] = $count;
+                $data['name'] = $row->name ;
+                $data['view'] = $row->view ;
+                $data['slug'] = $row->slug;
+                $data['status'] = $row->is_active == 1 ? '<span class="badge badge-success">' . trans('lang.active') . '</span>' : '<span class="badge badge-danger">' . trans('lang.inactive') . '</span>';
+                $data['display_to_menu'] = $row->display_to_menu == 1 ? '<span class="badge badge-success">' . trans('lang.active') . '</span>' : '<span class="badge badge-danger">' . trans('lang.inactive') . '</span>';
+                $data['created_at'] =  $row->created_at;
+                $response['data'][] = $data;
+            }
+
+            $response['columns'] = [];
+            if (!isset($response['data'])) {
+                $response['data'] = [];
+            }
+            $response['totalRecords'] = $result['totalRecord'];
+            $response['pages'] = $result['pages'];
+            $response['totalFilterRecords'] = $result['totalFilterRecords'];
+
+            return $response;
     }
 
     public function getRule(){

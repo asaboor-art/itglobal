@@ -42,65 +42,7 @@ data(){
         Lang:Language,
         loader:false,
         errors:{},
-        FormFields:[
-            {
-                label:Language.name,
-                field:"name",
-                class:"form-control",
-                grid:"col-md-12 col-12",
-                type:"text",
-                required:true,
-            },
-            {
-                label:Language.slug,
-                field:"slug",
-                class:"form-control",
-                grid:"col-md-12 col-12",
-                type:"text",
-                required:true,
-            },
-            {
-                label:Language.description,
-                field:"description",
-                class:"form-control",
-                type:"textarea",
-                grid:"col-md-12 col-12",
-                required:true,
-            },
-            {
-                label:Language.view,
-                field:"view",
-                class:"form-control",
-                grid:"col-md-12 col-12",
-                type:"text",
-                required:true,
-            },
-            {
-                label:Language.home_page,
-                field:"is_home_page",
-                class:"form-check-input",
-                grid:"col-md-12 col-12",
-                type:"checkbox",
-                required:false,
-            },
-            {
-                label:Language.layout,
-                field:"layout",
-                class:"form-control",
-                grid:"col-md-12 col-12",
-                type:"text",
-                required:true,
-            },
-            {
-                label:Language.display_on_menu,
-                field:"display_to_menu",
-                class:"form-check-input",
-                grid:"col-md-12 col-12",
-                type:"checkbox",
-                required:false,
-            },
-            
-        ],
+        FormFields:[],
         form:{
             name:'',
             slug:'',
@@ -114,7 +56,98 @@ data(){
     }
 },
 mounted(){
-    this.edit();
+    let ref = this;
+    ref.edit();
+    ref.getData();
+        ref.FormFields = [
+                {
+                    label:Language.name,
+                    field:"name",
+                    class:"form-control",
+                    grid:"col-md-12 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.slug,
+                    field:"slug",
+                    class:"form-control",
+                    grid:"col-md-12 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.description,
+                    field:"description",
+                    class:"form-control",
+                    type:"textarea",
+                    grid:"col-md-12 col-12",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.view,
+                    field:"view",
+                    class:"form-control",
+                    grid:"col-md-12 col-12",
+                    type:"text",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:true,
+                },
+                {
+                    label:Language.home_page,
+                    field:"is_home_page",
+                    class:"form-check-input",
+                    grid:"col-md-12 col-12",
+                    type:"checkbox",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:false,
+                },
+                {
+                    label:Language.layout,
+                    field:"layout",
+                    class:"vue-select1",
+                    grid:"col-md-12 col-12",
+                    type:"select",
+                    isdynamic:true,
+                    searchable:true,
+                    options:function(){
+                            if(this.isdynamic){
+                                return ref.options;            
+                            }
+                            return [];
+                    },
+                    placeholder:function(){
+                        return "Select "+this.label
+                    },
+                    
+                    required:true,
+                },
+                {
+                    label:Language.display_on_menu,
+                    field:"display_to_menu",
+                    class:"form-check-input",
+                    grid:"col-md-12 col-12",
+                    type:"checkbox",
+                    placeholder:function(){
+                        return "Enter "+this.label
+                    },
+                    required:false,
+                },
+                
+            ]
 },
 methods:{
     async update(){
@@ -153,10 +186,14 @@ methods:{
             this.form.layout = page.value.layout;
             this.form.display_to_menu = page.value.display_to_menu;
             this.form.description = page.value.description?page.value.description:"";
-            this.form.is_home_page = page.value.is_home_page;
-            // this.form.is_active = page.value.is_active;
-            
+            this.form.is_home_page = page.value.is_home_page;            
     },
+    async getData(){
+            const {data,get} = useGenerals();
+            await get(`/admin/layouts/select`);
+            this.options = data.value;   
+    }
+
 }
 }
 </script>

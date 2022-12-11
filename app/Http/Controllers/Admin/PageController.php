@@ -6,6 +6,8 @@ use App\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use App\Helpers\Helper;
 use App\Models\Page;
+use App\Models\Header;
+use App\Models\Footer;
 use DB;
 use Log;
 
@@ -13,8 +15,12 @@ class PageController extends BaseController
 {
     //
     private $page;
-    public function __construct(Page $page) {
+    private $header;
+    private $footer;
+    public function __construct(Page $page,Header $header,Footer $footer) {
         $this->page = $page;
+        $this->header = $header;
+        $this->footer = $header;
     }
 
     public function index(Request $request){
@@ -25,44 +31,14 @@ class PageController extends BaseController
 
     public function renderTable(Request $request){
         $this->setGeneralFilters($request,$this->page);
-
-        if($request->has('search') && $request->search !=''){
-            $this->page->setFilters(['name','like','%'.$request->search.'%']);     
+        $response = [];
+        try{
+            $response = $this->page->getRecordDataTable($request);  
+        }catch(\Exception $e){
+            Log::error($e);
+            return $this->sendError(trans('validation.custom.errors.server-errors'));
         }
-
-        $condition = [];
-        
-        $result = $this->page->getAllDatatables([],
-        ['id','name','slug','view','is_active','display_to_menu','has_custom_view','created_at'],
-        [],'is_delete');
-
-        
-            $count = 0;
-            $data = [];
-            $response = [];
-            foreach ($result['data'] as $key => $row) {
-                $count++;
-                $data['id'] = $row->id;
-                $data['is_active'] = $row->is_active;
-                $data['sno'] = $count;
-                $data['name'] = $row->name ;
-                $data['view'] = $row->view ;
-                $data['slug'] = $row->slug;
-                $data['status'] = $row->is_active == 1 ? '<span class="badge badge-success">' . trans('lang.active') . '</span>' : '<span class="badge badge-danger">' . trans('lang.inactive') . '</span>';
-                $data['display_to_menu'] = $row->display_to_menu == 1 ? '<span class="badge badge-success">' . trans('lang.active') . '</span>' : '<span class="badge badge-danger">' . trans('lang.inactive') . '</span>';
-                $data['created_at'] =  $row->created_at;
-                $response['data'][] = $data;
-            }
-
-            $response['columns'] = [];
-            if (!isset($response['data'])) {
-                $response['data'] = [];
-            }
-            $response['totalRecords'] = $result['totalRecord'];
-            $response['pages'] = $result['pages'];
-            $response['totalFilterRecords'] = $result['totalFilterRecords'];
-
-            return $this->sendResponse($response);
+        return $this->sendResponse($response);
     }
 
     public function store(Request $request){
@@ -72,9 +48,7 @@ class PageController extends BaseController
         try {
             DB::beginTransaction();
             $data = $request->except('_token');
-            //dd($data);
-            $path = ""; //config('constant.default-images.general');
-            $logo_path = ""; //config('constant.defau""; //lt-images.general');
+            
             // $this->page->name = $data['name'];
             // $this->page->slug = $data['slug'];
             // $this->page->display_to_menu = (int)$request->display_to_menu;
@@ -82,20 +56,14 @@ class PageController extends BaseController
             // $this->page->view = $data['view'];
             // $this->page->layout = $data['layout'];
             // $this->page->is_active = 1;
-            if ($request->has('image')) {
-
-                if (!is_array($request->image)) {
-                    $response = Helper::saveFiles($request->image, 'page');
-                    if ($response) {
-                        $path = $response;
-                    }
-                }
-                $data['image'] = $path;
-                // $this->page->image = $path;
-                // $this->page->image_url = $logo_path;
-            }
             
-            $this->page->store($data);
+            
+            $result = $this->page->store($data);
+            if ($request->has('image')) {
+                if (!is_array($request->image)) {
+                    $response = Helper::saveMedia($request->image, 'page',Page::class,$result->id);  
+                }
+            }
             DB::commit();
             return $this->sendResponse([], trans('messages.success_msg', ['action' => trans('lang.saved')]));
         } catch (\Exception $e) {

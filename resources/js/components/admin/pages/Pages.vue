@@ -32,7 +32,22 @@
             <div class="card-body p-0" v-if="data">
                 <datatables :rows="data.data" :pages="data.pages" :columns="columns" :checkbox="false" :setPageNo="setPageNo" :filter="filter" :setPageSize="setPageSize" :setFilter="setFilter" :pageNo="pageNo" :pageSize="pageSize" :updateStatus="updateStatus" :setOrder="setOrder" :order="order" />
             </div>
-
+            <div class="card-body p-0" v-else>
+                <table class="table table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th v-for="(item,index) in columns" :key="index" >
+                                <div>
+                                    <label>
+                                        <span class="mr-1">{{ item.label}}</span>
+                                    </label>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
             <!-- /.card-body -->
         </div>
         <!-- /.card -->
