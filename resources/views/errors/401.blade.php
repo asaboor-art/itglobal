@@ -2,7 +2,6 @@
 
 @section('content')
 <section class="page_404">
-
 	<div class="container">
 		<div class="row">	
 		<div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">

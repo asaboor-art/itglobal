@@ -30,7 +30,7 @@
                           @endif
                           
                         </ul>
-                        <ul class="desktop-hide">
+                        <!-- <ul class="desktop-hide">
                         <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
                           @if(true)
                               @foreach($Menus as $key => $menu)
@@ -46,7 +46,7 @@
                               @endforeach
                           @endif
                           
-                        </ul>
+                        </ul> -->
                       
                     </div>
                   </div>
