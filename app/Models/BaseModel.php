@@ -207,7 +207,10 @@ class BaseModel extends Model
 
     public function find($id)
     {
-
         return static::findorfail($id);
     }
+
+    // public function where($column, $operator, $value){
+
+    // }
 }

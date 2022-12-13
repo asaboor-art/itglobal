@@ -8,44 +8,57 @@ use App\Helpers\Helper;
 use App\Models\CustomForm;
 use App\Mail\CustomForm as MailForm;
 use App\Models\Page;
+use Log;
 
 class SitePageController extends BaseController
 {
     //
     private $customForm;
-    public function __construct(CustomForm $customForm){
+    private $page;
+    public function __construct(CustomForm $customForm,Page $page){
 
         $this->customForm = $customForm;
+        $this->page = $page;
     }
 
     public function renderMainPage(Request $request){
-        // abort(401);
-        $Page = Page::where('is_active',1)->where('is_home_page',1)->first();
-        return view(config('site_config.assets.home_pages').$Page->view,[
-            'title' => $Page->name,
-        ]);
+        try{
+            $Page = $this->page->where('is_active',1)->where('is_home_page',1)->first();
+            return view(config('site_config.assets.home_pages').$Page->view,[
+                'title' => $Page->name,
+            ]);
+        }catch(\Exception $e){
+            Log::error($e);
+            abort(404);
+        }
+        
+        
     }
     
     public function renderSitePages(Request $request,$page){
         
-        return view(config('site_config.assets.pages').$page,[
-    'title' => "Test Page",
-       ]);
-        // $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
+    //     return view(config('site_config.assets.pages').$page,[
+    // 'title' => "Test Page",
+    //    ]);
+        try{
+            $Page = $this->page->where('is_active',1)
+            ->where('is_home_page','!=',1)->where('slug',$page)->first();
 
-        // if($Page->is_home_page){
-        //     return redirect()->route('home');
-        // }
-        // if($Page->has_custom_view){
-        //    return view(config('site_config.assets.pages').$Page->view,[
-        //         'title' => $Page->name,
-        //     ]); 
-        // }else{
-        //     return view(config('site_config.assets.pages').'page',[
-        //         'title' => $Page->name,
-        //     ]);
-        // }
-
+            
+            if($Page->has_custom_view){
+            return view(config('site_config.assets.pages').$Page->view,[
+                    'title' => $Page->name,
+                ]); 
+            }else{
+                return view(config('site_config.assets.pages').'page',[
+                    'title' => $Page->name,
+                ]);
+            }
+        }catch(\Exception $e){
+            Log::error($e);
+            abort(404);
+        }
+        
         
     }
 
