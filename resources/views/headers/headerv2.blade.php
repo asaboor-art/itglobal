@@ -13,8 +13,8 @@
                       <a href="javascriptvoid:(0)"><img src="{{ asset(config('site_config.assets.logo')) }}" alt="image" class="img-fluid"></a>
                     </div>
                     <div class="menu" id="myTopnav">
-                        <ul >
-                            
+                        <ul>
+                        <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
                           @if(true)
                               @foreach($Menus as $key => $menu)
                                   @if(!$menu['is_main'])
@@ -30,15 +30,24 @@
                           @endif
                           
                         </ul>
-                      <ul class="desktop-hide">
+                        <ul class="desktop-hide">
                         <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
-                        <li><a href="javascriptvoid:(0)">Home</a></li>
-                        <li><a href="javascriptvoid:(0)">Seo</a></li>
-                        <li><a href="javascriptvoid:(0)">Web Design</a></li>
-                        <li><a href="javascriptvoid:(0)">Social Media</a></li> 
-                        <li><a href="javascriptvoid:(0)">Paid Avertisement</a></li>
-                        <li><a href="javascriptvoid:(0)">Contact Us</a></li>
-                      </ul>
+                          @if(true)
+                              @foreach($Menus as $key => $menu)
+                                  @if(!$menu['is_main'])
+                                  <li>
+                                      <a href="{{ route('site-pages',$menu['link']) }}">{{ trans('lang.'.$menu['name'])}}</a>
+                                  </li>
+                                  @else
+                                  <li >
+                                      <a href="{{ route('home') }}">{{ trans('lang.'.$menu['name'])}}</a>
+                                  </li>
+                                  @endif
+                              @endforeach
+                          @endif
+                          
+                        </ul>
+                      
                     </div>
                   </div>
                   <div id="mySidenav" class="sidenav">
