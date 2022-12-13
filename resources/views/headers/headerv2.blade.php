@@ -30,7 +30,7 @@
                           @endif
                           
                         </ul>
-                      <!-- <ul>
+                      <ul class="desktop-hide">
                         <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>
                         <li><a href="javascriptvoid:(0)">Home</a></li>
                         <li><a href="javascriptvoid:(0)">Seo</a></li>
@@ -38,7 +38,7 @@
                         <li><a href="javascriptvoid:(0)">Social Media</a></li> 
                         <li><a href="javascriptvoid:(0)">Paid Avertisement</a></li>
                         <li><a href="javascriptvoid:(0)">Contact Us</a></li>
-                      </ul> -->
+                      </ul>
                     </div>
                   </div>
                   <div id="mySidenav" class="sidenav">

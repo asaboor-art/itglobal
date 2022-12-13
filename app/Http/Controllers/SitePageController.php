@@ -19,13 +19,13 @@ class SitePageController extends BaseController
     }
 
     public function renderMainPage(Request $request){
-       
+        // abort(401);
         $Page = Page::where('is_active',1)->where('is_home_page',1)->first();
         return view(config('site_config.assets.home_pages').$Page->view,[
             'title' => $Page->name,
         ]);
     }
-
+    
     public function renderSitePages(Request $request,$page){
         
         return view(config('site_config.assets.pages').$page,[

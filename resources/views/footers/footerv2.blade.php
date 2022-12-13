@@ -9,13 +9,14 @@
 						<!-- <a href="javascriptvoid:(0)" class="rd-mr">READ MORE</a>  -->
 					</p>
 					<ul>
-						<li><a href="{{ config('site_config.contacts.facebook')}}"><i class="fa-brands fa-facebook"></i></a></li>
-						<li><a href="{{ config('site_config.contacts.instagram')}}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-						<li><a href="{{ config('site_config.contacts.tiktok')}}"><i class="fa-brands fa-tiktok"></i></a></li>
+						<li><a href="{{ config('site_config.contacts.facebook')}}"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="{{ config('site_config.contacts.twitter')}}"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="{{ config('site_config.contacts.linkedin')}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="{{ config('site_config.contacts.instagram')}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-12">
 				<div class="qc-links">
 					<h4>Quick Links</h4>
 					@php 
@@ -38,7 +39,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 col-12">
+			<div class="col-lg-3 col-md-4 col-sm-4 col-12">
 				<div class="qc-links">
 					<h4>Services</h4>
 					@php 
@@ -61,7 +62,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-2 col-md-2 col-sm-2 col-12">
+			<div class="col-lg-2 col-md-4 col-sm-4 col-12">
 				<div class="qc-links">
 					<h4>Contact Us</h4>
 					<ul>
