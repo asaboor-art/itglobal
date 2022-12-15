@@ -23,12 +23,14 @@ function showPassword(event) {
 }
 
 $('.newsletter-form').on('submit', (e) => {
+    console.log($('.newsletter-email').val());
     e.preventDefault();
+    var form = new FormData();
+    console.log(form)
+    form.append('email', $('.newsletter-email').val());
     ajaxPost(
         '/newsletter',
-        {
-            email:$('.newsletter-email').val(),
-        },
+        form,
         '.newsletter-success','.newsletter-error',
     )
 });
