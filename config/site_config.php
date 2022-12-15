@@ -42,8 +42,8 @@ return [
                 'is_main' => false,
             ],
             [
-                'name' => 'branding',
-                'link' => 'branding',
+                'name' => 'contact',
+                'link' => 'contact-us',
                 'is_main' => false,
             ],
             [
@@ -70,8 +70,8 @@ return [
                 'is_main' => false,
             ],
             [
-                'name' => 'branding',
-                'link' => 'branding',
+                'name' => 'contact',
+                'link' => 'contact-us',
                 'is_main' => false,
             ],
         ],
@@ -96,22 +96,27 @@ return [
                 'link' => 'seo',
                 'is_main' => false,
             ],
+            [
+                'name' => 'branding',
+                'link' => 'branding',
+                'is_main' => false,
+            ],
 
         ],
 
     ],
     
     'contacts' => [
-        'phone' => "(403)376-3322",
+        'phone' => "(585)707-2812",
         'email' => "info@K13.com",
         'copyright' => "© 2022 K13. All rights reserved.",
         'name' => "K13 Web",
         'address'   => "328 40 Ave NE Calgary,AB T2E 2M7",
         'developer' => 'K13.ca',
-        'facebook' => 'javascript:void(0);',
+        'facebook' => 'https://www.facebook.com/k13yyc/',
         'tiktok' => 'javascript:void(0);',
-        'instragram' => 'https://www.instagram.com/calgarypaintingcrew/?igshid=ZmVmZTY5ZGE%3D',
-        'website' => 'sagnter.com',
+        'instragram' => 'https://www.instagram.com/k13.ca/',
+        'website' => 'k13.ca',
 
     ]
 

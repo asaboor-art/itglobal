@@ -9,7 +9,7 @@
 					<p>Because we are aware of how valuable your time is, we are upfront about our qualifications and costs. Request a FREE CONSULTATION today!</p>
 				</div>
 				<div class="work-btn">
-				<a href="javascriptvoid:(0)" class="btn btn-primary">Schedule a Meeting</a>
+				<a href="{{ route('site-pages','contact-us')}}" class="btn btn-primary">Schedule a Meeting</a>
 				</div>
 			</div>
 			</div>
