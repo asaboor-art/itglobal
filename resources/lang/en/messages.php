@@ -10,7 +10,7 @@ return [
     'looks_to_do_project' => 'Looking to do a project outside of Calgary? We are able to do projects',
     'anywhere_in_canada' => 'anywhere in the USA or Canada. ',
     'contactus_for_information' => 'Contact us here for more information.',
-    'newsletter' => 'Sign Up To Our Newsletter',
+    'newsletter' => 'Join Our Newsletter',
     'errors' => [
         '500' => [
             'code'  => '500',

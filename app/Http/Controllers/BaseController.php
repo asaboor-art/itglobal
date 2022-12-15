@@ -11,7 +11,9 @@ use App\Models\ContactForm;
 use App\Models\Newsletter;
 use App\Helpers\Helper;
 use App\Traits\Validation;
-use App\Mail\ContactUss;
+use App\Mail\NewsLetter as NewsLetterMail;
+use App\Mail\ContactUs;
+
 use Pusher\Pusher;
 use DB;
 
@@ -58,12 +60,14 @@ class BaseController extends Controller
     }
 // Subscribe for newsletter
     public function newsletterSubscription(Request $request){
+        //dd($request->input());
         $request->validate([
-            'email' => 'required|email|unique:email'
+            'email' => 'required|email|unique:newsletters,email'
         ]);
-
-        $response =$this->newsLetter->store($request->except('_token'));
+        
+        $response =$this->newsletter->store($request->except('_token'));
         if($response){
+            $message = Helper::sendMail($request->email,new NewsLetterMail($response));
             return $this->sendResponse([],trans('messages.success_msg',['action' => trans('lang.subscribed')]));
         }
         return $this->sendError(trans('messages.error_msg',['action' => trans('lang.subscribing')]));
@@ -80,7 +84,7 @@ class BaseController extends Controller
 
         $response = $this->contactForm->store($request->except('_token'));
         if($response){
-            $message = Helper::sendMail(env('MAIL_FROM_ADDRESS'),new Contactus($response));
+            $message = Helper::sendMail(env('MAIL_FROM_ADDRESS'),new ContactUs($response));
             if($message ==""){
                 return $this->sendResponse([],'Your response has been '.trans('messages.success_msg',['action' => trans('lang.save')]));
             }else{

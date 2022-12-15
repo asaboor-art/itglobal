@@ -7,7 +7,7 @@
               <form class="newsletter-form" method="POST">
                 <div class="newsletter-flex-div">
                   <div class="newsletter-content">
-                    <h2>Join Our Newsletter</h2>
+                    <h2>{{ trans('messages.newsletter')}}</h2>
                     <p>Get weekly access to our best deals, tips and tricks</p>
                   </div>
                   <div class="newsletter-field">
