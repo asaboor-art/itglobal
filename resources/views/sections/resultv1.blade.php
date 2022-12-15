@@ -5,7 +5,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="lft-content">
 					<h2>We are <span class="sp-br-rs">results driven</span></h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					<p>We create an online presence for our clients using a direct approach in order to mobilise and generate meaningful ROI. We are committed to ensuring your success by offering holistic tactics that are affordable, have a wow factor, and receive ongoing support.</p>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">

@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-4 col-12">
 				<div class="footer-first-contemt">
-					<a href="javascriptvoid:(0)"><img src="{{ asset(config('site_config.assets.images').'logo.png') }}" alt="image" class="img-fluid"></a>
+					<a href="http://itglobal.test"><img src="{{ asset(config('site_config.assets.images').'logo.png') }}" alt="image" class="img-fluid"></a>
 					<p>All of your digital marketing requirements are taken care of by our business and our team of qualified professionals. As a result, we can satisfy everyone's needs. Almost all facets of the field are covered by our digital marketing services.
 						<!-- <a href="javascriptvoid:(0)" class="rd-mr">READ MORE</a>  -->
 					</p>

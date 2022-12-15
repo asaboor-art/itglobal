@@ -41,7 +41,7 @@ menu.responsive{position: relative;}
 menu.responsive{float: none;display: block;text-align: left;}
 @media screen and (max-width: 835px) {
 .logo img {height: 40px;}
-ul > li:first-of-type{display:none;}
+/*ul > li:first-of-type{display:none;}*/
 .menu{margin:0;}
 }
 @media screen and (max-width: 690px) {
@@ -264,7 +264,7 @@ footer {background-color: #F3F8F7;padding: 60px 120px 0px;}
 .meet-our-team-sec {padding: 20px 120px 80px;}
 .meet-our-content h2 {font-size: 50px;font-weight: 700;color: #070707;text-align: center;text-transform: uppercase;}
 .meet-our-content span {color: #327A56;}
-.meet-team-members {margin-top: 80px;}
+.meet-team-members {margin-top: 80px;align-items: center;justify-content: center;}
 .meet-team-members img {width: 100%;}
 .as-seen-on-sec .col-lg-3 {max-width: 20%;}
 .as-seen-on-sec img {width: 60%;display: block;margin: 0 auto 0 auto;}
@@ -272,9 +272,9 @@ footer {background-color: #F3F8F7;padding: 60px 120px 0px;}
 .testimonial-heading h2 {font-size: 50px;font-weight: 700;color: #070707;text-align: center;text-transform: uppercase;}
 .testimonial-box p {font-size: 15px;color: #808080;text-align: center;}
 .testimonial-box h6 {font-size: 22px;font-weight: 700;color: #070707;text-align: center;padding: 40px 0 0;position: relative;display: inline-block;}
-.testimonial-box h6:before {content: "";position: absolute;top: 10px;left: -30px;width: 192px;height: 2px;background-color: #327A56;}
+.testimonial-box h6:before {content: "";position: absolute;top: 10px;left: 28px;width: 192px;height: 2px;background-color: #327A56;}
 .testimonial-box span {font-size: 15px;font-weight: 400;color: #808080;display: block;text-align: center;}
-.testimonial-box {position: relative;box-shadow: 0 0 20px 2px #0000001f;border-radius: 25px;padding: 110px 160px;margin: 60px 70px 0;text-align: center;}
+.testimonial-box {position: relative;box-shadow: 0 0 20px 2px #0000001f;border-radius: 25px;padding: 110px 160px;margin: 60px 70px 0;text-align: center;height: 400px;}
 .quote-img {position: absolute;top: -40px;left: 110px;width: 8%;height: 26%;}
 .testimonial-sec .wrapper{width:100%;padding-top: 20px;text-align:center;}
 .testimonial-sec .carousel{width:90%;margin:0px auto;}
@@ -304,6 +304,10 @@ footer {background-color: #F3F8F7;padding: 60px 120px 0px;}
 
 /*RESPONSIVE CSS BEGIN*/
 @media only screen and (min-width: 320px) and (max-width: 529px) {
+.inquires-sec {padding: 60px 15px !important;}
+.inquiry-content {margin-bottom: 50px;}
+.inquiry-content h2 {font-size: 28px !important;}
+.roller-man-content h2 {font-size: 28px !important;}
 .page_404 {padding: 50px 15px;}
 .seo-sec {padding: 90px 15px 30px;margin-top: 20px;}
 .newsletter-sec {margin: 0 0 0;padding: 40px 15px 60px;}
@@ -374,7 +378,7 @@ header {padding: 22px 15px;}
 .meet-our-team-sec {padding: 20px 15px 46px;}
 .testimonial-heading h2 {font-size: 30px;}
 .testimonial-sec {padding: 40px 0px 20px;overflow: hidden;}
-.testimonial-box {padding: 60px 15px 110px;margin: 40px 0px 0;}
+.testimonial-box {padding: 60px 15px 110px;margin: 40px 0px 0;height: auto;}
 .testimonial-sec .carousel {width: 100%;}
 .quote-img {top: -12px;left: 31px;}
 .as-seen-on-sec .col-lg-3 {max-width: 100%;}
@@ -428,6 +432,10 @@ header {padding: 22px 15px;}
 .ab-pg-banner .web-design-ban-img img {margin: 150px auto 0 auto;}
 }
 @media only screen and (min-width: 530px) and (max-width: 767px) {
+.inquires-sec {padding: 60px 15px !important;}
+.inquiry-content {margin-bottom: 50px;}
+.inquiry-content h2 {font-size: 28px !important;}
+.roller-man-content h2 {font-size: 28px !important;}
 .page_404 {padding: 50px 15px;}
 .seo-sec {padding: 30px 15px 10px;margin-top: 20px;}
 .newsletter-sec {margin: 0 0 0;padding: 40px 15px 60px;}
@@ -545,6 +553,10 @@ header {padding: 22px 15px;}
 .sc-pg .web-design-ban-img img {width: 44%;}
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
+.inquires-sec {padding: 60px 15px !important;}
+.inquiry-content {margin-bottom: 50px;}
+.inquiry-content h2 {font-size: 28px !important;}
+.roller-man-content h2 {font-size: 28px !important;}
 .seo-sec {padding: 30px 15px 10px;margin-top: 20px;}
 .newsletter-sec {margin: 0 0 0;padding: 40px 15px 60px;}
 .webdesign-sec {padding: 40px 15px 18px;}
@@ -971,3 +983,18 @@ header {padding: 22px 15px;}
 .ab-pg-banner .web-design-ban-img img {width: 61%;}
 }
 /*RESPONSIVE CSS END*/
+.about-banner-content h2 {font-size: 80px;font-weight: 700;color: #070707;text-transform: uppercase;}
+.inquires-sec {padding: 100px 120px;}
+.inquiry-content h2 {font-size: 40px;font-weight: 700;color: #070707;font-family: 'DM Sans', sans-serif;display: inline-block;position: relative;}
+.roller-man-content h2 {font-size: 40px;font-weight: 700;color: #070707;font-family: 'DM Sans', sans-serif;display: inline-block;position: relative;}
+.inquiry-content a {color: #808080;font-family: 'DM Sans', sans-serif;font-size: 18px;font-weight: 500;}
+.inquiry-content .email-tag {display: block;}
+.inquiry-content li {padding: 10px 0px;}
+.inquiry-content ul {margin-top: 20px;}
+.inquiry-content a:hover {color: #1f7a61;}
+.contact-form {margin-top: 30px;}
+.contact-form .form-btn .btn-primary {font-size: 17px;font-weight: 700;color: #1F7A61 !important;font-family: 'DM Sans', sans-serif;background-color: #fff !important;padding: 15px 80px;border-radius: 25px;border-color: #1F7A61 !important;margin-top: 25px;}
+.contact-form p {color: #808080;font-family: 'DM Sans', sans-serif;font-size: 18px;font-weight: 500;margin-top: 25px;}
+.contact-form a {display: block;margin-top: 12px;color: #1F7A61;font-weight: 500;}
+.contact-form a:hover {color: #1F7A61;}
+.roller-man-content .form-control {height: auto;padding: 15px 15px;}

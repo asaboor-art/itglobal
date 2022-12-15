@@ -18,7 +18,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="how-help-content">
 					<h2>We Are <span>K13.CA</span></h2>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+					<p>All of your digital marketing requirements are taken care of by our business and our team of qualified professionals. As a result, we can satisfy everyone's needs. Almost all facets of the field are covered by our digital marketing services. Search engine optimization (SEO), web development, graphic design, and social media marketing are the services we offer.  Over the years, we have developed a solid and reliable cooperation with our clients.</p>
 					<ul>
 						<li><i class="fa fa-circle" aria-hidden="true"></i> We're Creative</li>
 						<li><i class="fa fa-circle" aria-hidden="true"></i> We're Local</li>

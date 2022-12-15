@@ -10,7 +10,7 @@
                                 $Menus = config('site_config.menus.pages');
                         @endphp
                     <div class="logo">
-                      <a href="javascriptvoid:(0)"><img src="{{ asset(config('site_config.assets.logo')) }}" alt="image" class="img-fluid"></a>
+                      <a href="http://itglobal.test"><img src="{{ asset(config('site_config.assets.logo')) }}" alt="image" class="img-fluid"></a>
                     </div>
                     <div class="menu" id="myTopnav">
                         <ul>

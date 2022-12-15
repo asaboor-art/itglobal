@@ -11,9 +11,9 @@
             <div class="carousel">
               <div>
                 <div class="testimonial-box">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                  <h6>John Willims</h6>
-                  <span>CEO, abc Company</span>
+                  <p>The K13 Media staff is fantastic. Dedicated to perfection, amiable, and always "On It." Excellent firm to work with; they produce results for any projects you are working on now or have planned. I'm eager for our relationship to continue.</p>
+                  <h6>Ruby’s Tap House - Carly</h6>
+                  <!-- <span>CEO, abc Company</span> -->
                   <div class="quote-img">
                     <img src="{{ asset(config('site_config.assets.images').'quote1.png') }}" alt="image" class="img-fluid">
                   </div>
@@ -21,9 +21,9 @@
               </div>
               <div>
                 <div class="testimonial-box">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                  <h6>John Willims</h6>
-                  <span>CEO, abc Company</span>
+                  <p>With their innovative site creation and effective marketing techniques, K13 continues to be the most outstanding digital agency we've ever worked with. The entire team constantly produces innovative work that is far superior to that of the competition. After collaborating on a number of projects, we can without a doubt recommend them.</p>
+                  <h6>Sidhu The Barber - Balraj</h6>
+                  <!-- <span>CEO, abc Company</span> -->
                   <div class="quote-img">
                     <img src="{{ asset(config('site_config.assets.images').'quote1.png') }}" alt="image" class="img-fluid">
                   </div>
@@ -31,9 +31,9 @@
               </div>
               <div>
                 <div class="testimonial-box">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                  <h6>John Willims</h6>
-                  <span>CEO, abc Company</span>
+                  <p>I have a long history with K13.CA. Because of the individual attention they provide and their in-depth understanding of digital marketing, I heartily recommend them. They are constantly coming up with creative solutions to improve my internet visibility and broaden our customer base.</p>
+                  <h6>Calgary Paint Crew - Harvee</h6>
+                  <!-- <span>CEO, abc Company</span> -->
                   <div class="quote-img">
                     <img src="{{ asset(config('site_config.assets.images').'quote1.png') }}" alt="image" class="img-fluid">
                   </div>
@@ -41,9 +41,9 @@
               </div>
               <div>
                 <div class="testimonial-box">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                  <h6>John Willims</h6>
-                  <span>CEO, abc Company</span>
+                  <p>It has been such a pleasure working with them. The staff at this marketing firm is top-notch, and they genuinely want to assist. I would always urge you to use them.</p>
+                  <h6>City Models - Daniel</h6>
+                  <!-- <span>CEO, abc Company</span> -->
                   <div class="quote-img">
                     <img src="{{ asset(config('site_config.assets.images').'quote1.png') }}" alt="image" class="img-fluid">
                   </div>
