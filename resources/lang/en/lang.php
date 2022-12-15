@@ -66,5 +66,9 @@ return [
     'inactive' => 'Inactive',
     'create' => 'Create',
     'saved' => 'Saved',
-    'updated' => 'Updated'
+    'updated' => 'Updated',
+    'headers' =>'Headers',
+    'edit' => 'Edit',
+    'footer' =>'Footer',
+    'footers' =>'Footers',
 ];

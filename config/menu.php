@@ -10,16 +10,6 @@ return [
                 'submenu_icon' => '',
                 'submenu' => [],
             ],
-           
-            // [
-            //     'name' => 'categories',
-            //     'route' => 'categories.index',
-            //     'icon' => 'nav-icon fas fa-clipboard',
-            //     'has_submenu' => false,
-            //     'submenu_icon' => '',
-            //     'submenu' => [],
-            // ],
-           
             [
                 'name' => 'site-setting',
                 'route' => 'dashboard',
@@ -35,6 +25,23 @@ return [
                         'submenu_icon' => '',
                         'submenu' => [],
                     ],
+                    [
+                        'name' => 'headers',
+                        'route' => 'headers.index',
+                        'icon' => 'nav-icon fa fa-file',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                    ],
+                    [
+                        'name' => 'footers',
+                        'route' => 'footers.index',
+                        'icon' => 'nav-icon fa fa-file',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                    ],
+                    
                     
 
                 ],

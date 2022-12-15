@@ -156,7 +156,7 @@ methods:{
         this.loader =true;
         
         await update(this.id,this.form).then(async (response) => {
-            successAlert(Language.success_msg.replace(':attribute',Language.page).replace(':action',Language.saved))
+            successAlert(Language.success_msg.replace(':attribute',Language.page).replace(':action',Language.updated))
             setTimeout(() => {
                 window.location.href = '/admin/pages';
             }, 3000);

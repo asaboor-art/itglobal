@@ -128,8 +128,8 @@
     import {Language} from '../../helpers/lang/lang';
     export default {
         props:{
-            rows:[],
-            columns:[],
+            rows:Array,
+            columns:Array,
             checkbox:false,
             pages:0,
             setPageNo:{ type: Function },

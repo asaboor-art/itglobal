@@ -171,4 +171,9 @@ export const Language = {
     layout:"Layout",
     home_page:"Home Page",
     delete:"Delete",
+    headers:"Headers",
+    header:"Header",
+    footers: "Footers",
+    footer:"Footer",
+    view:"View",
 };

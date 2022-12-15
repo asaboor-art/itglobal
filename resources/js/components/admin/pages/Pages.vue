@@ -24,7 +24,7 @@
         <div class="card card-secondary card-outline">
             <div class="card-header d-flex justify-content-end">
                 <a class="btn btn-secondary" href="/admin/pages/create">
-                    {{ Lang.add_new_msg.replace(':attribute',Lang.page) }}
+                    {{ Lang.add_new_msg.replace(':attribute',Lang.pages) }}
                 </a>
                 
 <!--                <h3 class="card-title">{{ Lang.companies }}</h3>-->
@@ -110,7 +110,7 @@ export default {
                 orignal_name:'name',
                 width:'4%',
                 sorted:true,
-                has_html:false,
+                has_html:true,
             },
             {
                 label:Language.slug,
@@ -224,16 +224,16 @@ export default {
             }
 
         },
-        // async updateStatus(id){
-        //     const {confirmAlert} = useService();
-        //     let ref = this
-        //         confirmAlert(async () => {
-        //             this.loader = true
-        //                 const { udpateStatus } = useCategories();
-        //                 await udpateStatus(id)
-        //                 ref.getPages(ref.pageNo,ref.pageSize,ref.filter);
-        //         })
-        // },
+        async updateStatus(id){
+            const {confirmAlert} = useService();
+            let ref = this
+                confirmAlert(async () => {
+                    this.loader = true
+                        const { udpateStatus } = useCategories();
+                        await udpateStatus(id)
+                        ref.getPages(ref.pageNo,ref.pageSize,ref.filter);
+                })
+        },
         async _delete(id){
             const {confirmAlert,successAlert} = useService();
             let ref = this
