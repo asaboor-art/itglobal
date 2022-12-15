@@ -1,5 +1,4 @@
 @extends('layouts.layoutv1')
-
 @section('content')
 <section class="page_404">
 	<div class="container">

@@ -298,6 +298,10 @@ footer {background-color: #F3F8F7;padding: 60px 120px 0px;}
 .method-imags img {width: 100%;margin: 80px 0 110px;}
 /*SEO PAGE CSS END*/
 
+/*ERROR PAGES BEGIN*/
+.page_404 {padding: 200px 120px;}
+/*ERROR PAGES END*/
+
 /*RESPONSIVE CSS BEGIN*/
 @media only screen and (min-width: 320px) and (max-width: 529px) {
 .seo-sec {padding: 90px 15px 30px;margin-top: 20px;}
@@ -335,16 +339,16 @@ header {padding: 22px 15px;}
 .work-inner-box p {width: 100%;margin: 16px auto 25px;font-size: 15px;}
 .work-inner-box h2:before {top: -13px;left: 89px;}
 .seo-content h2 {font-size: 30px;}
-.seo-content p {width: 100%;padding: 15px 0 37px;font-size: 15px;}
+.seo-content p {width: 100%;padding: 15px 0 17px;font-size: 15px;}
 .work-btn .btn-primary {font-size: 15px;padding: 15px 35px;}
 .seo-girl-img {margin-top: 44px;}
 .newsletter-form h2 {font-size: 30px;}
 .newsletter-form p {font-size: 15px;padding: 10px 0 20px;}
 .newsletter-field {width: 100%;}
-.webdesign-content p {width: 100%;font-size: 15px;}
+.webdesign-content p {width: 100%;font-size: 15px;padding-top: 0;}
 .webdesign-content {margin-top: 50px;}
 .jour-flex:before {z-index: -1;}
-.work-inner-box1 h2 {font-size: 30px;}
+.work-inner-box1 h2 {font-size: 28px;}
 .work-inner-box1 {width: 100%;}
 .work-inner-box1 p {width: 100%;padding: 14px 0 17px;}
 .latest-blog-content h2 {font-size: 30px;}
@@ -381,21 +385,46 @@ header {padding: 22px 15px;}
 .meet-team-members img {margin-bottom: 25px;}
 .as-seen-on-sec img {width: 60%;margin: 40px auto 0 auto;}
 .testimonial-sec .wrapper {padding-top: 0;}
-
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 69%;margin: 70px auto 0 auto;}
+.ppc-paid-sec {padding: 50px 15px 20px;}
+.methods-content h2 {font-size: 30px;margin-bottom: 65px;}
+.seo-method-together-sec {padding: 0 15px 90px;margin-top: 70px;margin-bottom: 0;}
+.method-imags img {margin: 0px 0 0px;}
+.method-heading-cont h2 {font-size: 30px;margin-bottom: 65px;}
+.ppc-method-sec {padding: 20px 15px 10px;}
+.web-col-cont {padding: 50px 15px;}
+.web-col-cont p {width: 100%;}
+.web-inner-cont-head h2 {font-size: 30px;}
+.lft-content {margin-top: 40px;}
+.lft-one-row {padding: 10px 0 0;}
+.lft-content span {display: inline;}
+.testing-sec {padding: 31px 15px 20px;}
+.launch-secc {padding: 0px 15px 40px;}
+.web-design-ban span {font-size: 21px;margin-left: 0;margin-top: 9px;}
+.social-media-banner-girl img {margin: 34px auto 0 auto;width: 56%;}
+.process-we-use-sec {padding: 50px 15px;}
+.process-we-use-content h2 {font-size: 25px;}
+.process-we-use-content p {width: 100%;}
+.inner-pc-content p {width: 100%;padding: 0 0 24px;}
+.lft-new-row:after {position: inherit;bottom: 0px;right: -15px;width: 100%;height: 52%;}
+.corporate-sec {padding: 80px 15px 0;}
+.corporate-content h2 {font-size: 30px;}
+.corporate-content p {width: 100%;}
+.corporate-icons-row {margin: 75px 0 0;padding: 0 0px;}
+.corporate-img-txt {margin-bottom: 40px;}
+.web-design-ban-img img {margin-top: 31px;}
+.webdesign-content span {display: inline;}
+.perform-paid-sec .seo-content h2 {font-size: 28px;}
+.bn-inner-two {bottom: 24px;right: -28px;z-index: -1;width: 25%;height: 25%;}
 }
 @media only screen and (min-width: 375px) and (max-width: 424px) {
-
-
+.seo-man-banner-sec .social-media-banner-girl img {width: 77%;}
+.social-media-banner-girl img {margin: 63px auto 0 auto;width: 62%;}
+.web-design-ban-img img {margin-top: 71px;}
 }
 @media only screen and (min-width: 400px) and (max-width: 424px) {
 .ab-pg-banner .web-design-ban-img img {margin: 150px auto 0 auto;}
-
-}
-@media only screen and (min-width: 425px) and (max-width: 529px) {
-
-
 }
 @media only screen and (min-width: 530px) and (max-width: 767px) {
 .seo-sec {padding: 30px 15px 10px;margin-top: 20px;}
@@ -471,7 +500,7 @@ header {padding: 22px 15px;}
 .testimonial-box {padding: 60px 15px 110px;margin: 40px 0px 0;}
 .testimonial-sec .carousel {width: 100%;}
 .quote-img {top: -12px;left: 31px;}
-.ab-pg-banner .web-design-ban-img img {margin: 100px auto 0 auto;}
+.ab-pg-banner .web-design-ban-img img {margin: 100px auto 0 auto;width: 62%;}
 .service-based-content p {width: 100%;}
 .service-box-row {margin-top: 0;}
 .lft-content p {width: 100%;}
@@ -479,10 +508,39 @@ header {padding: 22px 15px;}
 .meet-team-members img {margin-bottom: 25px;}
 .as-seen-on-sec img {width: 60%;margin: 40px auto 0 auto;}
 .testimonial-sec .wrapper {padding-top: 0;}
-
-
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 50%;margin: 31px auto 0 auto;}
+.ppc-paid-sec {padding: 50px 15px 20px;}
+.methods-content h2 {font-size: 30px;margin-bottom: 65px;}
+.seo-method-together-sec {padding: 0 15px 90px;margin-top: 70px;margin-bottom: 0;}
+.method-imags img {margin: 0px 0 0px;}
+.method-heading-cont h2 {font-size: 30px;margin-bottom: 65px;}
+.ppc-method-sec {padding: 20px 15px 10px;}
+.web-col-cont {padding: 50px 15px;}
+.web-col-cont p {width: 80%;}
+.web-inner-cont-head h2 {font-size: 30px;}
+.lft-content {margin-top: 40px;}
+.lft-one-row {padding: 50px 0 0;}
+.lft-content span {display: inline;}
+.testing-sec {padding: 31px 15px 20px;}
+.launch-secc {padding: 0px 15px 40px;}
+.web-design-ban span {font-size: 21px;margin-left: 0;margin-top: 9px;}
+.social-media-banner-girl img {margin: 34px auto 0 auto;width: 44%;}
+.process-we-use-sec {padding: 50px 15px;}
+.process-we-use-content h2 {font-size: 25px;}
+.process-we-use-content p {width: 100%;}
+.inner-pc-content p {width: 100%;padding: 0 0 24px;}
+.corporate-sec {padding: 80px 15px 0;}
+.corporate-content h2 {font-size: 30px;}
+.corporate-content p {width: 100%;}
+.corporate-icons-row {margin: 75px 0 0;padding: 0 0px;}
+.corporate-img-txt {margin-bottom: 40px;}
+.lft-new-row:after {bottom: -40px;right: -15px;width: 41%;height: 99%;}
+.web-design-ban-img img {margin-top: 31px;width: 69%;}
+.webdesign-content span {display: inline;}
+.perform-paid-sec .seo-content h2 {font-size: 28px;}
+.bn-inner-two {bottom: 24px;right: -28px;z-index: -1;width: 25%;height: 25%;}
+.sc-pg .web-design-ban-img img {width: 44%;}
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
 .seo-sec {padding: 30px 15px 10px;margin-top: 20px;}
@@ -566,9 +624,39 @@ header {padding: 22px 15px;}
 .meet-team-members img {margin-bottom: 25px;}
 .as-seen-on-sec img {width: 60%;margin: 40px auto 0 auto;}
 .testimonial-sec .wrapper {padding-top: 0;}
-
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 50%;margin: 31px auto 0 auto;}
+.ppc-paid-sec {padding: 50px 15px 20px;}
+.methods-content h2 {font-size: 30px;margin-bottom: 65px;}
+.seo-method-together-sec {padding: 0 15px 90px;margin-top: 70px;margin-bottom: 0;}
+.method-imags img {margin: 0px 0 0px;}
+.method-heading-cont h2 {font-size: 30px;margin-bottom: 65px;}
+.ppc-method-sec {padding: 20px 15px 10px;}
+.web-col-cont {padding: 50px 15px;}
+.web-col-cont p {width: 80%;}
+.web-inner-cont-head h2 {font-size: 30px;}
+.lft-content {margin-top: 40px;}
+.lft-one-row {padding: 50px 0 0;}
+.lft-content span {display: inline;}
+.testing-sec {padding: 31px 15px 20px;}
+.launch-secc {padding: 0px 15px 40px;}
+.web-design-ban span {font-size: 21px;margin-left: 0;margin-top: 9px;}
+.social-media-banner-girl img {margin: 34px auto 0 auto;width: 44%;}
+.process-we-use-sec {padding: 50px 15px;}
+.process-we-use-content h2 {font-size: 25px;}
+.process-we-use-content p {width: 100%;}
+.inner-pc-content p {width: 100%;padding: 0 0 24px;}
+.corporate-sec {padding: 80px 15px 0;}
+.corporate-content h2 {font-size: 30px;}
+.corporate-content p {width: 100%;}
+.corporate-icons-row {margin: 75px 0 0;padding: 0 0px;}
+.corporate-img-txt {margin-bottom: 40px;}
+.lft-new-row:after {bottom: -40px;right: -14px;width: 50%;height: 50%;}
+.web-design-ban-img img {margin-top: 31px;width: 71%;}
+.webdesign-content span {display: inline;}
+.perform-paid-sec .seo-content h2 {font-size: 28px;}
+.bn-inner-two {bottom: 24px;right: -28px;z-index: -1;width: 25%;height: 25%;}
+.sc-pg .web-design-ban-img img {width: 46%;}
 }
 @media only screen and (min-width:992px) and (max-width: 1199px) {
 .seo-sec {padding: 30px 15px 10px;margin-top: 20px;}
@@ -653,9 +741,42 @@ header {padding: 22px 15px;}
 .meet-team-members img {margin-bottom: 25px;}
 .as-seen-on-sec img {width: 60%;margin: 40px auto 0 auto;}
 .testimonial-sec .wrapper {padding-top: 0;}
-
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 56%;margin: 31px auto 0 auto;}
+.ppc-paid-sec {padding: 50px 15px 20px;}
+.methods-content h2 {font-size: 30px;margin-bottom: 65px;}
+.seo-method-together-sec {padding: 0 15px 90px;margin-top: 70px;margin-bottom: 0;}
+.method-imags img {margin: 0px 0 0px;}
+.method-heading-cont h2 {font-size: 30px;margin-bottom: 65px;}
+.ppc-method-sec {padding: 40px 15px 70px;}
+.web-col-cont {padding: 50px 15px;}
+.web-col-cont p {width: 80%;}
+.web-inner-cont-head h2 {font-size: 30px;}
+.lft-content {margin-top: 40px;}
+.lft-one-row {padding: 50px 0 0;}
+.lft-content span {display: inline;}
+.testing-sec {padding: 31px 15px 20px;}
+.launch-secc {padding: 0px 15px 40px;}
+.web-design-ban span {font-size: 21px;margin-left: 0;margin-top: 9px;}
+.social-media-banner-girl img {margin: 34px auto 0 auto;width: 49%;}
+.process-we-use-sec {padding: 50px 15px;}
+.process-we-use-content h2 {font-size: 25px;}
+.process-we-use-content p {width: 100%;}
+.inner-pc-content p {width: 100%;padding: 0 0 24px;}
+.corporate-sec {padding: 80px 15px 0;}
+.corporate-content h2 {font-size: 30px;}
+.corporate-content p {width: 100%;}
+.corporate-icons-row {margin: 75px 0 0;padding: 0 0px;}
+.corporate-img-txt {margin-bottom: 40px;}
+.lft-new-row:after {bottom: -40px;right: -14px;width: 50%;height: 70%;}
+.web-design-ban-img img {margin-top: 31px;width: 77%;}
+.webdesign-content span {display: inline;}
+.perform-paid-sec .seo-content h2 {font-size: 28px;}
+.bn-inner-two {bottom: 24px;right: -28px;z-index: -1;width: 25%;height: 25%;}
+.sc-pg .web-design-ban-img img {width: 50%;}
+.ab-pg-banner .web-design-ban-img img {width: 94%;}
+.ppc-sg .web-design-ban-img img {width: 78%;}
+.ab-pg-banner .web-design-ban-img img {width: 96%;}
 }
 @media only screen and (min-width:1260px) and (max-width: 1365px) {
 .jour-flex {padding: 60px 105px;}
@@ -710,9 +831,16 @@ header {padding: 22px 15px;}
 .testimonial-box {padding: 110px 60px;margin: 60px 70px 0;}
 .web-design-ban h2 {font-size: 70px;}
 .web-design-banner-sec {height: 60vh;}
-
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 59%;margin-top: 45px;}
+.social-media-banner-girl img {margin: 34px 0 0 auto;width: 55%;}
+.web-design-ban h2 {font-size: 50px;}
+.web-design-ban span {margin-left: 0px;}
+.lft-new-row:after {bottom: -40px;right: -119px;width: 59%;height: 90%;}
+.web-design-ban-img img {margin-top: 31px;width: 85%;}
+.bn-inner-two {bottom: 50px;right: -50px;z-index: -1;width: 30%;height: 30%;}
+.sc-pg .web-design-ban-img img {width: 55%;}
+.ab-pg-banner .web-design-ban-img img {width: 100%;}
 }
 @media only screen and (min-width:1366px) and (max-width: 1439px) {
 .jour-flex {padding: 60px 105px;}
@@ -767,8 +895,16 @@ header {padding: 22px 15px;}
 .testimonial-box {padding: 110px 60px;margin: 60px 70px 0;}
 .web-design-ban h2 {font-size: 70px;}
 .web-design-banner-sec {height: 60vh;}
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 56%;margin-top: 45px;}
+.social-media-banner-girl img {margin: 48px 0 0 auto;width: 49%;}
+.web-design-ban h2 {font-size: 50px;}
+.web-design-ban span {margin-left: 0px;}
+.lft-new-row:after {bottom: -40px;right: -119px;width: 59%;height: 100%;}
+.web-design-ban-img img {margin-top: 52px;width: 75%;}
+.bn-inner-two {bottom: 50px;right: -50px;z-index: -1;width: 30%;height: 30%;}
+.sc-pg .web-design-ban-img img {width: 48%;}
+.ab-pg-banner .web-design-ban-img img {width: 93%;}
 }
 @media only screen and (min-width: 1440px) and (max-width: 1599px){
 .webdesign-sec:after {right: 0;}
@@ -776,10 +912,20 @@ header {padding: 22px 15px;}
 .menu li {margin-right: 11px;}
 .girl-img img {width: 93%;}
 .jour-flex {padding: 60px 130px;}
-.work-inner-box1 {width: 63%;}
+.work-inner-box1 {width: 62%;}
 .web-design-banner-sec {height: 65vh;}
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 56%;margin-top: 45px;}
+.social-media-banner-girl img {margin: 34px 0 0 auto;width: 52%;}
+.web-design-ban h2 {font-size: 62px;}
+.web-design-ban span {margin-left: 31px;}
+.lft-new-row:after {bottom: -40px;right: -119px;width: 54%;height: 90%;}
+.web-design-ban-img img {margin-top: 31px;width: 81%;}
+.bn-inner-two {bottom: 50px;right: -60px;z-index: -1;width: 30%;height: 30%;}
+.sc-pg .web-design-ban-img img {width: 52%;}
+.ab-pg-banner .web-design-ban-img img {width: 94%;}
+.ppc-sg .web-design-ban-img img {width: 80%;}
+.ab-pg-banner .web-design-ban-img img {width: 96%;}
 }
 @media only screen and (min-width: 1600px) and (max-width: 1900px){
 .webdesign-sec:after {right: 0;}
@@ -788,22 +934,38 @@ header {padding: 22px 15px;}
 .girl-img img {width: 89%;margin-top: 0;}
 .work-inner-box1 {width: 64%;}
 .web-design-banner-sec {height: 70vh;}
-
-
-
-
+.ppc-method-sec:after {right: 0;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 55%;margin-top: 45px;}
+.social-media-banner-girl img {margin: 34px 0 0 auto;width: 52%;}
+.web-design-ban h2 {font-size: 62px;}
+.web-design-ban span {margin-left: 31px;}
+.lft-new-row:after {bottom: -40px;right: -119px;width: 56%;height: 100%;}
+.web-design-ban-img img {margin-top: 31px;width: 80%;}
+.bn-inner-two {bottom: 60px;right: -60px;z-index: -1;width: 30%;height: 30%;}
+.sc-pg .web-design-ban-img img {width: 51%;}
+.ab-pg-banner .web-design-ban-img img {width: 94%;}
 }
 @media only screen and (min-width: 1680px) and (max-width: 1919px){
 .girl-img img {width: 97%;}
-
-
-
+.lft-new-row:after {width: 61%;}
+.seo-man-banner-sec .social-media-banner-girl img {width: 61%;}
+.sc-pg .web-design-ban-img img {width: 55%;}
+.ab-pg-banner .web-design-ban-img img {width: 94%;}
+.ppc-sg .web-design-ban-img img {width: 87%;}
+.ab-pg-banner .web-design-ban-img img {width: 100%;}
 }
 @media only screen and (min-width: 2560px) {
 .webdesign-sec:after {right: 0;}
 .girl-img img {width: 80%;}
 .web-design-banner-sec {height: 63vh;}
 .ab-pg-banner .web-design-ban-img img {margin: 160px auto 0 auto;}
-
+.seo-man-banner-sec .social-media-banner-girl img {width: 47%;}
+.ppc-method-sec:after {right: 0;}
+.social-media-banner-girl img {margin: 20px 0 0 auto;width: 41%;}
+.lft-new-row:after {width: 53%;}
+.sc-pg .web-design-ban-img img {width: 42%;}
+.ab-pg-banner .web-design-ban-img img {width: 94%;}
+.ppc-sg .web-design-ban-img img {width: 65%;}
+.ab-pg-banner .web-design-ban-img img {width: 61%;}
 }
 /*RESPONSIVE CSS END*/

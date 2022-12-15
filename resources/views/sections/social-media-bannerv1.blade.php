@@ -1,5 +1,5 @@
 <!-- SOCIAL MEDIA BANNER SECTION BEGIN -->
-<section class="web-design-banner-sec">
+<section class="web-design-banner-sec sc-pg">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
