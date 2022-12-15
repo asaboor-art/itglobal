@@ -1,5 +1,10 @@
 @extends('layouts.layoutv1')
 @section('content')
+<!-- BANNER SECTION BEGIN -->
+@include('sections.error',[
+		'code' => 	trans('messages.errors.401.code')
+	])
+ <!-- BANNER SECTION END -->
 <section class="page_404">
 	<div class="container">
 		<div class="row">	

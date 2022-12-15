@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
 				<div class="web-design-ban">
-					<h2>ERROR 404</h2>
+					<h2>{{trans('messages.errors.'.$code.'.code') }}</h2>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-12">
