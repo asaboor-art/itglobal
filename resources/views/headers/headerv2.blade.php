@@ -9,9 +9,7 @@
                       @php 
                                 $Menus = config('site_config.menus.pages');
                         @endphp
-                    <div class="logo">
-                      <a href="http://itglobal.test"><img src="{{ asset(config('site_config.assets.logo')) }}" alt="image" class="img-fluid"></a>
-                    </div>
+                    @include('sections.logo')
                     <div class="menu" id="myTopnav">
                         <ul>
                         <a href="javascript:void(0);" class="icon" onclick="openNav()">&#9776;</a>

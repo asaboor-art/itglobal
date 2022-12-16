@@ -10,7 +10,7 @@
 					<h2>{{ strtoupper(trans('lang.paid_advertisement')) }}</h2>
 					<p>We offer analytics on traffic and clicks that track your spending and performance in addition to reports on conversions and leads tracking.</p>
 					<div class="work-btn">
-					<a href="{{ route('site-pages','paid_advertisement')}}" class="btn btn-primary">{{ strtoupper(trans('lang.learn_more')) }}</a>
+					<a href="{{ route('site-pages','paid-advertisement')}}" class="btn btn-primary">{{ strtoupper(trans('lang.learn_more')) }}</a>
 					</div>
 				</div>
 			</div>
