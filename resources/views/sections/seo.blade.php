@@ -7,7 +7,7 @@
 					<h2>{{ strtoupper(trans('lang.seo')) }}</h2>
 					<p>You must position and market your business as THE authority for what you do in the markets where you operate if you want to rank highly organically.</p>
 					<div class="work-btn seo-btn">
-					<a href="{{ route('site-pages','contact-us')}}" class="btn btn-primary">{{ strtoupper(trans('lang.learn_more')) }}</a>
+					<a href="{{ route('site-pages','seo')}}" class="btn btn-primary">{{ strtoupper(trans('lang.learn_more')) }}</a>
 					</div>
 				</div>
 			</div>
