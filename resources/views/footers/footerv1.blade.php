@@ -1,48 +1,71 @@
 <footer>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <div class="footer-content">
-              <a href="index.html"><img src="{{ asset(config('site_config.assets.logo')) }}" alt="image" class="img-fluid"></a>
-              <p>Small and medium-sized assignments that other contractors aren't interested in are our area of expertise.</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-            <div class="footer-content">
-              <h5>Menu</h5>
-              <ul>
-                <li><a href="{{ route('home')}}">{{ trans('lang.home') }}</a></li>
-                <li><a href="{{ route('site-pages','about-us') }}">{{ trans('lang.about_us') }}</a></li>
-                <li><a href="{{ route('site-pages','services') }}">{{ trans('lang.services') }}</a></li>
-                <li><a href="{{ route('site-pages','contact-us') }}">{{ trans('lang.contact') }}</a></li>
-              </ul>
-            </div>
-          </div>
-         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-            <div class="address-box">
-              <h5>{{ trans('lang.contact')}}</h5>
-              <ul>
-                <li><a href="tel:{{ config('site_config.contacts.phone')}}">{{ trans('lang.call_us')}}: <strong>{{ config('site_config.contacts.phone')}}</strong></a></li>
-                <li><a href="mailto:info@calgarypaintingcrew.com">{{ trans('lang.email_us')}}: <strong>{{ config('site_config.contacts.email')}}</strong></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <div class="address-box2">
-              <h5>{{ trans('lang.follow_us')}}</h5>
-              <ul>
-                <li><a href="{{ config('site_config.contacts.facebook')}}"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="{{ config('site_config.contacts.instagram')}}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="{{ config('site_config.contacts.tiktok')}}"><i class="fa-brands fa-tiktok"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        @include('sections.newsletterv1')
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <p class="copy-right-para">{{ config('site_config.contacts.copyright')}}<strong>|</strong>{{ trans('lang.designed_by')}} <a href="javascriptvoid:(0)">{{ config('site_config.contacts.developer')}}</a></p>
-          </div>
-        </div>
-      </div>
-</footer>
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-3 animate" data-animation="fadeInUp" data-duration="100">
+								<h3>طریقہ تعاون</h3>
+								<p>جامعہ سے صدقات، خیرات، عطیات اور زکوٰة  وغیرہ کی مد میں تعاون کے لیے  <a href="donations.html">یہاں پر کلک کریں۔</a></p> 
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-3 animate" data-animation="fadeInUp" data-duration="200">
+								<h3>ویب سائٹ کا نقشہ</h3>
+								<ul class="ftList">
+									<li>
+										<a href="index.html"><i class="icon-angle-left"></i>صفحہ اول</a> 
+									</li>
+									<li>
+										<a href="page/%d8%aa%d8%b9%d8%a7%d8%b1%d9%81.html"><i class="icon-angle-left"></i>تعارف</a> 
+									</li>
+									<li>
+										<a href="darulifta.html"><i class="icon-angle-left"></i>دارالافتاء</a> 
+									</li>
+									<li>
+										<a href="bayyinat.html"><i class="icon-angle-left"></i>بینات</a> 
+									</li>
+									<li>
+										<a href="books.html"><i class="icon-angle-left"></i>کتابیں</a> 
+									</li>
+									<li>
+										<a href="islamic-name.html"><i class="icon-angle-left"></i>اسلامی نام</a> 
+									</li> 
+								</ul> 
+							</div>
+							<div class="col-xs-6 col-sm-6 col-md-3 animate" data-animation="fadeInUp" data-duration="300">
+								<h3>شعبہ جات</h3>
+								<ul class="ftList">
+									<li>
+										<a href="ask-question.html"><i class="icon-angle-left"></i>مسئلہ پوچھیں</a> 
+									</li>
+									<li>
+										<a href="ask-dream.html"><i class="icon-angle-left"></i>خواب کی تعبیر معلوم کریں</a> 
+									</li>
+									<li>
+										<a href="duaen.html"><i class="icon-angle-left"></i>مسنون دعائیں</a> 
+									</li>
+									<li>
+										<a href="namaz-times.html"><i class="icon-angle-left"></i>نماز کے اوقات</a> 
+									</li>
+									<li>
+										<a href="contact.html"><i class="icon-angle-left"></i>رابطہ</a> 
+									</li>
+									<li>
+										<a href="donations.html"><i class="icon-angle-left"></i>طریقہ تعاون</a> 
+									</li> 
+								</ul> 
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-3 animate" data-animation="fadeInUp" data-duration="400">
+								<a href="index.html" class="ftLogo">
+									<img src="{{ asset(config('site_config.assets.images').'ftlogo.png') }}" alt=""> 
+								</a>
+								<p>پوسٹ بکس نمبر 3465 جمشید روڈ کراچی<br/>92-21-34913570+<br/>92-21-34121152+<br/>
+									<a href="cdn-cgi/l/email-protection.html#2f464149406f4d4e415a5d46014a4b5a015f44" title="info@banuri.edu.pk">
+										<span class="__cf_email__" data-cfemail="026b6c646d4260636c77706b2c6766772c7269">[email&#160;protected]</span> 
+									</a> 
+								</p> 
+							</div> 
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-center animate" data-animation="fadeInUp" data-duration="500"><hr>
+								<p class="last-pra">جامعہ علوم اسلامیہ علامہ محمد یوسف بنوری ٹاؤن</p> 
+							</div> 
+						</div> 
+					</div> 
+				</footer>

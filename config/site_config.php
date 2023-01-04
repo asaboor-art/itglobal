@@ -13,6 +13,9 @@ return [
         'home_pages' => 'homes.',
         'pages' => 'pages.',
         'logo'=>'images/logo.png',
+        'icon'=>'images/icon',
+        'img'=>'img/',
+        'svg'=>'svg/',
 
     ],
     'constants' => [

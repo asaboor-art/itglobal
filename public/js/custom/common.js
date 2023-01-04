@@ -132,8 +132,10 @@ function ajaxPost(url,data,succssContainer,errorContainer) {
 function setLoader(state){
     if(state){
         $('#loader').removeClass('deactive');
+        $('#loader-wrapper').removeClass('deactive');
     }else{
         $('#loader').addClass('deactive');
+        $('#loader-wrapper').removeClass('deactive');
     }
 
 }
