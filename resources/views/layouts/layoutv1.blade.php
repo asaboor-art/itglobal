@@ -24,12 +24,13 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <!-- <link rel="stylesheet" type="text/css" href="{{ asset(config('site_config.assets.css').'slick-theme.css') }}"/> -->
   </head>
-  <body>
+  <body class="loaded">
+    @include('components.loader')
     <!-- Header Starts -->
     @include('headers.headerv1')
     <!-- Header Ends -->
     <!-- Content Starts -->
-    @include('components.loader')
+    
     @yield('content')
     <!-- Content Ends  -->
     <!-- FOOTER SECTION BEGIN -->
@@ -39,7 +40,7 @@
     <!-- Latest compiled JavaScript -->
     <!-- <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script type="text/javascript" src="{{ asset(config('site_config.assets.js').'app.js') }}"></script>
-		<script defer type="bd6e1286bee3b72107a7f9ac-text/javascript" src="{{ asset(config('site_config.assets.js_scripts').'js6c5d.php?file=base') }}"></script>
+		<!-- <script defer type="bd6e1286bee3b72107a7f9ac-text/javascript" src="{{ asset(config('site_config.assets.js_scripts').'js6c5d.php?file=base') }}"></script> -->
    
 
 		<!-- <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'A.style_footer.css.pagespeed.cf.EwVUVo6K_6.css') }}"> -->

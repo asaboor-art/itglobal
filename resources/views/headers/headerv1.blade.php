@@ -1,5 +1,5 @@
 		<div class="print-header">
-			<img src="{{ asset(config('site_config.assets.svg').'logo.png') }}" alt="">
+			<img src="{{ asset(config('site_config.assets.svg').'logo.svg') }}" alt="">
 		</div>
 		<div class="top">
 			<div class="container">
@@ -29,7 +29,8 @@
 		</div>
 		<header>
 			<div class="container">
-				<div class="row"><div class="col-md-3 animate" data-animation="fadeInUp" data-duration="100"> 
+				<div class="row">
+					<div class="col-md-3 animate" data-animation="fadeInUp" data-duration="100"> 
 					<a href="index.html" class="logo"></a>
 					<div id="nav-icon3" class="menu-open"> 
 						<span></span> <span></span> <span></span> <span></span>

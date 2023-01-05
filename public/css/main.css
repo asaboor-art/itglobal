@@ -2,14 +2,15 @@
 /*font-family: 'Hind', sans-serif;*/
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');  */
 /*font-family: 'Poppins', sans-serif;*/
-/* html {overflow-x: hidden;scroll-behavior: smooth;}
-body {font-family: 'Hind', sans-serif;}
-h1{font-size: 100px;font-weight: 700;line-height: 83px;}
+html {overflow-x: hidden;scroll-behavior: smooth;}
+body {font-family: 'Hind', sans-serif;} 
+/*h1{font-size: 100px;font-weight: 700;line-height: 83px;}
 h2 {font-size: 50px;font-weight: 700;color: #000B31;} 
 h3 {font-size: 60px;font-weight: 700;}
 h4{font-size: 35px;font-weight: 700;}
 h5{font-size: 28px;font-weight: 700;}
 h6 {font-size: 20px;font-weight: 700;} */
+/* .print-header{display: block !important;} */
 p {font-size: 16px;font-weight: 500;margin-bottom: 0;line-height: 42px;}
 ul {padding-left: 0;list-style: none;}
 li {font-size: 15px;font-weight: 400;}
@@ -20,10 +21,10 @@ a {outline: none;text-decoration: none;font-size: 20px !important;font-weight: 4
 a:hover, a:focus{text-decoration: none;}
 /*HOME PAGE CSS BEGIN*/
 /*HEADER SECTION CSS BEGIN*/
-header {padding: 10px 120px;position: absolute;top: 0;left: 0;width: 100%;z-index: 1;}
+/* header {padding: 10px 120px;position: absolute;top: 0;left: 0;width: 100%;z-index: 1;}
 header .navbar-light .navbar-nav .nav-link {color: #231F20;padding: 0 70px 0 0;font-size: 22px !important;transition: 0.8s all ease-in-out;}
 header .navbar-light .navbar-nav .nav-link:hover {color: #36B5CA;}
-header .navbar-nav {margin-left: 140px;}
+header .navbar-nav {margin-left: 140px;} */
 .quote-btn .btn-primary {color: #fff;background-color: #36B5CA;width: 100%;padding: 13px 46px;border-radius: 8px;transition: 0.8s all ease-in-out;}
 .quote-btn .btn-primary:hover {background-color: #EA4638;}
 .quote-btn .btn-primary:hover {border-color: #36B5CA;}
