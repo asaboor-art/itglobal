@@ -5,17 +5,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-4 col-md-4">
-						<a href="login.html" class="login-btn" title="لاگ ان">لاگ ان</a>
-						<div class="langauge">
-							<a href="javascript:" title="اردو" class="active">اردو <i class="icon-angle-down"></i></a>
-							<ul class="open-langauge">
-								<li>
-									<a href="ar.html" title="العربية"><span class="arbi-font">العربية</span></a>
-								</li>
-								<li>
-									<a href="en.html" title="English">English</a>
-								</li>
-							</ul>
+						
+						<div class="dropdown show">
+							<a href="javascript:" title="اردو" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">اردو <i class="icon-angle-down"></i></a>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<ul>
+									<li class="dropdown-item">
+										<a href="ar.html" title="العربية"><span class="arbi-font">العربية</span></a>
+									</li>
+									<li class="dropdown-item">
+										<a href="en.html" title="English">English</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="col-sm-4 col-md-4 text-center">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
   <meta name="csrf-token" content="{{ csrf_token() }}"> 
 
@@ -24,7 +24,7 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <!-- <link rel="stylesheet" type="text/css" href="{{ asset(config('site_config.assets.css').'slick-theme.css') }}"/> -->
   </head>
-  <body class="loaded">
+  <body >
     @include('components.loader')
     <!-- Header Starts -->
     @include('headers.headerv1')
