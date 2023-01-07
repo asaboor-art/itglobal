@@ -10,5 +10,38 @@ li {font-size: 15px;font-weight: 400;}
 label {font-size: 16px;font-weight: 500;}
 input {outline: none;font-weight: 400 !important;font-size: 14px !important;}
 select {outline: none;font-weight: 400;font-size: 15px;color: #000;}
-a {outline: none;text-decoration: none;font-size: 20px !important;font-weight: 400;color: #716C6C;transition: 0.8s all ease-in-out;}
+a {outline: none;text-decoration: none;font-size: 20px !important;font-weight: 400;color: #fff;transition: 0.8s all ease-in-out;}
 a:hover, a:focus{text-decoration: none;}
+
+.color-change .dropdown-item a {color: #000;}
+#carouselExampleControls img {width: 100%;}
+.logo img {width: 100%;}
+.new-drop-down.show {left: 0 !important;}
+.dropdown.show {left: 0 !important;}
+.top {height: auto !important;}
+.new-drop-down .dropdown-toggle {color: #fff !important;}
+.new-drop-down {margin: 16px 0 !important;}
+.new-drop-down .dropdown-toggle:hover, .new-drop-down .dropdown-toggle:focus {color: #fff !important;}
+header .dropdown-toggle::after {display: none !important;}
+header .btn-primary {background: transparent;color: #7b654d;border-color: transparent;border:0;}
+header .btn-primary:hover, header .btn-primary:focus {box-shadow: none;outline: none;color: #fff;background-color: #41362b;border-color: transparent;}
+.tabing-section .nav-tabs li a {cursor: pointer;-webkit-border-radius: 0;-moz-border-radius: 0;-o-border-radius: 0;-ms-border-radius: 0;border-radius: 0;font-size: 30px;border: solid 2px #34592e;background: #222229;color: #fff;-webkit-transition: all .5s ease-in-out;-moz-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;transition: all .5s ease-in-out;margin: 0;}
+.tabing-section .nav-tabs li.active a {border: solid 2px #34592e;cursor: pointer;background: #34592e;color: #fff;}
+.tabing-section .nav-tabs li a:hover, .tabing-section .nav-tabs li a:focus {border: solid 2px #34592e;cursor: pointer;background: #34592e;color: #fff;}
+.tabing-section .tab-content .media .media-left a:after {content: '';position: absolute;background: #34592e;opacity: .5;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;left: 0;bottom: 0;height: 100%;width: 100%;-webkit-transform: scale(0);-moz-transform: scale(0);-ms-transform: scale(0);-o-transform: scale(0);transform: scale(0);}
+.islam-arkan h4 {padding: 20px 30px;background:#34592e;color: #fff;font-size: 25px;margin-bottom: 0;}
+.top {background: #34592e;width: 100%;height: 48px;}
+footer {background: #34592e !important;}
+.main-navigation ul li:hover .line-dropdown a {color: #fff;}
+.main-navigation ul li:hover .line-dropdown a:before {height: 100%;}
+.main-navigation ul li .line-dropdown a:before {position: absolute;right: 0;bottom: 0;background: #34592e;width: 100%;height: 0;-webkit-transition: all .5s ease-in-out;-moz-transition: all .5s ease-in-out;-o-transition: all .5s ease-in-out;transition: all .5s ease-in-out;content: '';z-index: -1;}
+.main-navigation ul li .line-dropdown a:after {content: '' !important;width: 0 !important;height: 3px !important;position: absolute !important;left: 0 !important;top: 0 !important;right: 0 !important;margin: 0 auto !important;background: #c19b76 !important;-webkit-transition: all .5s ease-in-out !important;-moz-transition: all .5s ease-in-out !important;-o-transition: all .5s ease-in-out !important;transition: all .5s ease-in-out !important;}
+.main-navigation ul li:hover .line-dropdown a:after {width: 100% !important;}
+.main-navigation ul li a:before {background: #34592e !important;}
+.main-navigation ul li a:after {background: #222229 !important;}
+.main-navigation ul li ul {background: #34592e !important;}
+.form-group {margin-bottom: 30px;margin-top: 4px !important;}
+footer h3 {border-bottom: 1px solid #fff !important;}
+.box .icon {width: auto !important;height: auto !important;text-align: left !important;vertical-align: middle !important;}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {color: #fff !important;background-color: #222229 !important;}
+.main-navigation ul li ul li:hover a {background: #222229 !important;}

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- BANNER SECTION BEGIN -->
-    @include('sections.bannerv1')
+    @include('sections.slider-bannerv1')
     <!-- BANNER SECTION END -->
 
     <!-- Card widgets FEED SECTION END -->

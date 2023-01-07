@@ -6,10 +6,10 @@
 				<div class="row">
 					<div class="col-sm-4 col-md-4">
 						
-						<div class="dropdown show">
+						<div class="dropdown new-drop-down show">
 							<a href="javascript:" title="اردو" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">اردو <i class="icon-angle-down"></i></a>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<ul>
+								<ul class="color-change">
 									<li class="dropdown-item">
 										<a href="ar.html" title="العربية"><span class="arbi-font">العربية</span></a>
 									</li>
@@ -33,7 +33,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 animate" data-animation="fadeInUp" data-duration="100"> 
-					<a href="index.html" class="logo"></a>
+					<a href="index.html" class="logo">
+						<img src="{{ asset(config('site_config.assets.images').'binori-logo.jpg') }}">
+					</a>
 					<div id="nav-icon3" class="menu-open"> 
 						<span></span> <span></span> <span></span> <span></span>
 					</div>
@@ -84,7 +86,7 @@
 								</ul> 
 							</li>
 							<li>
-								<a href="darulifta.html">دارالافتاء</a>
+								<!-- <a href="darulifta.html">د ا  رالافتاء </a>
 								<i class="icon-angle-left mobile-menu"></i>
 								<ul class="dropdown">
 									<li>
@@ -105,7 +107,31 @@
 									<li>
 										<a href="duaen.html">مسنون دعائیں</a> 
 									</li> 
-								</ul> 
+								</ul>  -->
+								<div class="dropdown line-dropdown">
+  <a href="darulifta.html" class="dropdown-toggle" data-toggle="dropdown"> ارالافتاء 
+  </a>
+  <ul class="dropdown-menu dropdown">
+    <li>
+										<a href="new-questions.html">نئے سوالات</a> 
+									</li>
+									<li>
+										<a href="ask-question.html">مسئلہ پوچھیں</a> 
+									</li>
+									<li>
+										<a href="ask-dream.html">خواب کی تعبیر معلوم کریں</a> 
+									</li>
+									<li>
+										<a href="islamic-name.html">اسلامی نام</a> 
+									</li>
+									<li>
+										<a href="namaz-times.html">نماز کے اوقات</a> 
+									</li>
+									<li>
+										<a href="duaen.html">مسنون دعائیں</a> 
+									</li> 
+  </ul>
+</div>
 							</li>
 							<li>
 								<a href="bayyinat.html">بینات</a>
