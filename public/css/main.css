@@ -45,3 +45,6 @@ footer h3 {border-bottom: 1px solid #fff !important;}
 .box .icon {width: auto !important;height: auto !important;text-align: left !important;vertical-align: middle !important;}
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {color: #fff !important;background-color: #222229 !important;}
 .main-navigation ul li ul li:hover a {background: #222229 !important;}
+.box .left {width: 63% !important;}
+.box p {line-height: 20px !important}
+.left h3 {line-height: 25px !important}
