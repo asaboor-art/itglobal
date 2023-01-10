@@ -162,6 +162,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        Alkoumi\LaravelHijriDate\LaravelHijriDateServiceProvider::class,
         // Kreait\Laravel\Firebase\ServiceProvider::class,
         // Barryvdh\DomPDF\ServiceProvider::class,
 

@@ -1,7 +1,7 @@
 <?php 
 
 return [
-
+    'date-type' => 'hijri', 
     'assets' => [
         'images' => 'images/',
         'css' => 'css/',
@@ -12,10 +12,11 @@ return [
         'layouts' => 'layouts.',
         'home_pages' => 'homes.',
         'pages' => 'pages.',
-        'logo'=>'svg/logo.png',
+        'logo'=>'images/logo.jpg',
         'icon'=>'images/icon',
         'img'=>'img/',
         'svg'=>'svg/',
+        'dataimages' => 'dataimages/'
 
     ],
     'constants' => [
@@ -59,7 +60,12 @@ return [
         'tiktok' => 'javascript:void(0);',
         'instragram' => 'https://www.instagram.com/calgarypaintingcrew/?igshid=ZmVmZTY5ZGE%3D',
 
-    ]
+    ],
+    'lang-code' => [
+        'en' => 'English',
+        'ur'=> 'اردو',
+    ],
+    'lang' => ['en','ur'],
 
 
 ];

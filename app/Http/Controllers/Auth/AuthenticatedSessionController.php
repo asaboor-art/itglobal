@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
-class AuthenticatedSessionController extends BaseController
+class AuthenticatedSessionController extends Controller
 {
     /**
      * Display the login view.

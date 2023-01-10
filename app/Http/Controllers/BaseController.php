@@ -14,6 +14,8 @@ use App\Traits\Validation;
 use App\Mail\ContactUss;
 use Pusher\Pusher;
 use DB;
+use Illuminate\Support\Facades\View;
+
 
 class BaseController extends Controller
 {
@@ -26,6 +28,7 @@ class BaseController extends Controller
         $this->baseModel = $baseModel;
         $this->contactForm = $contactForm;
         $this->newsletter = $newsletter;
+        
     }
 
     public function setModel(BaseModel $model){

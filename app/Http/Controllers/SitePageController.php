@@ -30,6 +30,11 @@ class SitePageController extends BaseController
         
         $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
 
+        if(!isset($Page)){
+            return view(config('site_config.assets.pages').$page,[
+                'title' => strtoupper($page),
+            ]); 
+        }
         if($Page->is_home_page){
             return redirect()->route('home');
         }

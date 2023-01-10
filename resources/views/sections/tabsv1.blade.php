@@ -28,7 +28,7 @@
                         <div class="tab-box">
                            <div class="media">
                               <div class="media-left">
-                                 <a href="readquestion/muzarb-ka-rabbul-mal-se-kraya-leny-ka-hukm-144401101313/18-08-2022.html"><img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="مضارب کا ربّ المال سے دکان کا کرایہ لینے کا حکم"></a> 
+                                 <a href="readquestion/muzarb-ka-rabbul-mal-se-kraya-leny-ka-hukm-144401101313/18-08-2022.html"><img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="مضارب کا ربّ المال سے دکان کا کرایہ لینے کا حکم"></a> 
                               </div>
                               <div class="media-body">
                                  <p>مضارب کا ربّ المال سے دکان کا کرایہ لینے کا حکم</p>
@@ -38,7 +38,7 @@
                            <div class="media">
                               <div class="media-left">
                                  <a href="readquestion/so-kar-uthne-ke-baad-aankhon-me-mojood-mail-pak-hoti-he-144403101467/15-10-2022.html">
-                                 <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="سوکر اٹھنے کے بعد آنکھوں میں موجود میل پاک ہوتی ہے"> 
+                                 <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="سوکر اٹھنے کے بعد آنکھوں میں موجود میل پاک ہوتی ہے"> 
                                  </a> 
                               </div>
                               <div class="media-body">
@@ -49,7 +49,7 @@
                            </div>
                            <div class="media">
                               <div class="media-left"><a href="readquestion/insan-ko-allah-tala-ne-qudret-se-zadia-mukallaf-nh-bania-144403102365/26-10-2022.html">
-                                 <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="زبان میں لکنت کی وجہ سے نماز میں الفاظ صاف ادا نہیں ہوتے؛ کیا اس پر مواخذہ ہوگا؟"></a> 
+                                 <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="زبان میں لکنت کی وجہ سے نماز میں الفاظ صاف ادا نہیں ہوتے؛ کیا اس پر مواخذہ ہوگا؟"></a> 
                               </div>
                               <div class="media-body">
                                  <p>زبان میں لکنت کی وجہ سے نماز میں الفاظ صاف ادا نہیں ہوتے؛ کیا اس پر مواخذہ ہوگا؟</p>
@@ -62,7 +62,7 @@
                         <div class="tab-box">
                            <div class="media">
                               <div class="media-left"><a href="readquestion/gir-muqldeen-ko-choota-rafzi-khna-144401101474/20-08-2022.html">
-                                 <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="غیر مقلدین کو چھوٹا رافضی کہنا "> 
+                                 <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="غیر مقلدین کو چھوٹا رافضی کہنا "> 
                                  </a> 
                               </div>
                               <div class="media-body">
@@ -72,7 +72,7 @@
                            </div>
                            <div class="media">
                               <div class="media-left"><a href="readquestion/bivi-ko-kharcha-na-dene-aur-zulm-ositam-karne-ki-bina-par-adalat-se-tanseekh-e-nikah-ka-hukum-144403100798/06-10-2022.html"> 
-                                 <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="بیوی کو خرچہ نہ دینے اور ظلم ستم کرنے کی بنا پر عدالت سے تنسیخ نکاح کا حکم"> 
+                                 <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="بیوی کو خرچہ نہ دینے اور ظلم ستم کرنے کی بنا پر عدالت سے تنسیخ نکاح کا حکم"> 
                                  </a> 
                               </div>
                               <div class="media-body">
@@ -82,7 +82,7 @@
                            </div>
                            <div class="media">
                               <div class="media-left"> 
-                                 <a href="readquestion/bey-ki-lughawi-istilahi-tareef-or-arkan-144403100660/05-10-2022.html"><img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="بیع کی لغوی اصطلاحی تعریف اور ارکان "></a> 
+                                 <a href="readquestion/bey-ki-lughawi-istilahi-tareef-or-arkan-144403100660/05-10-2022.html"><img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="بیع کی لغوی اصطلاحی تعریف اور ارکان "></a> 
                               </div>
                               <div class="media-body">
                                  <p>بیع کی لغوی اصطلاحی تعریف اور ارکان</p>
@@ -109,7 +109,7 @@
                         <div class="tab-box">
                            <div class="media">
                               <div class="media-left"> 
-                                 <a href="readquestion/12-rabee-ul-awwal-ka-roza-144203200730/30-10-2020.html"><img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="بارہ ربیع الاول کو روزہ رکھنا"></a> 
+                                 <a href="readquestion/12-rabee-ul-awwal-ka-roza-144203200730/30-10-2020.html"><img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="بارہ ربیع الاول کو روزہ رکھنا"></a> 
                               </div>
                               <div class="media-body">
                                  <p>بارہ ربیع الاول کو روزہ رکھنا</p>
@@ -119,7 +119,7 @@
                            <div class="media">
                               <div class="media-left"> 
                                  <a href="readquestion/bara-rbeulaawl-ko-eid-mubarak-kahny-ka-hukm-144203200710/30-10-2020.html"> 
-                                 <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="بارہ (12) ربیع الاول کو عید مبارک کہنے کا حکم"> 
+                                 <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="بارہ (12) ربیع الاول کو عید مبارک کہنے کا حکم"> 
                                  </a> 
                               </div>
                               <div class="media-body">
@@ -130,7 +130,7 @@
                            </div>
                            <div class="media">
                               <div class="media-left"> 
-                                 <a href="readquestion/rabi-ul-awal-me-hamen-kia-krna-chaey-144203200606/28-10-2020.html"><img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" alt="ربیع الاول میں کیا کرنا چاہیے؟"></a> 
+                                 <a href="readquestion/rabi-ul-awal-me-hamen-kia-krna-chaey-144203200606/28-10-2020.html"><img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" alt="ربیع الاول میں کیا کرنا چاہیے؟"></a> 
                               </div>
                               <div class="media-body">
                                  <p>ربیع الاول میں کیا کرنا چاہیے؟</p>
@@ -145,7 +145,7 @@
                               <div class="media-left">
                                  <a href="readquestion/%d8%b1%d8%a8%db%8c%d8%b9-%d8%a7%d9%84%d8%a7%d9%88%d9%84-%da%a9%db%92-%d9%85%db%81%db%8c%d9%86%db%92-%d9%85%db%8c%da%ba-%d9%85%d8%b1%d9%88%d8%ac%db%81-%d9%85%db%8c%d9%84%d8%a7%d8%af-%da%a9%db%8c-%d9%85%d8%ad%d8%a7%d9%81%d9%84-%d9%85%db%8c%da%ba-%d8%b4%d8%b1%da%a9%d8%aa-%d8%a7%d9%88%d8%b1-%d9%86%db%8c%d8%a7%d8%b2-%da%a9%da%be%d8%a7%d9%86%db%92-%da%a9%d8%a7-%d8%ad%da%a9%d9%85/12-11-2018.html">
                                     <script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5e73c51bd94038fd0480e3ed-|49"></script>
-                                    <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" onerror="this.onerror=null;this.src='assets/dataimages/errorimage.png';" alt="ربیع الاول کے مہینے میں مروجہ میلاد کی محافل میں شرکت اور نیاز کھانے کا حکم"> 
+                                    <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" onerror="this.onerror=null;this.src='assets/dataimages/errorimage.png';" alt="ربیع الاول کے مہینے میں مروجہ میلاد کی محافل میں شرکت اور نیاز کھانے کا حکم"> 
                                  </a>
                               </div>
                               <div class="media-body">
@@ -157,7 +157,7 @@
                               <div class="media-left">
                                  <a href="readquestion/12-rbae-u-alawal-ko-eid-melad-manana-144211201149/03-07-2021.html">
                                     <script src="cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5e73c51bd94038fd0480e3ed-|49"></script> 
-                                    <img class="media-object lazy" src="/cache/images/f/c/5/2/c/xfc52cdaef515b0546347814d8e4a7f9272ed19e9.png.pagespeed.ic.qwWoe0h0dU.png" onerror="this.onerror=null;this.src='assets/dataimages/errorimage.png';" alt="12 ربیع الاول کو میلاد النبی صلی اللہ علیہ وسلم کے عنوان سے جشن منانا"> 
+                                    <img class="media-object lazy" src="https://www.banuri.edu.pk/assets/dataimages/xerrorimage.png.pagespeed.ic.3t3bG9ahL5.png" onerror="this.onerror=null;this.src='assets/dataimages/errorimage.png';" alt="12 ربیع الاول کو میلاد النبی صلی اللہ علیہ وسلم کے عنوان سے جشن منانا"> 
                                  </a>
                               </div>
                               <div class="media-body">

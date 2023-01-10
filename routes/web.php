@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 use Artisan;
+use App;
 
 
 /*
@@ -56,3 +57,9 @@ Route::prefix('developer')->group(function () {
 Route::prefix('pages')->group(function () {
     Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
 });
+
+// Setting Local
+Route::get('/locale/{lang}', function($lang){
+    App::setlocale($lang);
+    return redirect()->back();
+})->name('locale');
