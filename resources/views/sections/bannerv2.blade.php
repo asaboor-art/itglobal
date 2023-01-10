@@ -6,7 +6,7 @@
             </div>
             <div class="col-sm-6 col-md-6">
                 <div class="right-heading">
-                  <img src="{{ asset(config('site_config.assets.dataimages'.'headingbarlogo.png')) }}" alt="" class="img-responsive"> 
+                  <img src="{{ asset(config('site_config.assets.dataimages').'headingbarlogo.png') }}" alt="" class="img-responsive"> 
                 </div>
             </div>
           </div>
