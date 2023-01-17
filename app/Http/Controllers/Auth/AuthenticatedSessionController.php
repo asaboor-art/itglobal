@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 
-class AuthenticatedSessionController extends Controller
+class AuthenticatedSessionController extends BaseController
 {
     /**
      * Display the login view.
@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
      * @param  \App\Http\Requests\Auth\LoginRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(LoginRequest $request)
+    public function auth(LoginRequest $request)
     {
         $request->authenticate();
 
@@ -53,7 +53,7 @@ class AuthenticatedSessionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Request $request)
+    public function destroy(Request $request,$id)
     {
         auth()->user()->logout_at = Carbon::now();
         auth()->user()->is_login = 0;
