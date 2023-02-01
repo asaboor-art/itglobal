@@ -12,6 +12,7 @@ use App\Models\Newsletter;
 use App\Helpers\Helper;
 use App\Traits\Validation;
 use App\Mail\ContactUss;
+use App\Models\Media;
 use Pusher\Pusher;
 use DB;
 
@@ -19,19 +20,26 @@ class BaseController extends Controller
 {
     //
     // use Validation;
-    private $baseModel,$contactForm,$newsletter;
+    private $baseModel,$contactForm,$newsletter,$Media;
     private $model;
 
     public function __construct(BaseModel $baseModel,Newsletter $newsletter,ContactForm $contactForm){
         $this->baseModel = $baseModel;
         $this->contactForm = $contactForm;
         $this->newsletter = $newsletter;
+        
+        
     }
 
     public function setModel(BaseModel $model){
         $this->model = $model;
     }
 
+    
+
+    public function setMedia(Media $media){
+        $this->Media = $media;
+    }
     public function getModel(){
         return $this->model;
     }
@@ -119,6 +127,7 @@ class BaseController extends Controller
             DB::beginTransaction();
                 $this->model->destroyByid($id);
             DB::commit();
+            return $this->sendResponse([],'Your data has been '.trans('messages.delete_msg',['action' => trans('lang.delete')]));
         }catch(Exception $e){
             DB::rollback();
             Log::error($e);
@@ -128,14 +137,22 @@ class BaseController extends Controller
 // Store
     public function store(Request $request){
         $request->validate($this->model->getRule());
-
+        
         try {
             DB::beginTransaction();
             $data = $request->except('_token'); 
             $result = $this->model->store($data);
-            if ($request->has('image')) {
-                if (!is_array($request->image)) {
-                    $response = Helper::saveMedia($request->image, 'header',$this->model->class_name,$result->id);  
+            //DB::commit();
+            if ($request->has('media')) {
+                //$response = Helper::saveMedia($request->image,$this->model->class_name,$result->id);  
+                
+                foreach($request->media as $media){
+                   // dd($this->Media);
+                    $this->Media->updateByColumn([
+                        'model_id' => $result,
+                        'model' => $this->model->class_name,
+                    ],$media);
+                    
                 }
             }
             DB::commit();
@@ -151,18 +168,20 @@ class BaseController extends Controller
         $request->validate($this->model->getRule());
         try {
             DB::beginTransaction();
-            $data = $request->except('_token');
+            $data = $request->except(['_token','media','gallery']);
             
-            if ($request->has('image')) {
-
-                if ($request->has('image')) {
-                    if (!is_array($request->image)) {
-                        $response = Helper::saveMedia($request->image, 'header',$this->model,$result->id);  
-                    }
-                }
-                
-            }
             $this->model->updateByColumn($data,$id);
+            if ($request->has('media')) {
+                
+                foreach($request->media as $media){
+                   
+                    $this->Media->updateByColumn([
+                        'model_id' => $id,
+                        'model' => $this->model->class_name,
+                    ],$media);
+                    
+                }
+            }
             DB::commit();
             return $this->sendResponse([], trans('messages.success_msg', ['action' => trans('lang.updated')]));
         } catch (\Exception $e) {
@@ -176,5 +195,35 @@ class BaseController extends Controller
         $result = $this->model->first('id',$id);
         //dd($result);
         return $result;
+    }
+// Save files
+    public function saveFiles(Request $request){
+        $media = 0;
+        if (isset($request->files)) { 
+            
+            $media =  Helper::saveMedia($request->files,$this->model);      
+            //dd($media);
+            return $media->id;
+        }
+        return true;
+    }
+
+    public function deleteFile(Request $request,$id){
+        //dd($request->files);
+        try{
+            DB::beginTransaction();
+            $response = $this->Media->find($id);
+            Helper::unlinkFile($response->image_url);
+            $this->Media->destroyById($id);
+            DB::commit();
+            return $this->sendResponse([],'Your data has been '.trans('messages.delete_msg',['action' => trans('lang.delete')]));
+            
+        }catch (\Exception $e) {
+            DB::rollback();
+            Log::error($e);
+            return $this->sendError(trans('validation.custom.errors.server-errors'));
+        }
+        
+        
     }
 }

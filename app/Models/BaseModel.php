@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use App\Models\Media;
 use Carbon\Carbon;
 use DB;
 
@@ -17,6 +18,7 @@ class BaseModel extends Model
     private $orderBy = 'created_at';
     private $order = 'desc';
     private $filters = [];
+    public $class_name = '';
     private $select_columns = [];
     private $render_columns = [];
     public static function boot()
@@ -231,12 +233,15 @@ class BaseModel extends Model
 
     public function first($column = 'id', $value = 0, $operator = '=', $relation = [])
     {
-
+        $result = null;
         if (!empty($relation)) {
-
-            return static::with($relation)->where($column, $operator, $value)->first();
+            $result = static::with($relation)->where($column, $operator, $value)->first();
+             
+        }else{
+            $result = static::where($column, $operator, $value)->first();
         }
-        return static::where($column, $operator, $value)->first();
+        $result['media'] = Media::where('model',$this->class_name)->where('model_id',  $result->id)->get();
+        return $result;
     }
 
     public function find($id)

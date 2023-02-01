@@ -18,6 +18,17 @@ return [
     'constants' => [
         'experience' => '10',
         'warranty' => '2',
+        'currency' => 'PKR' 
+    ],
+    'currencies' => [
+        'PKR' => [
+            'name' => 'PKR',
+            'symbol' => '',
+        ],
+        'USD' => [
+            'name' => 'USD',
+            'symbol' => '$',
+        ],
     ],
     'menus' => [
         'pages' => [

@@ -71,4 +71,7 @@ return [
     'edit' => 'Edit',
     'footer' =>'Footer',
     'footers' =>'Footers',
+    // Real State
+    'property'  => 'Property',
+    'properties' => 'Properties',
 ];

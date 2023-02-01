@@ -56,3 +56,4 @@ Route::prefix('developer')->group(function () {
 Route::prefix('pages')->group(function () {
     Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
 });
+

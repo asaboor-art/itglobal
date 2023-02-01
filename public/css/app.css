@@ -11424,6 +11424,9 @@ ul {
     width: 22px !important;
 }
 
+.nav-sidebar .nav-link>.right, .nav-sidebar .nav-link>p>.right{
+    top: 1.3rem !important;
+}
 /* .modal-enter-active {
     transform: translate(100%, 0) scale(1);
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);

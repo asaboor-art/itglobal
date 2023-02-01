@@ -18,6 +18,10 @@ import EditHeader from '../components/admin/headers/EditHeader.vue';
 import Footers from '../components/admin/footers/Footers.vue';
 import CreateFooter from '../components/admin/footers/CreateFooter.vue';
 import EditFooter from '../components/admin/footers/EditFooter.vue';
+// Properties
+import Properties from '../components/admin/properties/Properties.vue';
+import CreateProperty from '../components/admin/properties/CreateProperty.vue';
+import EditProperty from '../components/admin/properties/EditProperty.vue';
 
 const routes = [
     {
@@ -88,7 +92,25 @@ const routes = [
         component: EditFooter,
         props: true,
     },
-
+    // Properties
+    {
+        path: "/admin/properties",
+        name: "admin.properties",
+        component: Properties,
+        props: true,
+    },
+    {
+        path: "/admin/properties/create",
+        name: "admin.properties.create",
+        component: CreateProperty,
+        props: true,
+    },
+    {
+        path: "/admin/properties/edit/:id",
+        name: "admin.properties.edit",
+        component: EditProperty,
+        props: true,
+    },
 
 
 
