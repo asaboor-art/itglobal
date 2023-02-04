@@ -8,14 +8,17 @@ use App\Helpers\Helper;
 use App\Models\CustomForm;
 use App\Mail\CustomForm as MailForm;
 use App\Models\Page;
+use Log;
 
 class SitePageController extends BaseController
 {
     //
     private $customForm;
-    public function __construct(CustomForm $customForm){
+    private $Page;
+    public function __construct(CustomForm $customForm,Page $page){
 
         $this->customForm = $customForm;
+        $this->Page = $page;
     }
 
     public function renderMainPage(Request $request){
@@ -29,19 +32,30 @@ class SitePageController extends BaseController
     public function renderSitePages(Request $request,$page){
         
         $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
+        try{
 
-        if($Page->is_home_page){
-            return redirect()->route('home');
+            if(!isset($Page)){
+                return view(config('site_config.assets.pages').$page,[
+                    'title' => strtoupper(str_replace('-',' ',$page)),
+                ]);
+            }
+            else if($Page->is_home_page){
+                return redirect()->route('home');
+            }
+            else if($Page->has_custom_view){
+                return view(config('site_config.assets.pages').$Page->view,[
+                    'title' => $Page->name,
+                ]);
+            }else{
+                return view(config('site_config.assets.pages').'page',[
+                    'title' => $Page->name,
+                ]);
+            }
+        }catch(Exception $e){
+            Log::error($e->getMessage());
+            abort(404);
         }
-        if($Page->has_custom_view){
-            return view(config('site_config.assets.pages').$Page->view,[
-                'title' => $Page->name,
-            ]);
-        }else{
-            return view(config('site_config.assets.pages').'page',[
-                'title' => $Page->name,
-            ]);
-        }
+        
 
         
     }

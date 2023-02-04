@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\PropertyController;
 use Artisan;
 
 
@@ -56,4 +57,19 @@ Route::prefix('developer')->group(function () {
 Route::prefix('pages')->group(function () {
     Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
 });
+
+// Public properties
+Route::prefix('properties')->group(function () {
+    Route::get('/',[PropertyController::class, 'buyAndSell'])->name('properties.index');
+    Route::get('/{slug}',[PropertyController::class, 'getProperty'])->name('properties.get');
+});
+
+Route::prefix('projects')->group(function () {
+    Route::get('/{slug}',function($slug){
+        return view('projects.project-detail',[
+            'title' => str_replace('-',' ',$slug),
+        ]);
+    })->name('projects.get');
+});
+
 

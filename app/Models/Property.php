@@ -86,7 +86,7 @@ class Property extends BaseModel
 
         $condition = [];
         $result = [];
-        $this->setSelectedColumn(['id','name','slug','address','area','price','city','developer','type','is_active','category','city','created_at']);
+        $this->setSelectedColumn(['id','name','slug','address','area','price','city','developer','type','is_active','category','created_at']);
 
         $this->setRenderColumn([
             [
@@ -137,6 +137,7 @@ class Property extends BaseModel
                 'name' => 'type',
                 'type' => 'string',
                 'html' => false,
+
             ],
             [
                 'name' => 'category',
@@ -166,7 +167,7 @@ class Property extends BaseModel
 
         $result = $this->getAllDatatables([],
         $this->getSelectedColumns(),
-        [],'is_delete');
+        []);
             
         return $result;
     }
@@ -174,4 +175,6 @@ class Property extends BaseModel
     public function getRule(){
         return $this->rules;
     }
+
+    
 }

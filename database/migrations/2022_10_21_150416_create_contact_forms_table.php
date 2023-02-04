@@ -18,6 +18,9 @@ class CreateContactFormsTable extends Migration
             $table->string('first_name')->nullable()->length(255);
             $table->string('last_name')->nullable()->length(255);
             $table->string('email')->nullable()->length(255);
+            $table->string('phone')->nullable()->length(100);
+            $table->string('city')->nullable()->length(100);
+            $table->bigInteger('property_id')->default(0);
             $table->longText('message')->nullable();
             $table->timestamps();
         });

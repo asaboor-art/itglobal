@@ -10,6 +10,6 @@ class ContactForm extends BaseModel
 {
     use HasFactory;
     protected $fillable = [
-        'first_name','last_name','email','message','subject'
+        'first_name','phone','email','message','city','property_id'
     ];
 }

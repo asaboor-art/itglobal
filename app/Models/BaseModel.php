@@ -97,7 +97,11 @@ class BaseModel extends Model
     public function getRenderColumns(){
         return $this->render_columns;
     }
-    public function getAllDatatables($relation = [],$select = ['*'] ,$conditions = [],$scope='')
+    // Relation with media
+    public function media(){
+        return $this->hasMany(Media::class,'model_id')->where('model',$this->class_name);
+    }
+    public function getAllDatatables($relation = [],$select = ['*'] ,$conditions = [],$scope='',$join=[],$where='orwhere')
     {
         
         if($scope != ''){
@@ -106,8 +110,12 @@ class BaseModel extends Model
         }else{
             $Model = static::selectRaw(implode(',',$select));
         }
-        if (!empty($relation)) {
-            foreach ($relation as $index => $rel){
+
+        if(!empty($relation)){
+            $Model = static::with($relation)->selectRaw(implode(',',$select));
+        }
+        if (!empty($join)) {
+            foreach ($join as $index => $rel){
                 $Model->join($rel[0],$rel[1],$rel[2],$rel[3]);
             }
             
@@ -120,9 +128,9 @@ class BaseModel extends Model
        
         
         $totalRecord = $Model->count();
-
+        
         foreach ($this->getFilters() as $key => $filter) {
-            $Model = $Model->orwhere($filter[0], $filter[1], $filter[2]);
+            $Model = $Model->{$where}($filter[0], $filter[1], $filter[2]);
         }
 
         $totalFilteredRecord = $Model->count();
@@ -130,6 +138,7 @@ class BaseModel extends Model
         $count = 0;
         $response = [];
         $result = $Model->skip($this->getLength() * ($this->getStart() - 1))->take($this->getLength())->orderBy($this->getOrderBy(), $this->getOrder())->get();
+        
         foreach ($result as $key => $row) {
                 $count++;
                 $data = [];
@@ -228,17 +237,23 @@ class BaseModel extends Model
                 $data->where($condition[0], $condition[1], $condition[2]);
             }
         }
+        if($this->getLength() > 0 )
+            $Model = $data->skip($this->getLength() * ($this->getStart() - 1))->take($this->getLength())->orderBy($this->getOrderBy(), $this->getOrder())->get();
+        
+        $Model =$data->get();
+        
         return $data->get();
+         
     }
 
     public function first($column = 'id', $value = 0, $operator = '=', $relation = [])
     {
         $result = null;
         if (!empty($relation)) {
-            $result = static::with($relation)->where($column, $operator, $value)->first();
+            $result = static::with($relation)->where($column, $operator, $value)->firstorfail();
              
         }else{
-            $result = static::where($column, $operator, $value)->first();
+            $result = static::where($column, $operator, $value)->firstorfail();
         }
         $result['media'] = Media::where('model',$this->class_name)->where('model_id',  $result->id)->get();
         return $result;

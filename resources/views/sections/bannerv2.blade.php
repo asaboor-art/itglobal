@@ -1,11 +1,8 @@
-<section class="about-banner-sec">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="about-banner-content">
-              <h2>{{ trans('lang.about_us') }}</h2>
-            </div>
-          </div>
-        </div>
+<section class="banner-video-wrp">
+    <div class="bg-video-wrap">
+      <div class="full-screen-banner">
+        <h1 class="wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0.8s">ABOUT US <span>Leading Real Estate Marketing Agency In Pakistan</span></h1>
+        <a href="javascript:void(0)" class="btn btn-primary wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0.9s">BOOK NOW</a>
       </div>
-    </section>
+    </div>
+  </section>

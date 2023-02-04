@@ -53,7 +53,7 @@ class AuthenticatedSessionController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Request $request,$id)
+    public function destroy(Request $request,$id=0)
     {
         auth()->user()->logout_at = Carbon::now();
         auth()->user()->is_login = 0;

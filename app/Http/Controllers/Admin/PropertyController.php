@@ -16,7 +16,7 @@ class PropertyController extends BaseController
     //
     private $property,$media;
     public function __construct(Property $property,Media $media) {
-        //$this->property = $property;
+        $this->property = $property;
         $this->setModel($property);
         $this->setMedia($media);
         //parent::__construct();
@@ -42,6 +42,139 @@ class PropertyController extends BaseController
             'name' => 'property',
         ]);
     }
+// Buy and Sell
+    public function buyAndSell(Request $request){
+        try{
+            $condition = [];
+            $result = [];
+            
+            $this->setGeneralFilters($request);
+            if($request->has('search_city') && $request->search_city !=''){
+                $this->property->setFilters(['city','like','%'.$request->search_city.'%']);    
+            }
 
+            if($request->has('search_location') && $request->search_location !=''){
+                $this->property->setFilters(['address','like','%'.$request->search_location.'%']);    
+            }
+
+            if($request->has('search_developer') && $request->search_developer !=''){
+                $this->property->setFilters(['developer','like','%'.$request->search_developer.'%']);    
+            }
+            if($request->has('search_type') && $request->search_type !=''){
+                $this->property->setFilters(['type','like','%'.$request->search_type.'%']);    
+            }
+            if($request->has('search_min_price') && $request->search_min_price !=''){
+                $this->property->setFilters(['price','>=',$request->search_min_price]);    
+            }
+            if($request->has('search_max_price') && $request->search_max_price !=''){
+                $this->property->setFilters(['price','<=',$request->search_max_price]);    
+            }
+            if($request->has('search_min_area') && $request->search_min_area !=''){
+                $this->property->setFilters(['area','>=',$request->search_min_area]);    
+            }
+            if($request->has('search_min_area') && $request->search_min_area !=''){
+                $this->property->setFilters(['area','<=',$request->search_min_area]);    
+            }
+            if($request->has('category') && $request->category !=''){
+                $this->property->setFilters(['category','like','%'.$request->category.'%']);    
+            }
+
+
+            $this->property->setSelectedColumn(['id','name','slug','address','area','price','city','developer','type','category']);
+
+            $this->property->setRenderColumn([
+                [
+                    'name' => 'id',
+                    'db_name' => 'id',
+                    'type' => 'integer',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'name',
+                    'type' => 'string',
+                    'html' => false,
+                    'link' => 'property',
+                    'link_column' => 'slug',
+                    
+                ],
+                [
+                    'name' => 'slug',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'address',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'city',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'area',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'price',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'developer',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'type',
+                    'type' => 'string',
+                    'html' => false,
+
+                ],
+                [
+                    'name' => 'category',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'media',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+            ]);
+
+        $result = $this->property->getAllDatatables(['media'],
+        $this->property->getSelectedColumns(),
+        [],'',[],'where');
+        
+        if($request->ajax()){
+            return view('properties.ajax.properties',[
+                'Properties' => $result,
+                'request' => $request
+            ]);
+        }
+            
+        return view('properties.properties',[
+            'title' => trans('lang.buy_rent'),
+            'Properties' => $result,
+            'request' => $request,
+        ]);
+        }catch(Exception $e){
+            Log::error($e->getMessage());
+            abort(404);
+        }
+        
+    }
+
+    public function getProperty(Request $request,$slug){
+        $Property = $this->property->first('slug',$slug,'=');
+        
+        return view('properties.property',[
+            'title' => __('lang.property'). '|' .$Property->name,
+            'Property' => $Property
+        ]);
+    }
 
 }
