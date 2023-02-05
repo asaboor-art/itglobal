@@ -58,10 +58,10 @@ class PropertyController extends BaseController
             }
 
             if($request->has('search_developer') && $request->search_developer !=''){
-                $this->property->setFilters(['developer','like','%'.$request->search_developer.'%']);    
+                $this->property->setFilters(['developer','=',$request->search_developer]);    
             }
             if($request->has('search_type') && $request->search_type !=''){
-                $this->property->setFilters(['type','like','%'.$request->search_type.'%']);    
+                $this->property->setFilters(['type','=',$request->search_type]);    
             }
             if($request->has('search_min_price') && $request->search_min_price !=''){
                 $this->property->setFilters(['price','>=',$request->search_min_price]);    
@@ -169,7 +169,7 @@ class PropertyController extends BaseController
     }
 
     public function getProperty(Request $request,$slug){
-        $Property = $this->property->first('slug',$slug,'=');
+        $Property = $this->property->first('properties.slug',$slug,'=',[],[['developers','properties.developer','=','developers.id'],['property_types','properties.type','=','property_types.id']],['properties.*','developers.name as Developer','property_types.name as PropertyType']);
         
         return view('properties.property',[
             'title' => __('lang.property'). '|' .$Property->name,

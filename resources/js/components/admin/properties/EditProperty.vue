@@ -12,7 +12,7 @@
     </section>
     <!-- Main content -->
     <div class="loading" v-if="loader">Loading</div>
-    <section class="content" v-else>
+    <section class="content">
 
     <!-- Default box -->
     <div class="card card-secondary card-outline">
@@ -33,6 +33,8 @@ import Form from '../../commons/Form.vue';
 import useProperties from '../../../composables/properties';
 import useService  from '../../../services/index';
 import useGenerals from '../../../composables/general';
+import useDevelopers from '../../../composables/developers';
+import usePropertyTypes from '../../../composables/propertytypes';
 
 export default {
 components:{
@@ -45,7 +47,9 @@ data(){
         loader:false,
         errors:{},
         FormFields:[],
-        options:[],
+        developerOptions:[],
+        typesOptions:[],
+        citiesOptions:[],
         form:{
             name:'',
             slug:'',
@@ -65,7 +69,9 @@ data(){
 },
 mounted(){
     let ref = this;
-    ref.getData();
+    ref.getDevelopers();
+    ref.getPropertyTypes();
+    ref.getCities();
     ref.edit();
     ref.FormFields = [
                 {
@@ -126,13 +132,56 @@ mounted(){
                 {
                     label:Language.developer,
                     field:"developer",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    placeholder:function(){
-                        return "Enter "+this.label
+                    class:"vue-select1",
+                    grid:"col-md-6 col-12",
+                    type:"select",
+                    isdynamic:true,
+                    searchable:true,
+                    options:function(){
+                            if(this.isdynamic){
+                                return ref.developerOptions;            
+                            }
+                            return [
+                                {
+                                    text:'Residential',
+                                    id:'Residential'
+                                },
+                                {
+                                    text:'Commercial',
+                                    id:'Commercial'
+                                }
+                            ];
                     },
-                    required:false,
+                    placeholder:function(){
+                        return "Select "+this.label
+                    },
+                },
+                {
+                    label:Language.city,
+                    field:"city",
+                    class:"vue-select1",
+                    grid:"col-md-6 col-12",
+                    type:"select",
+                    isdynamic:true,
+                    searchable:true,
+                    options:function(){
+                            if(this.isdynamic){
+                                return ref.citiesOptions;            
+                            }
+                            return [
+                                {
+                                    text:'Residential',
+                                    id:'Residential'
+                                },
+                                {
+                                    text:'Commercial',
+                                    id:'Commercial'
+                                }
+                            ];
+                    },
+                    placeholder:function(){
+                        return "Select "+this.label
+                    },
                 },
                 {
                     label:Language.address,
@@ -145,28 +194,18 @@ mounted(){
                     },
                     required:true,
                 },
-                {
-                    label:Language.city,
-                    field:"city",
-                    class:"form-control",
-                    grid:"col-md-12 col-12",
-                    type:"text",
-                    placeholder:function(){
-                        return "Enter "+this.label
-                    },
-                    required:false,
-                },
+                
                 {
                     label:Language.type,
                     field:"type",
                     class:"vue-select1",
                     grid:"col-md-6 col-12",
                     type:"select",
-                    isdynamic:false,
+                    isdynamic:true,
                     searchable:true,
                     options:function(){
                             if(this.isdynamic){
-                                return ref.options;            
+                                return ref.typesOptions;            
                             }
                             return [
                                 {
@@ -359,7 +398,25 @@ methods:{
             const {data,get} = useGenerals();
             await get(`/admin/layouts/select`);
             this.options = data.value;   
-    }
+    },
+    async getDevelopers(){
+            const {developers,getDevelopersPublic} = useDevelopers();
+            await getDevelopersPublic();
+            this.developerOptions = developers.value;
+            //console.log(this.developerOptions);
+    },
+    async getPropertyTypes(){
+            const {propertyTypes,getPropertyTypesPublic} = usePropertyTypes();
+            await getPropertyTypesPublic();
+            this.typesOptions = propertyTypes.value;
+            //console.log(this.developerOptions);
+    },
+    async getCities(){
+            const {data,getCitiesByCountry} = useGenerals();
+            await getCitiesByCountry();
+            this.citiesOptions = data.value;
+            console.log(this.citiesOptions);
+    },
 
 }
 }

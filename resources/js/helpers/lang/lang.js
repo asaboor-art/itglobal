@@ -180,6 +180,12 @@ export const Language = {
     property:"Property",
     type:"Type",
     developer:"Developer",
+    developers:"Developers",
     gallery:"Gallery",
     area:"Area",
+    property_types:"Property Types",
+    property_type:"Property Type",
+    queries:"Queries",
+    phone:"Phone",
+    message:"Message",
 };

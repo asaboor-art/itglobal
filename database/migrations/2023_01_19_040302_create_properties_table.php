@@ -22,8 +22,8 @@ class CreatePropertiesTable extends Migration
             $table->longText('address')->nullable();
             $table->string('lognitude')->nullable()->length(100);
             $table->string('latitude')->nullable()->length(100);
-            $table->string('developer')->nullable()->length(100);
-            $table->string('type')>nullable()->length(100);
+            $table->string('developer_id')->default(0);
+            $table->string('property_type_id')->default(0);
             $table->string('category')>nullable()->length(100);
             $table->string('city')->nullable()->length(100);
             $table->string('country')->nullable()->length(100);

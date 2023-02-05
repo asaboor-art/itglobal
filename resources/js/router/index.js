@@ -22,7 +22,14 @@ import EditFooter from '../components/admin/footers/EditFooter.vue';
 import Properties from '../components/admin/properties/Properties.vue';
 import CreateProperty from '../components/admin/properties/CreateProperty.vue';
 import EditProperty from '../components/admin/properties/EditProperty.vue';
-
+// Developers
+import Developers from '../components/admin/developers/Developers.vue';
+// import CreateDeveloper from '../components/admin/developers/CreateDeveloper.vue';
+// import EditDeveloper from '../components/admin/developers/EditDeveloper.vue';
+// PropertyTypes
+import PropertyTypes from '../components/admin/property_types/PropertyTypes.vue';
+// Queries
+import Queries from '../components/admin/queries/Queries.vue';
 const routes = [
     {
         path: "/admin",
@@ -111,7 +118,27 @@ const routes = [
         component: EditProperty,
         props: true,
     },
-
+    // Developers
+    {
+        path: "/admin/developers",
+        name: "admin.developers",
+        component: Developers,
+        props: true,
+    },
+    // PropertyTypes
+     {
+        path: "/admin/property-types",
+        name: "admin.property-types",
+        component: PropertyTypes,
+        props: true,
+    },
+    // Queries
+    {
+        path: "/admin/queries",
+        name: "admin.queries",
+        component: Queries,
+        props: true,
+    },
 
 
 ];

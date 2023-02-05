@@ -233,10 +233,10 @@ class Helper
     // set new Price Format
     public static function setPriceFormat($price){
         if($price > 10000000){
-            return ($price/10000000).'Crore';
+            return number_format(($price/10000000),2).' Crore';
         }
         elseif($price > 100000){
-            return ($price/100000).'Lac';
+            return number_format(($price/100000),2).' Lac';
         }
 
         return number_format($price,2);

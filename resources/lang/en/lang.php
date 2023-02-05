@@ -93,6 +93,7 @@ return [
     'phone' => 'Phone',
     'buy_rent'  => 'Buy & Rent',
     'developer' => 'Developer',
+    'developers' => 'Developers',
     'min_price' => 'Min - Price',
     'max_price' => 'Max - Price',
     'min_area' => 'Min - Area',
@@ -106,5 +107,10 @@ return [
     'price' => 'Price',
     'area' => 'Area',
     'financial-advisory' => 'Financal Advisory',
+    'select' => 'Select',
+    'property_types' => 'Property Types',
+    'property_type' => 'Property Type',
+    'queries' => 'Queries',
+    'recent_messages' => 'Recent Messages',
 
 ];

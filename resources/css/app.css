@@ -21,7 +21,7 @@ a {
 }
 
 .records-cls {
-    width: 22% !important;
+    width: 25% !important;
 }
 
 .backdrop-shadow {
@@ -334,13 +334,9 @@ ul {
 }
 
 .nav-sidebar .nav-link>.right, .nav-sidebar .nav-link>p>.right{
-    top: 1.3rem !important;
+    /* top: 1.3rem !important; */
 }
-/* .modal-enter-active {
-    transform: translate(100%, 0) scale(1);
-    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+.card-box-shadow{box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 -2px 3px rgb(0 0 0 / 20%) !important;}
+.select2-container .select2-selection--single{padding: 8px 0 27px 0 !important;}
 
-.modal-leave-active {
-    /* transform: none;
-    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
+

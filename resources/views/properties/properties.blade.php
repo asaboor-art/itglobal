@@ -26,7 +26,7 @@
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            @include('properties.filter',[
+            @include('sections.filters.filterv1',[
                 'heading'  => __('messages.properties.sec-heading'),
                 'subheading' => __('messages.properties.sec-subheading'),
                 'Properties' => $Properties, 

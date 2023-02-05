@@ -178,3 +178,34 @@ $(document).on('error','img',function(e){
     e.preventDefault();
     $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
 })
+$(document).ready(function(){
+    getCities();
+})
+
+// Get all cities of a country
+function getCities() {
+    let ref = $('.cities');
+    
+    var urlParameter = window.location.href.split('?')[1];
+    if(urlParameter && urlParameter.length > 0){
+        city_parameter = urlParameter.split('&')[0];
+        var city = city_parameter.split('=')[1]; 
+        console.log(city_parameter);
+    }
+    
+    $.post('https://countriesnow.space/api/v0.1/countries/cities',{
+        "country": "pakistan"
+    },(response,status)=>{
+        var html = '<option value"Select Cities">Select City</option>';
+        response.data.forEach(element => {
+            if(city && city == element){
+                html += '<option value="'+element+'" selected>'+element+'</option>';
+            }else{
+                html += '<option value="'+element+'">'+element+'</option>';
+            }
+            
+        });
+
+        ref.html(html);
+    });
+}

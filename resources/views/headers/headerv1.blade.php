@@ -26,6 +26,7 @@
                                 <li class="{{ $menu['class']}}">
                                     
                                  <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                 
 
                                  </li>
                                 @else

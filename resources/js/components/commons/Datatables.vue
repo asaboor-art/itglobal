@@ -1,19 +1,19 @@
 <template>
     <div class="col-md-12">
-        <div class="row p-4">
-            <div class="col-md-7 col-sm-7 col-12">
+        <div class="row p-3">
+            <div class="col-md-5 col-sm-5 col-12">
             <select class="records-cls custom-select" v-model="pageSize">
                 <option :value="10">10</option>
                 <option :value="25">25</option>
                 <option :value="50">50</option>
             </select>
             </div>
-            <div class="form-group col-md-5 col-sm-5 d-inline-block">
+            <div class="form-group col-md-7 col-sm-7 d-inline-block">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <input type="text" name="search" placeholder="Search" class="form-control" v-model="filter.search" />
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <button class="btn btn-secondary w-100" @click="searchAction()">Search</button>
                     </div>
                     <div class="col-3">

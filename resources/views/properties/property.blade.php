@@ -130,11 +130,11 @@
                            <td class="bg-tab-col">{{ __('lang.city')}}</td>
                            <td>{{ $Property->city}}</td>
                            <td class="bg-tab-col">{{ strtoupper(__('lang.developer')) }}</td>
-                           <td>{{ $Property->developer }}</td>
+                           <td>{{ $Property->Developer?$Property->Developer:'None' }}</td>
                         </tr>
                         <tr>
                            <td class="bg-tab-col">{{ strtoupper(__('lang.type')) }}</td>
-                           <td>{{ $Property->type }}</td>
+                           <td>{{ $Property->PropertyType?$Property->PropertyType:'None' }}</td>
                            <td class="bg-tab-col">{{ strtoupper(__('lang.area')) }}</td>
                            <td>{{ $Property->area }} Sq Yard</td>
                            <td class="bg-tab-col">{{ strtoupper(__('lang.price')) }}</td>

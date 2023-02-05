@@ -15,10 +15,10 @@
                </div>
                <div class="building-img-content">
                   <div class="build-tag">
-                    <a href="{{ route('properties.get',$property['slug']) }}"><p>{{ __('lang.avenue')}} <span>{{ $property['name'] }} </span> {{ $property['city'] }}</p></a>
+                    <a href="{{ route('properties.get',$property['slug']) }}"><p><span>{{ $property['name'] }} </span> {{ $property['city'] }}</p></a>
                   </div>
                   <div class="build-tag-price">
-                  <a href="{{ route('properties.get',$property['slug']) }}"><p>{{ strtoupper(__('lang.starting_from'))}} <span>{{ number_format($property['price'],2)}}</span> {{ config('site_config.constants.currency') }}</p></a>
+                  <a href="{{ route('properties.get',$property['slug']) }}"><p>{{ strtoupper(__('lang.starting_from'))}} <span>{{ $property['price']}}</span> {{ config('site_config.constants.currency') }}</p></a>
                   </div>
                </div>
                <div class="{{ strtolower($property['category'])=='rent'?'buy-tag buy-yellow-tag':'buy-tag' }}">

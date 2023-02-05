@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use App\Models\BaseModel;
+use App\Models\BaseModel; 
 use App\Helpers\Helper;
 use Auth;
 
@@ -22,8 +22,8 @@ class Property extends BaseModel
         'address' =>  'required',
         'description' => 'required',
         'address' => 'required',
-        'developer' => 'required',
-        'type' => 'required',
+        'developer' => 'required|exists:developers,id',
+        'type' => 'required|exists:property_types,id',
         'category' => 'required',
         'city' => 'required',
         'price' => 'required|numeric',
@@ -44,29 +44,29 @@ class Property extends BaseModel
         });
     }
 
-    public function setSlugAttribute($slug)
-    {
-
-        if(isset($this->id)){
-            $property = self::where('slug',$slug)->where('id','!=',$this->id)->first();
-            $this->attributes['slug'] = $slug.'-'.((int)$this->id);
-            return true;
-        }
-        $property = self::where('slug',$slug)->first();
-        if(isset($property)){
-            $this->attributes['slug'] = $slug.'-'.((int)$property->id+1);
-            return true;
-        }
-        $this->attributes['slug'] = preg_replace('/^[A-z]+[0-9]+\s+/', '-', $slug);
-        return true;
-    }
+    // public function setSlugAttribute($slug)
+    // {
+    //     $slug = preg_replace("![^a-z0-9]+!i", "-", $slug);
+    //     if(isset($this->id)){
+    //         $property = self::where('slug',$slug)->where('id','!=',$this->id)->first();
+    //         $this->attributes['slug'] = $slug.'-'.((int)$this->id);
+    //         return true;
+    //     }
+    //     $property = self::where('slug',$slug)->first();
+    //     if(isset($property)){
+    //         $this->attributes['slug'] = $slug.'-'.((int)$property->id+1);
+    //         return true;
+    //     }
+    //     $this->attributes['slug'] = $slug;
+    //     return true;
+    // }
 
     public function getPriceAttribute()
     {   
-        if(!isset($this->id)){
+        if(!isset(request()->id) && !isset(request()->slug)){
+            
             return Helper::priceFormat($this->attributes['price']);
         }
-
         return $this->attributes['price'];
         
     }
@@ -86,7 +86,7 @@ class Property extends BaseModel
 
         $condition = [];
         $result = [];
-        $this->setSelectedColumn(['id','name','slug','address','area','price','city','developer','type','is_active','category','created_at']);
+        $this->setSelectedColumn(['properties.id','properties.name','properties.slug','address','area','price','city','developer','type','properties.is_active','category','properties.created_at','developers.name as Developer','property_types.name as PropertyType']);
 
         $this->setRenderColumn([
             [
@@ -129,12 +129,12 @@ class Property extends BaseModel
                 'html' => false,
             ],
             [
-                'name' => 'developer',
+                'name' => 'Developer',
                 'type' => 'string',
                 'html' => false,
             ],
             [
-                'name' => 'type',
+                'name' => 'PropertyType',
                 'type' => 'string',
                 'html' => false,
 
@@ -167,13 +167,23 @@ class Property extends BaseModel
 
         $result = $this->getAllDatatables([],
         $this->getSelectedColumns(),
-        []);
+        [],'',[['developers','properties.developer','=','developers.id'],['property_types','properties.type','=','property_types.id']]);
             
         return $result;
     }
 
     public function getRule(){
         return $this->rules;
+    }
+
+    public function getRecodsForSelect(){
+        try{
+            $response = [];
+            $data = $this->getAll([],['id','name as text']);
+            return $data;
+        }catch(Exception $e){
+            Logger::error($e->getMessage());
+        }
     }
 
     

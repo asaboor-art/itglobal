@@ -1029,4 +1029,6 @@ video {min-height: auto;}
 .box-item-div:hover .building-box-hover img {transform: scale(1.1);cursor: pointer;}
 .thumb img{max-height: 113px !important;}
 .img-box-img img{min-height: 241px  !important;}
+/* .filter-form select{height: auto;outline: none;box-shadow: none;font-size: 15px;font-weight: 400;color: #000;border-radius: 0;padding: 15px;margin-bottom: 13px;resize: none;} */
 /* .thumb img{max-height: 113px !important;} */
+

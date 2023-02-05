@@ -36,12 +36,14 @@
                            </div>
                            <div class="building-img-content">
                               <div class="build-tag">
-                              <a href="{{ route('properties.get',$project->slug) }}"><p>{{ __('lang.avenue')}} {{ $project->name }} <span>{{ $project->city }}</span></p></a>
+                              <a href="{{ route('properties.get',$project->slug) }}"><p>{{ $project->name }} <span>{{ $project->city }}</span></p></a>
                               </div>
+                              <a href="{{ route('properties.get',$project->slug) }}">
                               <div class="build-tag-price">
-                              <a href="{{ route('properties.get',$project->slug) }}"><small>{{ strtoupper(__('lang.starting_from'))}} </small>
-                                 <p>{{ number_format($project->price,2)}} {{ config('site_config.constants.currency') }}</p></a>
+                                 <small>{{ strtoupper(__('lang.starting_from'))}} </small>
+                                 <p>{{ App\Helpers\Helper::setPriceFormat($project->price)}} {{ config('site_config.constants.currency') }}</p>
                               </div>
+                              </a>
                            </div>
                         </div>
                      </a>

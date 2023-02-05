@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PropertyController;
+use App\Http\Controllers\Admin\DeveloperController;
+use App\Http\Controllers\Admin\PropertyTypeController;
 use Artisan;
 
 
@@ -72,4 +74,8 @@ Route::prefix('projects')->group(function () {
     })->name('projects.get');
 });
 
+// Developers
+Route::get('/developers/select', [DeveloperController::class, 'getSelectRecords'])->name('developers.select');
 
+// PropertyTypes
+Route::get('/property-types/select', [PropertyTypeController::class, 'getSelectRecords'])->name('property_types.select');

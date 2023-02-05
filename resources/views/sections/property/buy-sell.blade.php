@@ -15,19 +15,7 @@
             <div class="buy-sell-box wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0.9s">
                <h2>{{ isset($heading)?$heading:__('messages.properties.sec-heading') }}</h2>
                <p>{{ isset($subheading)?$heading:__('messages.properties.sec-subheading')}}</p>
-               <form method="GET" action="{{ route('properties.index') }}" class="filter-form">
-                  @csrf
-                  <div class="fields-box">
-                     <input type="text" placeholder="{{ __('lang.city') }}" name="search_city" class="form-control search_city">
-                     <input type="text" placeholder="{{ __('lang.location') }}" name="search_location" class="form-control search_location">
-                     <input type="text" placeholder="{{ __('lang.type') }}" name="search_type" class="form-control search_type">
-                     <input type="hidden" id="category" name="category" value=""/>
-                     <div class="form-btn">
-                        <button type="button" class="btn btn-primary search_filter" data-value="Buy">{{ trans('lang.buy') }}</button>
-                        <button type="button" class="btn btn-primary search_filter" data-value="Rent">{{ trans('lang.rent') }}</button>
-                     </div>
-                  </div>
-               </form>
+               @include('sections.filters.filterv2');
             </div>
          </div>
       </div>
@@ -51,12 +39,14 @@
                         </div>
                         <div class="building-img-content">
                            <div class="build-tag">
-                           <a href="{{ route('properties.get',$property->slug) }}"><p>{{ __('lang.avenue')}} <span>{{ $property->name }} </span> {{ $property->city }}</p></a>
+                           <a href="{{ route('properties.get',$property->slug) }}"><p><span>{{ $property->name }} </span> {{ $property->city }}</p></a>
                               
                            </div>
+                           <a href="{{ route('properties.get',$property->slug) }}">
                            <div class="build-tag-price">
-                           <a href="{{ route('properties.get',$property->slug) }}"><p>{{ strtoupper(__('lang.starting_from'))}} <span>{{ number_format($property->price,2)}}</span> {{ config('site_config.constants.currency') }}</p></a>
+                              <p>{{ strtoupper(__('lang.starting_from'))}} <span>{{ $property->price,2}}</span> {{ config('site_config.constants.currency') }}</p>
                            </div>
+                           </a>
                         </div>
                         <div class="{{ strtolower($property->category)=='rent'?'buy-tag buy-yellow-tag':'buy-tag' }}">
                            <p>{{ strtoupper($property->category) }}</p>
