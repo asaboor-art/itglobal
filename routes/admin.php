@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
-Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard.ajax');
 Route::get('/registrations/month', [DashboardController::class, 'getRegistrationsPreMonth'])->name('admin.registrations');
 // Pages
 Route::prefix('pages')->group(function () {

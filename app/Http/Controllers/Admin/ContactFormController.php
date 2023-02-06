@@ -23,8 +23,8 @@ class ContactFormController extends BaseController
 
     public function index(Request $request){
         return view('admin.crud.index',[
-             'title' => trans('lang.developers'),
-             'name'  => trans('lang.developer'),
+             'title' => trans('lang.queries'),
+             'name'  => trans('lang.query'),
         ]);
     }
 }

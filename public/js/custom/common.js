@@ -178,9 +178,10 @@ $(document).on('error','img',function(e){
     e.preventDefault();
     $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
 })
-$(document).ready(function(){
+window.onload = function(e){
+    
     getCities();
-})
+}
 
 // Get all cities of a country
 function getCities() {
@@ -190,13 +191,15 @@ function getCities() {
     if(urlParameter && urlParameter.length > 0){
         city_parameter = urlParameter.split('&')[0];
         var city = city_parameter.split('=')[1]; 
-        console.log(city_parameter);
+        
     }
     
     $.post('https://countriesnow.space/api/v0.1/countries/cities',{
         "country": "pakistan"
     },(response,status)=>{
-        var html = '<option value"Select Cities">Select City</option>';
+        var html = '<option value="">Select City</option>';
+        city = city.replace('+',' ');
+        
         response.data.forEach(element => {
             if(city && city == element){
                 html += '<option value="'+element+'" selected>'+element+'</option>';

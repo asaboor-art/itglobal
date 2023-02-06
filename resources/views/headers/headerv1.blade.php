@@ -22,12 +22,25 @@
                         @endphp
                         @if(true)
                             @foreach($Menus as $key => $menu)
-                                @if(!$menu['is_main'])
-                                <li class="{{ $menu['class']}}">
-                                    
-                                 <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                @if(!$menu['is_main']) 
+                                <li class="{{ $menu['class']}} dropdown_c dropdown_click" >
+                                 @if($menu['has_submenu'])
+                                 <div class="selected menu-item" data-target="#dropdown{{ $key }}">
+                                       <span class="{{ $menu['link-class']}}" data-target="#dropdown{{ $key }}">{{ trans('lang.'.$menu['name'])}}</span>
+                                    </div>
+                                    <div class="drop-content" data-target="#dropdown{{ $key }}">
+                                       <ul id="dropdown{{ $key }}">
+                                         @if(count($menu['submenu']) > 0)
+                                             @foreach($menu['submenu'] as $submenu)
+                                                <li><a href="{{ route($submenu['route'],$submenu['link']) }}">{{ $submenu['text'] }} </a></li>
+                                             @endforeach
+                                          @endif
+                                       </ul>
+                                    </div>
+                                    @else
+                                    <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                 @endif
                                  
-
                                  </li>
                                 @else
                                 <li class="{{ $menu['class'] }}">

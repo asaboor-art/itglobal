@@ -44,9 +44,12 @@
 @section('scripts')
 <script>
 $(document).ready(function(e){
-
+    //getCities();
     getProperties({});
 });
+// $(document).ready(function(){
+    
+// })
  $(document).on('click','.page-link',function(e){
     e.preventDefault();
     getProperties({
@@ -62,8 +65,17 @@ $(document).ready(function(e){
  });
 
 function getProperties(data){
+    var city = '';
+    var urlParameter = window.location.href.split('?')[1];
+    if(urlParameter && urlParameter.length > 0){
+        city_parameter = urlParameter.split('&')[0];        
+        city = city_parameter.split('=')[1]?city_parameter.split('=')[1]:''; 
+        
+    }
+    console.log($('.search_city option:selected').val())
     let request = {
-        search_city:$('.search_city').val(),
+        
+        search_city:$('.search_city option:selected').val()!= ''?$('.search_city option:selected').val():city.replace('+',' '),
         search_location:$('.search_location').val(),
         search_developer:$('.search_developer').val(),
         search_type:$('.search_type').val(),

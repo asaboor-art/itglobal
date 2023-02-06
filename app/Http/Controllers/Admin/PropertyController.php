@@ -31,7 +31,7 @@ class PropertyController extends BaseController
 
     public function create(Request $request){
         return view('admin.crud.create',[
-            'title' => trans('lang.pages').' | '.trans('lang.create'),
+            'title' => trans('lang.properties').' | '.trans('lang.create'),
             'name' => 'page',
         ]);
     }
@@ -148,6 +148,8 @@ class PropertyController extends BaseController
         $result = $this->property->getAllDatatables(['media'],
         $this->property->getSelectedColumns(),
         [],'',[],'where');
+
+        
         
         if($request->ajax()){
             return view('properties.ajax.properties',[

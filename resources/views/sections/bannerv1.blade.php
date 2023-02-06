@@ -2,7 +2,8 @@
 <section class="banner-video-wrp">
    <div class="bg-video-wrap">
     @if(isset($video) && $video['display'])
-      <video src="{{ $image['src'] }}" loop muted autoplay></video>
+    
+      <video src="{{ $video['src'] }}" loop muted autoplay></video>
     
     @elseif(isset($image) && $image['display'])
       <img src="{{ $image['src'] }}" />

@@ -93,7 +93,22 @@
          });
       });
       /*MENUBAR SCRIPT END*/
+      /*DROPDOWN SCRIPT BEGIN*/
+      $(".dropdown_click .menu-item").on('mouseenter', function() {
+         var drpdown = $(this).data('target');
+         console.log(drpdown);
+         $(drpdown).slideToggle();
+        });
+        $(".dropdown_click .drop-content ul li a").on('mouseleave', function() {
+         var drpdown = $(this).data('target');
+         $(drpdown).slideUp();
+        }); 
 
+        $(".drop-content").on('mouseleave', function() {
+         var drpdown = $(this).data('target');
+         $(drpdown).slideUp();
+        }); 
+      /*DROPDOWN SCRIPT END*/
     </script>
     
     @yield('scripts')

@@ -39,42 +39,101 @@ return [
                 'link' => 'home',
                 'is_main' => true,
                 'class' => 'menu-item',
-                'link-class' => 'menu-link active'
+                'link-class' => 'menu-link active',
+                'has_submenu' => true,
+                'submenu' => []
             ],
             [
                 'name' => 'about_us',
                 'link' => 'about-us',
                 'is_main' => false,
                 'class' => 'menu-item',
-                'link-class' => 'menu-link'
+                'link-class' => 'menu-link',
+                'has_submenu' => true,
+                'submenu' => []
             ],
             [
                 'name' => 'our_projects',
                 'link' => 'projects',
                 'is_main' => false,
                 'class' => 'menu-item',
-                'link-class' => 'menu-link'
+                'link-class' => 'menu-link',
+                'has_submenu' => true,
+                'submenu' =>[
+                    [
+                        'text' => 'Blue World City',
+                        'link' => str_replace(' ','-','Blue-World-City'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Capital Smart City',
+                        'link' =>  str_replace(' ','-','Capital Smart City'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Kingdom Valley',
+                        'link' =>  str_replace(' ','-','Kingdom Valley'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Lahore Smart City',
+                        'link' =>  str_replace(' ','-','Lahore Smart City'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'New Metro City Gujar Khan',
+                        'link' =>  str_replace(' ','-','New Metro City Gujar Khan'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Nova City',
+                        'link' => str_replace(' ','-','Nova City'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Park View City',
+                        'link' =>  str_replace(' ','-','Park View City'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Seven Wonders City',
+                        'link' =>  str_replace(' ','-','Seven Wonders City'),
+                        'route' => 'projects.get'
+                    ],
+                ]
             ],
             [
                 'name' => 'services',
                 'link' => 'services',
                 'is_main' => false,
                 'class' => 'menu-item',
-                'link-class' => 'menu-link'
+                'link-class' => 'menu-link',
+                'has_submenu' => true,
+                'submenu' => [
+                    [
+                        'text' => 'Financial Advisory',
+                        'link' => 'financial-advisory',
+                        'route' => 'site-pages'
+                    ],
+                ]
             ],
             [
-                'name' => 'financial-advisory',
-                'link' => 'financial-advisory',
+                'name' => 'buy_rent',
+                'link' => 'properties',
                 'is_main' => false,
                 'class' => 'menu-item',
-                'link-class' => 'menu-link'
+                'link-class' => 'menu-link',
+                'has_submenu' => false,
+                'submenu' => []
             ],
             [
                 'name' => 'book_now',
                 'link' => 'contact-us',
                 'is_main' => false,
                 'class' => 'menu-item book-now-btn',
-                'link-class' => 'btn btn-primary'
+                'link-class' => 'btn btn-primary',
+                'has_submenu' => true,
+                'submenu' => []
             ],
             
             
