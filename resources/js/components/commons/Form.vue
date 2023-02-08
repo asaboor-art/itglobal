@@ -45,7 +45,7 @@
                         label-idle="Drop files here..."
                         :allow-multiple=field.multiple
                         :accepted-file-types=field.fileType
-                        max-files="5" 
+                        max-files="10" 
                         :server=field.server
                         v-bind:files="data[field.field]"
                        

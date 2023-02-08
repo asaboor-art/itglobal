@@ -41,23 +41,24 @@
                 @endphp
                 @if($menu['has_submenu'])
                     @foreach($menu['submenu'] as $key => $submenu)
-
-                        @if(\Request::route()->getName() == auth()->user()->roles[0]->name.'.'.$submenu['route'])
-
+                        
+                        @if(strpos(\Request::route()->getName(),$submenu['main_route']))
+                            
                             @php
                                 $is_route = true;
-                                break;
+                                
                             @endphp
                         @endif
                     @endforeach
                 @endif
+                
           <li class="nav-item {{ $is_route?'menu-open':'' }}">
-            <a href="{{ prefix_route($menu['route']) }}" class="nav-link {{ \Request::route()->getName() == auth()->user()->roles[0]->name.'.'.$menu['route']?'bg-nav-link':'' }}">
+            <a href="{{ prefix_route($menu['route']) }}" class="nav-link {{ strpos($menu['route'],\Request::route()->getName())?'bg-nav-link':'' }}">
               <i class="{{ $menu['icon'] }}"></i>
               <p>
-                {{ trans('lang.'.$menu['name']) }}
+                {{ trans('lang.'.$menu['name']) }} 
                 @if($menu['has_submenu'])
-
+               
                   @if($is_route)
                     <i class="right fa fa-angle-down"></i>
                   @else
@@ -67,7 +68,7 @@
               </p>
             </a>
             @if($menu['has_submenu'])
-
+             
               <ul class="nav nav-treeview" style="{{ $is_route?'display:block;':'display:none;'}}">
 
               @foreach($menu['submenu'] as $key => $submenu)

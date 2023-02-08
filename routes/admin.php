@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard.ajax');
+Route::get('/registrations/month', [DashboardController::class, 'getRegistrationsPreMonth'])->name('admin.registrations');
 // Pages
 Route::prefix('pages')->group(function () {
     Route::get('/', [PageController::class, 'index'])->name('admin.pages.index');
@@ -58,6 +60,39 @@ Route::prefix('properties')->group(function(){
         Route::post('/store',[PropertyController::class, 'saveFiles']);
         Route::delete('/delete/{id}',[PropertyController::class, 'deleteFile']);
     });
+
+});
+
+// Property Types
+Route::prefix('property-types')->group(function(){
+    Route::get('/',[PropertyTypeController::class, 'index'])->name('admin.property-types.index');
+    Route::get('/ajax', [PropertyTypeController::class, 'render'])->name('admin.property-types.ajax');
+    Route::get('/create',[PropertyTypeController::class, 'create'])->name('admin.property-types.create');
+    Route::post('/',[PropertyTypeController::class, 'store'])->name('admin.property-types.store');
+    Route::get('/{id}',[PropertyTypeController::class, 'get'])->name('admin.property-types.header');
+    Route::get('/edit/{id}',[PropertyTypeController::class, 'edit'])->name('admin.property-types.edit');
+    Route::put('/update/{id}',[PropertyTypeController::class, 'update'])->name('admin.property-types.update');
+    Route::delete('/delete/{id}',[PropertyTypeController::class, 'destroy'])->name('admin.property-types.destroy');
+});
+
+// Developers
+Route::prefix('developers')->group(function(){
+    Route::get('/',[DeveloperController::class, 'index'])->name('admin.developers.index');
+    Route::get('/ajax', [DeveloperController::class, 'render'])->name('admin.developers.ajax');
+    
+    Route::get('/create',[DeveloperController::class, 'create'])->name('admin.developers.create');
+    Route::post('/',[DeveloperController::class, 'store'])->name('admin.developers.store');
+    Route::get('/{id}',[DeveloperController::class, 'get'])->name('admin.developers.header');
+    Route::get('/edit/{id}',[DeveloperController::class, 'edit'])->name('admin.developers.edit');
+    Route::put('/update/{id}',[DeveloperController::class, 'update'])->name('admin.developers.update');
+    Route::delete('/delete/{id}',[DeveloperController::class, 'destroy'])->name('admin.developers.destroy');
+    
+
+});
+// Queries
+Route::prefix('queries')->group(function(){
+    Route::get('/',[ContactFormController::class, 'index'])->name('admin.queries.index');
+    Route::get('/ajax', [ContactFormController::class, 'render'])->name('admin.queries.ajax');
 });
 
 

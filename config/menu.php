@@ -12,12 +12,41 @@ return [
             ],
             [
                 'name' => 'properties',
-                'route' => 'properties.index',
-                'icon' => 'nav-icon fas fa-tachometer-alt',
-                'has_submenu' => false,
-                'submenu_icon' => '',
-                'submenu' => [],
-            ]
+                'route' => 'dashboard',
+                'icon' => 'nav-icon fa fa-home',
+                'has_submenu' => true,
+                'submenu_icon' => 'right fas fa-angle-left',
+                'submenu' => [
+                    [
+                        'name' => 'properties',
+                        'route' => 'properties.index',
+                        'main_route' => 'properties',
+                        'icon' => 'nav-icon fa fa-home',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                        
+                    ],
+                    [
+                        'name' => 'developers',
+                        'route' => 'developers.index',
+                        'main_route' => 'properties',
+                        'icon' => 'nav-icon fas fa-user',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                    ],
+                    [
+                        'name' => 'property_types',
+                        'route' => 'property-types.index',
+                        'main_route' => 'properties',
+                        'icon' => 'nav-icon fa fa-home',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                    ]
+                ],
+            ],
             // [
             //     'name' => 'site-setting',
             //     'route' => 'dashboard',
@@ -54,6 +83,14 @@ return [
 
             //     ],
             // ]
+            [
+                'name' => 'queries',
+                'route' => 'queries.index',
+                'icon' => 'nav-icon fas fa-tachometer-alt',
+                'has_submenu' => false,
+                'submenu_icon' => '',
+                'submenu' => [],
+            ]
         ]
     ],
     'guest' => [

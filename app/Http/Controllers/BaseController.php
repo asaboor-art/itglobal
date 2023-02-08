@@ -11,7 +11,7 @@ use App\Models\ContactForm;
 use App\Models\Newsletter;
 use App\Helpers\Helper;
 use App\Traits\Validation;
-use App\Mail\ContactUss;
+use App\Mail\ContactUs;
 use App\Models\Media;
 use Pusher\Pusher;
 use DB;
@@ -88,14 +88,28 @@ class BaseController extends Controller
     }
 // Contact us form
     public function saveContactForm(Request $request){
-        $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email',
-            'subject' =>'required',
-            'message' => 'required'
-        ]);
-
+        if(isset($request->property_id) && $request->property_id > 0){
+            $request->validate([
+                'first_name' => 'required',
+                'phone' => 'required',
+                'city' => 'required',
+                'email' => 'required|email',
+                'property_id' =>'required|integer|exists:properties,id',
+                'message' => 'required'
+            ]);
+        }else{
+            $request->validate([
+                'first_name' => 'required',
+                'phone' => 'required',
+                'city' => 'required',
+                'email' => 'required|email',
+                // 'property_id' =>'required|integer|exists:properties,id',
+                'message' => 'required'
+            ]);
+        }
+            
+        
+       
         $response = $this->contactForm->store($request->except('_token'));
         if($response){
             $message = Helper::sendMail(env('MAIL_FROM_ADDRESS'),new Contactus($response));

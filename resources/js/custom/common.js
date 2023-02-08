@@ -38,9 +38,10 @@ $('.contact-form').on('submit', (e) => {
     var form = new FormData();
     console.log(form)
     form.append('first_name', $('.first_name').val());
-    form.append('last_name', $('.last_name').val());
+    form.append('city', $('.city').val());
     form.append('email', $('.email').val());
-    form.append('subject', $('.subject').val());
+    form.append('phone', $('.phone').val());
+    form.append('property_id', $('.property').val()?$('.property').val():0);
     form.append('message', $('.message').val());
 
     ajaxPost('/contact-us',form,'.contact-success','.contact-error')
@@ -128,6 +129,40 @@ function ajaxPost(url,data,succssContainer,errorContainer) {
     })
 }
 
+// Ajax get
+function ajaxGet(url,data,dataContainer,responseType='html'){
+    $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+     });
+    $.ajax({
+        url: url,
+        method: 'GET',
+        data:data,
+
+        beforeSend: function() {
+            setLoader(true);
+        },
+        success: function(response) {
+            if(responseType == 'html'){
+                $(dataContainer).html(response);
+            }else if(responseType == 'json'){
+                // Will be hanlde it later
+            }
+          
+        },
+        error:function(error){
+            console.log(error)
+            // $(errorContainer).text(error.responseJSON.message);
+            // $(errorContainer).addClass("alert alert-danger");
+            
+        },
+        complete:function(){
+            setLoader(false);
+        }
+    })
+}
 
 function setLoader(state){
     if(state){
@@ -139,7 +174,41 @@ function setLoader(state){
 }
 
 // Image not found issue
-$('img').on('error',function(e){
+$(document).on('error','img',function(e){
     e.preventDefault();
     $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
 })
+window.onload = function(e){
+    
+    getCities();
+}
+
+// Get all cities of a country
+function getCities() {
+    let ref = $('.cities');
+    
+    var urlParameter = window.location.href.split('?')[1];
+    if(urlParameter && urlParameter.length > 0){
+        city_parameter = urlParameter.split('&')[0];
+        var city = city_parameter.split('=')[1]; 
+        
+    }
+    
+    $.post('https://countriesnow.space/api/v0.1/countries/cities',{
+        "country": "pakistan"
+    },(response,status)=>{
+        var html = '<option value="">Select City</option>';
+        city = city.replace('+',' ');
+        
+        response.data.forEach(element => {
+            if(city && city == element){
+                html += '<option value="'+element+'" selected>'+element+'</option>';
+            }else{
+                html += '<option value="'+element+'">'+element+'</option>';
+            }
+            
+        });
+
+        ref.html(html);
+    });
+}
