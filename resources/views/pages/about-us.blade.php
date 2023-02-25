@@ -29,8 +29,13 @@
          </div>
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="advise-content wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.9s">
-               <h4>CEO REALITY ONE GROUP <span>Syed Asjad Hussain Shah</span></h4>
-               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p>
+               <h4><span>CEO’s Mission</span></h4>
+               <p>The mission of Reality One Group is to be the most successful real estate group of Pakistan. 
+For this purpose, Reality One Group integrates professional and proven state of-the-art strategies specializing in the listing, selling, and marketing of new and resale luxury homes, residential communities, condominiums, home sites, undeveloped land and commercial and investment opportunities. Our ultimate golden goal is to benefit the clients with our experience by making ourselves available at the most sensitive decisions of their lives. 
+</p>
+<p>We vision to make lives worth admiring, comfort worth remembering, professionalism worth pursuing, properties worth owning, and innovation worth celebrating. 
+At Reality One Group, we not only strive to grow as a business organization, but work round the clock to meet the needs of our customers. Simply, we vision to become a Group which leads in the creation and delivery of services that enable our clients to find comfort in the busy world and become the first choice of customers when they listen the word “home.”
+</p>
             </div>
          </div>
       </div>
@@ -51,16 +56,18 @@
       <div class="row">
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="realty-box-sec wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
-               <h4>CEO REALITY ONE GROUP <span>Syed Asjad Hussain Shah</span></h4>
-               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-               <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p>
+               <h4><span>Story</span></h4>
+               <p>Home ownership is a start for a better future. But the process of buying a property is indeed very difficult. People have investments, but what they lack is timely professional guidance. This is where Reality One Group can be a game changer for those who are working day and night to buy home of their dreams, serving the offices to collect amount to make dream living a reality, and looking for the places to secure a plot. We firmly believe in making professional Real Estate Services easily accessible to anyone who looks to build an asset in home, a haven of freedom, and legacy for future generations. Simply, we are here to rewrite the rules of the real estate to transform the lives of the Pakistanis. </p>
+               <!-- <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p> -->
             </div>
          </div>
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="realty-box-sec wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.9s">
-               <h4>CEO REALITY ONE GROUP <span>Syed Asjad Hussain Shah</span></h4>
-               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-               <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p>
+               <h4><span>Chairman’s Vision </span></h4>
+               <p>We vision to make lives worth admiring, comfort worth remembering, professionalism worth pursuing, properties worth owning, and innovation worth celebrating. 
+At Reality One Group, we not only strive to grow as a business organization, but work round the clock to meet the needs of our customers. Simply, we vision to become a Group which leads in the creation and delivery of services that enable our clients to find comfort in the busy world and become the first choice of customers when they listen the word “home.”
+</p>
+               <!-- <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced The standard chunk of Lorem Ipsum used since the 1500s is reproduced</p> -->
             </div>
          </div>
       </div>
@@ -107,44 +114,68 @@
          </div>
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="accordian-content wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.9s">
-               <h4>CEO REALITY ONE GROUP <span>Syed Asjad Hussain Shah</span></h4>
-               <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+               <h4><span>Why Only Reality One Group</span></h4>
+               <!-- <p>t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p> -->
                <div class="accordian-tabs">
                   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingTwo">
                            <h4 class="panel-title">
                               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Experienced Consultants
+                                 Data Driven Decision
                               </a>
                            </h4>
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                           <div class="panel-body">We are a top real estate company, and our consultants have an average of 25 years of expertise, so you’ll be getting real estate guidance from the professionals. We have various types of real estate advisors to ensure a seamless and comfortable transaction.</div>
+                           <div class="panel-body">Reality One Group experienced financial and sales team joins their knowledge with latest artificially intelligent technology to select the most compelling real estate properties in high-growth markets across the Pakistan. </div>
                         </div>
                      </div>
                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingThree">
                            <h4 class="panel-title">
                               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Profitable Investments
+                                 Secured Investment 
                               </a>
                            </h4>
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                           <div class="panel-body">We are a top real estate company, and our consultants have an average of 25 years of expertise, so you’ll be getting real estate guidance from the professionals. We have various types of real estate advisors to ensure a seamless and comfortable transaction.</div>
+                           <div class="panel-body">Inflation negatively affects everything, but we help you choose an asset whose value increases with the increasing prices of commodities and properties so that you can sell less and earn more. </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                           <h4 class="panel-title">
+                              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                 Fair Price Policy
+                              </a>
+                           </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                           <div class="panel-body">We believe that everyone must own a home so we have kept our rates competitive and affordable with zero hidden fees even if you are first time buyer or an owner of exotic villas. </div>
                         </div>
                      </div>
                      <div class="panel panel-default">
                         <div class="panel-heading" role="tab" id="headingFour">
                            <h4 class="panel-title">
                               <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                              Dedicated Team
+                              	7 days and File is on your way
                               </a>
                            </h4>
                         </div>
                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                           <div class="panel-body">We are a top real estate company, and our consultants have an average of 25 years of expertise, so you’ll be getting real estate guidance from the professionals. We have various types of real estate advisors to ensure a seamless and comfortable transaction.</div>
+                           <div class="panel-body">We understand how painful and slow home buying process is for you. But, our technological innovations in the system will get your file in less than a week! Imagine owning a house in just 5 days. </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                           <h4 class="panel-title">
+                              <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                 Guaranteed Profit
+                              </a>
+                           </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                           <div class="panel-body">Money is hard earned and we know that! We provide you financial assessments to help you invest in the safest asset that ensures long term financial stability. </div>
                         </div>
                      </div>
                   </div>
@@ -262,315 +293,12 @@
 </section>
 <!-- OUR TEAM SECTION END -->
 <!-- GALLERY SECTION BEGIN -->
-<div class="picman_tm_section" id="portfolio">
-   <div class="container">
-      <div class="capital-gallery">
-         <h4>Capital Smart City <span>Gallery</span></h4>
-      </div>
-   </div>
-   <div class="picman_tm_porfolio_wrap">
-      <div class="picman_tm_portfolio_titles" style="left: 565px; top: 404px">
-         Commerical Area<span class="work__cat"></span>
-      </div>
-      <div class="picman_tm_portfolio" data-width="400" data-gap="24" style="animation-name: marketifyScroll0">
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Tennis Court" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/tennis-court.jpg" data-fancybox="gallery"></a>
-                  <img src="/images/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/tennis-court.jpg" style="background-image: url('/assests/amenities/tennis-court.jpg');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Taaj Mahal" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mahal.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mahal.webp" style="background-image: url('/assests/amenities/mahal.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Front Gate" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/gate.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/gate.webp" style="background-image: url('/assests/amenities/gate.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Sports Complex" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/sports-complex.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/sports-complex.webp" style="background-image: url('/assests/amenities/sports-complex.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Aerial View" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/ariel.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/ariel.webp" style="background-image: url('/assests/amenities/ariel.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Road View" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/road.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/road.webp" style="background-image: url('/assests/amenities/road.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Commerical Area" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/commerical-area.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/commerical-area.webp" style="background-image: url('/assests/amenities/commerical-area.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Shopping Mall" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mall.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mall.webp" style="background-image: url('/assests/amenities/mall.webp');"></div>
-                  <div class="hidden_content">
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Front Gate" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/gate.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/gate.webp" style="background-image: url('/assests/amenities/gate.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Water Park" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/water-park.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/water-park.webp" style="background-image: url('/assests/amenities/water-park.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Mosque" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mosque.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mosque.webp" style="background-image: url('/assests/amenities/mosque.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Commerical Area" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/commerical-area.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/commerical-area.webp" style="background-image: url('/assests/amenities/commerical-area.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Tennis Court" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/tennis-court.jpg" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/tennis-court.jpg" style="background-image: url('/assests/amenities/tennis-court.jpg');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Taaj Mahal" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mahal.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mahal.webp" style="background-image: url('/assests/amenities/mahal.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Front Gate" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/gate.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/gate.webp" style="background-image: url('/assests/amenities/gate.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Sports Complex" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/sports-complex.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/sports-complex.webp" style="background-image: url('/assests/amenities/sports-complex.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Aerial View" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/ariel.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/ariel.webp" style="background-image: url('/assests/amenities/ariel.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Road View" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/road.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/road.webp" style="background-image: url('/assests/amenities/road.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Commerical Area" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/commerical-area.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/commerical-area.webp" style="background-image: url('/assests/amenities/commerical-area.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Shopping Mall" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mall.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mall.webp" style="background-image: url('/assests/amenities/mall.webp');"></div>
-                  <div class="hidden_content">
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Front Gate" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/gate.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/gate.webp" style="background-image: url('/assests/amenities/gate.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Water Park" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/water-park.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/water-park.webp" style="background-image: url('/assests/amenities/water-park.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Mosque" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mosque.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mosque.webp" style="background-image: url('/assests/amenities/mosque.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Commerical Area" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/commerical-area.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/commerical-area.webp" style="background-image: url('/assests/amenities/commerical-area.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Tennis Court" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/tennis-court.jpg" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/tennis-court.jpg" style="background-image: url('/assests/amenities/tennis-court.jpg');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Taaj Mahal" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mahal.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mahal.webp" style="background-image: url('/assests/amenities/mahal.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Front Gate" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/gate.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/gate.webp" style="background-image: url('/assests/amenities/gate.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Sports Complex" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/sports-complex.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/sports-complex.webp" style="background-image: url('/assests/amenities/sports-complex.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Aerial View" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/ariel.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/ariel.webp" style="background-image: url('/assests/amenities/ariel.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Road View" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/road.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/road.webp" style="background-image: url('/assests/amenities/road.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div class="image" data-title="Commerical Area" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/commerical-area.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/commerical-area.webp" style="background-image: url('/assests/amenities/commerical-area.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Shopping Mall" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mall.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mall.webp" style="background-image: url('/assests/amenities/mall.webp');"></div>
-                  <div class="hidden_content">
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="odd items" style="min-width: 400px">
-            <div class="image" data-title="Front Gate" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/gate.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/gate.webp" style="background-image: url('/assests/amenities/gate.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Water Park" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/water-park.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/water-park.webp" style="background-image: url('/assests/amenities/water-park.webp');"></div>
-               </div>
-            </div>
-         </div>
-         <div class="even items" style="min-width: 400px">
-            <div
-               class="image" data-title="Mosque" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/mosque.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/90-113.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/mosque.webp" style="background-image: url('/assests/amenities/mosque.webp');"></div>
-               </div>
-            </div>
-            <div class="image" data-title="Commerical Area" data-category="" style="padding: 12px">
-               <div class="img_in">
-                  <a href="/assests/amenities/commerical-area.webp" data-fancybox="gallery"></a>
-                  <img src="/img/thumbs/42-29.jpg" alt="" />
-                  <div class="main" data-img-url="/assests/amenities/commerical-area.webp" style="background-image: url('/assests/amenities/commerical-area.webp');"></div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+@php
+ $Galleries = config('site_config.galleries');
+@endphp
+@include('sections.gallery',[
+      'Galleries'  => $Galleries,
+    ])
 <!-- GALLERY SECTION END -->
 @endsection
 @section('scripts')

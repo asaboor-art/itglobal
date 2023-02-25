@@ -26,19 +26,25 @@
                                 <li class="{{ $menu['class']}} dropdown_c dropdown_click" >
                                  @if($menu['has_submenu'])
                                  <div class="selected menu-item" data-target="#dropdown{{ $key }}">
-                                       <span class="{{ $menu['link-class']}}" data-target="#dropdown{{ $key }}">{{ trans('lang.'.$menu['name'])}}</span>
+                                       <a href="{{ $menu['type'] == 'page'?route('site-pages',$menu['link']):route($menu['link'])  }}" class="{{ $menu['link-class']}}" data-target="#dropdown{{ $key }}">{{ trans('lang.'.$menu['name'])}}</a>
                                     </div>
                                     <div class="drop-content" data-target="#dropdown{{ $key }}">
                                        <ul id="dropdown{{ $key }}">
                                          @if(count($menu['submenu']) > 0)
                                              @foreach($menu['submenu'] as $submenu)
-                                                <li><a href="{{ route($submenu['route'],$submenu['link']) }}">{{ $submenu['text'] }} </a></li>
+                                                <li>
+                                                   <a href="{{ route($submenu['route'],$submenu['link']) }}">{{ $submenu['text'] }} </a>
+                                                </li>
                                              @endforeach
                                           @endif
                                        </ul>
                                     </div>
                                     @else
-                                    <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    @if($menu['type'] == 'page')
+                                       <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    @else
+                                    <a href="{{ route($menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    @endif
                                  @endif
                                  
                                  </li>

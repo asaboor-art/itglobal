@@ -67,9 +67,16 @@ Route::prefix('properties')->group(function () {
 });
 
 Route::prefix('projects')->group(function () {
+    Route::get('/',function(){
+        return view('pages.projects',[
+            'title' => __('lang.our_projects'),
+        ]);
+    })->name('projects.index');
+
     Route::get('/{slug}',function($slug){
         return view('projects.project-detail',[
             'title' => str_replace('-',' ',$slug),
+            'name' => strtolower($slug),
         ]);
     })->name('projects.get');
 });

@@ -3,6 +3,12 @@
 /public/storage
 /public/images
 /public/media
+/public/img
+/public/assests/
+/public/fonts
+/public/plugins
+/public/stylear
+/public/svg
 /public/js/app.js
 /storage/*.key
 /vendor

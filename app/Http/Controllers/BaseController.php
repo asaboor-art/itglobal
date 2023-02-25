@@ -88,13 +88,13 @@ class BaseController extends Controller
     }
 // Contact us form
     public function saveContactForm(Request $request){
-        if(isset($request->property_id) && $request->property_id > 0){
+        if(isset($request->project)){
             $request->validate([
                 'first_name' => 'required',
                 'phone' => 'required',
                 'city' => 'required',
                 'email' => 'required|email',
-                'property_id' =>'required|integer|exists:properties,id',
+                'project' =>'required',
                 'message' => 'required'
             ]);
         }else{

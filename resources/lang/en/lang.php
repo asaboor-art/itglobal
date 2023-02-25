@@ -112,5 +112,7 @@ return [
     'property_type' => 'Property Type',
     'queries' => 'Queries',
     'recent_messages' => 'Recent Messages',
+    'commercial_area' => 'Commerical Area',
+    'projects' => 'Projects',
 
 ];

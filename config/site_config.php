@@ -39,30 +39,43 @@ return [
                 'link' => 'home',
                 'is_main' => true,
                 'class' => 'menu-item',
+                'type' => 'page',
                 'link-class' => 'menu-link active',
                 'has_submenu' => true,
+                'submenu' => []
+            ],
+            [
+                'name' => 'buy_rent',
+                'link' => 'properties.index',
+                'is_main' => false,
+                'type' => 'link',
+                'class' => 'menu-item',
+                'link-class' => 'menu-link',
+                'has_submenu' => false,
                 'submenu' => []
             ],
             [
                 'name' => 'about_us',
                 'link' => 'about-us',
                 'is_main' => false,
+                'type' => 'page',
                 'class' => 'menu-item',
                 'link-class' => 'menu-link',
-                'has_submenu' => true,
+                'has_submenu' => false,
                 'submenu' => []
             ],
             [
                 'name' => 'our_projects',
-                'link' => 'projects',
+                'link' => 'projects.index',
                 'is_main' => false,
+                'type' => 'lin',
                 'class' => 'menu-item',
                 'link-class' => 'menu-link',
                 'has_submenu' => true,
                 'submenu' =>[
                     [
-                        'text' => 'Blue World City',
-                        'link' => str_replace(' ','-','Blue-World-City'),
+                        'text' => 'Prime Valley',
+                        'link' => str_replace(' ','-','Prime Valley'),
                         'route' => 'projects.get'
                     ],
                     [
@@ -81,8 +94,8 @@ return [
                         'route' => 'projects.get'
                     ],
                     [
-                        'text' => 'New Metro City Gujar Khan',
-                        'link' =>  str_replace(' ','-','New Metro City Gujar Khan'),
+                        'text' => 'New Metro City',
+                        'link' =>  str_replace(' ','-','New Metro City'),
                         'route' => 'projects.get'
                     ],
                     [
@@ -96,8 +109,13 @@ return [
                         'route' => 'projects.get'
                     ],
                     [
-                        'text' => 'Seven Wonders City',
-                        'link' =>  str_replace(' ','-','Seven Wonders City'),
+                        'text' => 'Eighteen',
+                        'link' =>  str_replace(' ','-','Eighteen'),
+                        'route' => 'projects.get'
+                    ],
+                    [
+                        'text' => 'Sialkot Motorway City',
+                        'link' =>  str_replace(' ','-','Sialkot Motorway City'),
                         'route' => 'projects.get'
                     ],
                 ]
@@ -106,6 +124,7 @@ return [
                 'name' => 'services',
                 'link' => 'services',
                 'is_main' => false,
+                'type' => 'page',
                 'class' => 'menu-item',
                 'link-class' => 'menu-link',
                 'has_submenu' => true,
@@ -117,19 +136,12 @@ return [
                     ],
                 ]
             ],
-            [
-                'name' => 'buy_rent',
-                'link' => 'properties',
-                'is_main' => false,
-                'class' => 'menu-item',
-                'link-class' => 'menu-link',
-                'has_submenu' => false,
-                'submenu' => []
-            ],
+            
             [
                 'name' => 'book_now',
                 'link' => 'contact-us',
                 'is_main' => false,
+                'type' => 'page',
                 'class' => 'menu-item book-now-btn',
                 'link-class' => 'btn btn-primary',
                 'has_submenu' => true,
@@ -207,8 +219,8 @@ return [
     'footer-menu2' => [
 
         [
-            'text' => 'Blue World City',
-            'link' => str_replace(' ','-','Blue-World-City')
+            'text' => 'Prime Valley',
+            'link' => str_replace(' ','-','Prime Valley')
         ],
         [
             'text' => 'Capital Smart City',
@@ -223,8 +235,8 @@ return [
             'link' =>  str_replace(' ','-','Lahore Smart City')
         ],
         [
-            'text' => 'New Metro City Gujar Khan',
-            'link' =>  str_replace(' ','-','New Metro City Gujar Khan')
+            'text' => 'New Metro City',
+            'link' =>  str_replace(' ','-','New Metro City')
         ],
         [
             'text' => 'Nova City',
@@ -235,14 +247,262 @@ return [
             'link' =>  str_replace(' ','-','Park View City')
         ],
         [
-            'text' => 'Seven Wonders City',
-            'link' =>  str_replace(' ','-','Seven Wonders City')
+            'text' => 'Sialkot Motorway City',
+            'link' =>  str_replace(' ','-','Sialkot Motorway City')
         ],
         [
-            'text' => 'Taj Residencia',
-            'link' => 'Blue World City'
+            'text' => 'Eighteen',
+            'link' => str_replace(' ','-','Eighteen')
         ],
     ],
+
+    'galleries' => [
+        [   
+            'class' => 'odd items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/tennis-court.jpg',
+                    'title' => 'Tennis Court',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/mahal.webp',
+                    'title' => 'Taj Mahal',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'even items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/gate.webp',
+                    'title' => 'Front Gate',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/sports-complex.webp',
+                    'title' => 'Sports Complex',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'odd items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/ariel.webp',
+                    'title' => 'Aerial View',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/road.webp',
+                    'title' => 'Road View',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'even items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/commerical-area.webp',
+                    'title' => 'Commerical Area',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/mall.webp',
+                    'title' => 'Shopping Mall',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'odd items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/gate.webp',
+                    'title' => 'Front Gate',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/water-park.webp',
+                    'title' => 'Water Park',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'even items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/mosque.webp',
+                    'title' => 'Mosque',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/commerical-area.webp',
+                    'title' => 'Commerical Area',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'odd items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/tennis-court.jpg',
+                    'title' => 'Tennis Court',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/mahal.webp',
+                    'title' => 'Taaj Mahal',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'even items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/gate.webp',
+                    'title' => 'Front Gate',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/sports-complex.webp',
+                    'title' => 'Sports Complex',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'odd items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/ariel.webp',
+                    'title' => 'Aerial View',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/road.webp',
+                    'title' => 'Road View',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'even items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/commerical-area.webp',
+                    'title' => 'Commerical Area',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/mall.webp',
+                    'title' => 'Shopping Mall',
+                ]
+                
+            ]
+           
+        ],
+        [   
+            'class' => 'odd items',
+            'images' => [
+                [
+                    'thumbnail' => 'img/thumbs/90-113.jpg',
+                    'image' => 'assests/amenities/gate.webp',
+                    'title' => 'Front Gate',
+                ],
+                [
+                    'thumbnail' => 'img/thumbs/42-29.jpg',
+                    'image' => 'assests/amenities/water-park.webp',
+                    'title' => 'Water Park',
+                ]
+                
+            ]
+           
+        ],
+    ],
+
+    'how-to-purchase' => [
+        'heading' => '<span>How To Purchase</span> Your Property?',
+        'sections' => [
+            [
+                'heading' => strtoupper('Always do your research'),
+                'image' => 'pc1.png',
+                'description' => "Make sure you are aware of the latest real estate news and trend along with the market conditions that may affect your capital to make an informed decision about your investment. ",
+            ],
+            [
+                'heading' => strtoupper('Find the right agent'),
+                'image' => 'pc2.png',
+                'description' => "Look for an agent who can introduce you to the potential property with transparency. Reality One Group offers industry experts who you can trust with your investments and get desired results.",
+            ],
+            [
+                'heading' => strtoupper('Land assessment and negotiation'),
+                'image' => 'pc3.png',
+                'description' => "Ensure a real-time visit to the site with a land surveyor to get the best location for construction. Reality One Group offers the best sales agents to negotiate your favorite price. ",
+            ],
+            [
+                'heading' => strtoupper('Token money and pay bank order'),
+                'image' => 'pc4.png',
+                'description' => "Always start the transaction with the partial token money and keep the bank in the loop to ensure a smooth and evidence-based process.",
+            ],
+        ]
+    ],
+
+    'reviews' => [
+        'heading' => 'What Our Clients <span>Say About Us</span>',
+        'sections' => [
+            [
+                'name' => 'Zafar Hussain',
+                'image' => 'slider-img.png',
+                'review' => "I recently approached Reality One Group and had an amazing experience. Their agents are knowledgeable and professional, and they helped me find the perfect home for my family. I highly recommend them.",
+            ],
+            [
+                'name' => 'Muzzamil Khan',
+                'image' => 'slider-img.png',
+                'review' => "I was extremely impressed with Reality One Group and the service they provided. They were always available to answer my questions and made the process of buying a home as stress-free as possible. I would definitely use them again in the future.",
+            ],
+            [
+                'name' => 'Zakir Khan',
+                'image' => 'slider-img.png',
+                'review' => "I had a great experience with Reality One Group. The agent I worked with was very responsive and always had my best interests in mind. I appreciated their honesty and integrity throughout the process.",
+            ],
+            [
+                'name' => 'Muzzamil Khan',
+                'image' => 'slider-img.png',
+                'review' => "I was very happy with the service I received from Reality One Group. They were very patient with me as I navigated the complex process of buying a home for the first time. I would definitely recommend them to others.",
+            ],
+            [
+                'name' => 'Muzzamil Khan',
+                'image' => 'slider-img.png',
+                'review' => "I was extremely pleased with the immediate and transparent response from sales agents. Their agents were knowledgeable, professional, and always went above and beyond to help me find the perfect home. I will be sure to use them again in the future for any real estate needs.",
+            ],
+        ]
+    ]
+
 
 
 ];

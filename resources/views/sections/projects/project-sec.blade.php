@@ -1,3 +1,9 @@
+@php 
+
+   $Projects = config('projects.projects');
+   
+
+@endphp
 <section class="ultimate-investment-sec">
    <div class="container-fluid">
       <div class="row">
@@ -9,20 +15,32 @@
          </div>
       </div>
       <div class="row capital-row">
+         @php 
+         $count = 1;
+         @endphp
+         @foreach($Projects as $project)
          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
-            <a href="{{ route('projects.get','Capital-Smart-City')}}">
+            <a href="{{ route('projects.get',str_replace(' ','-',$project['name']))}}">
                <div class="ultimate-boxes-content wow fadeInDown" data-wow-duration="0.7s" data-wow-delay="0.7s">
                   <div class="image-overlay-ultimate">
-                     <img src="{{ asset(config('site_config.assets.images').'c1.png') }}" alt="image" class="img-fluid">
+                     <img src="{{ asset(config('site_config.assets.images').$project['image1']) }}" alt="image" class="img-fluid">
                      <div class="hover-logo">
-                        <img src="{{ asset(config('site_config.assets.images').'gg1.jpg') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset(config('site_config.assets.images').$project['image2']) }}" alt="image" class="img-fluid">
                      </div>
                   </div>
-                  <h6>Capital Smart City</h6>
+                  <h6>{{ $project['name'] }}</h6>
                </div>
             </a>
          </div>
-         <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+         @if($count % 3 == 0)
+            </div>
+            <div class="row capital-row">
+         @endif
+         @php 
+            $count += 1;
+         @endphp
+         @endforeach
+         <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-12">
             <a href="{{ route('projects.get','Park-View-City')}}">
                <div class="ultimate-boxes-content wow fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.7s">
                   <div class="image-overlay-ultimate">
@@ -47,9 +65,9 @@
                   <h6>Prime Valley</h6>
                </div>
             </a>
-         </div>
+         </div> -->
       </div>
-      <div class="row capital-row">
+      <!-- <div class="row capital-row">
          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
             <a href="{{ route('projects.get','Eighteen')}}">
                <div class="ultimate-boxes-content wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.8s">
@@ -130,6 +148,6 @@
                </div>
             </a>
          </div>
-      </div>
+      </div> -->
    </div>
 </section>

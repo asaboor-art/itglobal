@@ -13,7 +13,7 @@ class ContactForm extends BaseModel
 {
     use HasFactory;
     protected $fillable = [
-        'first_name','phone','email','message','city','property_id'
+        'first_name','phone','email','message','city','property_id','project'
     ];
 
     public $class_name = 'App\Models\ContactForm';
@@ -38,7 +38,7 @@ class ContactForm extends BaseModel
 
         $condition = [];
         $result = [];
-        $this->setSelectedColumn(['contact_forms.id','contact_forms.first_name as name','contact_forms.email','phone','contact_forms.city','message','contact_forms.created_at','properties.name as property']);
+        $this->setSelectedColumn(['contact_forms.id','contact_forms.first_name as name','project','contact_forms.email','phone','contact_forms.city','message','contact_forms.created_at','properties.name as property']);
 
         $this->setRenderColumn([
             [
@@ -62,6 +62,12 @@ class ContactForm extends BaseModel
                 'name' => 'property',
                 'type' => 'string',
                 'html' => false,
+            ],
+            [
+                'name' => 'project',
+                'type' => 'string',
+                'html' => false,
+                
             ],
             [
                 'name' => 'phone',

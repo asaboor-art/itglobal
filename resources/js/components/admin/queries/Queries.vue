@@ -145,9 +145,9 @@ mounted(){
             has_html:false,
         },
         {
-            label:Language.property,
-            field:'property',
-            orignal_name:'property',
+            label:Language.project,
+            field:'project',
+            orignal_name:'project',
             width:'4%',
             sorted:false,
             has_html:false,

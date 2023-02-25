@@ -188,4 +188,5 @@ export const Language = {
     queries:"Queries",
     phone:"Phone",
     message:"Message",
+    project:"Project",
 };

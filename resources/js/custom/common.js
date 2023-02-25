@@ -41,6 +41,7 @@ $('.contact-form').on('submit', (e) => {
     form.append('city', $('.city').val());
     form.append('email', $('.email').val());
     form.append('phone', $('.phone').val());
+    form.append('project', $('.project').val()?$('.project').val():'');
     form.append('property_id', $('.property').val()?$('.property').val():0);
     form.append('message', $('.message').val());
 
@@ -198,7 +199,10 @@ function getCities() {
         "country": "pakistan"
     },(response,status)=>{
         var html = '<option value="">Select City</option>';
-        city = city.replace('+',' ');
+        if(city){
+            city = city.replace('+',' ');
+        }
+        
         
         response.data.forEach(element => {
             if(city && city == element){

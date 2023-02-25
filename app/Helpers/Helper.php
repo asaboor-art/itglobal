@@ -241,4 +241,9 @@ class Helper
 
         return number_format($price,2);
     }
+
+    // Text uppercase
+    public static function textFormat($text){
+        return strtoupper($text);
+    }
 }

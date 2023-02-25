@@ -2,7 +2,7 @@
   $Property = new \App\Models\Property();
   
   $Properties = $Property->getAll([],['id','name']);
-  
+  $Projects = config('projects.projects')
 @endphp
 <div class="col-lg-6 col-md-6 col-sm-6 col-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">
             <form class="contact-form" method="POSTS">
@@ -27,9 +27,9 @@
                     <div class="error-city errors"></div>
                   </div>
                   <div class="form-group">
-                    <select class="form-control property">
-                      @foreach($Properties as $Property)
-                      <option value="{{ $Property->id}}">{{ $Property->name }}</option>
+                    <select class="form-control project">
+                      @foreach($Projects as $Project)
+                      <option value="{{ $Project['name'] }}">{{ $Project['name'] }}</option>
                       @endforeach
                     </select>
                     <div class="error-property errors"></div>
