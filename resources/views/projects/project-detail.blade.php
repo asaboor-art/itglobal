@@ -43,7 +43,7 @@
     </section>
     <!-- CAPITAL CITY SECTION END -->
     <!-- PROFESSIONALS SECTION BEGIN -->
-    <section class="professionals-sec">
+    <section class="professionals-sec" style="background-image: url('{{ $Project['section2']['image'] }}');">
       <div class="bg-video-wrap">
       <div class="full-screen-banner">
         <div class="dri-prof">
@@ -62,7 +62,7 @@
             <div class="popup-img wow fadeInLeft" data-wow-duration="0.7s" data-wow-delay="0.7s">
               <img src="{{ asset($path.$Project['section3']['image1']) }}" alt="image" class="img-fluid">
               <div class="img-popup-btn">
-                <a href="{{ asset($path.$Project['section3']['image2']) }}" data-fancybox="gallery"><i class="fa fa-play" aria-hidden="true"></i></a>
+                <a href="{{ $Project['section3']['image2'] }}" target="_blank"><i class="fa fa-play" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
@@ -81,8 +81,8 @@
     </section>
     <!-- REAL ESTATE SECTION END -->
     <!-- PROFESSIONALS SECOND SECTION BEGIN -->
-    <section class="professionals-second-sec">
-      <div class="bg-video-wrap">
+    <section class="professionals-second-sec" style="background-image: url('{{ $Project['section4']['image'] }}');">
+      <div class="bg-video-wrap" >
       <div class="full-screen-banner">
         <div class="dri-prof">
           <h5 class="wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">{!! $Project['section4']['heading'] !!}</h5>
@@ -106,7 +106,7 @@
               <h5 class="wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.9s">{!! $Project['section5']['heading'] !!}</h5>
               <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s">{!! $Project['section5']['description'] !!}</p>
               <div class="img-popup-booknow">
-                <a href="javascript:void(0)" class="btn btn-primary dark-color wow fadeInDown" data-wow-duration="1.1s" data-wow-delay="1.1s">{{ __('lang.book_now')}}</a>
+                <a href="{{ route('site-pages','contact-us') }}" class="btn btn-primary dark-color wow fadeInDown" data-wow-duration="1.1s" data-wow-delay="1.1s">{{ __('lang.book_now')}}</a>
               </div>
             </div>
           </div>

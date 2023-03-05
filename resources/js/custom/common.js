@@ -199,10 +199,7 @@ function getCities() {
         "country": "pakistan"
     },(response,status)=>{
         var html = '<option value="">Select City</option>';
-        if(city){
-            city = city.replace('+',' ');
-        }
-        
+        city = city.replace('+',' ');
         
         response.data.forEach(element => {
             if(city && city == element){

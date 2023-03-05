@@ -114,5 +114,6 @@ return [
     'recent_messages' => 'Recent Messages',
     'commercial_area' => 'Commerical Area',
     'projects' => 'Projects',
+    'geo_location' => 'Geo Location',
 
 ];

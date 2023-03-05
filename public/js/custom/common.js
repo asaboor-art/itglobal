@@ -180,8 +180,11 @@ $(document).on('error','img',function(e){
     $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
 })
 window.onload = function(e){
+    console.log($('.cities'));
+    if($('.cities')){
+        getCities();
+    }
     
-    getCities();
 }
 
 // Get all cities of a country
@@ -199,6 +202,7 @@ function getCities() {
         "country": "pakistan"
     },(response,status)=>{
         var html = '<option value="">Select City</option>';
+
         if(city){
             city = city.replace('+',' ');
         }

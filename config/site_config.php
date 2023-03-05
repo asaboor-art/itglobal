@@ -73,11 +73,11 @@ return [
                 'link-class' => 'menu-link',
                 'has_submenu' => true,
                 'submenu' =>[
-                    [
-                        'text' => 'Prime Valley',
-                        'link' => str_replace(' ','-','Prime Valley'),
-                        'route' => 'projects.get'
-                    ],
+                    // [
+                    //     'text' => 'Prime Valley',
+                    //     'link' => str_replace(' ','-','Prime Valley'),
+                    //     'route' => 'projects.get'
+                    // ],
                     [
                         'text' => 'Capital Smart City',
                         'link' =>  str_replace(' ','-','Capital Smart City'),
@@ -113,11 +113,11 @@ return [
                         'link' =>  str_replace(' ','-','Eighteen'),
                         'route' => 'projects.get'
                     ],
-                    [
-                        'text' => 'Sialkot Motorway City',
-                        'link' =>  str_replace(' ','-','Sialkot Motorway City'),
-                        'route' => 'projects.get'
-                    ],
+                    // [
+                    //     'text' => 'Sialkot Motorway City',
+                    //     'link' =>  str_replace(' ','-','Sialkot Motorway City'),
+                    //     'route' => 'projects.get'
+                    // ],
                 ]
             ],
             [
@@ -147,38 +147,44 @@ return [
                 'has_submenu' => true,
                 'submenu' => []
             ],
+            // [
+            //     'name' => 'geo_location',
+            //     'link' => 'contact-us',
+            //     'is_main' => false,
+            //     'type' => 'page',
+            //     'class' => 'menu-item book-now-btn',
+            //     'link-class' => 'btn btn-primary',
+            //     'has_submenu' => true,
+            //     'submenu' => []
+            // ],
             
             
         ],
 
     ],
     'contacts' => [
-        'phone' => ["(403)376-3322","+1 456 695 6666","+1 456 695 6666"],
-        'email' => ["info@realityonegroup.com","support@realityonegroup.com"],
+        'phone' => ["+92 333 0596 566"],
+        'email' => ["Info@realityonegroup.pk"],
         'copyright' => "© 2022 Calgary Painting Crew. All rights reserved.",
         'name' => "Calgary Painting",
-        'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.386445110092!2d73.13804481549502!3d33.56931425047113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfed0335fc560d%3A0xe620a95d39a00216!2sGhar%20Kahani%20Pvt%20Ltd.!5e0!3m2!1sen!2s!4v1674252985805!5m2!1sen!2s',
+        'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.3614135870826!2d73.08473401550481!3d33.725469380696005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf807254c203%3A0x3bb822ce92ad00f3!2s33%20Buland%20Markaz!5e0!3m2!1sen!2s!4v1676399849880!5m2!1sen!2s',
         'address'   => "328 40 Ave NE Calgary,AB T2E 2M7",
         'developer' => 'K13.ca',
         'social' => [
             'instagram' => [
-                'url' => 'http://www.instagram.com',
+                'url' => 'https://www.instagram.com/realityonegroup.pk',
                 'icon' => 'fa fa-instagram',
             ],
-            'twitter' => [
-                'url' => 'https://twitter.com/',
-                'icon' => 'fa fa-twitter',
-            ],
             'facebook' => [
-                'url' => 'http://www.facebook.com',
+                'url' => 'https://www.facebook.com/realityonegroup.pk',
                 'icon' => 'fa fa-facebook',
             ],
             'whatsapp' => [
-                'url' => 'http://www.whatsapp.com',
+                'url' => 'https://en.wh.ms/92333 0596 566',
                 'icon' => 'fa fa-whatsapp',
             ],
             'youtube' => [
-                'url' => 'http://www.youtube.com',
+                'url' => 'https://www.youtube.com/channel/UCyPyPzHl3loIt3QZilpkRUQ',
                 'icon' => 'fa fa-youtube',
             ],
          
@@ -196,32 +202,28 @@ return [
             'link' => 'about-us'
         ],
         [
-            'text' => 'our_team',
-            'link' => 'javascript:void(0)'
+            'text' => 'services',
+            'link' => 'services'
         ],
-        [
-            'text' => 'videos',
-            'link' => 'javascript:void(0)'
-        ],
-        [
-            'text' => 'blog',
-            'link' => 'javascript:void(0)'
-        ],
+        // [
+        //     'text' => 'videos',
+        //     'link' => 'javascript:void(0)'
+        // ],
+        // [
+        //     'text' => 'blog',
+        //     'link' => 'javascript:void(0)'
+        // ],
         [
             'text' => 'contact',
             'link' => 'contact-us'
         ],
-        [
-            'text' => 'privacy_policy',
-            'link' => 'javascript:void(0)'
-        ],
+        // [
+        //     'text' => 'privacy_policy',
+        //     'link' => 'javascript:void(0)'
+        // ],
     ],
     'footer-menu2' => [
 
-        [
-            'text' => 'Prime Valley',
-            'link' => str_replace(' ','-','Prime Valley')
-        ],
         [
             'text' => 'Capital Smart City',
             'link' =>  str_replace(' ','-','Capital Smart City')
@@ -247,45 +249,25 @@ return [
             'link' =>  str_replace(' ','-','Park View City')
         ],
         [
-            'text' => 'Sialkot Motorway City',
-            'link' =>  str_replace(' ','-','Sialkot Motorway City')
-        ],
-        [
             'text' => 'Eighteen',
             'link' => str_replace(' ','-','Eighteen')
         ],
     ],
 
     'galleries' => [
-        [   
-            'class' => 'odd items',
-            'images' => [
-                [
-                    'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/tennis-court.jpg',
-                    'title' => 'Tennis Court',
-                ],
-                [
-                    'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/mahal.webp',
-                    'title' => 'Taj Mahal',
-                ]
-                
-            ]
-           
-        ],
+        
         [   
             'class' => 'even items',
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/gate.webp',
-                    'title' => 'Front Gate',
+                    'image' => 'assests/amenities/about1.jpeg',
+                    'title' => '',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/sports-complex.webp',
-                    'title' => 'Sports Complex',
+                    'image' => 'assests/amenities/about2.jpeg',
+                    'title' => '',
                 ]
                 
             ]
@@ -296,13 +278,13 @@ return [
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/ariel.webp',
-                    'title' => 'Aerial View',
+                    'image' => 'assests/amenities/about3.jpeg',
+                    'title' => '',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/road.webp',
-                    'title' => 'Road View',
+                    'image' => 'assests/amenities/about4.jpeg',
+                    'title' => '',
                 ]
                 
             ]
@@ -313,13 +295,13 @@ return [
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/commerical-area.webp',
+                    'image' => 'assests/amenities/about5.jpeg',
                     'title' => 'Commerical Area',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/mall.webp',
-                    'title' => 'Shopping Mall',
+                    'image' => 'assests/amenities/about6.jpeg',
+                    'title' => '',
                 ]
                 
             ]
@@ -330,13 +312,13 @@ return [
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/gate.webp',
-                    'title' => 'Front Gate',
+                    'image' => 'assests/amenities/about7.jpeg',
+                    'title' => '',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/water-park.webp',
-                    'title' => 'Water Park',
+                    'image' => 'assests/amenities/about8.jpeg',
+                    'title' => '',
                 ]
                 
             ]
@@ -347,13 +329,13 @@ return [
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/mosque.webp',
-                    'title' => 'Mosque',
+                    'image' => 'assests/amenities/about1.jpeg',
+                    'title' => '',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/commerical-area.webp',
-                    'title' => 'Commerical Area',
+                    'image' => 'assests/amenities/about2.jpeg',
+                    'title' => '',
                 ]
                 
             ]
@@ -364,13 +346,13 @@ return [
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/tennis-court.jpg',
-                    'title' => 'Tennis Court',
+                    'image' => 'assests/amenities/about3.jpeg',
+                    'title' => '',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/mahal.webp',
-                    'title' => 'Taaj Mahal',
+                    'image' => 'assests/amenities/about4.jpeg',
+                    'title' => '',
                 ]
                 
             ]
@@ -381,69 +363,19 @@ return [
             'images' => [
                 [
                     'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/gate.webp',
-                    'title' => 'Front Gate',
+                    'image' => 'assests/amenities/about5.jpeg',
+                    'title' => '',
                 ],
                 [
                     'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/sports-complex.webp',
-                    'title' => 'Sports Complex',
+                    'image' => 'assests/amenities/about6.jpeg',
+                    'title' => '',
                 ]
                 
             ]
            
         ],
-        [   
-            'class' => 'odd items',
-            'images' => [
-                [
-                    'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/ariel.webp',
-                    'title' => 'Aerial View',
-                ],
-                [
-                    'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/road.webp',
-                    'title' => 'Road View',
-                ]
-                
-            ]
-           
-        ],
-        [   
-            'class' => 'even items',
-            'images' => [
-                [
-                    'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/commerical-area.webp',
-                    'title' => 'Commerical Area',
-                ],
-                [
-                    'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/mall.webp',
-                    'title' => 'Shopping Mall',
-                ]
-                
-            ]
-           
-        ],
-        [   
-            'class' => 'odd items',
-            'images' => [
-                [
-                    'thumbnail' => 'img/thumbs/90-113.jpg',
-                    'image' => 'assests/amenities/gate.webp',
-                    'title' => 'Front Gate',
-                ],
-                [
-                    'thumbnail' => 'img/thumbs/42-29.jpg',
-                    'image' => 'assests/amenities/water-park.webp',
-                    'title' => 'Water Park',
-                ]
-                
-            ]
-           
-        ],
+   
     ],
 
     'how-to-purchase' => [
@@ -501,7 +433,18 @@ return [
                 'review' => "I was extremely pleased with the immediate and transparent response from sales agents. Their agents were knowledgeable, professional, and always went above and beyond to help me find the perfect home. I will be sure to use them again in the future for any real estate needs.",
             ],
         ]
+    ],
+    'financial-advisory' => [
+        'sections' => [
+            [
+                'heading' => 'Real Estate Merger and Acquisitions ',
+                'image' => 'advisory.png',
+                'description' => "Mergers are rewarding, but an entry into a new market can be financially challenging too. At Reality One Group, we provide you with holistic financial consultations pertaining to the investment strategies involved in setting up production centers, initiating distribution channels, managing the old and new storage places, buying new machinery and equipment, and locating financially stable land. "
+            ]
+            
+        ]
     ]
+
 
 
 

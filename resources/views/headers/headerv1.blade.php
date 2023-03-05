@@ -1,7 +1,7 @@
 
 
 <div class="gradient-bg">
-   @include('sections.topbar')
+   
    <!-- HEADER SECTION BEGIN -->
    <header class="header" id="header">
       <div class="container-fluid">

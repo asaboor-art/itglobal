@@ -19,7 +19,7 @@
 ])
 
 <!-- ULTIMATE INVESTMENT SECTION BEGIN -->
-@include('sections.projects.project-sec',[
+@include('sections.projects.projects',[
     'heading'  => __('messages.projects.sec-heading'),
     'subheading' => __('messages.projects.sec-subheading'), 
 ])

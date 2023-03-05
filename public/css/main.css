@@ -273,8 +273,8 @@ footer {background-image: url("../images/footer-bg.png");background-repeat: no-r
 /*BUY AND SELL PAGE CSS END*/
 
 /*PROJECT DETAIL PAGE CSS BEGIN*/
-.professionals-sec {background-image: url("../images/vid-bg.png");background-repeat: no-repeat;background-size: cover;background-position: center;padding: 100px 0 100px;background-attachment: fixed;}
-.professionals-second-sec {background-image: url("../images/vid-bg.png");background-repeat: no-repeat;background-size: cover;background-position: center;padding: 100px 0 100px;background-attachment: fixed;}
+.professionals-sec {background-repeat: no-repeat;background-size: cover;background-position: center;padding: 100px 0 100px;background-attachment: fixed;}
+.professionals-second-sec {background-repeat: no-repeat;background-size: cover;background-position: center;padding: 100px 0 100px;background-attachment: fixed;}
 .capital-city-sec {padding: 90px 120px 100px;}
 .capital-city-sec .row {align-items: center;e}
 .dri-prof h5 {font-weight: 400;color: #353535;}
@@ -294,7 +294,7 @@ footer {background-image: url("../images/footer-bg.png");background-repeat: no-r
 .smart-city-map {position: relative;}
 .smart-city-map img {height: 732px;width: 100%;}
 .location-address-img {position: absolute;top: 30px;right: 30px;}
-.location-address-img img {height: auto;width: auto;}
+.location-address-img img {height: auto;width: auto;max-width: 280px;}
 .marker-img {position: absolute;bottom: 190px;left: 180px;}
 .marker-img img {width: auto;height: auto;}
 .bounce2 {animation: bounce2 2s ease infinite;}
@@ -451,6 +451,23 @@ footer {background-image: url("../images/footer-bg.png");background-repeat: no-r
 
 /*RESPONSIVE CSS BEGIN*/
 @media only screen and (min-width: 320px) and (max-width: 529px) {
+
+/*22-02-2023*/
+.mobile-slider-prop {display: block !important;}
+.sale-row {display: none;}
+.mobile-slider-prop .building-box-hover img {min-height: auto !important;margin: 0 5px;}
+.mobile-slider-prop .build-tag p {font-size: 13px;line-height: 17px;text-align: left;color: #000;}
+.mobile-slider-prop .build-tag {background-image: none;}
+.mobile-slider-prop .build-tag-price {background-color: transparent;justify-content: left;}
+.mobile-slider-prop .build-tag-price p {font-size: 13px;text-align: left;}
+.mobile-slider-prop .build-tag-price span {font-size: 15px;display: inline-block;}
+.mobile-slider-prop .buy-tag {padding: 2px 12px;left: 5px;}
+.mobile-slider-prop .buy-tag p {font-size: 12px;}
+.mobile-slider-prop .a-right {display: none !important;}
+.mobile-slider-prop .a-left {display: none !important;}
+.mobile-slider-prop .slider-heading-text h3 {margin: 0 0 40px;}
+/*22-02-2023*/
+
 .buy-sell-sec {padding: 0 15px 60px;}
 .top-bar-sec {padding: 13px 15px;}
 .header {padding: 0px 0px 24px;}
@@ -1023,7 +1040,7 @@ video {min-height: auto;}
 .services-advisory-boxes {transition: 0.6s all ease-in-out;}
 .vid-bg-sec .bg-video-wrap {height: 100vh;}
 .vid-bg-sec .overlay {height: 100vh;}
-.banner-video-wrp {background-image: url("../images/aboutus-bg.png");background-repeat: no-repeat;background-size: cover;background-position: center;}
+.banner-video-wrp {background-repeat: no-repeat;background-size: cover;background-position: center;}
 .building-box-hover {overflow: hidden;}
 .building-box-hover img {transition: 0.6s all ease-in-out;min-height: 395px !important;}
 .box-item-div:hover .building-box-hover img {transform: scale(1.1);cursor: pointer;}
@@ -1042,3 +1059,13 @@ video {min-height: auto;}
 .drop-content ul li a:hover{background: rgba(0,0,0,0.1);color: #fff;border-left: 5px solid rgba(0,0,0,0.8);}
 /*DROP DOWN CSS END*/
 
+/* Privacy Policy */
+.privacy-sec{padding: 100px 20px 30px;}
+.privacy-row p{padding: 10px 0 48px 0; text-align: justify;}
+.privacy-content h4 {font-size: 24px;font-weight: 400;color: #000000;line-height: 33px;margin-bottom: 0px;}
+.advise-content h4 {color:#012148 !important;margin-bottom: 0px;}
+
+
+/*22-02-2023*/
+.mobile-slider-prop {display: none;}
+/*22-02-2023*/

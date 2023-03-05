@@ -38,7 +38,7 @@ return [
         
     ],
     'footer' => [
-        'description' => "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,",
+        'description' => "Reality One Group serves to finance, develop, construct, and expand companies. Reality One Group positions the investment strategies of funding and control the trading activities of partners involved. In this regard, Reality One Group exhibits expertise through quasi-equity and mezzanine instruments. Reality One Group is interested in Pakistan’s Real Estate Realm, Wealth Management Advisory, and Fintech Companies",
     ],
     'errors' => [
         '500' => [

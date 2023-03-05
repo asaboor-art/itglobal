@@ -33,8 +33,8 @@
     <!-- FOOTER SECTION END -->
     @include('footers.footerv1')
     <!-- Latest compiled JavaScript -->
-    <script src="{{ asset(config('site_config.assets.js').'app.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- <script src="{{ asset(config('site_config.assets.js').'app.js') }}"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="{{ asset(config('site_config.assets.plugins').'jquery/jquery.min.js') }}"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
@@ -86,11 +86,13 @@
       });
       document.addEventListener("DOMContentLoaded", () => {
          const darkSwitch = document.getElementById("switch");
-
-         darkSwitch.addEventListener("click", () => {
+         if(darkSwitch){
+            darkSwitch.addEventListener("click", () => {
             document.documentElement.classList.toggle("darkmode");
             document.body.classList.toggle("darkmode");
          });
+         }
+         
       });
       /*MENUBAR SCRIPT END*/
       /*DROPDOWN SCRIPT BEGIN*/

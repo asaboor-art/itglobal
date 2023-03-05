@@ -32,19 +32,15 @@
 ])
 <!-- ULTIMATE INVESTMENT SECTION END -->
 <!-- OUR PROJECT SECTION BEGIN -->
-@include('sections.property.our-projects',[
-    'heading'  => __('messages.properties.proj-sec-heading'),
-    'subheading' => __('messages.properties.proj-sec-subheading'),
-    'Properties' => null, 
-])
+
 <!-- OUR PROJECT SECTION END -->
 <!-- REAL ESTATE SECTION BEGIN -->
 
 @include('sections.about-us',[
     'heading'  => __('messages.about-us.sec-heading'),
     'description' => __('messages.about-us.sec-subheading'),
-    'video' => asset(config('site_config.assets.images').'banner-animation.mp4'),
-    'image' => asset(config('site_config.assets.images').'house-img.png'),
+    'video' => "https://youtu.be/fpOYeuNYQGs",
+    'image' => asset(config('site_config.assets.images').'home.jpg'),
     'links' => [
         [
             'href' => route('site-pages','about-us'),
@@ -56,7 +52,7 @@
         ]
     ]
 ])
-<!-- REAL ESTATE SECTION END -->
+<!-- REAL ESTATE SECTION END --> 
 <!-- OUR SERVICES SECTION BEGIN -->
 @include('sections.our-services',[
     'heading'  => __('messages.services.sec-heading'),
@@ -116,7 +112,7 @@
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1
             }
           }
@@ -237,5 +233,45 @@
           $('#category').val($(this).data('value'));
           $('.filter-form').submit();
       });
+
+      /*MOBILE PROPERTY SLIDER BEGIN*/
+      $('.responsive-mob-prop').slick({
+          dots: false,
+          arrows: true,
+          infinite: true,
+          autoplay: true,
+          nextArrow:"<img src='images/slider-down.png' class='a-right'>",
+          prevArrow:"<img src='images/slider-up.png' class='a-left'>",
+          vertical: false,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      /*MOBILE PROPERTY SLIDER END*/
 </script>
 @endsection

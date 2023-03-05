@@ -25,7 +25,7 @@
    <div class="container-fluid">
       <div class="row advise-row">
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <img src="{{ asset(config('site_config.assets.images').'ceo.png') }}" alt="image" class="img-fluid wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
+            <img src="{{ asset(config('site_config.assets.images').'ceo.jpg') }}" alt="image" class="img-fluid wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
          </div>
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="advise-content wow fadeInRight" data-wow-duration="0.9s" data-wow-delay="0.9s">
@@ -45,7 +45,7 @@ At Reality One Group, we not only strive to grow as a business organization, but
 <!-- VID BACKGROUND SECTION BEGIN -->
 <section class="vid-bg-sec">
    <div class="bg-video-wrap">
-      <video src="{{ asset(config('site_config.assets.images').'banner-animation.mp4') }}" loop muted autoplay></video>
+      <video src="{{ asset(config('site_config.assets.images').'aboutus-video.mp4') }}" loop muted autoplay></video>
       <div class="overlay"></div>
    </div>
 </section>
@@ -106,9 +106,9 @@ At Reality One Group, we not only strive to grow as a business organization, but
       <div class="row">
          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="accordian-img">
-               <img src="{{ asset(config('site_config.assets.images').'as1.png') }}" alt="image" class="img-fluid wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
+               <img src="{{ asset(config('site_config.assets.images').'as1.jpg') }}" alt="image" class="img-fluid wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
                <div class="img-accordian-inner">
-                  <img src="{{ asset(config('site_config.assets.images').'as2.png') }}" alt="image" class="img-fluid wow fadeInLeft" data-wow-duration="1.1s" data-wow-delay="1.1s">
+                  <img src="{{ asset(config('site_config.assets.images').'as2.jpg') }}" alt="image" class="img-fluid wow fadeInLeft" data-wow-duration="1.1s" data-wow-delay="1.1s">
                </div>
             </div>
          </div>
@@ -204,15 +204,15 @@ At Reality One Group, we not only strive to grow as a business organization, but
                      <a href="javascript:void(0)">
                         <div class="box-item-div wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
                            <div class="img-box-img">
-                              <img src="{{ asset(config('site_config.assets.images').'bilal-ahmed.png') }}" alt="image" class="img-fluid">
+                              <img src="{{ asset(config('site_config.assets.images').'sana-rashid.jpg') }}" alt="image" class="img-fluid">
                            </div>
                            <div class="building-img-content">
                               <div class="build-tag">
-                                 <p>Bilal Ahmed</p>
+                                 <p>Sana Rashid</p>
                               </div>
                            </div>
                            <div class="designation-box">
-                              <h6>MANAGER</h6>
+                              <h6>Marketing Head</h6>
                            </div>
                         </div>
                      </a>
@@ -221,15 +221,15 @@ At Reality One Group, we not only strive to grow as a business organization, but
                      <a href="javascript:void(0)">
                         <div class="box-item-div wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0.9s">
                            <div class="img-box-img">
-                              <img src="{{ asset(config('site_config.assets.images').'bilal-ahmed.png') }}" alt="image" class="img-fluid">
+                              <img src="{{ asset(config('site_config.assets.images').'aamir-majid.jpg') }}" alt="image" class="img-fluid">
                            </div>
                            <div class="building-img-content">
                               <div class="build-tag">
-                                 <p>Bilal Ahmed</p>
+                                 <p>Aamir Majid</p>
                               </div>
                            </div>
                            <div class="designation-box">
-                              <h6>MANAGER</h6>
+                              <h6>Chariman</h6>
                            </div>
                         </div>
                      </a>
