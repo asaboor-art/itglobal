@@ -131,7 +131,7 @@ function ajaxPost(url,data,succssContainer,errorContainer) {
 }
 
 // Ajax get
-function ajaxGet(url,data,dataContainer,responseType='html'){
+function ajaxGet(url,data,dataContainer,responseType='html',callback=null){
     $.ajaxSetup({
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -149,7 +149,7 @@ function ajaxGet(url,data,dataContainer,responseType='html'){
             if(responseType == 'html'){
                 $(dataContainer).html(response);
             }else if(responseType == 'json'){
-                // Will be hanlde it later
+               callback(response);
             }
           
         },
@@ -180,11 +180,8 @@ $(document).on('error','img',function(e){
     $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
 })
 window.onload = function(e){
-    console.log($('.cities'));
-    if($('.cities')){
-        getCities();
-    }
     
+    getCities();
 }
 
 // Get all cities of a country
@@ -197,18 +194,12 @@ function getCities() {
         var city = city_parameter.split('=')[1]; 
         
     }
-    
-    $.post('https://countriesnow.space/api/v0.1/countries/cities',{
-        "country": "pakistan"
-    },(response,status)=>{
-        var html = '<option value="">Select City</option>';
 
-        if(city){
-            city = city.replace('+',' ');
-        }
+    var html = '<option value="">Select City</option>';
+    var cities = ['Islamabad','Rawalpindi', 'Gujjar Khan','Mardan','Peshawar','Quetta','Karachi','Multan',
+        'Sialkot','Lahore'];
         
-        
-        response.data.forEach(element => {
+        cities.forEach(element => {
             if(city && city == element){
                 html += '<option value="'+element+'" selected>'+element+'</option>';
             }else{
@@ -216,7 +207,13 @@ function getCities() {
             }
             
         });
-
         ref.html(html);
-    });
+    
+    // $.post('https://countriesnow.space/api/v0.1/countries/cities',{
+    //     "country": "pakistan"
+    // },(response,status)=>{
+        
+
+    //     ref.html(html);
+    // });
 }
