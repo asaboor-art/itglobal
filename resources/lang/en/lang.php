@@ -71,4 +71,5 @@ return [
     'edit' => 'Edit',
     'footer' =>'Footer',
     'footers' =>'Footers',
+    'blog'  =>'Blog',
 ];

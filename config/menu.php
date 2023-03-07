@@ -45,7 +45,15 @@ return [
                     
 
                 ],
-            ]
+            ],
+            [
+                'name' => 'blogs',
+                'route' => 'blogs.index',
+                'icon' => 'nav-icon fa fa-file',
+                'has_submenu' => false,
+                'submenu_icon' => '',
+                'submenu' => [],
+            ],
         ]
     ],
     'guest' => [

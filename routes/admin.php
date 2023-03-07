@@ -43,6 +43,17 @@ Route::prefix('footers')->group(function(){
     Route::put('/update/{id}',[FooterController::class, 'update'])->name('admin.footers.update');
     Route::delete('/delete/{id}',[FooterController::class, 'destroy'])->name('admin.footers.destroy');
 });
+
+Route::prefix('blogs')->group(function(){
+    Route::get('/',[FooterController::class, 'index'])->name('admin.blogs.index');
+    Route::get('/ajax', [FooterController::class, 'render'])->name('admin.blogs.ajax');
+    Route::get('/create',[FooterController::class, 'create'])->name('admin.blogs.create');
+    Route::post('/',[FooterController::class, 'store'])->name('admin.blogs.store');
+    Route::get('/{id}',[FooterController::class, 'get'])->name('admin.blogs.header');
+    Route::get('/edit/{id}',[FooterController::class, 'edit'])->name('admin.blogs.edit');
+    Route::put('/update/{id}',[FooterController::class, 'update'])->name('admin.blogs.update');
+    Route::delete('/delete/{id}',[FooterController::class, 'destroy'])->name('admin.blogs.destroy');
+});
 // Inner dashboard
 // Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard.ajax');
 // Route::get('/registrations/month', [DashboardController::class, 'getRegistrationsPreMonth'])->name('admin.dashboard.registration.month');
