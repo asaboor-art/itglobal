@@ -63,6 +63,7 @@ Route::prefix('pages')->group(function () {
 // Public properties
 Route::prefix('properties')->group(function () {
     Route::get('/',[PropertyController::class, 'buyAndSell'])->name('properties.index');
+    Route::get('/locations',[PropertyController::class, 'buyAndSellLocations'])->name('properties.location');
     Route::get('/{slug}',[PropertyController::class, 'getProperty'])->name('properties.get');
 });
 

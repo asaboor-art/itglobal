@@ -50,3 +50,6 @@
             </ul>
          </nav>
       </div>
+<!-- @if(count($Properties) > 0)
+
+@endif -->

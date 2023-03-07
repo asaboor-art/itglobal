@@ -61,6 +61,8 @@ data(){
             city:'',
             type:'',
             category:'',
+            lognitude:'',
+            latitude:'',
             media:[],
             gallery:[],
         },
@@ -188,7 +190,7 @@ mounted(){
                     field:"address",
                     class:"form-control",
                     grid:"col-md-12 col-12",
-                    type:"text",
+                    type:"map",
                     placeholder:function(){
                         return "Enter "+this.label
                     },

@@ -65,6 +65,8 @@ export default {
                 city:'',
                 type:'',
                 category:'',
+                lognitude:'',
+                latitude:'',
                 media:[],
                 gallery:[]
             },
@@ -189,9 +191,9 @@ export default {
                 {
                     label:Language.address,
                     field:"address",
-                    class:"form-control",
+                    class:"form-control address",
                     grid:"col-md-12 col-12",
-                    type:"text",
+                    type:"map",
                     placeholder:function(){
                         return "Enter "+this.label
                     },
@@ -336,6 +338,10 @@ export default {
                 },
                 
         ]
+
+        // var autocomplete = new google.maps.places.Autocomplete(
+        //     document.getElementById("address"),
+        // );
     },
 
     methods:{
@@ -381,7 +387,6 @@ export default {
             const {data,getCitiesByCountry} = useGenerals();
             await getCitiesByCountry();
             this.citiesOptions = data.value;
-            console.log(this.citiesOptions);
         },
         setFormData(field,data){
             this.FormData[field] = data; 

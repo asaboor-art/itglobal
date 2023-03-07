@@ -48,38 +48,7 @@ class PropertyController extends BaseController
             $condition = [];
             $result = [];
             
-            $this->setGeneralFilters($request);
-            if($request->has('search_city') && $request->search_city !=''){
-                $this->property->setFilters(['city','like','%'.$request->search_city.'%']);    
-            }
-
-            if($request->has('search_location') && $request->search_location !=''){
-                $this->property->setFilters(['address','like','%'.$request->search_location.'%']);    
-            }
-
-            if($request->has('search_developer') && $request->search_developer !=''){
-                $this->property->setFilters(['developer','=',$request->search_developer]);    
-            }
-            if($request->has('search_type') && $request->search_type !=''){
-                $this->property->setFilters(['type','=',$request->search_type]);    
-            }
-            if($request->has('search_min_price') && $request->search_min_price !=''){
-                $this->property->setFilters(['price','>=',$request->search_min_price]);    
-            }
-            if($request->has('search_max_price') && $request->search_max_price !=''){
-                $this->property->setFilters(['price','<=',$request->search_max_price]);    
-            }
-            if($request->has('search_min_area') && $request->search_min_area !=''){
-                $this->property->setFilters(['area','>=',$request->search_min_area]);    
-            }
-            if($request->has('search_min_area') && $request->search_min_area !=''){
-                $this->property->setFilters(['area','<=',$request->search_min_area]);    
-            }
-            if($request->has('category') && $request->category !=''){
-                $this->property->setFilters(['category','like','%'.$request->category.'%']);    
-            }
-
-
+            $this->setFilters($request);
             $this->property->setSelectedColumn(['id','name','slug','address','area','price','city','developer','type','category']);
 
             $this->property->setRenderColumn([
@@ -170,6 +139,56 @@ class PropertyController extends BaseController
         
     }
 
+    public function buyAndSellLocations(Request $request){
+        $this->setFilters($request);
+            $this->property->setSelectedColumn(['id','name','lognitude','latitude','address']);
+
+            $this->property->setRenderColumn([
+                [
+                    'name' => 'id',
+                    'db_name' => 'id',
+                    'type' => 'integer',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'name',
+                    'type' => 'string',
+                    'html' => false,
+                    'link' => 'property',
+                    'link_column' => 'slug',
+                    
+                ],
+                [
+                    'name' => 'lognitude',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'latitude',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+                [
+                    'name' => 'address',
+                    'type' => 'string',
+                    'html' => false,
+                ],
+               
+              
+              
+            ]);
+            $result = [];
+        $result = $this->property->getAllDatatables(['media'],
+        $this->property->getSelectedColumns(),
+        [],'',[],'where');
+
+        
+        
+        if($request->ajax()){
+            return $this->sendResponse($result);
+        }
+    }
+
     public function getProperty(Request $request,$slug){
         $Property = $this->property->first('properties.slug',$slug,'=',[],[['developers','properties.developer','=','developers.id'],['property_types','properties.type','=','property_types.id']],['properties.*','developers.name as Developer','property_types.name as PropertyType']);
         
@@ -177,6 +196,41 @@ class PropertyController extends BaseController
             'title' => __('lang.property'). '|' .$Property->name,
             'Property' => $Property
         ]);
+    }
+
+    public function setFilters(Request $request){
+        $this->setGeneralFilters($request);
+            if($request->has('search_city') && $request->search_city !=''){
+                $this->property->setFilters(['city','like','%'.$request->search_city.'%']);    
+            }
+
+            if($request->has('search_location') && $request->search_location !=''){
+                $this->property->setFilters(['address','like','%'.$request->search_location.'%']);    
+            }
+
+            if($request->has('search_developer') && $request->search_developer !=''){
+                $this->property->setFilters(['developer','=',$request->search_developer]);    
+            }
+            if($request->has('search_type') && $request->search_type !=''){
+                $this->property->setFilters(['type','=',$request->search_type]);    
+            }
+            if($request->has('search_min_price') && $request->search_min_price !=''){
+                $this->property->setFilters(['price','>=',$request->search_min_price]);    
+            }
+            if($request->has('search_max_price') && $request->search_max_price !=''){
+                $this->property->setFilters(['price','<=',$request->search_max_price]);    
+            }
+            if($request->has('search_min_area') && $request->search_min_area !=''){
+                $this->property->setFilters(['area','>=',$request->search_min_area]);    
+            }
+            if($request->has('search_min_area') && $request->search_min_area !=''){
+                $this->property->setFilters(['area','<=',$request->search_min_area]);    
+            }
+            if($request->has('category') && $request->category !=''){
+                $this->property->setFilters(['category','like','%'.$request->category.'%']);    
+            }
+
+            return true;
     }
 
 }

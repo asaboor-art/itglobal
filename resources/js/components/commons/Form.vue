@@ -16,7 +16,7 @@
                 
                 <div class="form-group" v-else-if="field.type == 'textarea'">
                     <label class="form-label">{{ field.label }}</label>
-                    <ckeditor :editor="editor" :placeholder="field.placeholder()"  v-model="data[field.field]" :config="editorConfig" placeholder="Enter Honor Code"></ckeditor>
+                    <ckeditor :editor="editor"   :placeholder="field.placeholder()"  v-model="data[field.field]" :config="editorConfig" placeholder="Enter Honor Code"></ckeditor>
                     <div v-if="errors[field.field]">
                       <ul>
                           <li class="text-danger" style="list-style:none;" v-for="(error,index) in errors[field.field]" :key="index">{{ error }}</li>
@@ -57,9 +57,20 @@
                       </ul>
                     </div>
                 </div>
+
+                <div class="form-group" v-else-if="field.type == 'map'">
+                    <label class="form-label">{{ field.label }}</label>
+                    <vue-google-autocomplete :id="field.field" :placeholder="field.placeholder()" :classname="field.class" ref="address" v-model="data[field.field]"  :country="['pk']"  v-on:placechanged="getLognitudeLatitude">
+                    </vue-google-autocomplete>
+                    <div v-if="errors[field.field]">
+                      <ul>
+                          <li class="text-danger" style="list-style:none;" v-for="(error,index) in errors[field.field]" :key="index">{{ error }}</li>
+                      </ul>
+                    </div>
+                </div>
                 <div class="form-group" v-else>
                     <label class="form-label">{{ field.label }}</label>
-                    <input :type="field.type" :placeholder="field.placeholder()" :class="field.class" :name="field.field"  v-model="data[field.field]" :required="field.required" autocomplete="email" autofocus>
+                    <input :type="field.type" id="field.field"  :placeholder="field.placeholder()" :class="field.class" :name="field.field"  v-model="data[field.field]" :required="field.required" >
                     <div v-if="errors[field.field]">
                       <ul>
                           <li class="text-danger" style="list-style:none;" v-for="(error,index) in errors[field.field]" :key="index">{{ error }}</li>
@@ -84,6 +95,7 @@
 <script>
 import {Language} from '../../helpers/lang/lang';
 import CKEditor from '@ckeditor/ckeditor5-vue';
+
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Select2 from 'vue3-select2-component';
 import vueFilePond from 'vue-filepond';
@@ -92,7 +104,7 @@ import FilePondPluginFileEncode from 'filepond-plugin-file-encode';
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import 'filepond/dist/filepond.min.css';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
-
+import VueGoogleAutocomplete from "vue-google-autocomplete";
 const FilePond = vueFilePond(FilePondPluginFileValidateType, FilePondPluginImagePreview);
 export default {
     props:{
@@ -106,7 +118,8 @@ export default {
     components:{
         ckeditor: CKEditor.component,
         Select2,
-        FilePond
+        FilePond,
+        VueGoogleAutocomplete
        
     },
     data(){
@@ -116,15 +129,25 @@ export default {
             editorConfig:[],
             files:[],
             fileTag:null,
+            autocomplet:null,
         }
     },
-    mounted(){
-       
+    mounted(){        
     },
     methods:{
         store(){
             this.action();
         },
+        getLognitudeLatitude(addressData, placeResultData, id){
+            if('lognitude' in this.data && 'latitude' in this.data){
+                this.data.lognitude = placeResultData.geometry.location.lng();
+                this.data.latitude = placeResultData.geometry.location.lat();
+                
+                this.data.address = placeResultData.formatted_address
+            }
+            
+        }
+
         
     }
 

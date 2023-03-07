@@ -36,9 +36,13 @@
         <div id="properties">
            
         </div>
+        
     </div>
    </div>
-</section>
+   <div class="map" id="map" style="width:1171px;height: 400px;margin-top:20px;">
+
+        </div>
+</section>  
 <!-- BUY SELL SECTION END -->
 @endsection
 @section('scripts')
@@ -72,7 +76,7 @@ function getProperties(data){
         city = city_parameter.split('=')[1]?city_parameter.split('=')[1]:''; 
         
     }
-    console.log($('.search_city option:selected').val())
+    
     let request = {
         
         search_city:$('.search_city option:selected').val()!= ''?$('.search_city option:selected').val():city.replace('+',' '),
@@ -88,7 +92,67 @@ function getProperties(data){
         length:9,
         ...data
     };
-    ajaxGet(`${blade_config.baseUrl}/properties/`,request,'#properties');
+    ajaxGet(`/properties/`,request,'#properties');
+    ajaxGet(`/properties/locations`,request,'#properties','json',function(response){
+        // console.log(response);
+        if(response.data.totalRecord > 0){
+            var map = new GMaps({
+                el: '#map',
+                lat: '31.03337426163127',
+                lng: '69.29326878452582',
+                scrollwheel: true
+            });
+            
+            // var map = new google.maps.Map(document.getElementById('map'), {
+            // zoom: 10,
+            // center: new google.maps.LatLng(response.data.data[0].latitude, response.data.data[0].lognitude),
+            // mapTypeId: google.maps.MapTypeId.ROADMAP
+            // });
+            
+            // var infowindow = new google.maps.InfoWindow();
+
+            var bounds = [];
+            
+        for (i = 0; i < response.data.data.length; i++) {  
+            var latlng = new google.maps.LatLng(response.data.data[i].latitude, response.data.data[i].lognitude);
+            bounds.push(latlng);
+            map.addMarker({
+                lat: response.data.data[i].latitude,
+                lng: response.data.data[i].lognitude,
+                title: response.data.data[i].name,
+                infoWindow: {
+                    content: '<p>'+response.data.data[i].name+'</p>'
+                }
+            })
+        }
+        map.fitLatLngBounds(bounds);
+    }
+    });
 }
+
+// // get Locations
+// function getLocations(){
+    
+// }
+
+// function initMap() {
+//     const myLatLng = { lat: -25.363, lng: 131.044 };
+//             console.log(myLatLng)
+//             const map = new google.maps.Map(document.getElementById("map"), {
+//                 zoom: 4,
+//                 center: myLatLng,
+//             });
+
+//             new google.maps.Marker({
+//                 position: myLatLng,
+//                 map,
+//                 title: "Hello World!",
+//             })
+// }
+
+// window.initMap = initMap;
+
 </script>
+
+
 @endsection

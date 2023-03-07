@@ -40,6 +40,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="https://rawgit.com/moagrius/isOnScreen/master/jquery.isonscreen.min.js"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'main.js') }}"></script>
+   
     <script src="{{ asset(config('site_config.assets.js_scripts').'slick.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'jquery.fancybox.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'owl.carousel.min.js') }}"></script>
@@ -112,8 +113,10 @@
         }); 
       /*DROPDOWN SCRIPT END*/
     </script>
-    
+     <script defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_API_KEY') }}"></script>
+     <script src="{{ asset(config('site_config.assets.js_scripts').'gmaps.js') }}"></script>
     @yield('scripts')
+   
      <script src="{{ asset(config('site_config.assets.js').'custom/common.js') }}"></script>
   </body>
 </html>
