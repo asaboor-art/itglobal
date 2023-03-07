@@ -39,10 +39,11 @@
         
     </div>
    </div>
-   <div class="map" id="map" style="width:1171px;height: 400px;margin-top:20px;">
+   
+</section> 
+<div class="map" id="map" style="height: 400px;margin-top:20px;">
 
-        </div>
-</section>  
+    </div> 
 <!-- BUY SELL SECTION END -->
 @endsection
 @section('scripts')
@@ -103,13 +104,7 @@ function getProperties(data){
                 scrollwheel: true
             });
             
-            // var map = new google.maps.Map(document.getElementById('map'), {
-            // zoom: 10,
-            // center: new google.maps.LatLng(response.data.data[0].latitude, response.data.data[0].lognitude),
-            // mapTypeId: google.maps.MapTypeId.ROADMAP
-            // });
             
-            // var infowindow = new google.maps.InfoWindow();
 
             var bounds = [];
             
@@ -130,27 +125,9 @@ function getProperties(data){
     });
 }
 
-// // get Locations
-// function getLocations(){
-    
-// }
 
-// function initMap() {
-//     const myLatLng = { lat: -25.363, lng: 131.044 };
-//             console.log(myLatLng)
-//             const map = new google.maps.Map(document.getElementById("map"), {
-//                 zoom: 4,
-//                 center: myLatLng,
-//             });
 
-//             new google.maps.Marker({
-//                 position: myLatLng,
-//                 map,
-//                 title: "Hello World!",
-//             })
-// }
 
-// window.initMap = initMap;
 
 </script>
 
