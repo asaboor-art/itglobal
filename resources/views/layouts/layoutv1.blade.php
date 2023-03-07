@@ -20,6 +20,7 @@
     <!-- <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'animate.css') }}"> -->
   </head>
   <body>
+ 
     <!-- Header Starts -->
     @include('headers.headerv1')
     <!-- Header Ends -->
@@ -113,9 +114,10 @@
         }); 
       /*DROPDOWN SCRIPT END*/
     </script>
-     <script defer src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_API_KEY') }}"></script>
+    
+     <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAP_API_KEY') }}"></script>
      <script src="{{ asset(config('site_config.assets.js_scripts').'gmaps.js') }}"></script>
-    @yield('scripts')
+      @yield('scripts')
    
      <script src="{{ asset(config('site_config.assets.js').'custom/common.js') }}"></script>
   </body>

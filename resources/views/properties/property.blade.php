@@ -161,10 +161,51 @@
    <div class="container-fluid">
       <div class="row">
          <div class="col-lg-12 col-md-12 col-sm-12 col-12 wow fadeInDown"  data-wow-duration="0.9s" data-wow-delay="0.9s">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.386445110092!2d73.13804481549502!3d33.56931425047113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfed0335fc560d%3A0xe620a95d39a00216!2sGhar%20Kahani%20Pvt%20Ltd.!5e0!3m2!1sen!2s!4v1674252985805!5m2!1sen!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="map" style="height: 400px;"></div>
          </div>
       </div>
    </div>
 </section>
 <!-- GOOGLE MAP CONATC SECTION END -->
+@endsection
+@section('scripts')
+<script>
+   // var map = new GMaps({
+   //              el: '#map',
+   //              lat: '',
+   //              lng: '',
+   //              scrollwheel: false
+   //          });
+            
+            
+
+   //          var bounds = [];
+            
+   //          var latlng = new google.maps.LatLng("{{ $Property->latitude}}", "{{ $Property->lognitude}}");
+   //          bounds.push(latlng);
+   //          map.addMarker({
+   //              lat: "{{ $Property->latitude}}",
+   //              lng: "{{ $Property->lognitude}}",
+   //              title: "{{ $Property->name}}",
+   //              infoWindow: {
+   //                  content: '<p>'+"{{ $Property->name}}"+'</p>'
+   //              }
+   //          })
+        
+   //      map.fitLatLngBounds(bounds);
+   let lat = "{{ $Property->latitude}}";
+   let long = "{{ $Property->lognitude}}";
+   const myLatLng = { lat: parseFloat(lat), lng: parseFloat(long) };
+   const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: myLatLng,
+   });
+
+   new google.maps.Marker({
+      position: myLatLng,
+      map,
+      title: "{{ $Property->name}}",
+   });
+
+</script>
 @endsection
