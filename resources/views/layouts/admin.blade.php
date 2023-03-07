@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
         <!-- Theme style -->
         <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+        <!-- <link rel="stylesheet" href="{{ asset('css/main.css') }}" /> -->
 
 
     </head>
@@ -39,7 +39,12 @@
         </div>
         <!-- jQuery -->
          <!-- Scripts -->
+         <!-- <script>
+            window.function 
+         </script> -->
+         <script async src="https://maps.googleapis.com/maps/api/js?libraries=places&key={{ env('GOOGLE_MAP_API_KEY') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+        
         <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
         <!-- Bootstrap 4 -->
         <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

@@ -1,170 +1,76 @@
 @extends('layouts.layoutv1')
 
 @section('content')
-<!-- BANNER SECTION BEGIN -->
-<section class="about-banner-sec">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="about-banner-content">
-              <h2>Our Services</h2>
+@include('sections.bannerv1',[
+    'heading' => $title,
+    'sub_heading' => trans('messages.banner_subheading1'),
+    'image' => [
+        'display' => false,
+        'src' => '',
+    ],
+    'video' => [
+        'display' => false,
+        'src' => asset(config('site_config.assets.images.'.'banner-animation.mp4')),
+    ], 
+    'link' => [
+            'display' => true,
+            'link' => route('site-pages','contact-us'),
+            'text' => 'book_now'
+    ]
+])
+<!-- SERVICES ADVISORY SECTION BEGIN -->
+<section class="services-advisory-sec">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="services-advisory-flex">
+               <div class="services-advisory-boxes wow fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.7s">
+                  <img src="{{ asset(config('site_config.assets.images').'real-estate-marketing.jpg') }}" alt="image" class="img-fluid circle-shape1">
+                  <div class="bg-advise">
+                     <img src="{{ asset(config('site_config.assets.images').'ad2.png') }}" alt="image" class="img-fluid circle-shape"> 
+                     <h5>Real Estate Sales & Marketing</h5>
+                     <p>We market the property with value. Moreover, we strongly believe in actions to attract the trust of our ideal customers. Meanwhile, we believe in providing information that is insightful and beneficial for our customers.</p>
+                  </div>
+               </div>
+               <div class="services-advisory-boxes wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.8s">
+                  <img src="{{ asset(config('site_config.assets.images').'real-estate-development.jpg') }}" alt="image" class="img-fluid circle-shape1">
+                  <div class="bg-advise">
+                     <img src="{{ asset(config('site_config.assets.images').'ad2.png') }}" alt="image" class="img-fluid circle-shape"> 
+                     <h5>Real Estate Development</h5>
+                     <p>We market the property with value. Moreover, we strongly believe in actions to attract the trust of our ideal customers. Meanwhile, we believe in providing information that is insightful and beneficial for our customers.</p>
+                  </div>
+               </div>
+               <div class="services-advisory-boxes wow fadeInLeft" data-wow-duration="0.9s" data-wow-delay="0.9s">
+                  <img src="{{ asset(config('site_config.assets.images').'merger-and-acquisition.jpg') }}" alt="image" class="img-fluid circle-shape1">
+                  <div class="bg-advise">
+                     <img src="{{ asset(config('site_config.assets.images').'ad2.png') }}" alt="image" class="img-fluid circle-shape"> 
+                     <h5>Real Estate Merger and Acquisition</h5>
+                     <p>We merge with mega real estate giants to spark innovations and provide solutions to real estate problems. Further, we also acquire assistance from experts to save costs and spend for the best of our customers.</p>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
+            <div class="services-advisory-flex2">
+               <div class="services-advisory-boxes wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                  <img src="{{ asset(config('site_config.assets.images').'reits.jpg') }}" alt="image" class="img-fluid circle-shape1">
+                  <div class="bg-advise">
+                     <img src="{{ asset(config('site_config.assets.images').'ad2.png') }}" alt="image" class="img-fluid circle-shape"> 
+                     <h5>REITS</h5>
+                     <p>We are a real estate investment trust that invests in most real estate property types, including apartment buildings, cell towers, data centers, hotels, medical facilities, offices, retail centers, and warehouses.</p>
+                  </div>
+               </div>
+             
+               <div class="services-advisory-boxes wow fadeInRight" data-wow-duration="1.1s" data-wow-delay="1.1s">
+                  <img src="{{ asset(config('site_config.assets.images').'wealth-advisory-services.jpg') }}" alt="image" class="img-fluid circle-shape1">
+                  <div class="bg-advise">
+                     <img src="{{ asset(config('site_config.assets.images').'ad2.png') }}" alt="image" class="img-fluid circle-shape"> 
+                     <h5>Wealth Advisory Services</h5>
+                     <p>We are masters of wealth management since through financial services we cater to the needs of our affluent clients. With our tested strategies, clients are likely to extract optimum results.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </section>
-    <!-- BANNER SECTION END -->
-    <!-- RESIDENTIAL INTERIOR SECTION BEGIN -->
-    <section class="residential-interior-sec">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="residential-interior-content">
-              <h2><span>Residential</span> Interior</h2>
-              <p>We specialise in excellent wall preparation and exquisite colour selection while painting the interior of Calgary residences.</p>
-              <div class="banner-btn">
-              <a href="{{ route('site-pages','get-a-quote')}}" class="btn btn-primary">Get A Free Quote</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="residential-img-co">
-              <img src="{{ asset(config('site_config.assets.images').'pw1.png') }}" alt="image" class="img-fluid">
-              <div class="res-des">
-                <img src="{{ asset(config('site_config.assets.images').'pw-design.png') }}" alt="image" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="cabinet-heading">
-              <h2>Cabinets</h2>
-              <p>Cabinets come in all different sizes and forms, and the constant opening and closing puts quite a strain on them. We spray-apply our primers, lacquers, and paints to give them a smooth surface that looks as though it came from the factory.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-cb">
-              <h2>Staining</h2>
-              <p>We assist you in enhancing the beauty of wood and protecting it from further deterioration. We provide both thorough interior staining and lacquer services and outside staining. Customers are free to select any type of finish (solid, translucent, semi-transparent, clear coat, etc.), and we would be pleased to produce the finished product in accordance with their preferences.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-img">
-              <img src="{{ asset(config('site_config.assets.images').'ct1.png') }}" alt="image" class="img-fluid">
-              <div class="inner-img">
-                <img src="{{ asset(config('site_config.assets.images').'ct2.png') }}" alt="image" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-img2">
-              <img src="{{ asset(config('site_config.assets.images').'ct3.png') }}" alt="image" class="img-fluid second-img">
-              <div class="inner-img2">
-                <img src="{{ asset(config('site_config.assets.images').'ct4.png') }}" alt="image" class="img-fluid one-img">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-cb">
-              <h2>Trim and Molding</h2>
-              <p>Our qualified workforce has received training in interior trim painting methods. We have the skills necessary to paint or refinish your trim beautifully. We are capable of handling baseboards, crown moulding, window trim, wainscoting, and doors. To discover more about our staff and our trim painting procedure, contact us right away.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-cb">
-              <h2>Ceiling</h2>
-              <p>When considering ways to update a space, ceilings are frequently forgotten. You'd be surprised at the difference, nevertheless, a fresh coat of paint can make on your ceiling. To improve your area, our team of painting professionals will expertly prepare and paint your ceiling.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-img">
-              <img src="{{ asset(config('site_config.assets.images').'ct5.png') }}" alt="image" class="img-fluid">
-              <div class="inner-img">
-                <img src="{{ asset(config('site_config.assets.images').'ct6.png') }}" alt="image" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-         <div class="row ex-cb">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <div class="residential-interior-content">
-              <h2><span>Exterior</span></h2>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="residential-img-co">
-              <img src="{{ asset(config('site_config.assets.images').'ec1.png') }}" alt="image" class="img-fluid">
-              <div class="res-des">
-                <img src="{{ asset(config('site_config.assets.images').'ec-design.png') }}" alt="image" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="cabinet-heading">
-              <h2>Residential Exterior</h2>
-              <p>Experience our top-notch service by letting Calgary Painting Crew breathe new life into your outdoor painting or staining project.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-cb">
-              <h2>Fence & Deck</h2>
-              <p>Decks and fences in Calgary suffer greatly from the hard winters. Trust Calgary Painting Crew to maximise your outdoor living area. Your old wood will be revitalised by our crew of deck and fence painting specialists, who will turn it into a lovely outdoor living area that you'll be proud to show off to family and friends at your summer barbecues.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-img">
-              <img src="{{ asset(config('site_config.assets.images').'ec2.png') }}" alt="image" class="img-fluid">
-              <div class="inner-img">
-                <img src="{{ asset(config('site_config.assets.images').'ec3.png') }}" alt="image" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-img2">
-              <img src="{{ asset(config('site_config.assets.images').'ec4.png') }}" alt="image" class="img-fluid second-img">
-              <div class="inner-img2">
-                <img src="{{ asset(config('site_config.assets.images').'ec5.png') }}" alt="image" class="img-fluid one-img">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-cb">
-              <h2>Hardy</h2>
-              <p>To prepare window trim, door trim, doors, soffits, fascia, or any other external trim for painting or staining, it first requires scraping, sanding, and caulking. Then we apply premium, long-lasting paints, stains, and other treatments to keep your trim weatherproof and in top condition.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row cb-flex2">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-cb">
-              <h2>Stucco</h2>
-              <p>After power washing the stucco to clean it, we use film and paper to cover any sections that shouldn't be painted until the stucco is completely dried. The elastomeric coating or latex stucco paint of your choice in the colour of your choosing is then applied once all areas have been protected to rejuvenate and protect the stucco for years to come. To make sure the paint/coating adheres to the stucco properly and uniformly, we apply the stucco paints and elastomeric coatings by spray painting, back rolling, and brushing.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="interior-exterior-img">
-              <img src="{{ asset(config('site_config.assets.images').'ec6.png') }}" alt="image" class="img-fluid">
-              <div class="inner-img">
-                <img src="{{ asset(config('site_config.assets.images').'ec7.png') }}" alt="image" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- RESIDENTIAL INTERIOR SECTION END -->
-    <!-- FOOTER SECTION BEGIN -->
+   </div>
+</section>
+<!-- SERVICES ADVISORY SECTION END -->
 @endsection
