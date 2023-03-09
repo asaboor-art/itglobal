@@ -164,21 +164,53 @@ mounted(){
                     class:"vue-select1",
                     grid:"col-md-6 col-12",
                     type:"select",
-                    isdynamic:true,
+                    isdynamic:false,
                     searchable:true,
                     options:function(){
                             if(this.isdynamic){
                                 return ref.citiesOptions;            
                             }
                             return [
-                                {
-                                    text:'Residential',
-                                    id:'Residential'
+                            {
+                                    text:'Islamabad',
+                                    id:'Islamabad'
                                 },
                                 {
-                                    text:'Commercial',
-                                    id:'Commercial'
-                                }
+                                    text:'Rawalpindi',
+                                    id:'Rawalpindi'
+                                },
+                                {
+                                    text:'Gujjar Khan',
+                                    id:'Gujjar Khan'
+                                },
+                                {
+                                    text:'Mardan',
+                                    id:'Mardan'
+                                },
+                                {
+                                    text:'Peshawar',
+                                    id:'Peshawar'
+                                },
+                                {
+                                    text:'Quetta',
+                                    id:'Quetta'
+                                },
+                                {
+                                    text:'Karachi',
+                                    id:'Karachi'
+                                },
+                                {
+                                    text:'Multan',
+                                    id:'Multan'
+                                },
+                                {
+                                    text:'Sialkot',
+                                    id:'Sialkot'
+                                },
+                                {
+                                    text:'Lahore',
+                                    id:'Lahore'
+                                },
                             ];
                     },
                     placeholder:function(){

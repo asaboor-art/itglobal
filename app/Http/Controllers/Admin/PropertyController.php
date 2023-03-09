@@ -48,7 +48,7 @@ class PropertyController extends BaseController
             $condition = [];
             $result = [];
             
-            $this->setFilters($request);
+            $this->setGeneralFilters($request);
             $this->property->setSelectedColumn(['id','name','slug','address','area','price','city','developer','type','category']);
 
             $this->property->setRenderColumn([
@@ -119,11 +119,12 @@ class PropertyController extends BaseController
         [],'',[],'where');
 
         
-        
+        // dd($result);
         if($request->ajax()){
             return view('properties.ajax.properties',[
                 'Properties' => $result,
-                'request' => $request
+                'request' => $request,
+                'pageno' => $this->property->getStart()
             ]);
         }
             

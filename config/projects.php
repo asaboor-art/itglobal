@@ -45,6 +45,11 @@ return [
             'name' => 'Sialkot Motorway City',
             'image1' => 'c9.png',
             'image2' => 'sialkot-motorway-city.png', 
+        ],
+      	[
+            'name' => 'Grand City Mardan',
+            'image1' => 'c10.jpg',
+            'image2' => 'grand-city-mardan.png', 
         ]
     ],
     'eighteen' => [
@@ -87,9 +92,10 @@ return [
 
         ],
         'section6' => [
-            'image1' => 'marker-map.jpg',
-            'image2' => 'marker-loc.jpg',
+            'image1' => 'eighteen-map.jpg',
+            'image2' => 'eighteen-marker-loc.jpg',
             'image3' => 'marker-eighteen.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13274.803078620545!2d73.071064!3d33.716691!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf9bd3c1d50b%3A0x8a73941e455ef7eb!2sRazia%20Sharif%20Plaza!5e0!3m2!1sen!2s!4v1677266338972!5m2!1sen!2s'
         ],
         'galleries' => [
             [   
@@ -255,6 +261,7 @@ return [
             'image1' => 'marker-map.jpg',
             'image2' => 'marker-loc.jpg',
             'image3' => 'marker-capital-smart-city.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3319.9469810051423!2d72.988846!3d33.684437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbdc7f137c599%3A0xcfc85a0966290cdc!2sFDH%20-%20Capital%20Smart%20City%20(Main%20Office)!5e0!3m2!1sen!2s!4v1677266000751!5m2!1sen!2s'
         ],
         'galleries' => [
             [   
@@ -495,9 +502,10 @@ return [
 
         ],
         'section6' => [
-            'image1' => 'marker-map.jpg',
-            'image2' => 'marker-loc.jpg',
+            'image1' => 'kingdom-valley-marker-map.jpg',
+            'image2' => 'kingdom-valley-marker-loc.jpg',
             'image3' => 'marker-kingdom-valley.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.5933412826985!2d73.0752068!3d33.6676974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95bd6a968ad7%3A0x8e039d3765bc2fc8!2sKingdom%20Valley%20Islamabad!5e0!3m2!1sen!2s!4v1677267613861!5m2!1sen!2s'
         ],
         'galleries' => [
             [   
@@ -629,30 +637,14 @@ return [
                     ],
                     [
                         'thumbnail' => 'img/thumbs/42-29.jpg',
-                        'image' => 'assests/amenities/kv16.jpg',
+                        'image' => 'assests/amenities/kv18.jpg',
                         'title' => '',
                     ]
                     
                 ]
                
             ],
-            [   
-                'class' => 'odd items',
-                'images' => [
-                    [
-                        'thumbnail' => 'img/thumbs/90-113.jpg',
-                        'image' => 'assests/amenities/kv17.jpg',
-                        'title' => '',
-                    ],
-                    [
-                        'thumbnail' => 'img/thumbs/42-29.jpg',
-                        'image' => 'assests/amenities/kv18.jpeg',
-                        'title' => '',
-                    ]
-                    
-                ]
-               
-            ],
+           
            
             
         ]
@@ -698,6 +690,7 @@ return [
             'image1' => 'lahore-smart-city-map.jpg',
             'image2' => 'lahore-smart-city-marker-loc.jpg',
             'image3' => 'marker-lahore-smart-city.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.878435150802!2d74.43041699999999!3d31.500025100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190fe7b5715b5b%3A0x48cf5f3918592b96!2sLahore%20Smart%20City%20Pvt%20Ltd!5e0!3m2!1sen!2s!4v1677267692269!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
         ],
         'galleries' => [
             [   
@@ -859,6 +852,7 @@ return [
             'image1' => 'new-metro-city-map.jpg',
             'image2' => 'new-metro-city-marker-loc.jpg',
             'image3' => 'marker-new-metro-city.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.015212849442!2d73.3355636!3d33.2136974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3920057b993aac1d%3A0x8044361cd1dac2ce!2sNew%20Metro%20City%20Gujar%20khan!5e0!3m2!1sen!2s!4v1677267745253!5m2!1sen!2s'
         ],
         'galleries' => [
             [   
@@ -996,6 +990,7 @@ return [
             'image1' => 'nova-city-map.jpg',
             'image2' => 'nova-city-marker-loc.jpg',
             'image3' => 'marker-nova-city.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1702336.412176642!2d72.700822!3d33.556603!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9f9ae3ca2feb%3A0xc8012579a4d47e6f!2sNova%20City%20Location%20-%204%20Seaon%20Investment!5e0!3m2!1sen!2sus!4v1677267848919!5m2!1sen!2sus'
         ],
         'galleries' => [
             [   
@@ -1205,6 +1200,7 @@ return [
             'image1' => 'park-view-city-map.jpg',
             'image2' => 'park-view-city-marker-loc.jpg',
             'image3' => 'marker-park-view-city.png',
+          	'map' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6807.271959620738!2d74.204084!3d31.451687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918fe0f60b2f02f%3A0xb30686048817e73c!2sParkView%20City!5e0!3m2!1sen!2sus!4v1677267915544!5m2!1sen!2sus'
         ],
         'galleries' => [
             [   
@@ -1714,6 +1710,173 @@ return [
             ],
            
             
+        ]
+    ],
+  	'grand-city-mardan' => [
+        'section1' => [
+            'image' => 'gcm-2.jpg',
+            'heading' => '<h5><span>Eighteen Owners and Developers in Islamabad</span></h5>',
+            'description' => "Eighteen - an initiative by Ora Developers, Saif Group Ora Developers, and Kohistan Builders & Developers is located in 18 sectors of Pakistan's capital city close to the motorway.  The Capital Development Authority will shortly approve the No Objection Certificate (NOC) for Eighteen Islamabad (CDA). We may anticipate that CDA will soon accept the society's NOC and layout plan because there have been no claims of illegal expansion or land encroachment made against the society. The project is placed in a strategic location on the Kashmir Highway, 5 km from Golra Mor and 3 km from the exit for Lahore-Islamabad. It is located just a few kilometers from Islamabad International Airport and is the nearest housing society to the city of Islamabad. One of the oldest housing societies in the area, University Town, is located right adjacent to the project. The project is conveniently close to the most promising, highly productive housing societies in the area, including Taj Residencia, B-17 Multi Gardens, and Top City. ",
+
+        ],
+        'section2' => [
+            'image' => '/images/gcm-1.jpg',
+            'heading' => '<span>Master Plan of Eighteen</span>',
+            'description' => "This project's master plan covers 2.7 million square yards of space. In addition to commercial assets targeted at the upper-middle class and upper class of society, the master plan of this auspicious development includes 2000 residential units, 1068 villas of various sizes, and more than 900 apartment apartments. Seven hundred acres of land make up 18 Islamabad. 2000 residential units, 1068 villas, over 900 apartments, and high-end commercial properties are all part of the project's planned amenities. The lavish villas will be built on plots measuring 10 Marla, 1, 2, 4, and 8 Kanals, respectively. These will be fully furnished villas with stunning views of the lavishly landscaped green fields that will cover the entire society. For couples and small families, The Heights offers residential units with studio, 2, 3, and 4-bedroom apartments. The luxuriant flora of the golf course will be seen from these well-designed apartments.",
+
+        ],
+        'section3' => [
+            'image1' => 'gcm-3.jpg',
+            'image2' => 'https://www.youtube.com/watch?v=fpOYeuNYQGs&feature=youtu.be',
+            'heading' => '<span>Eighteen Modern Villas</span>',
+            'description' => "The villas at 18 are the most prestigious and opulent estates, with grand 1/2, 1, 2, 4 & 8 Kanal individual residences. These villas are best suited for larger families or people looking for roomy lodgings because they will provide the safest and most luxurious living.  Eighteen has decided to open international standards business centers and commercial hubs in Pakistan that will definitely give a great boost to our economy and employment. The Core at Eighteen is the newest and most inventive addition to the project, which aims to provide investors with cutting-edge business options. This corporate center will be built using 13 luxurious high-rise skyscrapers.",
+        ],
+        'section4' => [
+            'image' => '/images/eighteen-b2.jpg',
+            'heading' => '<span>Big reasons for investment in Eighteen Islamabad</span>',
+            'description' => "Investors should consider a number of factors before making a home investment, including price, location, approved NOC, payment schedule, amenities, and accessibility. The payment schedule for the home project under negotiation draws investors. The properties are offered with simple payment arrangements for immediate possession. 
+            In addition to having affordable site prices, the community is conveniently situated along Kashmir Highway, close to New Islamabad International Airport. The community provides its residents with both basic and contemporary amenities. 
+            Furthermore, there are no claims of illegal encroachment or extension in the housing scheme's NOC, which the CDA will shortly approve. The residential society becomes safe for investing as a result. 
+            Eighteen Islamabad is suitable for investment due to all of these advantages. Therefore, join this residential project to take advantage of the newest features. 
+            ",
+
+        ],
+        'section5' => [
+            'image' => 'mark1.png',
+            'heading' => '<span>How can you reserve your property at Eighteen Islamabad? </span>',
+            'description' => "You need to submit us:<br/>
+            1.	Two passport-size photos<br/>
+            2.	Your CNIC in two copies<br/>
+            3.	2 copies of your next-of-identification kin's card.<br/>
+            4.	NICOP for international clients",
+
+        ],
+        'section6' => [
+            'image1' => 'marker-map.jpg',
+            'image2' => 'marker-loc.jpg',
+            'image3' => 'marker-eighteen.png',
+        ],
+        'galleries' => [
+            [   
+                'class' => 'odd items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e1.jpg',
+                        'title' => '',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e2.jpg',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+            [   
+                'class' => 'even items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e3.jpg',
+                        'title' => 'Front Gate',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e4.jpg',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+            [   
+                'class' => 'odd items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e5.jpg',
+                        'title' => '',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e6.webp',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+            [   
+                'class' => 'even items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e7.jpg',
+                        'title' => '',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e8.jpg',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+            [   
+                'class' => 'odd items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e9.jpg',
+                        'title' => '',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e10.jpg',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+            [   
+                'class' => 'even items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e11.jpeg',
+                        'title' => '',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e12.jpg',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+            [   
+                'class' => 'odd items',
+                'images' => [
+                    [
+                        'thumbnail' => 'img/thumbs/90-113.jpg',
+                        'image' => 'assests/amenities/e1.jpg',
+                        'title' => '',
+                    ],
+                    [
+                        'thumbnail' => 'img/thumbs/42-29.jpg',
+                        'image' => 'assests/amenities/e2.jpg',
+                        'title' => '',
+                    ]
+                    
+                ]
+               
+            ],
+          
         ]
     ],
 

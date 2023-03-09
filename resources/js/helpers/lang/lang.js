@@ -189,4 +189,10 @@ export const Language = {
     phone:"Phone",
     message:"Message",
     project:"Project",
+    blogs:"Blogs",
+    blog:"Blog",
+    written_by:"Written By",
+    published_by:"Published By",
+    published_at:"Published At",
+    thumbnail_image:"Thumbnail Image",
 };

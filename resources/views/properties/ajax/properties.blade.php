@@ -43,11 +43,22 @@
 
       <div class="bootstrap-pagination wow fadeInDown" data-wow-duration="0.9s" data-wow-delay="0.9s">
          <nav aria-label="Page navigation example">
+            @php 
+              $page = $pageno;
+            @endphp
             <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="javascript:void(0)" data-value="{{ $page-1 }}">Prev</a></li>
                 @for($i=1;$i<=$Properties['pages'];$i++)
                     <li class="page-item"><a class="page-link" href="javascript:void(0)" data-value="{{ $i}}">{{ $i }}</a></li>
+                    @if($i>=5)
+                      @php break; @php 
+                    @endif
                 @endfor
+                @if($pageno < $Properties['pages'])
+                <li class="page-item"><a class="page-link" href="javascript:void(0)" data-value="{{ $page+1 }}">Next</a></li>
+                @endif
             </ul>
+           
          </nav>
       </div>
 <!-- @if(count($Properties) > 0)

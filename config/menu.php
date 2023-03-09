@@ -78,11 +78,7 @@ return [
             //             'submenu_icon' => '',
             //             'submenu' => [],
             //         ],
-                    
-                    
-
-                ],
-            ],
+            //]
             [
                 'name' => 'blogs',
                 'route' => 'blogs.index',
@@ -101,8 +97,9 @@ return [
                 'submenu_icon' => '',
                 'submenu' => [],
             ]
-        ]
+        ],
     ],
+    
     'guest' => [
         [
             'name' => 'home',

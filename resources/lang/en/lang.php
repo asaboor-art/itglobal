@@ -72,6 +72,7 @@ return [
     'footer' =>'Footer',
     'footers' =>'Footers',
     'blog'  =>'Blog',
+    'blogs'  =>'Blogs',
     // Real State
     'property'  => 'Property',
     'properties' => 'Properties',

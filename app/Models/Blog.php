@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\Models\BaseModel;
+use Auth;
 
 class Blog extends BaseModel
 {
@@ -18,7 +19,7 @@ class Blog extends BaseModel
     private $rules = [
         'name' => 'required',
         'slug' => 'required',
-        'desciption' => 'required',
+        'description' => 'required',
         'published_at' => 'required',
         'published_by' => 'required',
         'written_by' => 'required',
@@ -46,7 +47,7 @@ class Blog extends BaseModel
 
         $condition = [];
         $result = [];
-        $this->setSelectedColumn(['blogs.id','blogs.name','blogs.slug','blogs.published_by','blogs.written_by','blogs.published_At']);
+        $this->setSelectedColumn(['id','name','slug','published_by','written_by','published_at','created_at','is_active']);
 
         $this->setRenderColumn([
             [

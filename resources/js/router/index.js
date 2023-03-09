@@ -22,6 +22,10 @@ import EditFooter from '../components/admin/footers/EditFooter.vue';
 import Properties from '../components/admin/properties/Properties.vue';
 import CreateProperty from '../components/admin/properties/CreateProperty.vue';
 import EditProperty from '../components/admin/properties/EditProperty.vue';
+// Blogs
+import Blogs from '../components/admin/blogs/Blogs.vue';
+import CreateBlog from '../components/admin/blogs/CreateBlog.vue';
+import EditBlog from '../components/admin/blogs/EditBlog.vue';
 // Developers
 import Developers from '../components/admin/developers/Developers.vue';
 // import CreateDeveloper from '../components/admin/developers/CreateDeveloper.vue';
@@ -116,6 +120,25 @@ const routes = [
         path: "/admin/properties/edit/:id",
         name: "admin.properties.edit",
         component: EditProperty,
+        props: true,
+    },
+    // Blogs
+    {
+        path: "/admin/blogs",
+        name: "admin.blogs",
+        component: Blogs,
+        props: true,
+    },
+    {
+        path: "/admin/blogs/create",
+        name: "admin.blogs.create",
+        component: CreateBlog,
+        props: true,
+    },
+    {
+        path: "/admin/blogs/edit/:id",
+        name: "admin.blogs.edit",
+        component: EditBlog,
         props: true,
     },
     // Developers

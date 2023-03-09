@@ -6,14 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BaseController;
 use App\Models\Blog;
+use App\Models\Media;
 
 class BlogController extends BaseController
 {
     //
     private $blog;
-    public function __construct(Blog $blog) {
+    public function __construct(Blog $blog,Media $media) {
         $this->blog = $blog;
         $this->setModel($blog);
+        $this->setMedia($media);
        
     }
 
