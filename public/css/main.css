@@ -140,7 +140,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 .calgary-app {text-align: center;}
 .calgary-app span {width: 90px;height: 90px;background-color: #ED2024;display: flex;align-items: center;justify-content: center;border-radius: 50%;margin: 0 auto 22px auto;}
 .calgary-app h6 {font-weight: 500;color: #000000;font-family: 'Montserrat', sans-serif;}
-.calgary-app p {color: #000000;padding-top: 13px;}
+.calgary-app p {color: #000000;padding-top: 13px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
 .why-calgary-btn {margin-top: 40px;text-align: center;}
 .why-calgary-btn .btn-primary {background-color: #ED2024 !important;transition: 0.6s all ease-in-out;font-size: 17px;font-weight: 400;color: #FFFFFF;text-transform: capitalize;border-radius: 8px;padding: 13px 38px;margin-top: 30px;}
 .sources-row {align-items: baseline;}
@@ -381,10 +381,47 @@ footer .row {position: relative;z-index: 1;}
 .blogs-sec-bg {padding: 20px 15px 0;height: 45vh;}
 .our-blogs-pg-sec {padding: 40px 15px 60px;}
 .our-blogs-pg-sec .col-lg-4 {margin-bottom: 0;}
-
-
-
-
+.services-ceramic-sec {padding: 40px 15px 40px;}
+.services-ceramic-sec .aboutus-content {margin-top: 30px;margin-bottom: 44px;}
+.services-ceramic-sec .aboutus-car-row {padding-top: 20px;}
+.things-sec {padding: 40px 15px 30px;}
+.things-sec-content h2 {margin: 41px 0 0;font-size: 35px;line-height: 36px;}
+.video-player-sec {padding: 10px 15px 10px;}
+.video-player-sec .aboutus-content {margin-top: 0;margin-bottom: 40px;}
+.fancy-box-video .aboutus-content p {text-align: justify;}
+.professional-washing-sec {padding: 30px 15px;}
+.professional-washing-heading h2 {font-size: 35px;line-height: 36px;}
+.professional-washing-heading p {width: 100%;}
+.washing-btn {display: block;margin-bottom: 50px;}
+.washing-btn .btn-primary {width: 100%;}
+.washing-btn .number-tel {margin-top: 22px;display: block;}
+.professional-washing-heading li {display: flex;align-items: center;}
+.car-wash-platform-sec {padding: 50px 15px 40px;}
+.aboutus-car-row {padding-top: 0px;}
+.number-speak-sec {padding: 30px 15px 0px;margin: 0 15px;}
+.number-speak-heading h2 {font-size: 35px;line-height: 36px;}
+.main-counter-content {margin-bottom: 50px;}
+.highest-rated-sec {padding: 20px 15px 0px;}
+.calgary-highest-heading h2 {font-size: 35px;line-height: 36px;}
+.calgary-highest-heading {margin-bottom: 40px;}
+.calgary-highest-content {margin-bottom: 40px;margin-top: 40px;}
+.detailing-sec-bg {padding: 10px 0 20px;}
+.paint-protection-sec {padding: 0px 0 20px;}
+.calgary-sec-bg {padding: 20px 15px 0px;}
+.faq-sec-bg {padding: 0px 15px 30px;}
+.our-testimonial-sec {padding: 0px 15px 70px;}
+.faq-heading h2 {font-size: 35px;line-height: 36px;}
+.our-testimonial-content h2 {font-size: 35px;line-height: 36px;}
+.inner-img-text h5 {font-size: 20px;}
+.blog-detail-sec {padding: 40px 15px 20px;}
+.detail-row img {margin-bottom: 20px;}
+.contact-detail-sec {padding: 50px 15px 20px;}
+.contact-detail-content {margin-bottom: 30px;padding: 60px 20px;}
+.embed-map {margin-top: 20px;}
+.contact-form-sec {padding: 20px 15px 50px;}
+.contact-form-content h2 {font-size: 35px;line-height: 36px;}
+.field-con-flex {display: block;}
+.field-inner-con {margin-bottom: 20px;}
 }
 @media only screen and (min-width: 530px) and (max-width: 767px) {
 .header {padding: 15px 15px;position: unset;}
@@ -429,8 +466,48 @@ footer .row {position: relative;z-index: 1;}
 .blogs-sec-bg {padding: 0px 15px 0;height: 65vh;}
 .our-blogs-pg-sec {padding: 40px 15px 60px;}
 .our-blogs-pg-sec .col-lg-4 {margin-bottom: 0;}
-
-
+.services-ceramic-sec {padding: 40px 15px 40px;}
+.services-ceramic-sec .aboutus-content {margin-top: 30px;margin-bottom: 44px;}
+.services-ceramic-sec .aboutus-car-row {padding-top: 20px;}
+.things-sec {padding: 40px 15px 30px;}
+.things-sec-content h2 {margin: 41px 0 0;font-size: 35px;line-height: 36px;}
+.video-player-sec {padding: 10px 15px 10px;}
+.video-player-sec .aboutus-content {margin-top: 0;margin-bottom: 40px;}
+.fancy-box-video .aboutus-content p {text-align: justify;}
+.professional-washing-sec {padding: 30px 15px;}
+.professional-washing-heading h2 {font-size: 35px;line-height: 36px;}
+.professional-washing-heading p {width: 100%;}
+.washing-btn {display: block;margin-bottom: 50px;}
+.washing-btn .btn-primary {width: 100%;}
+.washing-btn .number-tel {margin-top: 22px;display: block;}
+.professional-washing-heading li {display: flex;align-items: center;}
+.car-wash-platform-sec {padding: 50px 15px 40px;}
+.aboutus-car-row {padding-top: 0px;}
+.number-speak-sec {padding: 30px 15px 0px;margin: 0 15px;}
+.number-speak-heading h2 {font-size: 35px;line-height: 36px;}
+.main-counter-content {margin-bottom: 50px;}
+.highest-rated-sec {padding: 20px 15px 0px;}
+.calgary-highest-heading h2 {font-size: 35px;line-height: 36px;}
+.calgary-highest-heading {margin-bottom: 40px;}
+.calgary-highest-content {margin-bottom: 40px;margin-top: 40px;}
+.detailing-sec-bg {padding: 10px 0 20px;}
+.paint-protection-sec {padding: 0px 0 20px;}
+.calgary-sec-bg {padding: 20px 15px 0px;}
+.faq-sec-bg {padding: 0px 15px 30px;}
+.our-testimonial-sec {padding: 0px 15px 70px;}
+.faq-heading h2 {font-size: 35px;line-height: 36px;}
+.our-testimonial-content h2 {font-size: 35px;line-height: 36px;}
+.inner-img-text h5 {font-size: 20px;}
+.our-testimonial-sec .slick-dots {display: none !important;}
+.blog-detail-sec {padding: 40px 15px 20px;}
+.detail-row img {margin-bottom: 20px;}
+.contact-detail-sec {padding: 50px 15px 20px;}
+.contact-detail-content {margin-bottom: 30px;padding: 60px 20px;}
+.embed-map {margin-top: 20px;}
+.contact-form-sec {padding: 20px 15px 50px;}
+.contact-form-content h2 {font-size: 35px;line-height: 36px;}
+.contact-detail-content a {word-break: break-all;}
+.social-icon-links li {padding: 0 0px 0 0;}
 }
 @media only screen and (min-width:768px) and (max-width: 991px) {
 .banner-sec-bg {padding: 180px 15px 60px;height: auto;}
@@ -473,7 +550,47 @@ footer .row {position: relative;z-index: 1;}
 .our-blogs-pg-sec {padding: 40px 15px 60px;}
 .our-blogs-pg-sec .col-lg-4 {margin-bottom: 0;}
 .book-now-btn {display: none;}
-
+.services-ceramic-sec {padding: 40px 15px 40px;}
+.services-ceramic-sec .aboutus-content {margin-top: 30px;margin-bottom: 44px;}
+.services-ceramic-sec .aboutus-car-row {padding-top: 20px;}
+.things-sec {padding: 10px 15px 30px;}
+.things-sec-content h2 {margin: 41px 0 0;font-size: 35px;line-height: 36px;}
+.video-player-sec {padding: 10px 15px 10px;}
+.video-player-sec .aboutus-content {margin-top: 0;margin-bottom: 40px;}
+.fancy-box-video .aboutus-content p {text-align: justify;}
+.professional-washing-sec {padding: 30px 15px;}
+.professional-washing-heading h2 {font-size: 35px;line-height: 36px;}
+.professional-washing-heading p {width: 100%;}
+.washing-btn {display: block;margin-bottom: 50px;}
+.washing-btn .btn-primary {width: 100%;}
+.washing-btn .number-tel {margin-top: 22px;display: block;}
+.professional-washing-heading li {display: flex;align-items: center;}
+.car-wash-platform-sec {padding: 50px 15px 40px;}
+.aboutus-car-row {padding-top: 0px;}
+.number-speak-sec {padding: 30px 15px 0px;margin: 0 15px;}
+.number-speak-heading h2 {font-size: 35px;line-height: 36px;}
+.main-counter-content {margin-bottom: 50px;}
+.highest-rated-sec {padding: 20px 15px 0px;}
+.calgary-highest-heading h2 {font-size: 35px;line-height: 36px;}
+.calgary-highest-heading {margin-bottom: 40px;}
+.calgary-highest-content {margin-bottom: 40px;margin-top: 40px;}
+.detailing-sec-bg {padding: 10px 0 20px;}
+.paint-protection-sec {padding: 0px 0 20px;}
+.calgary-sec-bg {padding: 20px 15px 0px;}
+.faq-sec-bg {padding: 0px 15px 30px;}
+.our-testimonial-sec {padding: 0px 15px 70px;}
+.faq-heading h2 {font-size: 35px;line-height: 36px;}
+.our-testimonial-content h2 {font-size: 35px;line-height: 36px;}
+.inner-img-text h5 {font-size: 20px;}
+.our-testimonial-sec .slick-dots {display: none !important;}
+.blog-detail-sec {padding: 40px 15px 20px;}
+.detail-row img {margin-bottom: 20px;}
+.contact-detail-sec {padding: 50px 15px 20px;}
+.contact-detail-content {margin-bottom: 30px;padding: 60px 20px;}
+.contact-form-sec {padding: 20px 15px 50px;}
+.contact-form-content h2 {font-size: 35px;line-height: 36px;}
+.contact-detail-content a {word-break: break-all;margin-bottom: 6px;}
+.social-icon-links li {padding: 0 0px 0 0;}
 }
 @media only screen and (min-width:992px) and (max-width: 1199px) {
 .banner-sec-bg {padding: 180px 15px 60px;height: auto;}
@@ -514,34 +631,59 @@ footer .row {position: relative;z-index: 1;}
 .our-blogs-pg-sec {padding: 80px 15px 60px;}
 .our-blogs-pg-sec .col-lg-4 {margin-bottom: 0;}
 .book-now-btn {display: none;}
-
+.things-sec {padding: 30px 15px 30px;}
+.services-ceramic-sec {padding: 50px 120px 60px;}
+.professional-washing-sec {padding: 70px 0px 70px 35px;}
+.car-wash-platform-sec {padding: 50px 15px 40px;}
+.aboutus-car-row {padding-top: 90px;}
+.number-speak-sec {padding: 30px 15px 0px;margin: 0 48px;}
+.number-speak-heading h2 {font-size: 35px;line-height: 36px;}
+.main-counter-content {margin-bottom: 50px;}
+.highest-rated-sec {padding: 20px 15px 0px;}
+.calgary-highest-heading h2 {font-size: 35px;line-height: 36px;}
+.calgary-highest-heading {margin-bottom: 40px;}
+.calgary-highest-content {margin-bottom: 40px;margin-top: 40px;}
+.detailing-sec-bg {padding: 10px 0 20px;}
+.paint-protection-sec {padding: 0px 0 20px;}
+.calgary-sec-bg {padding: 20px 15px 0px;}
+.faq-sec-bg {padding: 0px 15px 30px;}
+.our-testimonial-sec {padding: 0px 15px 70px;}
+.faq-heading h2 {font-size: 35px;line-height: 36px;}
+.our-testimonial-content h2 {font-size: 35px;line-height: 36px;}
+.inner-img-text h5 {font-size: 20px;}
+.contact-detail-sec {padding: 50px 15px 20px;}
+.contact-detail-content {margin-bottom: 30px;padding: 60px 20px;}
+.contact-form-sec {padding: 20px 15px 50px;}
+.contact-form-content h2 {font-size: 35px;line-height: 36px;}
+.contact-detail-content a {word-break: break-all;margin-bottom: 6px;}
+.social-icon-links li {padding: 0 0px 0 0;}
 }
 @media only screen and (min-width:1260px) and (max-width: 1365px) {
 .about-us-sec {padding: 230px 120px 210px;}
 .left-full-content {width: 67%;}
 .right-full-content {width: 67%;}
 footer .row {z-index: 1;position: relative;}
-
-
-
+.services-ceramic-sec {padding: 50px 120px 60px;}
+.professional-washing-sec {padding: 70px 0px 70px 123px;}
+.left-design {left: -300px;}
 }
 @media only screen and (min-width:1366px) and (max-width: 1439px) {
 .about-us-sec {padding: 230px 120px 210px;}
 .left-full-content {width: 67%;}
 .right-full-content {width: 67%;}
 footer .row {z-index: 1;position: relative;}
-
-
-
+.services-ceramic-sec {padding: 50px 120px 60px;}
+.professional-washing-sec {padding: 70px 0px 70px 123px;}
+.left-design {left: -300px;}
 }
 @media only screen and (min-width: 1440px) and (max-width: 1599px){
 .about-us-sec {padding: 230px 120px 210px;}
 .left-full-content {width: 67%;}
 .right-full-content {width: 67%;}
 footer .row {z-index: 1;position: relative;}
-
+.professional-washing-sec {padding: 70px 0px 70px 156px;}
 }
 @media only screen and (min-width: 1600px) and (max-width: 1900px) {
-
+.professional-washing-sec {padding: 70px 0px 70px 232px;}
 }
 /*RESPONSIVE CSS END*/

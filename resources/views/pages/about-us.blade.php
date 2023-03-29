@@ -2,9 +2,11 @@
 
 @section('content')
 <!-- BANNER SECTION BEGIN -->
+   @php $name = explode(' ',$Page->name); @endphp
+  
   @include('banners.bannerv4',[
-    'heading' => "<span>About</span> Us",
-    'subheading' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    'heading' => count($name)>1? count($name)-2>0?"<span>". implode(" ",array_slice($name,count($name)-2))."</span>":"<span>".$name[0]."</span> ".$name[count($name)-1]:"<span>".$name[0]."</span>",
+    'subheading' => $Page->description
   ])
   <section class="car-wash-platform-sec">
       <div class="container">
@@ -152,7 +154,7 @@
    <section class="detailing-sec-bg">
       <div class="container-fluid">
          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12 col-md-6 col-sm-6">
                <div class="right-full-content">
                   <h2>Detailing</h2>
                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>

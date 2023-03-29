@@ -16,19 +16,42 @@
                         @php 
                             $Menus = config('site_config.menus.pages');
                         @endphp
-                    @if(true)
-                        @foreach($Menus as $key => $menu)
-                            @if(!$menu['is_main'])
-                            <li class="menu-item">
-                                <a class="menu-link" href="{{ route('site-pages',$menu['link']) }}">{{ trans('lang.'.$menu['name'])}}</a>
-                            </li>
-                            @else
-                            <li class="menu-item">
-                                <a class="menu-link active" href="{{ route('home') }}">{{ trans('lang.'.$menu['name'])}}</a>
-                            </li>
-                            @endif
-                        @endforeach
-                    @endif
+                        @if(true)
+                            @foreach($Menus as $key => $menu)
+                                @if(!$menu['is_main']) 
+                                <li class="{{ $menu['class']}} dropdown_c dropdown_click" >
+                                 @if($menu['has_submenu'])
+                                 <div class="selected menu-item" data-target="#dropdown{{ $key }}">
+                                       <a href="{{ $menu['type'] == 'page'?route('site-pages',$menu['link']):route($menu['link'])  }}" class="{{ $menu['link-class']}}" data-target="#dropdown{{ $key }}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    </div>
+                                    <div class="drop-content" data-target="#dropdown{{ $key }}">
+                                       <ul id="dropdown{{ $key }}">
+                                         @if(count($menu['submenu']) > 0)
+                                             @foreach($menu['submenu'] as $submenu)
+                                                <li>
+                                                   <a href="{{ route($submenu['route'],$submenu['link']) }}">{{ $submenu['text'] }} </a>
+                                                </li>
+                                             @endforeach
+                                          @endif
+                                       </ul>
+                                    </div>
+                                    @else
+                                    @if($menu['type'] == 'page')
+                                       <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    @else
+                                    <a href="{{ route($menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    @endif
+                                 @endif
+                                 
+                                 </li>
+                                @else
+                                <li class="{{ $menu['class'] }}">
+                                    <a href="{{ route('home') }}" class="{{ $menu['link-class'] }}">{{ trans('lang.'.$menu['name'])}}</a>
+                                
+                                 </li>
+                                @endif
+                            @endforeach
+                        @endif
                       
                     </ul>
                    <!-- <ul class="menu-inner">
@@ -41,7 +64,7 @@
                    </ul> -->
                 </div>
                 <div class="book-now-btn">
-                  <a href="{{ route('site-pages','contact') }}" class="btn btn-primary">Book Now!</a>
+                  <a href="{{ route('site-pages','contact-us') }}" class="btn btn-primary">{{ trans('lang.book_now')}}!</a>
                 </div>
               </nav>
            </div>

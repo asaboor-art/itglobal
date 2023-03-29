@@ -19,6 +19,11 @@ import Footers from '../components/admin/footers/Footers.vue';
 import CreateFooter from '../components/admin/footers/CreateFooter.vue';
 import EditFooter from '../components/admin/footers/EditFooter.vue';
 
+// Blogs
+import Blogs from '../components/admin/blogs/Blogs.vue';
+import CreateBlog from '../components/admin/blogs/CreateBlog.vue';
+import EditBlog from '../components/admin/blogs/EditBlog.vue';
+
 const routes = [
     {
         path: "/admin",
@@ -86,6 +91,26 @@ const routes = [
         path: "/admin/footers/edit/:id",
         name: "admin.footers.edit",
         component: EditFooter,
+        props: true,
+    },
+
+    // Blogs
+    {
+        path: "/admin/blogs",
+        name: "admin.blogs",
+        component: Blogs,
+        props: true,
+    },
+    {
+        path: "/admin/blogs/create",
+        name: "admin.blogs.create",
+        component: CreateBlog,
+        props: true,
+    },
+    {
+        path: "/admin/blogs/edit/:id",
+        name: "admin.blogs.edit",
+        component: EditBlog,
         props: true,
     },
 

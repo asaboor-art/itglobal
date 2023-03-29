@@ -72,4 +72,13 @@ return [
     'footer' =>'Footer',
     'footers' =>'Footers',
     'submit' => 'Submit',
+    'book_now' => 'Book Now',
+    'blogs' => 'Blogs',
+    'blog' => 'Blog',
+    'learn_more' => 'Learn More',
+    'view_all' => 'View All',
+    'read_more' => 'Read More',
+    'load_more' => 'Load More',
+    'check_services' => 'Check Services',
+    'service_includes' => 'Our car detailing solutions include:',
 ];

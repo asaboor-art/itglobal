@@ -56,3 +56,29 @@ Route::prefix('developer')->group(function () {
 Route::prefix('pages')->group(function () {
     Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
 });
+
+// Blogs
+
+Route::prefix('blogs')->group(function () {
+    Route::get('/',function(){
+        return view('blogs.blogs');
+    })->name('blogs');
+
+    Route::get('/{slug}',function(){
+        return view('blogs.blog-detail');
+    })->name('blog');
+});
+
+// Services
+
+Route::prefix('services')->group(function () {
+    Route::get('/',function(){
+        return view('pages.services');
+    })->name('services');
+    Route::get('/{slug}',function($slug){
+        return view('pages.service-detail',[
+            'service' => $slug,
+            'title' => str_replace('-',' ',strtoupper($slug)),
+        ]);
+    })->name('service');
+});

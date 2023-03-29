@@ -12,33 +12,39 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                <div class="quick-links">
-                  <h4>Quick Links</h4>
+                  <h4>{{ trans('lang.quick_links') }}</h4>
+                  @php 
+                     $FooterMenus = config('site_config.menus.footer-menu1');
+                  @endphp
                   <ul>
-                     <li><a href="javascript:void(0)">Home</a></li>
-                     <li><a href="javascript:void(0)">About Us</a></li>
-                     <li><a href="javascript:void(0)">Services</a></li>
-                     <li><a href="javascript:void(0)">Blogs</a></li>
-                     <li><a href="javascript:void(0)">Contact Us</a></li>
+                     @foreach($FooterMenus as $menu)
+                     <li><a href="{{ route('site-pages',$menu['link']) }}">{{ trans('lang.'.$menu['name'])}}</a></li>
+                     @endforeach
                   </ul>
                </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                <div class="quick-links">
-                  <h4>Services</h4>
+                  <h4>{{ trans('lang.services') }}</h4>
+                  @php 
+                     $Services = trans('content.services.services');
+                  @endphp
                   <ul>
-                     <li><a href="javascript:void(0)">Complete Packages</a></li>
-                     <li><a href="javascript:void(0)">Interior Packages</a></li>
+                     @foreach($Services as $Service)
+                     <li><a href="{{ route($Service['link'],$Service['slug']) }}">{{ $Service['heading'] }}</a></li>
+                     @endforeach
+                     <!-- <li><a href="javascript:void(0)">Interior Packages</a></li>
                      <li><a href="javascript:void(0)">Exterior Packages</a></li>
-                     <li><a href="javascript:void(0)">Ceramic Coatings</a></li>
+                     <li><a href="javascript:void(0)">Ceramic Coatings</a></li> -->
                   </ul>
                </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-12">
                <div class="quick-links">
-                  <h4>Contact Us</h4>
+                  <h4>{{ trans('lang.contact') }}</h4>
                   <ul>
-                     <li><a href="tel:123-123-1234">Phone:<span>123-123-1234</span></a></li>
-                     <li><a href="mailto:calgarydetailing.ca">Email:<span>calgarydetailing.ca</span></a></li>
+                     <li><a href="tel:{{ config('site_config.contacts.phone') }}">Phone:<span>{{ config('site_config.contacts.phone') }}</span></a></li>
+                     <li><a href="mailto:{{ config('site_config.contacts.email') }}">Email:<span>{{ config('site_config.contacts.email') }}</span></a></li>
                   </ul>
                </div>
             </div>
@@ -51,10 +57,10 @@
             </div>
          </div>
          <div class="left-footer-design">
-            <img src="/images/footer-des.png" alt="image" class="img-fluid">
+            <img src="{{ asset(config('site_config.assets.images').'footer-des.png') }}" alt="image" class="img-fluid">
          </div>
          <div class="right-footer-design">
-            <img src="/images/footer-des.png" alt="image" class="img-fluid">
+            <img src="{{ asset(config('site_config.assets.images').'footer-des.png') }}" alt="image" class="img-fluid">
          </div>
       </div>
    </footer>
