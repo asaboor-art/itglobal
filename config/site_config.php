@@ -27,8 +27,8 @@ return [
                 'is_main' => true,
                 'class' => 'menu-item',
                 'type' => 'page',
-                'link-class' => 'menu-link active',
-                'has_submenu' => true,
+                'link-class' => 'menu-link',
+                'has_submenu' => false,
                 'submenu' => []
             ],
             [
@@ -38,7 +38,7 @@ return [
                 'class' => 'menu-item',
                 'type' => 'page',
                 'link-class' => 'menu-link ',
-                'has_submenu' => true,
+                'has_submenu' => false,
                 'submenu' => []
             ],
             [
@@ -48,7 +48,7 @@ return [
                 'class' => 'menu-item',
                 'type' => 'page',
                 'link-class' => 'menu-link ',
-                'has_submenu' => true,
+                'has_submenu' => false,
                 'submenu' => []
             ],
             [
@@ -58,7 +58,7 @@ return [
                 'class' => 'menu-item',
                 'type' => 'link',
                 'link-class' => 'menu-link',
-                'has_submenu' => true,
+                'has_submenu' => false,
                 'submenu' => []
             ],
             [
@@ -68,7 +68,7 @@ return [
                 'class' => 'menu-item',
                 'type' => 'page',
                 'link-class' => 'menu-link',
-                'has_submenu' => true,
+                'has_submenu' => false,
                 'submenu' => []
             ],
             

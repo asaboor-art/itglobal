@@ -2,7 +2,7 @@
 @section('content')
     @include('banners.bannerv4',[
     'heading' => "<span>Our</span> Blogs",
-    'subheading' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    'subheading' => "Check out our blogs to learn more about how and why you should protect your vehicle today!"
     ])
 @php
    $Blogs = trans('content.blogs');

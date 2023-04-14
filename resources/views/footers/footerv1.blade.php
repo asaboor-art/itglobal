@@ -18,7 +18,11 @@
                   @endphp
                   <ul>
                      @foreach($FooterMenus as $menu)
+                     @if($menu['link'] != 'home')
                      <li><a href="{{ route('site-pages',$menu['link']) }}">{{ trans('lang.'.$menu['name'])}}</a></li>
+                     @else
+                        <li><a href="{{ route($menu['link']) }}">{{ trans('lang.'.$menu['name'])}}</a></li>
+                     @endif
                      @endforeach
                   </ul>
                </div>

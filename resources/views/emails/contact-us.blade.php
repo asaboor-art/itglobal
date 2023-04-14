@@ -309,21 +309,41 @@ a {
                           <h1>Contact Email</h1>
                  
                           
-                          <p>Mail:</p>
+                          <p>MAIL:</p>
                           <table style="width:100%">
                           <tr>
-                            <td><strong>Name</strong></td>
-                            <td>{{$data['name']}}</td>
+                            <td><strong>NAME</strong></td>
+                            <td>{{$data['first_name']}}</td>
                           </tr>
                     
                           <tr>
-                            <td><strong>Email</strong></td>
+                            <td><strong>EMAIL</strong></td>
                             <td>{{$data['email']}}</td>
                           </tr>
                           <tr>
-                            <td><strong>Message</strong></td>
+                            <td><strong>MESSAGE</strong></td>
                             <td>{{$data['message']}}</td>
                           </tr>
+                          <tr>
+                            <td><strong>SUBJECT</strong></td>
+                            <td>{{$data['subject']}}</td>
+                          </tr>
+                          @php 
+                            $CustomFields = isset($data['custom_fields'])?json_decode($data['custom_fields']):null;
+                           
+                          @endphp
+
+                          @if(isset($CustomFields))
+                          
+                            @foreach($CustomFields as $key => $field)
+                            <tr>
+                                <td><strong>{{ strtoupper($key)}}</strong></td>
+                                <td>{{ $field }}</td>
+                            </tr>
+                            @endforeach
+                          @endif
+
+
                         </table><br>
                           
                         </td>
@@ -338,39 +358,7 @@ a {
 
     <div class="spacer">&nbsp;</div>
 
-    <table class="footer center" width="602" border="0" cellspacing="0" cellpadding="0">
-        <tbody>
-        <tr>
-            <td class="border" colspan="2">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="signature" width="300">
-                <p>
-                    With best regards,<br>
-                    Company Name<br>
-                    +0 (000) 00-00-00, John Doe<br>
-                    </p>
-                <p>
-                    Support: <a class="strong" href="mailto:#" target="_blank">info@whello.id</a>
-                </p>
-            </td>
-            <td class="subscription" width="300">
-                <div class="logo-image">
-                    <a href="#" target="_blank"><img src="https://zavoloklom.github.io/material-design-iconic-font/icons/mstile-70x70.png" alt="logo-alt" width="70" height="70"></a>
-                </div>
-                <p>
-                    <a class="strong block" href="#" target="_blank">
-                        Unsubscribe
-                    </a>
-                    <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <a class="strong block" href="#" target="_blank">
-                        Account Settings
-                    </a>
-                </p>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+   
 </center>
 </body>
 </html>

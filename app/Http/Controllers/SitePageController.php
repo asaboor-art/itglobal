@@ -31,10 +31,13 @@ class SitePageController extends BaseController
 
     public function renderSitePages(Request $request,$page){
         
-        $Page = Page::where('is_active',1)->where('is_home_page','!=',1)->where('slug',$page)->first();
+        $Page = Page::where('is_active',1)->where('slug',$page)->first();
         try{
 
             if(!isset($Page)){
+                // if($page == 'blogs'){
+                //     return redirect()->route('blogs');
+                // }
                 return view(config('site_config.assets.pages').$page,[
                     'title' => strtoupper(str_replace('-',' ',$page)),
                     'Page' => null,
@@ -44,6 +47,7 @@ class SitePageController extends BaseController
                 return redirect()->route('home');
             }
             else if($Page->has_custom_view){
+                
                 return view(config('site_config.assets.pages').$Page->view,[
                     'title' => $Page->name,
                     'Page' => $Page,

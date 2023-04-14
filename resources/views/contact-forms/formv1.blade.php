@@ -17,13 +17,36 @@
                     @if($field['type'] == 'textarea')
                    
                         <div class="{{ $field['class'] }}">
-                           <textarea cols="8" rows="8" class="form-control {{ $field['name'] }}" placeholder="{{ trans('messages.contact_placeholder_msg')}}"></textarea>
+                           <textarea cols="8" rows="8" class="form-control {{ $field['field_class'] }}" name="{{ $field['name'] }}" placeholder="{{ trans('messages.contact_placeholder_msg')}}"></textarea>
                            <div class="error-{{ $field['name'] }} errors"></div>
                         </div>
+                     @elseif($field['type'] == 'select')
+                            @if($field['multiple'] == true)
+                            <div class="{{ $field['class'] }}">
+                            <label>
+                            
+                                <input mbsc-input id="services-select-input" class="form-control {{ $field['field_class'] }}" placeholder="Select {{ $field['label'] }}" data-dropdown="true" name="{{ $field['name'] }}" data-input-style="outline" data-label-style="stacked" data-tags="true" />
+                            </label>
+                            <select id="services-select" class="form-control" name="{{ $field['name'] }}" multiple>
+                                <option Value="">Select {{ $field['label'] }}</option>
+                                @foreach($field['options'] as $option)
+                                    <option Value="{{ $option['value'] }}">{{ $option['text'] }}</option>
+                                @endforeach
+                            </select>
+                           </div>
+                            @else
+                            <select id="services-select" class="form-control" name="{{ $field['name'] }}">
+                                <option Value="">Select {{ $field['label'] }}</option>
+                                @foreach($field['options'] as $option)
+                                    <option Value="{{ $option['value'] }}">{{ $option['text'] }}</option>
+                                @endforeach
+                            </select>
+                            @endif
+                            
                      @else
                      
                         <div class="{{ $field['class'] }}">
-                           <input type="{{ $field['type'] }}" placeholder="{{ $field['placeholder'] }}" class="form-control {{ $field['name'] }}">
+                           <input type="{{ $field['type'] }}" placeholder="{{ $field['placeholder'] }}" name="{{ $field['name'] }}" class="form-control {{ $field['field_class'] }}">
                            <div class="error-{{ $field['name'] }} errors"></div>
                         </div>
                        

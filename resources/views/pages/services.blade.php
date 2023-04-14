@@ -14,12 +14,13 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="professional-washing-heading">
                <h2><span>Professional Washing &</span> Cleaning Services</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedia do eiusmod tempor incididunt ut labore. There are many varia tion of passages of Lorem Ipsum available.</p>
+               <p>We specialize in complete vehicle paint long term protection and our services reflect soley that.</p>
                <h6>Our car detailing solutions include:</h6>
                <ul>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Lorem ipsum dolor sit amet, consectetur adipiscing</li>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> It is a long established fact that a reader more.</li>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> There are many variations of passages of Lorem Ipsum</li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Ceramic coating is a durable protective layer applied to a vehicle's exterior</li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Polishing is the process of removing scratch and swirl imperfections from a vehicle's exterior.</li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Wheel coatings enhance appearance and provide protection. Leather is conditioned to prevent cracking and fading. </li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid">Paint protection film (PPF) is a clear film applied to a vehicle's painted surfaces.  </li>
                </ul>
                <div class="washing-btn">
                   <a href="javascript:void(0)" class="btn btn-primary">{{ trans('lang.check_services') }}</a>

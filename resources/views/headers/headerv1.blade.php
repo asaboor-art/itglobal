@@ -16,11 +16,14 @@
                         @php 
                             $Menus = config('site_config.menus.pages');
                         @endphp
+                        
                         @if(true)
                             @foreach($Menus as $key => $menu)
+                           
                                 @if(!$menu['is_main']) 
                                 <li class="{{ $menu['class']}} dropdown_c dropdown_click" >
                                  @if($menu['has_submenu'])
+                                 
                                  <div class="selected menu-item" data-target="#dropdown{{ $key }}">
                                        <a href="{{ $menu['type'] == 'page'?route('site-pages',$menu['link']):route($menu['link'])  }}" class="{{ $menu['link-class']}}" data-target="#dropdown{{ $key }}">{{ trans('lang.'.$menu['name'])}}</a>
                                     </div>
@@ -36,10 +39,14 @@
                                        </ul>
                                     </div>
                                     @else
+                                    
                                     @if($menu['type'] == 'page')
-                                       <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    
+                                       <a href="{{ route('site-pages',$menu['link']) }}" class="{{ $menu['link-class']}} {{ \Request::url() ==  route('site-pages',$menu['link'])?'active':''}}">{{ trans('lang.'.$menu['name'])}}</a>
                                     @else
-                                    <a href="{{ route($menu['link']) }}" class="{{ $menu['link-class']}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    
+                                    <a href="{{ route($menu['link']) }} " class="{{ $menu['link-class']}} {{ \Request::route()->getName() ==  $menu['link']?'active':''}}">{{ trans('lang.'.$menu['name'])}}</a>
+                                    
                                     @endif
                                  @endif
                                  

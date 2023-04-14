@@ -9,18 +9,14 @@ use App\Models\BaseModel;
 class Footer extends BaseModel
 {
     use HasFactory;
+
+    public function __construct(){
+        $this->rules = config('rules.footer');
+    }
     protected $fillable = ['name','view'];
     protected $table = 'footers';
     public $class_name = 'App\Models\Header';
-    private $rules = [
-        'name' => 'required',
-        'view' =>  'required',
-    ];
-
-
-    public function getRule(){
-        return $this->rules;
-    }
+ 
 
     public function getRecordDataTable($request){
         if($request->has('search') && $request->search !=''){

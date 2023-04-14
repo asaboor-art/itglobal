@@ -1,23 +1,29 @@
 <!-- WHY CALGARY SECTION BEGIN -->
+@php
+   $WhySec = trans('content.why-sec');
+   
+@endphp
 <section class="why-calgary-sec">
       <div class="container">
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-12 col-sm-6">
                <div class="why-calgary-heading">
-                  <h2><span>Why</span> Calgary Detailing.ca</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <h2>{!! $WhySec['heading']  !!}</h2>
+                  <p>{!! $WhySec['description']  !!}</p>
                </div>
             </div>
          </div>
          <div class="row sources-row">
+            @foreach($WhySec['sections'] as $section)
             <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                <div class="calgary-app">
-                  <span><img src="/images/q1.png" alt="image" class="img-fluid"></span>
-                  <h6>CONVENIENT</h6>
-                  <p>Save time with services that come to you</p>
+                  <span><img src="{{ asset(config('site_config.assets.images').$section['image']) }}" alt="image" class="img-fluid"></span>
+                  <h6>{{ $section['heading'] }}</h6>
+                  <p>{{ $section['description'] }}</p>
                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+            @endforeach
+            <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                <div class="calgary-app">
                   <span><img src="/images/q2.png" alt="image" class="img-fluid"></span>
                   <h6>TRUSTED</h6>
@@ -37,10 +43,10 @@
                   <h6>GREEN</h6>
                   <p>Eco-conscious at every step</p>
                </div>
-            </div>
+            </div> -->
          </div>
          <div class="why-calgary-btn">
-            <a href="javascript:void(0)" class="btn btn-primary">TELL ME MORE</a>
+            <a href="{{ route('site-pages','about-us') }}" class="btn btn-primary">{{ trans('lang.tell_me_more') }}</a>
          </div>
       </div>
    </section>

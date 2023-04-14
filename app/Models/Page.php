@@ -10,19 +10,14 @@ use Auth;
 class Page extends BaseModel
 {
     use HasFactory;
+    public function __construct(){
+        $this->rules = config('rules.page.store');
+    }
     protected $fillable = ['name','slug','description','view','layout','has_custom_view','display_to_menu','is_active','is_delete','is_home_page'];
     public $class_name = 'App\Models\Page';
     protected $table = 'pages';
 
-    private $rules = [
-        'name' => 'required',
-        'slug' => 'required',
-        'view' =>  'required',
-        'description' => 'required',
-        'layout' => 'required',
-        'display_to_menu' => 'required|min:0|max:1',
-        'is_home_page' => 'required|min:0|max:1',
-    ];
+    
 
     //private $select_columns = 
     

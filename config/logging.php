@@ -58,6 +58,7 @@ return [
             'driver' => 'single',
             'path' => storage_path('logs/queries/query-'.date('Y-m-d').'.log'),
             'level' => env('LOG_LEVEL', 'debug'),
+            'tap' => [App\Logging\CustomizeFormatter::class],
         ],
 
         'daily' => [

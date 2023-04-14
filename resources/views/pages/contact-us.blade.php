@@ -47,7 +47,7 @@
 </section>
  <!-- CONTACT DETAIL SECTION END -->
 <!-- CONTACT FORM SECTION BEGIN -->
-   <section class="contact-form-sec">
+   <section class="contact-form-sec form">
       @include('contact-forms.formv1',[
          'heading' => "<span>How Can We</span> Help You?",
          'description' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -59,6 +59,7 @@
                   
                   'type'  => 'text',
                   'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
                   'name' => 'first_name',
                   'placeholder' =>  trans('messages.placeholder',['attribute' => trans('lang.name')]) 
                ],
@@ -66,6 +67,7 @@
                   
                   'type'  => 'email',
                   'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
                   'name' => 'email',
                   'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.email')]) 
                ],
@@ -73,6 +75,7 @@
                   
                   'type'  => 'tel',
                   'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
                   'name' => 'phone',
                   'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.phone')]) 
                ],
@@ -80,13 +83,75 @@
                   
                   'type'  => 'text',
                   'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
                   'name' => 'subject',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.subject')]) 
+                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.vehicle-detail')]) 
+               ],
+               [
+                  
+                  'type'  => 'text',
+                  'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
+                  'name' => 'make',
+                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.make')]) 
+               ],
+               [
+                  
+                  'type'  => 'text',
+                  'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
+                  'name' => 'model',
+                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.model')]) 
+               ],
+               [
+                  
+                  'type'  => 'text',
+                  'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
+                  'name' => 'color',
+                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.color')]) 
+               ],
+               [
+                  
+                  'type'  => 'select',
+                  'label' => trans('lang.service'),
+                  'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
+                  'name' => 'services',
+                  'options' => [
+                     [
+                        'value' => 'Polishing/Paint Correction',
+                        'text' => 'Polishing/Paint Correction'
+                     ],
+                     [
+                        'value' => 'Ceramic Coating Paint',
+                        'text' => 'Ceramic Coating Paint'
+                     ],
+                     [
+                        'value' => 'Glass Ceramic Coating',
+                        'text' => 'Glass Ceramic Coating'
+                     ],
+                     [
+                        'value' => 'Wheel Ceramic Coating',
+                        'text' => 'Wheel Ceramic Coating'
+                     ],
+                     [
+                        'value' => 'Interior Ceramic Coating',
+                        'text' => 'Interior Ceramic Coating'
+                     ],
+                     [
+                        'value' => 'Paint Protection Film',
+                        'text' => 'Paint Protection Film'
+                     ],
+                  ],
+                  'multiple' => true,
+                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.service')]) 
                ],
                [
                   
                   'type'  => 'textarea',
                   'class' => 'field-inner-con',
+                  'field_class' => 'form-field',
                   'name' => 'message',
                   'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.message')]) 
                ]

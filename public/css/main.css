@@ -203,7 +203,7 @@ footer {position: relative;padding: 60px 120px 20px;background-color: #000000;ov
 .blogs-sec-bg .banner-inner-content span {display: inline;}
 .blogs-sec-bg .banner-inner-content {text-align: center;}
 .our-blogs-pg-sec {padding: 90px 120px 60px;}
-.our-blogs-pg-sec .col-lg-4 {margin-bottom: 32px;display:none;}
+.our-blogs-pg-sec .col-lg-4 {margin-bottom: 32px;}
 .our-blogs-pg-sec .load-more{background-color: #ED2024 !important;transition: 0.6s all ease-in-out;font-size: 17px;font-weight: 400;color: #FFFFFF;text-transform: capitalize;border-radius: 8px;padding: 13px 38px;margin-top: 30px;}
 .blogs-load-more {margin: 50px 0 0;text-align: center;}
 /*OUR BLOGS PAGE CSS END*/
@@ -337,6 +337,12 @@ footer {position: relative;padding: 60px 120px 20px;background-color: #000000;ov
 .con-submit-btn .btn-primary {background-color: #ED2024 !important;transition: 0.6s all ease-in-out;font-size: 17px;font-weight: 400;color: #FFFFFF;text-transform: capitalize;border-radius: 8px;padding: 13px 38px;}
 /*CONTACT US PAGE CSS END*/
 
+/* Ghazanfar */
+.form-sec .mbsc-windows.mbsc-textfield-wrapper{margin: 0 !important; }
+.form-sec .mbsc-textfield.mbsc-textfield-tags.mbsc-textarea{background-color:#F6F6F6 !important;border: none;padding: 10px;text-align: left;}
+
+.contact-form-sec .mbsc-windows.mbsc-textfield-wrapper{margin: 0 !important;}
+.contact-form-sec .mbsc-textfield.mbsc-textfield-tags.mbsc-textarea{outline: none;height: auto;box-shadow: none;padding: 13px 15px;border-radius: 0;border: 1px solid #00000042;resize: none; }
 /*RESPONSIVE CSS BEGIN*/
 @media only screen and (min-width: 320px) and (max-width: 529px) {
 .header {padding: 15px 15px;position: unset;}

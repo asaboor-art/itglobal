@@ -24,11 +24,11 @@ function showPassword(event) {
 
 $('.newsletter-form').on('submit', (e) => {
     e.preventDefault();
+    var form = new FormData();
+    form.append('email', $('.newsletter-email').val());
     ajaxPost(
         '/newsletter',
-        {
-            email:$('.newsletter-email').val(),
-        },
+        form,
         '.newsletter-success','.newsletter-error',
     )
 });
@@ -36,14 +36,25 @@ $('.newsletter-form').on('submit', (e) => {
 $('.contact-form').on('submit', (e) => {
     e.preventDefault();
     var form = new FormData();
-    console.log(form)
-    form.append('first_name', $('.first_name').val());
-    form.append('last_name', $('.last_name').val());
-    form.append('email', $('.email').val());
-    form.append('subject', $('.subject').val());
-    form.append('message', $('.message').val());
+    $('.form').find('.form-field').each((index,element) => {
+        console.log(element.getAttribute('name'), element.value);
+        form.append(element.getAttribute('name'), element.value);
+        
+    });
+    // form.append('first_name', $('.first_name').val());
+    // form.append('last_name', $('.last_name').val());
+    // form.append('email', $('.email').val());
+    // form.append('subject', $('.subject').val());
+    // form.append('message', $('.message').val());
 
     ajaxPost('/contact-us',form,'.contact-success','.contact-error')
+});
+
+$(function () {
+    // Mobiscroll Select initialization
+    $('#services-select').mobiscroll().select({
+        inputElement: document.getElementById('services-select-input')  // More info about inputElement: https://docs.mobiscroll.com/5-23-2/select#opt-inputElement
+    });
 });
 
 $('.get-a-quote-form').on('submit', (e) => {

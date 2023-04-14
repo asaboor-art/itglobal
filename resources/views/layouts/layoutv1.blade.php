@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- <link href="{{ asset(config('site_config.assets.css').'jquery.fancybox.min.css.css') }}" rel="stylesheet"> -->
     <link href="{{ asset(config('site_config.assets.css').'animate.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'mobiscroll.jquery.min.css') }}">
     <!-- <link rel="stylesheet" href="{{ asset(config('site_config.assets.css').'animate.css') }}"> -->
   </head>
   <body>
@@ -40,6 +41,8 @@
     <script src="{{ asset(config('site_config.assets.js_scripts').'jquery.fancybox.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'owl.carousel.min.js') }}"></script>
     <script src="{{ asset(config('site_config.assets.js_scripts').'wow.min.js') }}"></script>
+    <script src="{{ asset(config('site_config.assets.js_scripts').'mobiscroll.jquery.min.js') }}"></script>
+    
     <script>
       const blade_config = {
         baseUrl: "{{ env('APP_URL') }}"

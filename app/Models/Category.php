@@ -11,6 +11,11 @@ class Category extends BaseModel
 {
     use HasFactory;
     protected $table= 'categories';
+    public $class_name = 'App\Models\Category';
+
+    public function __construct(){
+        $this->rules = [];
+    }
 
     public static function boot()
     {

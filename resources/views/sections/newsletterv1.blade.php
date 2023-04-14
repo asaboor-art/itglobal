@@ -23,10 +23,10 @@
             </div>
          </div>
          <div class="left-design">
-            <img src="images/subscribe-design.png" alt="image" class="img-fluid">
+            <img src="{{ asset(config('site_config.assets.images').'subscribe-design.png') }}" alt="image" class="img-fluid">
          </div>
          <div class="right-design">
-            <img src="images/subscribe-design.png" alt="image" class="img-fluid">
+            <img src="{{ asset(config('site_config.assets.images').'subscribe-design.png') }}" alt="image" class="img-fluid">
          </div>
       </div>
    </section>

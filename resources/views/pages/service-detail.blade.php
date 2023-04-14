@@ -2,7 +2,9 @@
 @section('content')
 
 @php
+
       $Service =  trans('content.services.'.$service);
+      
    @endphp
   
 @include('banners.bannerv4',[
@@ -23,10 +25,12 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                <div class="aboutus-content">
                   <h2>{!! $Service['sections'][0]['heading'] !!}</h2>
-                  <p>{{ $Service['sections'][0]['description'] }}</p>
+                  <p>{!! $Service['sections'][0]['description'] !!}</p>
                </div>
                <div class="car-dt-cont">
+                  @if(count($Service['sections'][0]['service-include']) > 0)
                   <h6>{{ trans('lang.service_includes') }}</h6>
+                  @endif
                   <div class="row">
                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                         <ul>
@@ -59,7 +63,7 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="aboutus-content">
                   <h2>{!! $Service['sections'][1]['heading'] !!} </h2>
-                  <p>{{ $Service['sections'][1]['description'] }} </p>
+                  <p>{!! $Service['sections'][1]['description'] !!} </p>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -70,7 +74,9 @@
    </section>
    <!-- SERVICES CERAMIC SECTION END -->
    <!-- THINGS SECTION BEGIN -->
-   @include('sections.things-sec')
+   @include('sections.things-sec',[
+      'Things' =>   $Service['sections']['things-sec'] 
+   ])
    <!-- THINGS SECTION END -->
    <!-- VIDEO PLAYER SECTION BEGIN -->
    <section class="video-player-sec">
@@ -94,7 +100,7 @@
                   </div>
                </div>
                <div class="aboutus-content">
-                  <p>{{ $Service['sections']['video-desc'] }}</p>
+                  <p>{!! $Service['sections']['video-desc'] !!}</p>
                </div>
             </div>
          </div>

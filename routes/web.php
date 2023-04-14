@@ -17,8 +17,7 @@ use Artisan;
 |
 */
 
-Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
-Route::get('/pages/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
+
 
 Route::get('/error', function(){
     return view('errors.404');
@@ -52,10 +51,7 @@ Route::prefix('developer')->group(function () {
 });
 
 
-// Static Pages
-Route::prefix('pages')->group(function () {
-    Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
-});
+
 
 // Blogs
 
@@ -72,9 +68,9 @@ Route::prefix('blogs')->group(function () {
 // Services
 
 Route::prefix('services')->group(function () {
-    Route::get('/',function(){
-        return view('pages.services');
-    })->name('services');
+    // Route::get('/',function(){
+    //     return view('pages.services');
+    // })->name('services');
     Route::get('/{slug}',function($slug){
         return view('pages.service-detail',[
             'service' => $slug,
@@ -82,3 +78,6 @@ Route::prefix('services')->group(function () {
         ]);
     })->name('service');
 });
+
+Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
+Route::get('/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
