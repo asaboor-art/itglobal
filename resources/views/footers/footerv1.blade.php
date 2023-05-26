@@ -6,7 +6,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                <div class="footer-logo">
                   <a href="javascript:void(0)"><img src="/images/logo.png" alt="image" class="img-fluid"></a>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <p>We are a ceramic coating company dedicated to protecting and enhancing the appearance of your vehicle. Our high-quality coatings provide long-lasting shine and protection against damage from the elements</p>
                   <a href="javascript:void(0)" class="footer-logo-link">READ MORE <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                </div>
             </div>

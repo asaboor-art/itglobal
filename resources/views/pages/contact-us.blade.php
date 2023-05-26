@@ -29,8 +29,7 @@
                      <ul>
                         <li><a href="{{ config('site_config.contacts.instagram')}}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li><a href="{{ config('site_config.contacts.facebook')}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="{{ config('site_config.contacts.twitter')}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="{{ config('site_config.contacts.whatsapp')}}"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                        
                      </ul>
                   </div>
                </div>
@@ -86,30 +85,6 @@
                   'field_class' => 'form-field',
                   'name' => 'subject',
                   'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.vehicle-detail')]) 
-               ],
-               [
-                  
-                  'type'  => 'text',
-                  'class' => 'field-inner-con',
-                  'field_class' => 'form-field',
-                  'name' => 'make',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.make')]) 
-               ],
-               [
-                  
-                  'type'  => 'text',
-                  'class' => 'field-inner-con',
-                  'field_class' => 'form-field',
-                  'name' => 'model',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.model')]) 
-               ],
-               [
-                  
-                  'type'  => 'text',
-                  'class' => 'field-inner-con',
-                  'field_class' => 'form-field',
-                  'name' => 'color',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.color')]) 
                ],
                [
                   

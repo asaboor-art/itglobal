@@ -31,6 +31,7 @@
                   @if(count($Service['sections'][0]['service-include']) > 0)
                   <h6>{{ trans('lang.service_includes') }}</h6>
                   @endif
+                  <br/>
                   <div class="row">
                      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                         <ul>

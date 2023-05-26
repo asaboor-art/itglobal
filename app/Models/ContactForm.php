@@ -33,14 +33,14 @@ class ContactForm extends BaseModel
             $data['message'] = $request['message'];
 
             // Mapping Custom Fields(Have to me customized according to the request)
-            $fields = [
-                'make' => $request['make'],
-                'color' => $request['color'],
-                'model' => $request['model'],
-                'services' => $request['services']
-            ];
+            // $fields = [
+            //     'make' => $request['make'],
+            //     'color' => $request['color'],
+            //     'model' => $request['model'],
+            //     'services' => $request['services']
+            // ];
 
-            $data['custom_fields'] = json_encode($fields);
+            // $data['custom_fields'] = json_encode($fields);
             $response = parent::store($data);
             return $response;
 

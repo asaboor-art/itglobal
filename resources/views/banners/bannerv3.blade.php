@@ -51,27 +51,6 @@
                ],
                [
                   
-                  'type'  => 'text',
-                  'class' => 'field-inner-con form-field',
-                  'name' => 'make',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.make')]) 
-               ],
-               [
-                  
-                  'type'  => 'text',
-                  'class' => 'field-inner-con form-field',
-                  'name' => 'model',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.model')]) 
-               ],
-               [
-                  
-                  'type'  => 'text',
-                  'class' => 'field-inner-con form-field',
-                  'name' => 'color',
-                  'placeholder' => trans('messages.placeholder',['attribute' => trans('lang.color')]) 
-               ],
-               [
-                  
                   'type'  => 'select',
                   'label' => trans('lang.service'),
                   'class' => 'field-inner-con form-field',

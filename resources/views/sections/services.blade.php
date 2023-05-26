@@ -24,7 +24,7 @@
                <div class="box-content">
                   <img src="{{ asset(config('site_config.assets.images').$Service['image']) }}" alt="image" class="img-fluid">
                   <h4>{{ $Service['heading'] }}</h4>
-                  <p>{{ $Service['description'] }}}</p>
+                  <p>{{ $Service['description'] }}</p>
                   <a href="{{ route($Service['link'],$Service['slug']) }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>
             </div>

@@ -20,8 +20,9 @@
                      $name = explode(' ',$ceramic['heading']);
                      
                   @endphp
-                  <h2>{!!count($name)>1?"<span>".$name[0]."</span>" .' '.$name[1]:$name[0] !!}</h2>
+                  <h2>{!!count($name)>1?"<span>".$name[0]."</span>" .' '. implode(' ',array_slice($name,1,count($name)-1)):$name[0] !!}</h2>
                   <p>{!! $ceramic['description'] !!}</p>
+                  <a href="{{ route($ceramic['link'],$ceramic['slug']) }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>   
             </div>
             @else
@@ -30,9 +31,11 @@
                <div class="left-full-content">
                   @php
                      $name = explode(' ',$ceramic['heading']);
+                   
                   @endphp
-                  <h2>{!!count($name)>1?"<span>".$name[0]."</span>" .' '.$name[1]:$name[0] !!}</h2>
+                  <h2>{!!count($name)>1?"<span>".$name[0]."</span>" .' '. implode(' ',array_slice($name,1,count($name)-1)):$name[0] !!}</h2>
                   <p>{!! $ceramic['description'] !!}</p>
+                  <a href="{{ route($ceramic['link'],$ceramic['slug']) }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>   
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">

@@ -98,15 +98,13 @@ return [
 
     ],
     'contacts' => [
-        'phone' => "(403)376-3322",
-        'email' => "info@calgarypaintingcrew.com",
-        'copyright' => "© 2022 Calgary Painting Crew. All rights reserved.",
-        'name' => "Calgary Painting",
+        'phone' => "(587) 284-9184",
+        'email' => "info@ceramiccoatingscalgary.com",
+        'copyright' => "© 2023 Ceramic Coatings Calgary . All rights reserved",
+        'name' => "Ceramic Coatings",
         'address'   => "328 40 Ave NE Calgary,AB T2E 2M7",
         'developer' => 'K13.ca',
-        'facebook' => 'javascript:void(0);',
-        'tiktok' => 'javascript:void(0);',
-        'whatsapp' => 'javascript:void(0);',
+        'facebook' => 'https://www.facebook.com/dripautopros',
         'instragram' => 'https://www.instagram.com/calgarypaintingcrew/?igshid=ZmVmZTY5ZGE%3D',
         'map' => "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28393.307336755148!2d-114.05491292789799!3d51.02284509581211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scalgary%20detailing%20CA!5e0!3m2!1sen!2s!4v1679095364003!5m2!1sen!2s"
     ]

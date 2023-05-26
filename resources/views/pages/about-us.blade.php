@@ -57,7 +57,7 @@ Our team is made up of highly trained and experienced professionals who are dedi
             <div class="col-lg-3 col-md-3 col-sm-3 col-12">
                <div class="main-counter-content">
                   <div class="stastic">
-                    <h4 class="counter">3500</h4>
+                    <h4 class="counter">250</h4>
                     <div class="small-des">
                    <img src="/images/small-des.png" alt="image" class="img-fluid">
                 </div>
@@ -68,7 +68,7 @@ Our team is made up of highly trained and experienced professionals who are dedi
             <div class="col-lg-3 col-md-3 col-sm-3 col-12">
                <div class="main-counter-content">
                    <div class="stastic">
-                    <h4  class="counter">1270</h4>
+                    <h4  class="counter">500</h4>
                     <div class="small-des">
                    <img src="/images/small-des.png" alt="image" class="img-fluid">
                 </div>
@@ -79,7 +79,7 @@ Our team is made up of highly trained and experienced professionals who are dedi
             <div class="col-lg-3 col-md-3 col-sm-3 col-12">
                <div class="main-counter-content">
                   <div class="stastic">
-                    <h4  class="counter">68</h4>
+                    <h4  class="counter">13</h4>
                    <div class="small-des">
                    <img src="/images/small-des.png" alt="image" class="img-fluid">
                 </div>
@@ -90,7 +90,7 @@ Our team is made up of highly trained and experienced professionals who are dedi
             <div class="col-lg-3 col-md-3 col-sm-3 col-12">
                <div class="main-counter-content">
                   <div class="stastic">
-                    <h4  class="counter">4900</h4>
+                    <h4  class="counter">5000</h4>
                     <div class="small-des">
                    <img src="/images/small-des.png" alt="image" class="img-fluid">
                 </div>
@@ -122,6 +122,7 @@ Our team is made up of highly trained and experienced professionals who are dedi
                   <h2><span>Ceramic</span> Coating</h2>
                   <p>Ceramic coating is a liquid thin glass layer applied to the exterior of a vehicle to protect it from the elements. It provides a durable layer of protection against UV rays, chemicals, and minor scratches. The coating creates a hydrophobic surface that repels water, dirt, and other contaminants, making it easier to clean and maintain. Ceramic coatings can last for several years, reducing the need for regular waxing or polishing. The coating also enhances the appearance of the vehicle by creating a deep, glossy shine</p>
                   <p>Ceramic coating is a protective layer that is applied to a vehicle's paint surface to provide long-lasting protection against the elements. The process typically involves several steps:<br/>1.	Prep work: The first step in the process is to thoroughly wash and decontaminate the vehicle's exterior surfaces to remove any dirt, debris, or contaminants that may affect the adhesion of the ceramic coating.<br/>2.	Paint correction: If necessary, the vehicle's paint may be subjected to a paint correction process to remove any imperfections, such as swirl marks, scratches, or oxidation. This step is essential for achieving a smooth, flawless surface before applying the ceramic coating.<br/>3.	Application: The ceramic coating is applied in thin, even layers using a specialized applicator or spray gun. The coating is designed to bond chemically with the paint surface, creating a protective barrier that repels water, dirt, and other contaminants.<br/>4.  Curing: Once the coating has been applied, it needs to cure for a specific period to achieve its full protective properties. This process typically takes several hours to several days, depending on the type of coating and the environmental conditions.<br/> Ceramic coating is a popular choice for car owners who want to protect their vehicle's paint from damage and preserve its appearance for years to come. While the process requires a significant investment of time and money, the benefits of ceramic coating are well worth it for those who prioritize the long-term health and value of their vehicle.</p>
+                  <a href="{{ route('service','ceramic-coating') }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>   
             </div>
          </div>
@@ -134,8 +135,8 @@ Our team is made up of highly trained and experienced professionals who are dedi
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="calgary-highest-heading">
-                  <h4>Car wash & deatiling service</h4>
-                  <h2><span>Calgary's Highest Rated Detailing</span> Car Service</h2>
+                  <h4>Protect Your Investment</h4>
+                  <h2><span>Ceramic Coating</span> Service</h2>
                </div>
             </div>
          </div>
@@ -158,11 +159,12 @@ Our team is made up of highly trained and experienced professionals who are dedi
          <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12 col-md-6 col-sm-6">
                <div class="right-full-content">
-                  <h2>Detailing</h2>
+                  <h2>Ceramic Coating Calgary Protection</h2>
                   <p>At our business, we offer a range of professional and high-quality wheel, glass, and ceramic coating services to protect and enhance the appearance of your vehicle. When you book a service with us, our experienced technicians will thoroughly inspect, clean, and prepare your car's surfaces before applying the appropriate coating for optimal protection and longevity.
 We use only the highest quality products and techniques to ensure that your car looks its best and stays protected from everyday wear and tear. Our team will keep you informed throughout the service and provide you with care instructions and maintenance tips to help you keep your coated surfaces looking great for as long as possible.
 Our goal is to provide exceptional customer service and deliver results that exceed your expectations. So why wait? Book your wheel, glass, and ceramic coating service with us today and see the difference for yourself!
 </p>
+<a href="{{ route('service',str_replace(' ','-',strtolower('Polish & Scratch Removal'))) }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>   
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -180,8 +182,8 @@ Our goal is to provide exceptional customer service and deliver results that exc
          <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="calgary-highest-heading">
-                  <h4>Car wash & deatiling service</h4>
-                  <h2><span>Calgary's Highest Rated Detailing</span> Car Service</h2>
+                  <h4>Protect Your Investment</h4>
+                  <h2><span>Ceramic Coating </span> Service</h2>
                </div>
             </div>
          </div>
@@ -192,6 +194,7 @@ Our goal is to provide exceptional customer service and deliver results that exc
             <div class="col-lg-8 col-md-8 col-sm-8 col-12">
                <div class="calgary-highest-content">
                   <p>LPolishing and paint correction are two crucial steps in the auto detailing process that can help to enhance the appearance and protect the paint of your vehicle. Polishing involves the use of specialized compounds and tools to remove imperfections in the paint, such as swirl marks, scratches, and oxidation. This process can restore the shine and gloss of your vehicle's paint and prepare it for further protection with a ceramic coating or wax. Paint correction, on the other hand, is a more intensive process that involves multiple stages of polishing and sanding to remove deeper scratches and defects in the paint. This process can take longer, but it can transform a vehicle's appearance and restore its original factory finish. Whether you're looking to improve the overall appearance of your vehicle or prepare it for a ceramic coating, polishing and paint correction can help to achieve a stunning, long-lasting finish.</p>
+                  <a href="{{ route('service',str_replace(' ','-',strtolower('Polish & Scratch Removal'))) }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>
             </div>
          </div>
@@ -230,7 +233,7 @@ Our goal is to provide exceptional customer service and deliver results that exc
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="faq-heading">
                   <h2><span>Frequently</span> Asked Questions</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <p>Interested in a ceramic coating calgary? Find out all you need to know below. If you have any other questions or concerns please contact us today!</p>
                </div>
                <div class="faq-questions">
                   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -238,78 +241,87 @@ Our goal is to provide exceptional customer service and deliver results that exc
                           <div class="panel-heading" role="tab" id="headingOne">
                                <h4 class="panel-title">
                           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+                          What is ceramic coating?
                           </a>
                         </h4>
 
                           </div>
                           <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                              <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                              <div class="panel-body">Ceramic coating is a liquid polymer that is applied to the exterior of a vehicle to protect it from various environmental hazards, such as UV rays, acid rain, bird droppings, and scratches. It creates a layer of protection on the car's surface that lasts for several years, making it easier to clean and maintain.</div>
                           </div>
                       </div>
                       <div class="panel panel-default">
                           <div class="panel-heading" role="tab" id="headingTwo">
                                <h4 class="panel-title">
                           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+                          What are the benefits of ceramic coating?
+
                           </a>
                         </h4>
 
                           </div>
                           <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                              <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                              <div class="panel-body">Ceramic coating provides several benefits, including:<br/>
+                                 Protection against environmental hazards<br/>
+                                 Enhanced gloss and shine<br/>
+                                 Easier maintenance and cleaning<br/>
+                                 Resistance to chemical stains and contaminants<br/>
+                                 Protection against UV rays and oxidation<br/>
+                                 Long-lasting durability and protection<br/>
+
+                              </div>
                           </div>
                       </div>
                       <div class="panel panel-default">
                           <div class="panel-heading" role="tab" id="headingThree">
                                <h4 class="panel-title">
                           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+                          How long does ceramic coating last?
                           </a>
                         </h4>
 
                           </div>
                           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                              <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                              <div class="panel-body">The lifespan of ceramic coating depends on various factors, such as the quality of the coating, the application process, and the level of maintenance. Typically, a ceramic coating can last for 2-5 years with proper care and maintenance.</div>
                           </div>
                       </div>
                       <div class="panel panel-default">
                           <div class="panel-heading" role="tab" id="headingFour">
                                <h4 class="panel-title">
                           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+                          How is ceramic coating applied?
                           </a>
                         </h4>
 
                           </div>
                           <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                              <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                              <div class="panel-body">Ceramic coating is applied by hand using a microfiber applicator pad. The process involves cleaning the vehicle's surface, removing any contaminants, and applying the coating in small sections. After applying the coating, it needs to cure for several hours before the vehicle can be driven.</div>
                           </div>
                       </div>
                       <div class="panel panel-default">
                           <div class="panel-heading" role="tab" id="headingFive">
                                <h4 class="panel-title">
                           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+                          Can ceramic coating be applied to any surface?
                           </a>
                         </h4>
 
                           </div>
                           <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                              <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                              <div class="panel-body">Ceramic coating is primarily designed for automotive paint surfaces, but it can also be applied to other surfaces, such as wheels, glass, and plastic trim. However, it's important to note that the application process and durability may vary depending on the surface material.</div>
                           </div>
                       </div>
                       <div class="panel panel-default">
                           <div class="panel-heading" role="tab" id="headingSix">
                                <h4 class="panel-title">
                           <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry?
+                          Is ceramic coating worth the investment?
                           </a>
                         </h4>
 
                           </div>
                           <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                              <div class="panel-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                              <div class="panel-body">Ceramic coating is worth the investment because it provides long-lasting protection, easier maintenance, enhanced appearance, protection against environmental hazards, and can increase the resale value of the vehicle. Although it may come with a higher price tag compared to traditional products, the benefits of ceramic coating make it a worthwhile investment for those who want to preserve and maintain their vehicle's appearance for the long term.</div>
                           </div>
                       </div>
                   </div>
@@ -326,7 +338,7 @@ Our goal is to provide exceptional customer service and deliver results that exc
             <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                <div class="our-testimonial-content">
                   <h2><span>Our Top</span> Testimonials</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                  <p>With over 5+ years of experience in the industry  and hundreds of clients serviced you can trust your vehicle with ceramiccoatingscalgary.com</p>
                </div>
                <div class="our-testimonial-slider">
                   <div class="slider responsive">
@@ -334,14 +346,14 @@ Our goal is to provide exceptional customer service and deliver results that exc
                         <div class="inner-slider-box">
                            <div class="inner-img-flex">
                               <div class="inner-img">
-                                 <img src="{{ asset(config('site_config.assets.images').'t1.png') }}" alt="image" class="img-fluid">
+                                 <img src="{{ asset(config('site_config.assets.images').'user-man.png') }}" alt="image" class="img-fluid">
                               </div>
                               <div class="inner-img-text">
-                                 <h5>Chris Haris</h5>
-                                 <span>Professor</span>
+                                 <h5>Ricky Morison</h5>
+                                 <span>General Manager Of Toyota Calgary</span>
                               </div>
                            </div>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                           <p>We've been using Pau  for our ceramic coating needs for years now, and we couldn't be happier with the service. They are professional, reliable, and always do an excellent job. Our customers love the results, and we've had many compliments on the quality of the work. We highly recommend this business to anyone looking for ceramic coating services.</p>
                            <div class="pos-comma">
                               <img src="{{ asset(config('site_config.assets.images').'comma.png') }}" alt="image" class="img-fluid">
                            </div>
@@ -351,31 +363,14 @@ Our goal is to provide exceptional customer service and deliver results that exc
                         <div class="inner-slider-box">
                            <div class="inner-img-flex">
                               <div class="inner-img">
-                                 <img src="{{ asset(config('site_config.assets.images').'t2.png') }}" alt="image" class="img-fluid">
-                              </div>
-                              <div class="inner-img-text">
-                                 <h5>Jim Morison</h5>
-                                 <span>Doctor</span>
-                              </div>
-                           </div>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                           <div class="pos-comma">
-                              <img src="{{ asset(config('site_config.assets.images').'comma.png') }}" alt="image" class="img-fluid">
-                           </div>
-                        </div>
-                     </div>
-                     <div>
-                        <div class="inner-slider-box">
-                           <div class="inner-img-flex">
-                              <div class="inner-img">
-                                 <img src="{{ asset(config('site_config.assets.images').'t3.png') }}" alt="image" class="img-fluid">
+                                 <img src="{{ asset(config('site_config.assets.images').'user-man.png') }}" alt="image" class="img-fluid">
                               </div>
                               <div class="inner-img-text">
                                  <h5>Alex Cruis</h5>
-                                 <span>Professor</span>
+                                 <span>Bentley Bentayga</span>
                               </div>
                            </div>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                           <p>I recently had my car ceramic coated by this business, and I'm extremely happy with the results. The coating has made my car look brand new again, and it's much easier to keep clean. The detailer was friendly and professional, and they took great care in applying the coating to my car. I would highly recommend Paul and his team.</p>
                            <div class="pos-comma">
                               <img src="{{ asset(config('site_config.assets.images').'comma.png') }}" alt="image" class="img-fluid">
                            </div>
@@ -385,14 +380,31 @@ Our goal is to provide exceptional customer service and deliver results that exc
                         <div class="inner-slider-box">
                            <div class="inner-img-flex">
                               <div class="inner-img">
-                                 <img src="{{ asset(config('site_config.assets.images').'t1.png') }}" alt="image" class="img-fluid">
+                                 <img src="{{ asset(config('site_config.assets.images').'user-women.png') }}" alt="image" class="img-fluid">
                               </div>
                               <div class="inner-img-text">
-                                 <h5>Chris Haris</h5>
-                                 <span>Professor</span>
+                                 <h5>Amber Patel</h5>
+                                 <span>Honda Civic</span>
                               </div>
                            </div>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                           <p>I recently had my Honda Civic ceramic coated by Ceramic Coatings Calgary, and I have to say, I'm really impressed with the results. I was a bit hesitant at first to invest in the coating, but I'm glad I did. The car looks better than it did when I first bought it, and the coating has made it much easier to keep clean.</p>
+                           <div class="pos-comma">
+                              <img src="{{ asset(config('site_config.assets.images').'comma.png') }}" alt="image" class="img-fluid">
+                           </div>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="inner-slider-box">
+                           <div class="inner-img-flex">
+                              <div class="inner-img">
+                                 <img src="{{ asset(config('site_config.assets.images').'user-man.png') }}" alt="image" class="img-fluid">
+                              </div>
+                              <div class="inner-img-text">
+                                 <h5>Chris Gais</h5>
+                                 <span>Kawasaki Ninja ZX-10R</span>
+                              </div>
+                           </div>
+                           <p>I had my motorcycle ceramic coated by this business, and I'm amazed at how great it looks. The coating has brought out the depth and clarity of the paint, and it has a mirror-like finish that is just stunning. They took great care in applying the coating to my bike. I've already noticed that dirt and contaminants are less likely to stick to the surface, making it much easier to maintain. I would definitely recommend this business to anyone looking to protect their motorcycle and enhance its appearance.</p>
                            <div class="pos-comma">
                               <img src="{{ asset(config('site_config.assets.images').'comma.png') }}" alt="image" class="img-fluid">
                            </div>
@@ -401,7 +413,7 @@ Our goal is to provide exceptional customer service and deliver results that exc
                   </div>
                </div>
                <div class="testimonial-btn">
-                  <a href="javascript:void(0)" class="btn btn-primary">{{ trans('lang.view_all')}}</a>
+                  <a href="{{ route('site-pages','contact-us') }}" class="btn btn-primary">{{ trans('lang.contact')}}</a>
                </div>
             </div>
          </div>

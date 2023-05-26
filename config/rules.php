@@ -6,9 +6,6 @@ return [
         'phone' => 'required',
         'subject' => 'required',
         'email' => 'required|email',
-        'make' => 'required',
-        'color' => 'required',
-        'model' => 'required',
         'services' => 'required',
         'message' => 'required'
     ],

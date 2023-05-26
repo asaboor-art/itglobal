@@ -13,14 +13,14 @@
          <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="professional-washing-heading">
-               <h2><span>Professional Washing &</span> Cleaning Services</h2>
+               <h2><span>Professional Polishing &</span> Ceramic Coating</h2>
                <p>We specialize in complete vehicle paint long term protection and our services reflect soley that.</p>
-               <h6>Our car detailing solutions include:</h6>
+               <h6>Our Paint Protection Services Include:</h6>
                <ul>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Ceramic coating is a durable protective layer applied to a vehicle's exterior</li>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Polishing is the process of removing scratch and swirl imperfections from a vehicle's exterior.</li>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Wheel coatings enhance appearance and provide protection. Leather is conditioned to prevent cracking and fading. </li>
-                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid">Paint protection film (PPF) is a clear film applied to a vehicle's painted surfaces.  </li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Ceramic Coating.</li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Paint Protection Film.</li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid"> Wheel Polishing & Scratch Removal. </li>
+                  <li><img src="{{ asset(config('site_config.assets.images').'circle-tick.png') }}" alt="image" class="img-fluid">Paint Wheel,Glass & Leather Ceramic Coating.  </li>
                </ul>
                <div class="washing-btn">
                   <a href="javascript:void(0)" class="btn btn-primary">{{ trans('lang.check_services') }}</a>
@@ -56,7 +56,7 @@
                <div class="box-content">
                   <img src="{{ asset(config('site_config.assets.images').$Service['image']) }}" alt="image" class="img-fluid">
                   <h4>{{ $Service['heading'] }}</h4>
-                  <p>{{ $Service['description'] }}}</p>
+                  <p>{{ $Service['description'] }}</p>
                   <a href="{{ route($Service['link'],$Service['slug']) }}" class="link-btn">{{ trans('lang.read_more') }}</a>
                </div>
             </div>
