@@ -139,6 +139,40 @@ function ajaxPost(url,data,succssContainer,errorContainer) {
     })
 }
 
+// Ajax get
+function ajaxGet(url,data,dataContainer,responseType='html',callback=null){
+    $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+     });
+    $.ajax({
+        url: url,
+        method: 'GET',
+        data:data,
+
+        beforeSend: function() {
+            setLoader(true);
+        },
+        success: function(response) {
+            if(responseType == 'html'){
+                $(dataContainer).html(response);
+            }else if(responseType == 'json'){
+               callback(response);
+            }
+          
+        },
+        error:function(error){
+            console.log(error)
+            // $(errorContainer).text(error.responseJSON.message);
+            // $(errorContainer).addClass("alert alert-danger");
+            
+        },
+        complete:function(){
+            setLoader(false);
+        }
+    })
+}
 
 function setLoader(state){
     if(state){
@@ -150,7 +184,45 @@ function setLoader(state){
 }
 
 // Image not found issue
-$('img').on('error',function(e){
+$(document).on('error','img',function(e){
     e.preventDefault();
     $(this).attr('src',blade_config.baseUrl+'/images/image-not-found.png');
 })
+window.onload = function(e){
+    
+    getCities();
+}
+
+// Get all cities of a country
+function getCities() {
+    let ref = $('.cities');
+    
+    var urlParameter = window.location.href.split('?')[1];
+    if(urlParameter && urlParameter.length > 0){
+        city_parameter = urlParameter.split('&')[0];
+        var city = city_parameter.split('=')[1]; 
+        
+    }
+
+    var html = '<option value="">Select City</option>';
+    var cities = ['Islamabad','Rawalpindi', 'Gujjar Khan','Mardan','Peshawar','Quetta','Karachi','Multan',
+        'Sialkot','Lahore'];
+        
+        cities.forEach(element => {
+            if(city && city == element){
+                html += '<option value="'+element+'" selected>'+element+'</option>';
+            }else{
+                html += '<option value="'+element+'">'+element+'</option>';
+            }
+            
+        });
+        ref.html(html);
+    
+    // $.post('https://countriesnow.space/api/v0.1/countries/cities',{
+    //     "country": "pakistan"
+    // },(response,status)=>{
+        
+
+    //     ref.html(html);
+    // });
+}

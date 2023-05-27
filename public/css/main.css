@@ -44,6 +44,22 @@ a:hover, a:focus{text-decoration: none;color: #ED2024;}
 .btn-primary:not(:disabled):not(.disabled):active:focus {box-shadow: none;}
 
 /*HOME PAGE CSS BEGIN*/
+/*TOP SECTION CSS BEGIN*/
+.social-icons-links.social-icons-links2 {display: none;}
+.address-box.address-box2 {display: none;}
+.gradient-bg {background-image: linear-gradient(to bottom, #012148, #022751, #032c5b, #043265, #05386f);}
+.top-bar-sec {padding: 13px 120px;}
+.top-bar-sec .row {justify-content: space-between;align-items: center;}
+.social-icons-links li {display: inline-block;padding: 0 2px 0 0;}
+.social-icons-links a {width: 30px;height: 30px;border-radius: 50%;background-color: #fff;color: #012148;display: flex;align-items: center;justify-content: center;}
+.social-icons-links a:hover {background-color: #dfbd51;color: #fff;transform: rotate(360deg);}
+.social-icons-links i {font-size: 19px;}
+.address-box {text-align: end;}
+.address-box li {display: inline-block;padding: 0 20px 0 0;}
+.address-box a {font-size: 13px;font-weight: 400;color: #fff;}
+.address-box a:hover {color:#dfbd51;}
+.address-box i {color: #dfbe51;margin-right: 5px;font-size: 21px;}
+/*TOP SECTION CSS END*/
 /*HEADER SECTION CSS BEGIN*/
 .header .menu-item .btn-primary {display: none;}
 .header {margin: 0 auto;padding: 15px 120px;position: absolute;top: 0;left: 0;width: 100%;height: auto;z-index: 1;}

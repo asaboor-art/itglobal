@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard.ajax');
+Route::get('/registrations/month', [DashboardController::class, 'getRegistrationsPreMonth'])->name('admin.registrations');
 
 Route::prefix('pages')->group(function () {
     Route::get('/', [PageController::class, 'index'])->name('admin.pages.index');
@@ -54,12 +57,25 @@ Route::prefix('blogs')->group(function(){
     Route::get('/edit/{id}',[BlogController::class, 'edit'])->name('admin.blogs.edit');
     Route::put('/update/{id}',[BlogController::class, 'update'])->name('admin.blogs.update');
     Route::delete('/delete/{id}',[BlogController::class, 'destroy'])->name('admin.blogs.destroy');
+
+    //Media
+    Route::prefix('media')->group(function () {
+        Route::post('/store',[BlogController::class, 'saveFiles']);
+        Route::delete('/delete/{id}',[BlogController::class, 'deleteFile']);
+    });
 });
+// Blogs End
 // Inner dashboard
 // Route::get('/ajax', [DashboardController::class, 'index'])->name('admin.dashboard.ajax');
 // Route::get('/registrations/month', [DashboardController::class, 'getRegistrationsPreMonth'])->name('admin.dashboard.registration.month');
 // // General
 // Route::get('/newsletters/subscribe', [DashboardController::class, 'getNewsletterSubscriptions'])->name('admin.newsletter.subscribe');
+
+// Queries
+Route::prefix('queries')->group(function(){
+    Route::get('/',[ContactFormController::class, 'index'])->name('admin.queries.index');
+    Route::get('/ajax', [ContactFormController::class, 'render'])->name('admin.queries.ajax');
+});
 
 Route::get('/roles', [\App\Http\Controllers\BaseController::class, 'getAllRoles'])->name('admin.roles');
 Route::get('/admin/messages', function () {

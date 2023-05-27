@@ -100,12 +100,11 @@ export default {
                 }else if(e.response.status == 500){
                     errorAlert(e.message)
                 }else{
-
                     errorAlert(e.response.data.message)
                 }
             });;
             this.loader =false;
-            this.errors = errors.value;
+            // this.errors = errors.value;
             
     
         },

@@ -108,32 +108,37 @@ class Helper
         }
     }
 
-    public static function saveMedia($file, $directory,$model,$id)
+    public static function saveMedia($files,$class_name=null,$id=0)
     {
         $public_path = "";
+        $directory = time();
+       // dd($file);
         try{
-            if (file_exists(public_path('uploads/' . $directory . '/' . $directory . '_' . time() . '_' . $file->getClientOriginalName() . '.' . $file->getClientOriginalExtension()))) {
-                @unlink(public_path('uploads/' . $directory . '\\' . $directory . '_' . time() . '.' . $file->getClientOriginalExtension()));
+            foreach($files as $file){
+                if (file_exists(public_path('media/'.$file->getClientOriginalName()))) {
+                    @unlink(public_path('media/'.$file->getClientOriginalName()));
+                }
+                
+                $path = public_path('media/');
+                $public_path = asset('media/'.$file->getClientOriginalName());
+                $file->move($path, $file->getClientOriginalName());  
+                $media = Media::create([
+                    'image_url' => $public_path,
+                    'model_id' => $id,
+                ]);   
+                
             }
-            if (!file_exists(public_path('uploads/' . $directory)) && !is_dir(public_path('uploads/' . $directory))) {
-                mkdir(public_path('uploads/' . $directory), 0777);
-            }
-    
-            $path = public_path('uploads/' . $directory);
-            $public_path = 'uploads/' . $directory . '/' . time() . '.' . $file->getClientOriginalExtension();
-            $file->move($path, time() . '.' . $file->getClientOriginalExtension());  
+            return $media;
+            
         }catch(\Exception $e){
             $public_path = "images/image-not-found.png";
             Log::error($e);
+            return false;
         }
         
 
-        $media = Media::create([
-            'image_url' => $public_path,
-            'model' => $model,
-            'model_id' => $id,
-        ]);
-        return $media;
+        
+        
     }
 
     public static function base64ToImage($data)
@@ -174,7 +179,15 @@ class Helper
         return $number;
     }
 
+    // Price Format
+    public static function priceFormat($price){
+        return config('site_config.currencies.'.config('site_config.constants.currency').'.symbol').number_format($price, 2).config('site_config.currencies.'.config('site_config.constants.currency').'.name');
+    }
 
+    // Area Fromat
+    public static function areaFormat($area){
+        return number_format($area, 2).'sq.ft';
+    }
     // PDF FILE
     public static function generatePDF($view, $data)
     {
@@ -202,5 +215,36 @@ class Helper
         
         return $message;
 
+    }
+
+    // Delete file from directory
+    public static function unlinkFile($path){
+        try{
+            if (file_exists(public_path($path))) {
+                @unlink(public_path($path));
+            }
+            return true;
+        }catch(Exception $e){
+            Log::error($e);
+            return false;
+        }
+        
+    }
+
+    // set new Price Format
+    public static function setPriceFormat($price){
+        if($price > 10000000){
+            return number_format(($price/10000000),2).' Crore';
+        }
+        elseif($price > 100000){
+            return number_format(($price/100000),2).' Lac';
+        }
+
+        return number_format($price,2);
+    }
+
+    // Text uppercase
+    public static function textFormat($text){
+        return strtoupper($text);
     }
 }

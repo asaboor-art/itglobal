@@ -4,7 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use App\Models\BaseModel;
+use App\Helpers\Helper;
+use Auth;
+
 use Log;
 class ContactForm extends BaseModel
 {

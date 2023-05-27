@@ -7,6 +7,8 @@ import useService from '../services/';
 export default function useGenerals() {
 
     const data = ref([]);
+    const counters = ref([]);
+    const registrations = ref([]);
     // const errors = ref([]);
     // const category = ref({});
     const { errorAlert } = useService();
@@ -19,8 +21,55 @@ export default function useGenerals() {
         })
     }
 
+    const getCitiesByCountry = async() => {
+        await axiosWrapper.post('https://countriesnow.space/api/v0.1/countries/cities',{
+            "country": "pakistan"
+        }).then((response) => {
+            data.value = response.data.data
+        }).catch((e) => {
+            errorAlert(e.message);
+        })
+    }
+
+    
+
+    const getCounters = async() => {
+        return await axiosWrapper.get(`/admin/ajax`).then((response) => {
+            counters.value = response.data.data;
+        }).catch((e) => {
+            if (e.response.status === 422) {
+                errors.value = e.response.data.errors
+            } else if (e.response.status == 500) {
+                errorAlert(e.message)
+            } else {
+                errorAlert(e.response.data.message)
+            }
+        });
+    }
+
+    const getRegistrations = async(year) => {
+        return await axiosWrapper.get(`/admin/registrations/month?year=${year}`).then((response) => {
+            registrations.value = response.data.data;
+        }).catch((e) => {
+            if (e.response.status === 422) {
+                errors.value = e.response.data.errors
+            } else if (e.response.status == 500) {
+                errorAlert(e.message)
+            } else {
+                errorAlert(e.response.data.message)
+            }
+        });
+    }
+
     return {
         data,
-        get
+        get,
+        getCitiesByCountry,
+        getCounters,
+        counters,
+        getRegistrations,
+        registrations
+        
+        
     }
 }

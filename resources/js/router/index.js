@@ -18,12 +18,10 @@ import EditHeader from '../components/admin/headers/EditHeader.vue';
 import Footers from '../components/admin/footers/Footers.vue';
 import CreateFooter from '../components/admin/footers/CreateFooter.vue';
 import EditFooter from '../components/admin/footers/EditFooter.vue';
-
 // Blogs
 import Blogs from '../components/admin/blogs/Blogs.vue';
 import CreateBlog from '../components/admin/blogs/CreateBlog.vue';
 import EditBlog from '../components/admin/blogs/EditBlog.vue';
-
 const routes = [
     {
         path: "/admin",
@@ -93,7 +91,6 @@ const routes = [
         component: EditFooter,
         props: true,
     },
-
     // Blogs
     {
         path: "/admin/blogs",

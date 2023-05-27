@@ -13,11 +13,24 @@ return [
         'home_pages' => 'homes.',
         'pages' => 'pages.',
         'logo'=>'images/logo.png',
+        'image-not-found'=>'images/image-not-found.png',
 
     ],
     'constants' => [
         'experience' => '10',
         'warranty' => '2',
+        'currency' => 'PKR', 
+        'display-limit' => 4,
+    ],
+    'currencies' => [
+        'PKR' => [
+            'name' => 'PKR',
+            'symbol' => '',
+        ],
+        'USD' => [
+            'name' => 'USD',
+            'symbol' => '$',
+        ],
     ],
     'menus' => [
         'pages' => [
@@ -61,8 +74,9 @@ return [
                 'has_submenu' => false,
                 'submenu' => []
             ],
+            
             [
-                'name' => 'contact',
+                'name' => 'book_now',
                 'link' => 'contact-us',
                 'is_main' => false,
                 'class' => 'menu-item',
@@ -71,6 +85,17 @@ return [
                 'has_submenu' => false,
                 'submenu' => []
             ],
+            // [
+            //     'name' => 'geo_location',
+            //     'link' => 'contact-us',
+            //     'is_main' => false,
+            //     'type' => 'page',
+            //     'class' => 'menu-item book-now-btn',
+            //     'link-class' => 'btn btn-primary',
+            //     'has_submenu' => true,
+            //     'submenu' => []
+            // ],
+            
             
         ],
         'footer-menu1' => [
@@ -108,6 +133,8 @@ return [
         'instragram' => 'https://www.instagram.com/calgarypaintingcrew/?igshid=ZmVmZTY5ZGE%3D',
         'map' => "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28393.307336755148!2d-114.05491292789799!3d51.02284509581211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scalgary%20detailing%20CA!5e0!3m2!1sen!2s!4v1679095364003!5m2!1sen!2s"
     ]
+
+
 
 
 ];

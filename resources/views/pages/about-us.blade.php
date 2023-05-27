@@ -425,23 +425,138 @@ Our goal is to provide exceptional customer service and deliver results that exc
    <!-- SUBSCRIBE NEWSLETTER SECTION END -->
 @endsection
 @section('scripts')
+<script src="https://rawgit.com/moagrius/isOnScreen/master/jquery.isonscreen.min.js"></script>
+<script src="{{ asset(config('site_config.assets.js').'scripts/custom.js') }}"></script>
+<script src="{{ asset(config('site_config.assets.js').'scripts/plugins.js') }}"></script>
+<script src="{{ asset(config('site_config.assets.js').'scripts/init.js') }}"></script>
+<!-- <script src="js/plugins.js"></script>
+    <script src="js/init.js"></script> -->
+<!-- <script src="js/custom.js"></script> -->
 <script>
-      new WOW().init();
-    </script>
-<script>
-      $('.responsive').slick({
+          /*PROPERTY SLIDER SCRIPT BEGIN*/
+          $('.responsive').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        autoplay: true,
+        nextArrow:"<img src='/images/right-arrow.png' class='a-right'>",
+        prevArrow:"<img src='/images/left-arrow.png' class='a-left'>",
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+      /*PROPERTY SLIDER SCRIPT END*/
+      /*PROJECT SLIDER SCRIPT BEGIN*/
+      $('.responsive2').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        autoplay: true,
+        nextArrow:"<img src='/images/right-arrow.png' class='a-right'>",
+        prevArrow:"<img src='/images/left-arrow.png' class='a-left'>",
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+      /*PROJECT SLIDER SCRIPT END*/
+      /*COUNTER SCRIPT BEGIN*/
+      $(document).ready(function() {
+        checkDisplay();
+      $(window).on('resize scroll', function() {
+        checkDisplay();
+        });
+      });
+      function checkDisplay(){
+        $('.prg-count').each(function() {
+            var $this = $(this);
+            if ($this.isOnScreen()) {
+              var countTo = $this.attr('data-count');
+              $({
+                countNum: $this.text()
+              }).animate({
+                countNum: countTo
+              }, {
+                duration: 4000,
+                easing: 'linear',
+                step: function() {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function() {
+                  $this.text(this.countNum);
+                  //alert('finished');
+                }
+              });
+            }
+          });
+      }
+      /*COUNTER SCRIPT END*/
+      /*OUR CLIENTS SLIDER SCRIPT BEGIN*/
+      $('.responsive3').slick({
           dots: false,
-          arrows: false,
-          autoplay: true,
+          arrows: true,
           infinite: true,
+          autoplay: true,
+          nextArrow:"<img src='/images/right-arrow.png' class='a-right'>",
+          prevArrow:"<img src='/images/left-arrow.png' class='a-left'>",
+          vertical: true,
           speed: 300,
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           responsive: [
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true
@@ -450,7 +565,7 @@ Our goal is to provide exceptional customer service and deliver results that exc
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1
               }
             },
@@ -463,5 +578,45 @@ Our goal is to provide exceptional customer service and deliver results that exc
             }
           ]
         });
-    </script>
+       /*OUR CLIENTS SLIDER SCRIPT END*/
+
+              /*PROJECT SLIDER SCRIPT BEGIN*/
+              $('.responsive2').slick({
+         dots: false,
+         arrows: true,
+         infinite: true,
+         autoplay: true,
+         nextArrow:"<img src='images/right-arrow.png' class='a-right'>",
+         prevArrow:"<img src='images/left-arrow.png' class='a-left'>",
+         speed: 300,
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         responsive: [
+           {
+             breakpoint: 1024,
+             settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               infinite: true,
+               dots: true
+             }
+           },
+           {
+             breakpoint: 600,
+             settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1
+             }
+           },
+           {
+             breakpoint: 480,
+             settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+             }
+           }
+         ]
+       });
+       /*PROJECT SLIDER SCRIPT END*/
+</script>
 @endsection

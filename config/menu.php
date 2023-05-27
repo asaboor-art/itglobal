@@ -11,43 +11,95 @@ return [
                 'submenu' => [],
             ],
             [
-                'name' => 'site-setting',
+                'name' => 'properties',
                 'route' => 'dashboard',
-                'icon' => 'nav-icon fas fa-bars',
+                'icon' => 'nav-icon fa fa-home',
                 'has_submenu' => true,
                 'submenu_icon' => 'right fas fa-angle-left',
                 'submenu' => [
                     [
-                        'name' => 'pages',
-                        'route' => 'pages.index',
-                        'icon' => 'nav-icon fa fa-file',
+                        'name' => 'properties',
+                        'route' => 'properties.index',
+                        'main_route' => 'properties',
+                        'icon' => 'nav-icon fa fa-home',
+                        'has_submenu' => false,
+                        'submenu_icon' => '',
+                        'submenu' => [],
+                        
+                    ],
+                    [
+                        'name' => 'developers',
+                        'route' => 'developers.index',
+                        'main_route' => 'properties',
+                        'icon' => 'nav-icon fas fa-user',
                         'has_submenu' => false,
                         'submenu_icon' => '',
                         'submenu' => [],
                     ],
                     [
-                        'name' => 'headers',
-                        'route' => 'headers.index',
-                        'icon' => 'nav-icon fa fa-file',
+                        'name' => 'property_types',
+                        'route' => 'property-types.index',
+                        'main_route' => 'properties',
+                        'icon' => 'nav-icon fa fa-home',
                         'has_submenu' => false,
                         'submenu_icon' => '',
                         'submenu' => [],
-                    ],
-                    [
-                        'name' => 'footers',
-                        'route' => 'footers.index',
-                        'icon' => 'nav-icon fa fa-file',
-                        'has_submenu' => false,
-                        'submenu_icon' => '',
-                        'submenu' => [],
-                    ],
-                    
-                    
-
+                    ]
                 ],
+            ],
+            // [
+            //     'name' => 'site-setting',
+            //     'route' => 'dashboard',
+            //     'icon' => 'nav-icon fas fa-bars',
+            //     'has_submenu' => true,
+            //     'submenu_icon' => 'right fas fa-angle-left',
+            //     'submenu' => [
+            //         [
+            //             'name' => 'pages',
+            //             'route' => 'pages.index',
+            //             'icon' => 'nav-icon fa fa-file',
+            //             'has_submenu' => false,
+            //             'submenu_icon' => '',
+            //             'submenu' => [],
+            //         ],
+            //         [
+            //             'name' => 'headers',
+            //             'route' => 'headers.index',
+            //             'icon' => 'nav-icon fa fa-file',
+            //             'has_submenu' => false,
+            //             'submenu_icon' => '',
+            //             'submenu' => [],
+            //         ],
+            //         [
+            //             'name' => 'footers',
+            //             'route' => 'footers.index',
+            //             'icon' => 'nav-icon fa fa-file',
+            //             'has_submenu' => false,
+            //             'submenu_icon' => '',
+            //             'submenu' => [],
+            //         ],
+            //]
+            [
+                'name' => 'blogs',
+                'route' => 'blogs.index',
+                'icon' => 'nav-icon fa fa-file',
+                'has_submenu' => false,
+                'submenu_icon' => '',
+                'submenu' => [],
+            ],
+            //     ],
+            // ]
+            [
+                'name' => 'queries',
+                'route' => 'queries.index',
+                'icon' => 'nav-icon fas fa-tachometer-alt',
+                'has_submenu' => false,
+                'submenu_icon' => '',
+                'submenu' => [],
             ]
-        ]
+        ],
     ],
+    
     'guest' => [
         [
             'name' => 'home',

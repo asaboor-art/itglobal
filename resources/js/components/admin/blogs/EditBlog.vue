@@ -32,6 +32,8 @@ import {Language} from '../../../helpers/lang/lang';
 import Form from '../../commons/Form.vue';
 import useBlogs from '../../../composables/blogs';
 import useService  from '../../../services/index';
+
+
 export default {
 components:{
     Form,
@@ -137,9 +139,11 @@ mounted(){
                                 
                                 const request = new XMLHttpRequest();
                                 request.open('POST', '/admin/blogs/media/store');
+
                                 request.upload.onprogress = (e) => {
                                     progress(e.lengthComputable, e.loaded, e.total);
                                 };
+
                     
                                 let data = [];
                                 request.onload = function () {
@@ -155,7 +159,9 @@ mounted(){
                                         error('oh no');
                                     }
                                 };
+
                                 request.send(formData);
+
                                 // Should expose an abort method so the request can be cancelled
                                 return {
                                     abort: () => {
@@ -188,10 +194,8 @@ mounted(){
                                     error('oh no');
                                 }
                             };
-                            request.send(formData);
                             load();
-                        },
-                        //store:"/admin/properties/media/store",
+                        }
                     },
                     required:false,
                     fileType:"image/jpeg, image/png"
@@ -247,6 +251,8 @@ methods:{
                 ref.form.media.push(gallery.id);
             }) 
     },
+
+
 }
 }
 </script>
