@@ -10,18 +10,11 @@ class Layout extends BaseModel
 {
     use HasFactory;
 
+    public function __construct(){
+        $this->rules = config('rules.layout');
+    }
+
     protected $fillable = ['name','view','header_id','footer_id'];
     protected $table = 'layouts';
-
-    private $rules = [
-        'name' => 'required',
-        'view' =>  'required',
-        'header_id' => 'required|exists:headers,id',
-        'footer_id' => 'required|exists:footers,id',
-    ];
-
-
-    public function getRule(){
-        return $this->rules;
-    }
+    public $class_name = 'App\Models\Layout';
 }

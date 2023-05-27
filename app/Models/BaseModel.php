@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Models\Media;
 use Carbon\Carbon;
 use DB;
-
+use Log;
 class BaseModel extends Model
 {
     use HasFactory;
@@ -22,6 +22,7 @@ class BaseModel extends Model
     protected $table = '';
     private $select_columns = [];
     private $render_columns = [];
+    protected $rules = [];
     public static function boot()
     {   
         //$table = $this->table;
@@ -196,25 +197,43 @@ class BaseModel extends Model
 
     public function store($data)
     {
-        $data['created_at'] = Carbon::now();
-        return static::create($data)->id;
+        try{
+            $data['created_at'] = Carbon::now();
+            return static::insertGetId($data);
+        }catch(Exception $e){
+            Log::error($e->getMessage());
+            return false;
+        }
+      
     }
 
     public function updateByColumn($data,$value,$column = 'id')
-    {
-        $data['updated_at'] = Carbon::now();
-        return static::where($column, $value)->update($data);
+    {   
+        try{
+            $data['updated_at'] = Carbon::now();
+            return static::where($column, $value)->update($data);
+        }catch(Exception $e){
+            Log::error($e->getMessage());
+            return false;
+        }
+        
     }
 
     public function destroyByid($id)
-    {
-        if(config('app.APP_ENV') == 'production'){
-            $data['updated_at'] = Carbon::now();
-            $data['is_delete'] = 1;
-            return $this->where('id', $id)->update($data);
-        }else{
-            return $this->where('id', $id)->delete();
+    {   
+        try{
+            if(config('app.APP_ENV') == 'production'){
+                $data['updated_at'] = Carbon::now();
+                $data['is_delete'] = 1;
+                return $this->where('id', $id)->update($data);
+            }else{
+                return $this->where('id', $id)->delete();
+            }
+        }catch(Exception $e){
+            Log::error($e->getMessage());
+            return false;
         }
+        
         
     }
 
@@ -230,16 +249,21 @@ class BaseModel extends Model
 
     public function insertOrUpdate($data, $where)
     {
+        try{
+            $data['updated_at'] = Carbon::now();
+            $data['created_at'] = Carbon::now();
 
-        $data['updated_at'] = Carbon::now();
-        $data['created_at'] = Carbon::now();
-
-        $response = static::where($where)->first();
-        if (isset($response)) {
-            $result = $response->update($data);
-            return $response->id;
+            $response = static::where($where)->first();
+            if (isset($response)) {
+                $result = $response->update($data);
+                return $response->id;
+            }
+            return static::insertGetId($data);
+        }catch(Exception $e){
+            Log::error($e->getMessage());
+            return false;
         }
-        return static::insertGetId($data);
+        
     }
 
     public function getAll($relation = [], $select = ['*'], $where = [])
@@ -289,5 +313,9 @@ class BaseModel extends Model
     public function find($id)
     {
         return static::findorfail($id);
+    }
+
+    public function getRules(){
+        return $this->rules;
     }
 }

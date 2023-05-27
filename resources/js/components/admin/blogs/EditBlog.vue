@@ -167,7 +167,6 @@ mounted(){
                                     abort: () => {
                                         // This function is entered if the user has tapped the cancel button
                                         request.abort();
-
                                         // Let FilePond know the request has been cancelled
                                         abort();
                                     },
@@ -185,7 +184,6 @@ mounted(){
                             console.log(uniqueFileId)
                             const request = new XMLHttpRequest();
                             request.open('DELETE', '/admin/properties/media/delete/'+uniqueFileId);
-
                             request.onload = function () {
                                 if (request.status >= 200 && request.status < 300) {
                                     // the load method accepts either a string (id) or an object
@@ -196,11 +194,8 @@ mounted(){
                                     error('oh no');
                                 }
                             };
-
-                            request.send(formData);
                             load();
-                        },
-                        //store:"/admin/properties/media/store",
+                        }
                     },
                     required:false,
                     fileType:"image/jpeg, image/png"
@@ -225,14 +220,12 @@ methods:{
             }else if(e.response.status == 500){
                 errorAlert(e.message)
             }else{
-
                 errorAlert(e.response.data.message)
             }
         });;
         this.loader =false;
        
         
-
     },
     async edit(){
             const {blog,getBlog} = useBlogs();

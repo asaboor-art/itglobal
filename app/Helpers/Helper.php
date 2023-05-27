@@ -10,7 +10,6 @@ use Kreait\Firebase\Database;
 use PDF;
 use Mail;
 use App\Models\Media;
-
 class Helper
 {
     public static function getuserrole($id = 0, $type = '')
@@ -207,8 +206,10 @@ class Helper
         $message = "";
 
         try{
+            
             Mail::to($to)->send($MailObject);
         }catch(\Exception $e){
+            Log::error($e);
             $response = trans('messages.mail_error');
         }
         

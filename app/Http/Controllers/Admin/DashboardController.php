@@ -13,34 +13,8 @@ use DB;
 class DashboardController extends BaseController
 {
     //
-    public function index(Request $request){
-        if ($request->ajax()) {
-            $TotalDevelopers = Developer::count();
-            $TotalProperties = Property::count();
-            $TotalQueries = ContactForm::count();
-
-            return $this->sendResponse([
-                [
-                    'title' => trans('lang.properties'),
-                    'count' => $TotalProperties,
-                    'bg_color' => 'bg-primary',
-                    'link' => route('admin.properties.index'),
-                ],
-                [
-                    'title' => trans('lang.developers'),
-                    'count' => $TotalDevelopers,
-                    'bg_color' => 'bg-info',
-                    'link' => route('admin.developers.index'),
-                ],
-                [
-                    'title' => trans('lang.queries'),
-                    'count' => $TotalQueries,
-                    'bg_color' => 'bg-warning',
-                    'link' => route('admin.queries.index'),
-                ],
-                
-            ]);
-        }
+    public function index(){
+        
         return view('admin.dashboard',[
             'title' => trans('lang.admin'),
         ]);

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -76,11 +75,9 @@ class BaseController extends Controller
     }
 // Subscribe for newsletter
     public function newsletterSubscription(Request $request){
-        $request->validate([
-            'email' => 'required|email|unique:email'
-        ]);
+        $request->validate($this->newsletter->getRules());
 
-        $response =$this->newsLetter->store($request->except('_token'));
+        $response =$this->newsletter->store($request->except('_token'));
         if($response){
             return $this->sendResponse([],trans('messages.success_msg',['action' => trans('lang.subscribed')]));
         }
@@ -88,31 +85,14 @@ class BaseController extends Controller
     }
 // Contact us form
     public function saveContactForm(Request $request){
-        if(isset($request->project)){
-            $request->validate([
-                'first_name' => 'required',
-                'phone' => 'required',
-                'city' => 'required',
-                'email' => 'required|email',
-                'project' =>'required',
-                'message' => 'required'
-            ]);
-        }else{
-            $request->validate([
-                'first_name' => 'required',
-                'phone' => 'required',
-                'city' => 'required',
-                'email' => 'required|email',
-                // 'property_id' =>'required|integer|exists:properties,id',
-                'message' => 'required'
-            ]);
-        }
-            
         
-       
+        $request->validate($this->contactForm->getRules());
+        
         $response = $this->contactForm->store($request->except('_token'));
+        
         if($response){
-            $message = Helper::sendMail(env('MAIL_FROM_ADDRESS'),new Contactus($response));
+            $data = $this->contactForm->find($response);
+            $message = Helper::sendMail(env('MAIL_FROM_ADDRESS'),new Contactus($data));
             if($message ==""){
                 return $this->sendResponse([],'Your response has been '.trans('messages.success_msg',['action' => trans('lang.save')]));
             }else{
@@ -139,7 +119,7 @@ class BaseController extends Controller
     public function destroy(Request $request,$id){
         try{
             DB::beginTransaction();
-                $this->model->destroyByid($id);
+            $this->model->destroyByid($id);
             DB::commit();
             return $this->sendResponse([],'Your data has been '.trans('messages.delete_msg',['action' => trans('lang.delete')]));
         }catch(Exception $e){
@@ -150,7 +130,7 @@ class BaseController extends Controller
     }
 // Store
     public function store(Request $request){
-        $request->validate($this->model->getRule());
+        $request->validate($this->model->getRules());
         
         try {
             DB::beginTransaction();
@@ -179,7 +159,7 @@ class BaseController extends Controller
     }
 // Update
     public function update(Request $request,$id){
-        $request->validate($this->model->getRule());
+        $request->validate($this->model->getRules());
         try {
             DB::beginTransaction();
             $data = $request->except(['_token','media','gallery']);
@@ -207,17 +187,13 @@ class BaseController extends Controller
 // Get
     public function get(Request $request,$id){
         $result = $this->model->first('id',$id);
-        //dd($result);
         return $result;
     }
 // Save files
     public function saveFiles(Request $request){
         $media = 0;
-        
         if (isset($request->files)) { 
-            
             $media =  Helper::saveMedia($request->files,$this->model);      
-            //dd($media);
             return $media->id;
         }
         return true;

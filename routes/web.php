@@ -20,8 +20,7 @@ use Artisan;
 |
 */
 
-Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
-Route::get('/pages/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');
+
 
 Route::get('/error', function(){
     return view('errors.404');
@@ -55,35 +54,33 @@ Route::prefix('developer')->group(function () {
 });
 
 
-// Static Pages
-Route::prefix('pages')->group(function () {
-    Route::get('/{slug}', [SitePageController::class, 'page'])->name('page');
-});
 
-// Public properties
-Route::prefix('properties')->group(function () {
-    Route::get('/',[PropertyController::class, 'buyAndSell'])->name('properties.index');
-    Route::get('/locations',[PropertyController::class, 'buyAndSellLocations'])->name('properties.location');
-    Route::get('/{slug}',[PropertyController::class, 'getProperty'])->name('properties.get');
-});
 
-Route::prefix('projects')->group(function () {
+// Blogs
+
+Route::prefix('blogs')->group(function () {
     Route::get('/',function(){
-        return view('pages.projects',[
-            'title' => __('lang.our_projects'),
-        ]);
-    })->name('projects.index');
+        return view('blogs.blogs');
+    })->name('blogs');
 
-    Route::get('/{slug}',function($slug){
-        return view('projects.project-detail',[
-            'title' => str_replace('-',' ',$slug),
-            'name' => strtolower($slug),
-        ]);
-    })->name('projects.get');
+    Route::get('/{slug}',function(){
+        return view('blogs.blog-detail');
+    })->name('blog');
 });
 
-// Developers
-Route::get('/developers/select', [DeveloperController::class, 'getSelectRecords'])->name('developers.select');
+// Services
 
-// PropertyTypes
-Route::get('/property-types/select', [PropertyTypeController::class, 'getSelectRecords'])->name('property_types.select');
+Route::prefix('services')->group(function () {
+    // Route::get('/',function(){
+    //     return view('pages.services');
+    // })->name('services');
+    Route::get('/{slug}',function($slug){
+        return view('pages.service-detail',[
+            'service' => $slug,
+            'title' => str_replace('-',' ',strtoupper($slug)),
+        ]);
+    })->name('service');
+});
+
+Route::get('/',[SitePageController::class,'renderMainPage'])->name('home');
+Route::get('/{page}',[SitePageController::class,'renderSitePages'])->name('site-pages');

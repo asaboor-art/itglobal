@@ -10,4 +10,10 @@ class Newsletter extends BaseModel
 {
     use HasFactory;
     protected $fillable = ['email'];
+    public $class_name = 'App\Models\Newsletter';
+    protected $table = 'newsletters';
+    
+    public function __construct(){
+        $this->rules = config('rules.newsletter');
+    }
 }

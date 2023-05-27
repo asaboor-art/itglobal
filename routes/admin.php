@@ -47,51 +47,7 @@ Route::prefix('footers')->group(function(){
     Route::delete('/delete/{id}',[FooterController::class, 'destroy'])->name('admin.footers.destroy');
 });
 
-
-Route::prefix('properties')->group(function(){
-    Route::get('/',[PropertyController::class, 'index'])->name('admin.properties.index');
-    Route::get('/ajax', [PropertyController::class, 'render'])->name('admin.properties.ajax');
-    Route::get('/create',[PropertyController::class, 'create'])->name('admin.properties.create');
-    Route::post('/',[PropertyController::class, 'store'])->name('admin.properties.store');
-    Route::get('/{id}',[PropertyController::class, 'get'])->name('admin.properties.header');
-    Route::get('/edit/{id}',[PropertyController::class, 'edit'])->name('admin.properties.edit');
-    Route::put('/update/{id}',[PropertyController::class, 'update'])->name('admin.properties.update');
-    Route::delete('/delete/{id}',[PropertyController::class, 'destroy'])->name('admin.properties.destroy');
-    //Media
-    Route::prefix('media')->group(function () {
-        Route::post('/store',[PropertyController::class, 'saveFiles']);
-        Route::delete('/delete/{id}',[PropertyController::class, 'deleteFile']);
-    });
-
-});
-
-// Property Types
-Route::prefix('property-types')->group(function(){
-    Route::get('/',[PropertyTypeController::class, 'index'])->name('admin.property-types.index');
-    Route::get('/ajax', [PropertyTypeController::class, 'render'])->name('admin.property-types.ajax');
-    Route::get('/create',[PropertyTypeController::class, 'create'])->name('admin.property-types.create');
-    Route::post('/',[PropertyTypeController::class, 'store'])->name('admin.property-types.store');
-    Route::get('/{id}',[PropertyTypeController::class, 'get'])->name('admin.property-types.header');
-    Route::get('/edit/{id}',[PropertyTypeController::class, 'edit'])->name('admin.property-types.edit');
-    Route::put('/update/{id}',[PropertyTypeController::class, 'update'])->name('admin.property-types.update');
-    Route::delete('/delete/{id}',[PropertyTypeController::class, 'destroy'])->name('admin.property-types.destroy');
-});
-
-// Developers
-Route::prefix('developers')->group(function(){
-    Route::get('/',[DeveloperController::class, 'index'])->name('admin.developers.index');
-    Route::get('/ajax', [DeveloperController::class, 'render'])->name('admin.developers.ajax');
-    
-    Route::get('/create',[DeveloperController::class, 'create'])->name('admin.developers.create');
-    Route::post('/',[DeveloperController::class, 'store'])->name('admin.developers.store');
-    Route::get('/{id}',[DeveloperController::class, 'get'])->name('admin.developers.header');
-    Route::get('/edit/{id}',[DeveloperController::class, 'edit'])->name('admin.developers.edit');
-    Route::put('/update/{id}',[DeveloperController::class, 'update'])->name('admin.developers.update');
-    Route::delete('/delete/{id}',[DeveloperController::class, 'destroy'])->name('admin.developers.destroy');
-    
-
-});
-// Blogs Start
+// Blogs
 Route::prefix('blogs')->group(function(){
     Route::get('/',[BlogController::class, 'index'])->name('admin.blogs.index');
     Route::get('/ajax', [BlogController::class, 'render'])->name('admin.blogs.ajax');

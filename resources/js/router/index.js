@@ -18,22 +18,10 @@ import EditHeader from '../components/admin/headers/EditHeader.vue';
 import Footers from '../components/admin/footers/Footers.vue';
 import CreateFooter from '../components/admin/footers/CreateFooter.vue';
 import EditFooter from '../components/admin/footers/EditFooter.vue';
-// Properties
-import Properties from '../components/admin/properties/Properties.vue';
-import CreateProperty from '../components/admin/properties/CreateProperty.vue';
-import EditProperty from '../components/admin/properties/EditProperty.vue';
 // Blogs
 import Blogs from '../components/admin/blogs/Blogs.vue';
 import CreateBlog from '../components/admin/blogs/CreateBlog.vue';
 import EditBlog from '../components/admin/blogs/EditBlog.vue';
-// Developers
-import Developers from '../components/admin/developers/Developers.vue';
-// import CreateDeveloper from '../components/admin/developers/CreateDeveloper.vue';
-// import EditDeveloper from '../components/admin/developers/EditDeveloper.vue';
-// PropertyTypes
-import PropertyTypes from '../components/admin/property_types/PropertyTypes.vue';
-// Queries
-import Queries from '../components/admin/queries/Queries.vue';
 const routes = [
     {
         path: "/admin",
@@ -103,25 +91,6 @@ const routes = [
         component: EditFooter,
         props: true,
     },
-    // Properties
-    {
-        path: "/admin/properties",
-        name: "admin.properties",
-        component: Properties,
-        props: true,
-    },
-    {
-        path: "/admin/properties/create",
-        name: "admin.properties.create",
-        component: CreateProperty,
-        props: true,
-    },
-    {
-        path: "/admin/properties/edit/:id",
-        name: "admin.properties.edit",
-        component: EditProperty,
-        props: true,
-    },
     // Blogs
     {
         path: "/admin/blogs",
@@ -141,27 +110,8 @@ const routes = [
         component: EditBlog,
         props: true,
     },
-    // Developers
-    {
-        path: "/admin/developers",
-        name: "admin.developers",
-        component: Developers,
-        props: true,
-    },
-    // PropertyTypes
-     {
-        path: "/admin/property-types",
-        name: "admin.property-types",
-        component: PropertyTypes,
-        props: true,
-    },
-    // Queries
-    {
-        path: "/admin/queries",
-        name: "admin.queries",
-        component: Queries,
-        props: true,
-    },
+
+
 
 
 ];
