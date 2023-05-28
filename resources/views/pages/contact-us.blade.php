@@ -47,7 +47,7 @@
  <!-- CONTACT DETAIL SECTION END -->
 <!-- CONTACT FORM SECTION BEGIN -->
    <section class="contact-form-sec form">
-      @include('contact-forms.formv1',[
+      @include('contact-forms.formv3',[
          'heading' => "<span>How Can We</span> Help You?",
          'description' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
          'form' => [

@@ -214,7 +214,7 @@ footer {position: relative;padding: 60px 120px 20px;background-color: #000000;ov
 
 /*OUR BLOGS PAGE CSS BEGIN*/
 .blogs-sec-bg .banner-inner-content p {text-align: center;margin: 0 auto;}
-.blogs-sec-bg {padding: 60px 120px 0;background-image: url(../images/blog-banner.png);background-repeat: no-repeat;background-size: cover;background-position: center;position: relative;height: 75vh;display: flex;align-items: center;justify-content: center;}
+.blogs-sec-bg {padding: 60px 120px 0;background-repeat: no-repeat;background-size: cover;background-position: center;position: relative;height: 75vh;display: flex;align-items: center;justify-content: center;}
 .blogs-banner-overlay {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 0;background-color: #000;opacity: 80%;}
 .blogs-sec-bg .banner-inner-content span {display: inline;}
 .blogs-sec-bg .banner-inner-content {text-align: center;}
@@ -319,7 +319,7 @@ footer {position: relative;padding: 60px 120px 20px;background-color: #000000;ov
 .things-square-left {position: absolute;top: -300px;left: -360px;width: 650px;}
 .things-square-right {position: absolute;bottom: -300px;right: -350px;width: 650px;}
 .progress-bar-cont .textbox {height: 700px;}
-.progress-bar-cont .progress {margin-bottom: 30px;border: 2px solid #fff;border-radius: 25px;background-image: linear-gradient(to right, #ed2024, #e11e22, #d61d21, #ca1b1f, #bf1a1d);padding: 2px 2px;height: 23px;}
+.progress-bar-cont .progress {margin-bottom: 30px;border: 2px solid #fff;border-radius: 25px;background-image: linear-gradient(to right, #ed2024, #e11e22, #d61d21, #ca1b1f, #bf1a1d);padding: 2px 2px;height: 23px;position: relative;}
 .progress-bar-cont .progress-bar {width: 0;background-color: #fff;border-radius: 25px;color: #000;font-weight: 700;}
 .progress-bar-cont h4 {font-size: 20px;font-weight: 600;color: #fff;margin-bottom: 16px;}
 .progress-bar-cont {margin: 30px 0 0;}
@@ -348,7 +348,7 @@ footer {position: relative;padding: 60px 120px 20px;background-color: #000000;ov
 .contact-form-content p {color: #000000;padding: 22px 0 0;}
 .field-con-flex {display: flex;align-items: center;justify-content: space-between;gap: 14px;margin-bottom: 20px;}
 .field-inner-con {width: 100%;}
-.field-inner-con .form-control {outline: none;height: auto;box-shadow: none;padding: 15px 15px;border-radius: 0;border: 1px solid #00000042;resize: none;}
+.field-inner-con .form-control {outline: none;height: auto;box-shadow: none;padding: 15px 15px;border-radius: 0;border: 1px solid #00000042;resize: none;appearance: auto;}
 .con-submit-btn {text-align: center;margin-top: 45px;}
 .con-submit-btn .btn-primary {background-color: #ED2024 !important;transition: 0.6s all ease-in-out;font-size: 17px;font-weight: 400;color: #FFFFFF;text-transform: capitalize;border-radius: 8px;padding: 13px 38px;}
 /*CONTACT US PAGE CSS END*/
@@ -711,3 +711,8 @@ footer .row {z-index: 1;position: relative;}
 /*RESPONSIVE CSS END*/
 
 .inner-img img{width: 100px; height: 100px; border-radius: 50%;}
+
+
+.progress-bar-line-bg1 {position: absolute;top: 0;left: 0;height: 19px;background-color: #fff;}
+.blog-detail-sec img {display: block;margin: 0 auto 45px auto;}
+.contact-form-fields .field-inner-con {margin-bottom: 15px;}

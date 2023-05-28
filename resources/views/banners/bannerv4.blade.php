@@ -1,4 +1,4 @@
-<section class="blogs-sec-bg">
+<section class="blogs-sec-bg" style="background-image: url(../images/blog-banner.png);">
       <div class="blogs-banner-overlay"></div>
       <div class="container">
          <div class="row">

@@ -44,12 +44,12 @@
                             @endif
                             
                      @else
-                     
+                        
                         <div class="{{ $field['class'] }}">
                            <input type="{{ $field['type'] }}" placeholder="{{ $field['placeholder'] }}" name="{{ $field['name'] }}" class="form-control {{ $field['field_class'] }}">
                            <div class="error-{{ $field['name'] }} errors"></div>
                         </div>
-                       
+                      
                      @endif
                   
                      

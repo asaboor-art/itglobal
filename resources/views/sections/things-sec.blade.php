@@ -17,6 +17,8 @@
                   <h4>{!! $feature !!}</h4> 
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100</div>
+                  <div class="progress-bar-line-bg1" style="width: 30%;">
+                  </div>
                 </div>
                 @endforeach
                 <!-- <h4>5 Year Ceramic Coating</h4> 
